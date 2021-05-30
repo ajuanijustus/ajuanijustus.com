@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b5e27bc990ba130fe600224f2e92592c",
+    "revision": "cf0b550623b5f93469555e94859a0ab8",
     "url": "./index.html"
   },
   {
-    "revision": "a7ccb55c748a3ddd4c83",
-    "url": "./static/css/main.e95fb833.chunk.css"
+    "revision": "d607a253bcb5f959b8b2",
+    "url": "./static/css/main.19e71f25.chunk.css"
   },
   {
     "revision": "c3146951680d02db77a8",
     "url": "./static/js/2.80cd0664.chunk.js"
   },
   {
-    "revision": "a7ccb55c748a3ddd4c83",
-    "url": "./static/js/main.2f715514.chunk.js"
+    "revision": "d607a253bcb5f959b8b2",
+    "url": "./static/js/main.1ca6f446.chunk.js"
   },
   {
     "revision": "1d0eea201b1978fb0eaa",
@@ -52,6 +52,26 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/media/Montserrat-Regular.ee653992.ttf"
   },
   {
+    "revision": "708dc08ee05d43f4d46908bbf7542a2c",
+    "url": "./static/media/_deeplearning_ai.708dc08e.png"
+  },
+  {
+    "revision": "e197406d623afcd12d1e8d524bf7ffef",
+    "url": "./static/media/_gcp.e197406d.jpg"
+  },
+  {
+    "revision": "377b79def7072ab66980dd924f1bcc09",
+    "url": "./static/media/_gcp0.377b79de.jpg"
+  },
+  {
+    "revision": "a2ce2560374a5fa65abf6a2365c1111c",
+    "url": "./static/media/_stanford.a2ce2560.jpg"
+  },
+  {
+    "revision": "c8a92757b80b180eedb7429d5197b46a",
+    "url": "./static/media/_udemy.c8a92757.jpg"
+  },
+  {
     "revision": "3b021f8ffcf9f323ea72abc28382e234",
     "url": "./static/media/address_image.3b021f8f.svg"
   },
@@ -68,6 +88,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/media/blogs_image.b6b12c7d.svg"
   },
   {
+    "revision": "13fcbd3df7507d3d7450169fb03757f5",
+    "url": "./static/media/cet_emblem.13fcbd3d.png"
+  },
+  {
+    "revision": "96233e4daacbbad18f905d980c31e0c2",
+    "url": "./static/media/cet_emblem.96233e4d.jpg"
+  },
+  {
     "revision": "dfcb7a585547c0b125d208b980d6f57f",
     "url": "./static/media/cloud_infrastructure.dfcb7a58.svg"
   },
@@ -82,10 +110,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "434d2b012c3efc3da1ef90549a50f46b",
     "url": "./static/media/data_science.434d2b01.svg"
-  },
-  {
-    "revision": "7a9b2eb087350abacd2587dd578226c7",
-    "url": "./static/media/deeplearning_ai_logo.7a9b2eb0.png"
   },
   {
     "revision": "59389695208d7454c6607bed51ed4316",
@@ -172,10 +196,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/media/fullstack.589bec7d.svg"
   },
   {
-    "revision": "ba18401b15f40a463898b706cc6ff08c",
-    "url": "./static/media/gcp_logo.ba18401b.png"
-  },
-  {
     "revision": "e64de169a4222787bc49f3706282ef96",
     "url": "./static/media/github_logo.e64de169.png"
   },
@@ -186,14 +206,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "c24ba79111a90758a3a472a906ab2901",
     "url": "./static/media/googleAssistant.c24ba791.svg"
-  },
-  {
-    "revision": "6d325fec19fe3b6b169d9012f9a1dfb9",
-    "url": "./static/media/ibm_logo.6d325fec.png"
-  },
-  {
-    "revision": "c350d7996596e9909fe72c0938cc9ee5",
-    "url": "./static/media/iiitk_logo.c350d799.png"
   },
   {
     "revision": "29152cf756a1facead5393c32e373371",
@@ -216,10 +228,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/media/muffito_logo.db6c1c0d.png"
   },
   {
-    "revision": "cd7077f7a08bffdb11e13093424e13fd",
-    "url": "./static/media/nptel_logo.cd7077f7.png"
-  },
-  {
     "revision": "6e7dc5ad476dd2d57600bca9521f3a5d",
     "url": "./static/media/portfolio.6e7dc5ad.gif"
   },
@@ -234,10 +242,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "bd5f4148a754968cb4444206539c565c",
     "url": "./static/media/pwa.bd5f4148.png"
-  },
-  {
-    "revision": "da0e7c80b90df28dd3a590c80f3d4970",
-    "url": "./static/media/stanford_logo.da0e7c80.png"
   },
   {
     "revision": "0288c5ec7a87ea73f8d14b12fc4bc94e",

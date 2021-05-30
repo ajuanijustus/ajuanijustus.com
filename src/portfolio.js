@@ -80,9 +80,9 @@ const skills = {
       title: "Data Science",
       fileName: "DataScienceImg",
       skills: [
-        "⚡ Developing highly scalable production ready models for various deeplearning and statistical use cases",
-        "⚡ Experience of working with Computer Vision and NLP projects",
-        "⚡ Complex quantitative modelling for dynamic forecasting and time series analysis",
+        "⚡ Developing highly scalable production ready models for various deeplearning and statistical use cases.",
+        "⚡ Experience of working with Supply Chain and Consumer Packaged Goods clients.",
+        "⚡ Complex quantitative modelling for dynamic forecasting and time series analysis.",
       ],
       softwareSkills: [
         {
@@ -109,21 +109,77 @@ const skills = {
           },
         },
         {
-          skillName: "PyTorch",
-          fontAwesomeClassname: "logos-pytorch",
+          skillName: "MySQL",
+          fontAwesomeClassname: "simple-icons:mysql",
           style: {
             backgroundColor: "transparent",
+            color: "#4479A1",
           },
         },
+        {
+          skillName: "PySpark",
+          fontAwesomeClassname: "simple-icons:apachespark",
+          style: {
+            backgroundColor: "transparent",
+            color: "#E25A1C",
+          },
+        },
+      ],
+    },
+    {
+      title: "Cloud Technologies",
+      fileName: "",
+      skills: [
+        "⚡ Experience working on multiple cloud platforms",
+        "⚡ Hosting and maintaining websites on virtual machine instances along with integration of databases",
+        "⚡ Deploying deep learning models on cloud to use on mobile devices",
+        "⚡ Setting up streaming jobs from DB to Server or vice-versa on GCP and AWS",
+      ],
+      softwareSkills: [
+        {
+          skillName: "GCP",
+          fontAwesomeClassname: "simple-icons:googlecloud",
+          style: {
+            color: "#4285F4",
+          },
+        },
+        // {
+        //   skillName: "AWS",
+        //   fontAwesomeClassname: "simple-icons:amazonaws",
+        //   style: {
+        //     color: "#FF9900",
+        //   },
+        // },
+        {
+          skillName: "Azure",
+          fontAwesomeClassname: "simple-icons:microsoftazure",
+          style: {
+            color: "#0089D6",
+          },
+        },
+        {
+          skillName: "Docker",
+          fontAwesomeClassname: "simple-icons:docker",
+          style: {
+            color: "#1488C6",
+          },
+        },
+        // {
+        //   skillName: "Kubernetes",
+        //   fontAwesomeClassname: "simple-icons:kubernetes",
+        //   style: {
+        //     color: "#326CE5",
+        //   },
+        // },
       ],
     },
     {
       title: "Education",
       fileName: "FullStackImg",
       skills: [
-        "⚡ Building resposive website front end using React-Redux",
-        "⚡ Developing mobile applications using Flutter, React Native and solo android apps using Kotlin",
-        "⚡ Creating application backend in Node, Express & Flask",
+        "⚡ B.Tech (Honors) graduate from College of Engineering, Trivandrum with a 8.37 CGPA.",
+        "⚡ Studied at The School of The Good Shepherd, Trivandrum from 10th grade (𝐂𝐆𝐏𝐀: 𝟗.𝟔) to 12th grade (𝟗𝟑.𝟐%).",
+        "⚡ Studied at GEMS Our Own English High School, Sharjah - Boys from 5th grade to 9th grade.",
       ],
       softwareSkills: [
       //   {
@@ -141,13 +197,6 @@ const skills = {
       //     },
       //   },
       //   {
-      //     skillName: "Sass",
-      //     fontAwesomeClassname: "simple-icons:sass",
-      //     style: {
-      //       color: "#CC6699",
-      //     },
-      //   },
-      //   {
       //     skillName: "JavaScript",
       //     fontAwesomeClassname: "simple-icons:javascript",
       //     style: {
@@ -162,148 +211,39 @@ const skills = {
       //       color: "#61DAFB",
       //     },
       //   },
-      //   {
-      //     skillName: "NodeJS",
-      //     fontAwesomeClassname: "simple-icons:node-dot-js",
-      //     style: {
-      //       color: "#339933",
-      //     },
-      //   },
-      //   {
-      //     skillName: "NPM",
-      //     fontAwesomeClassname: "simple-icons:npm",
-      //     style: {
-      //       color: "#CB3837",
-      //     },
-      //   },
-      //   {
-      //     skillName: "Yarn",
-      //     fontAwesomeClassname: "simple-icons:yarn",
-      //     style: {
-      //       color: "#2C8EBB",
-      //     },
-      //   },
-      //   {
-      //     skillName: "Gatsby",
-      //     fontAwesomeClassname: "simple-icons:gatsby",
-      //     style: {
-      //       color: "#663399",
-      //     },
-      //   },
-      //   {
-      //     skillName: "Flutter",
-      //     fontAwesomeClassname: "simple-icons:flutter",
-      //     style: {
-      //       color: "#02569B",
-      //     },
-      //   },
       ],
     },
     {
       title: "Hobbies",
-      fileName: "",
-      skills: [
-        "⚡ Experience working on multiple cloud platforms",
-        "⚡ Hosting and maintaining websites on virtual machine instances along with integration of databases",
-        "⚡ Deploying deep learning models on cloud to use on mobile devices",
-        "⚡ Setting up streaming jobs from DB to Server or vice-versa on GCP and AWS",
-      ],
-      softwareSkills: [
-        {
-          skillName: "GCP",
-          fontAwesomeClassname: "simple-icons:googlecloud",
-          style: {
-            color: "#4285F4",
-          },
-        },
-        {
-          skillName: "AWS",
-          fontAwesomeClassname: "simple-icons:amazonaws",
-          style: {
-            color: "#FF9900",
-          },
-        },
-        {
-          skillName: "Azure",
-          fontAwesomeClassname: "simple-icons:microsoftazure",
-          style: {
-            color: "#0089D6",
-          },
-        },
-        {
-          skillName: "Firebase",
-          fontAwesomeClassname: "simple-icons:firebase",
-          style: {
-            color: "#FFCA28",
-          },
-        },
-        {
-          skillName: "PostgreSQL",
-          fontAwesomeClassname: "simple-icons:postgresql",
-          style: {
-            color: "#336791",
-          },
-        },
-        {
-          skillName: "MongoDB",
-          fontAwesomeClassname: "simple-icons:mongodb",
-          style: {
-            color: "#47A248",
-          },
-        },
-        {
-          skillName: "Docker",
-          fontAwesomeClassname: "simple-icons:docker",
-          style: {
-            color: "#1488C6",
-          },
-        },
-        {
-          skillName: "Kubernetes",
-          fontAwesomeClassname: "simple-icons:kubernetes",
-          style: {
-            color: "#326CE5",
-          },
-        },
-      ],
-    },
-    {
-      title: "UI/UX Design",
       fileName: "DesignImg",
       skills: [
-        "⚡ Designing highly attractive user interface for mobile and web applications",
-        "⚡ Customizing logo designs and building logos from scratch",
-        "⚡ Creating the flow of application functionalities to optimize user experience",
+        "⚡ Confusion",
+        "⚡ Doubt",
+        "⚡ Indecisive",
+        "🎮 Gaming",
       ],
       softwareSkills: [
-        {
-          skillName: "Adobe XD",
-          fontAwesomeClassname: "simple-icons:adobexd",
-          style: {
-            color: "#FF2BC2",
-          },
-        },
-        {
-          skillName: "Figma",
-          fontAwesomeClassname: "simple-icons:figma",
-          style: {
-            color: "#F24E1E",
-          },
-        },
-        {
-          skillName: "Adobe Illustrator",
-          fontAwesomeClassname: "simple-icons:adobeillustrator",
-          style: {
-            color: "#FF7C00",
-          },
-        },
-        {
-          skillName: "Inkscape",
-          fontAwesomeClassname: "simple-icons:inkscape",
-          style: {
-            color: "#000000",
-          },
-        },
+        // {
+        //   skillName: "Adobe Photoshop",
+        //   fontAwesomeClassname: "simple-icons:adobephotoshop",
+        //   style: {
+        //     color: "#31A8FF",
+        //   },
+        // },
+        // {
+        //   skillName: "Adobe Lightroom",
+        //   fontAwesomeClassname: "simple-icons:adobelightroom",
+        //   style: {
+        //     color: "#31A8FF",
+        //   },
+        // },
+        // {
+        //   skillName: "Figma",
+        //   fontAwesomeClassname: "simple-icons:figma",
+        //   style: {
+        //     color: "#F24E1E",
+        //   },
+        // },
       ],
     },
   ],
@@ -318,39 +258,15 @@ const competitiveSites = {
       style: {
         color: "#2EC866", //2EC866
       },
-      profileLink: "https://www.hackerrank.com/layman_brother",
+      profileLink: "https://www.hackerrank.com/ajuanijustus",
     },
-    // {
-    //   siteName: "Codechef",
-    //   iconifyClassname: "simple-icons:codechef",
-    //   style: {
-    //     color: "#5B4638",
-    //   },
-    //   profileLink: "https://www.codechef.com/users/ashutosh_1919",
-    // },
-    // {
-    //   siteName: "Codeforces",
-    //   iconifyClassname: "simple-icons:codeforces",
-    //   style: {
-    //     color: "#1F8ACB",
-    //   },
-    //   profileLink: "http://codeforces.com/profile/layman_brother",
-    // },
-    // {
-    //   siteName: "Hackerearth",
-    //   iconifyClassname: "simple-icons:hackerearth",
-    //   style: {
-    //     color: "#323754",
-    //   },
-    //   profileLink: "https://www.hackerearth.com/@ashutosh391",
-    // },
     {
       siteName: "Kaggle",
       iconifyClassname: "simple-icons:kaggle",
       style: {
         color: "#20BEFF", // 20BEFF
       },
-      profileLink: "https://www.kaggle.com/laymanbrother",
+      profileLink: "https://www.kaggle.com/ajuanijustus",
     },
   ],
 };
@@ -360,7 +276,7 @@ const degrees = {
     {
       title: "College of Engineering, Trivandrum",
       subtitle: "B.Tech. in Civil Engineering",
-      logo_path: "cet_emblem.jpg",
+      logo_path: "cet_emblem.png",
       alt_name: "CET",
       duration: "2015 - 2019",
       descriptions: [
@@ -387,112 +303,77 @@ const certifications = {
   certifications: [
     {
       title: "The Web Developer Bootcamp",
-      subtitle: "- Colt Steele",
-      logo_path: "large-udemy.jpg",
+      subtitle: "",
+      logo_path: "_udemy.jpg",
       certificate_link:
         "https://www.udemy.com/certificate/UC-0ea51c1a-d97e-4327-9990-2df80637a37d/",
       alt_name: "Udemy",
       color_code: "#EA5153",
     },
     {
-      title: "Deep Learning",
-      subtitle: "- Andrew Ng",
-      logo_path: "deeplearning_ai_logo.png",
+      title: "Neural Networks and Deep Learning",
+      subtitle: "",
+      logo_path: "_deeplearning_ai.png",
       certificate_link:
-        "https://www.coursera.org/account/accomplishments/specialization/H8CPSFXAJD2G",
+        "https://www.coursera.org/account/accomplishments/certificate/C64SUS5Y4TBT",
       alt_name: "deeplearning.ai",
       color_code: "#00000099",
     },
     {
-      title: "ML on GCP",
-      subtitle: "- GCP Training",
-      logo_path: "google_logo.png",
+      title: "Applied Text Mining in Python",
+      subtitle: "",
+      logo_path: "_michigan.png",
       certificate_link:
-        "https://www.coursera.org/account/accomplishments/specialization/EB4VJARK8647",
-      alt_name: "Google",
-      color_code: "#0C9D5899",
+        "https://www.coursera.org/account/accomplishments/certificate/UUJQA8WBWR9P",
+      alt_name: "University of Michigan",
+      color_code: "#FFFFFF",
     },
     {
-      title: "Data Science",
-      subtitle: "- Alex Aklson",
-      logo_path: "ibm_logo.png",
+      title: "Cloud Engineering",
+      subtitle: "",
+      logo_path: "_gcp.jpg",
       certificate_link:
-        "https://www.coursera.org/account/accomplishments/specialization/PLEAPCSJBZT5",
-      alt_name: "IBM",
-      color_code: "#1F70C199",
+        "https://www.coursera.org/account/accomplishments/specialization/certificate/3JAVEXSWKTNW",
+      alt_name: "Google Cloud Platform",
+      color_code: "#1D1D1D",
     },
     {
-      title: "Big Data",
-      subtitle: "- Kim Akers",
-      logo_path: "microsoft_logo.png",
+      title: "Game Theory",
+      subtitle: "",
+      logo_path: "_stanford.jpg",
       certificate_link:
-        "https://drive.google.com/file/d/164zKCFOsI4vGqokc-Qj-e_D00kLDHIrG/view",
-      alt_name: "Microsoft",
-      color_code: "#D83B0199",
+        "https://www.coursera.org/account/accomplishments/certificate/VUXWU2HPAYTB",
+      alt_name: "Stanford online",
+      color_code: "#A80532",
     },
     {
-      title: "Advanced Data Science",
-      subtitle: "- Romeo Kienzler",
-      logo_path: "ibm_logo.png",
+      title: "Data Engineering, Big Data, and Machine Learning on GCP",
+      subtitle: "",
+      logo_path: "_gcp.jpg",
       certificate_link:
-        "https://www.coursera.org/account/accomplishments/verify/BH2T9BRU87BH",
-      alt_name: "IBM",
-      color_code: "#1F70C199",
+        "https://www.coursera.org/account/accomplishments/specialization/certificate/WGXZ7E8FZZ5W",
+      alt_name: "Google Cloud Platform",
+      color_code: "#1D1D1D",
     },
     {
-      title: "Advanced ML on GCP",
-      subtitle: "- GCP Training",
-      logo_path: "google_logo.png",
+      title: "Understanding and Visualizing Data with Python",
+      subtitle: "",
+      logo_path: "_michigan.png",
       certificate_link:
-        "https://www.coursera.org/account/accomplishments/verify/5JZZM7TNQ2AV",
-      alt_name: "Google",
-      color_code: "#0C9D5899",
+        "https://www.coursera.org/account/accomplishments/certificate/TV2C7F4T9RBP",
+      alt_name: "University of Michigan",
+      color_code: "#FFFFFF",
     },
     {
-      title: "DL on Tensorflow",
-      subtitle: "- Laurence Moroney",
-      logo_path: "deeplearning_ai_logo.png",
+      title: "Introduction to Data Science in Python",
+      subtitle: "",
+      logo_path: "_michigan.png",
       certificate_link:
-        "https://www.coursera.org/account/accomplishments/verify/6T4DCUGNK8J8",
-      alt_name: "deeplearning.ai",
-      color_code: "#00000099",
+        "https://www.coursera.org/account/accomplishments/certificate/WGCKN6NDD67Z",
+      alt_name: "University of Michigan",
+      color_code: "#FFFFFF",
     },
-    {
-      title: "Fullstack Development",
-      subtitle: "- Jogesh Muppala",
-      logo_path: "coursera_logo.png",
-      certificate_link:
-        "https://www.coursera.org/account/accomplishments/certificate/NRANJA66Y2YA",
-      alt_name: "Coursera",
-      color_code: "#2A73CC",
-    },
-    {
-      title: "Kuberenetes on GCP",
-      subtitle: "- Qwiklabs",
-      logo_path: "gcp_logo.png",
-      certificate_link:
-        "https://google.qwiklabs.com/public_profiles/e4d5a92b-faf6-4679-a70b-a9047c0cd750",
-      alt_name: "GCP",
-      color_code: "#4285F499",
-    },
-    {
-      title: "Cryptography",
-      subtitle: "- Saurabh Mukhopadhyay",
-      logo_path: "nptel_logo.png",
-      certificate_link:
-        "https://drive.google.com/open?id=1z5ExD_QJVdU0slLkp8CBqSF3-C3g-ro_",
-      alt_name: "NPTEL",
-      color_code: "#FFBB0099",
-    },
-    {
-      title: "Cloud Architecture",
-      subtitle: "- Qwiklabs",
-      logo_path: "gcp_logo.png",
-      certificate_link:
-        "https://google.qwiklabs.com/public_profiles/5fab4b2d-be6f-408c-8dcb-6d3b58ecb4a2",
-      alt_name: "GCP",
-      color_code: "#4285F499",
-    },
+    
   ],
 };
 

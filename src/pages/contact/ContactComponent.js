@@ -5,15 +5,15 @@ import TopButton from "../../components/topButton/TopButton";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import Button from "../../components/button/Button";
 import BlogsImg from "./BlogsImg";
-import AddressImg from "./AddressImg";
+// import AddressImg from "./AddressImg";
 import { Fade } from "react-reveal";
 import "./ContactComponent.css";
 import { greeting, contactPageData } from "../../portfolio.js";
 
 const ContactData = contactPageData.contactSection;
 const blogSection = contactPageData.blogSection;
-const addressSection = contactPageData.addressSection;
-const phoneSection = contactPageData.phoneSection;
+// const addressSection = contactPageData.addressSection;
+// const phoneSection = contactPageData.phoneSection;
 
 class Contact extends Component {
   render() {
@@ -85,13 +85,13 @@ class Contact extends Component {
               </div>
             </div>
           </Fade>
-          <Fade bottom duration={1000} distance="40px">
+          {/* <Fade bottom duration={1000} distance="40px">
             <div className="address-heading-div">
               <div className="contact-heading-img-div">
-                {/* <img
-											src={require(`../../assests/images/${addressSection["avatar_image_path"]}`)}
-											alt=""
-										/> */}
+                //   <img
+								// 			src={require(`../../assests/images/${addressSection["avatar_image_path"]}`)}
+								// 			alt=""
+								// 		/>
                 <AddressImg theme={theme} />
               </div>
               <div className="address-heading-text-div">
@@ -129,7 +129,7 @@ class Contact extends Component {
                 </div>
               </div>
             </div>
-          </Fade>
+          </Fade> */}
         </div>
         <Footer theme={this.props.theme} onToggle={this.props.onToggle} />
         <TopButton theme={this.props.theme} />

@@ -15,6 +15,20 @@ function GetSkillSvg(props) {
     return <FullStackImg theme={props.theme} />;
   else if (props.fileName === "CloudInfraImg")
     return <CloudInfraImg theme={props.theme} />;
+  else if (props.fileName === "StudentImg")
+    return (
+      <img
+        alt="aju student"
+        src={require("../../assests/images/student.svg")}
+      ></img>
+    );
+  else if (props.fileName === "HobbiesImg")
+    return (
+      <img
+        alt="aju student"
+        src={require("../../assests/images/hobbies.svg")}
+      ></img>
+    );
   return <DesignImg theme={props.theme} />;
 }
 

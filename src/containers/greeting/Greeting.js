@@ -1,28 +1,33 @@
 import React from "react";
 import "./Greeting.css";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
-import Button from "../../components/button/Button";
+// import Button from "../../components/button/Button";
 import { greeting } from "../../portfolio";
 import { Fade } from "react-reveal";
-import FeelingProud from "./FeelingProud";
+// import FeelingProud from "./FeelingProud";
 
-var example = ['Data Scientist', 'Artist', 'Traveller', 'Gamer', 'Photographer', 'Musician'];
+var example = [
+  "Data Scientist",
+  "Traveller",
+  "Gamer",
+  "Photographer",
+  "Musician",
+];
+// var example = ['Data Scientist 🧑🏽‍💻', 'Artist 👨🏽‍🎨', 'Traveller 🚵🏽‍♂️', 'Gamer 👾', 'Photographer 📸', 'Musician 🎸'];
+// var example = ['🧑🏽‍💻', '👨🏽‍🎨', '🧎🏽‍♂️', '👾', '📸', '🎸'];
 textSequence(0);
 function textSequence(i) {
-    if (example.length > i) {
-        setTimeout(function() {
-            try {
-              document.getElementById("sequence").innerHTML = example[i];
-            }
-            catch {
-              
-            }
-            textSequence(++i);
-        }, 1000); // 1 second (in milliseconds)
-
-    } else if (example.length == i) { // Loop
-        textSequence(0);
-    }
+  if (example.length > i) {
+    setTimeout(function () {
+      try {
+        document.getElementById("sequence").innerHTML = example[i];
+      } catch {}
+      textSequence(++i);
+    }, 1000); // 1 second (in milliseconds)
+  } else if (example.length === i) {
+    // Loop
+    textSequence(0);
+  }
 }
 
 export default function Greeting(props) {
@@ -34,9 +39,16 @@ export default function Greeting(props) {
           <div className="greeting-text-div">
             <div>
               <p className="greeting-text" style={{ color: theme.text }}>
-                Hi, I am a <span style={{ color: "#e80000" }} id="sequence">Data Scientist</span>.
+                Hi, I am a{" "}
+                <span style={{ color: "#e80000" }} id="sequence">
+                  Data Scientist
+                </span>
+                .
               </p>
-              <p className="greeting-text-p subTitle" style={{ color: theme.secondaryText }}              >
+              <p
+                className="greeting-text-p subTitle"
+                style={{ color: theme.secondaryText }}
+              >
                 {greeting.subTitle}
               </p>
               <SocialMedia theme={theme} />
@@ -56,11 +68,11 @@ export default function Greeting(props) {
             </div>
           </div>
           <div className="greeting-image-div">
-            {/* <img
-							alt="saad sitting on table"
-							src={require("../../assests/images/feelingProud.svg")}
-						></img> */}
-            <FeelingProud theme={theme} />
+            <img
+              alt="aju multitasking"
+              src={require("../../assests/images/multitasking.svg")}
+            ></img>
+            {/* <FeelingProud theme={theme} /> */}
           </div>
         </div>
       </div>

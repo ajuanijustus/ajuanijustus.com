@@ -49,7 +49,7 @@ class Header extends Component {
                   Home
                 </NavLink>
               </li>
-              <li>
+              {/* <li>
                 <NavLink
                   to="/education"
                   tag={Link}
@@ -84,10 +84,10 @@ class Header extends Component {
                 >
                   Hobbies
                 </NavLink>
-              </li>
+              </li> */}
               <li>
                 <NavLink
-                  to="/coming-soon"
+                  to="/contact"
                   tag={Link}
                   activeStyle={{ fontWeight: "bold" }}
                   style={{ color: theme.text }}

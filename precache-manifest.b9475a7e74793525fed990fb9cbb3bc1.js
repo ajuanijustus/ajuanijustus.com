@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6b1e22048879a6c2d9dc241908a4c368",
+    "revision": "17309f523464b82eda4201d7d207517d",
     "url": "./index.html"
   },
   {
-    "revision": "7f99ab8cb13f10ef5530",
-    "url": "./static/css/main.19e71f25.chunk.css"
+    "revision": "a143af6e9a315146c271",
+    "url": "./static/css/main.ac31dcfb.chunk.css"
   },
   {
-    "revision": "c3146951680d02db77a8",
-    "url": "./static/js/2.80cd0664.chunk.js"
+    "revision": "954b96778afa871dee7c",
+    "url": "./static/js/2.b4988a73.chunk.js"
   },
   {
-    "revision": "7f99ab8cb13f10ef5530",
-    "url": "./static/js/main.ea786b17.chunk.js"
+    "revision": "a143af6e9a315146c271",
+    "url": "./static/js/main.5cba4e5c.chunk.js"
   },
   {
     "revision": "1d0eea201b1978fb0eaa",
@@ -74,10 +74,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "3b021f8ffcf9f323ea72abc28382e234",
     "url": "./static/media/address_image.3b021f8f.svg"
-  },
-  {
-    "revision": "6c8410d0dc11fec239040695be13315d",
-    "url": "./static/media/animated_ashutosh.6c8410d0.png"
   },
   {
     "revision": "52e0714e5ea7e3b96f50dbfb62de21d1",
@@ -208,6 +204,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/media/googleAssistant.c24ba791.svg"
   },
   {
+    "revision": "1e2848ddb12d91f29393fd69bda5a2b0",
+    "url": "./static/media/hobbies.1e2848dd.svg"
+  },
+  {
     "revision": "29152cf756a1facead5393c32e373371",
     "url": "./static/media/intel_logo.29152cf7.jpg"
   },
@@ -220,6 +220,18 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/media/legato_logo.4ba886ba.png"
   },
   {
+    "revision": "32755f13a057d7e2bc18d8495474a404",
+    "url": "./static/media/linkedin_dp_overlay_round.32755f13.png"
+  },
+  {
+    "revision": "dac1ef79bc5c24e3c6e608ea60a30ffa",
+    "url": "./static/media/linkedin_dp_overlay_round_repos.dac1ef79.png"
+  },
+  {
+    "revision": "b8de9345acb87527c6b0f10c35bcd16b",
+    "url": "./static/media/linkedin_dp_psd9.b8de9345.jpg"
+  },
+  {
     "revision": "52be31441c8cf8a8a16bd7a228d428bf",
     "url": "./static/media/manOnTable.52be3144.svg"
   },
@@ -228,8 +240,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/media/muffito_logo.db6c1c0d.png"
   },
   {
-    "revision": "6e7dc5ad476dd2d57600bca9521f3a5d",
-    "url": "./static/media/portfolio.6e7dc5ad.gif"
+    "revision": "3f47dfbce4ffeaf82c777d90d57c5272",
+    "url": "./static/media/multitasking.3f47dfbc.svg"
   },
   {
     "revision": "c1a95f7335cbfb730b937e19e8830a53",
@@ -242,6 +254,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "bd5f4148a754968cb4444206539c565c",
     "url": "./static/media/pwa.bd5f4148.png"
+  },
+  {
+    "revision": "3c32edf15a117b4727802169e5a26fb7",
+    "url": "./static/media/student.3c32edf1.svg"
   },
   {
     "revision": "0288c5ec7a87ea73f8d14b12fc4bc94e",

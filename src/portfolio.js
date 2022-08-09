@@ -77,6 +77,12 @@ const socialMediaLinks = [
     fontAwesomeIcon: "fa-goodreads", // Reference https://fontawesome.com/icons/instagram?style=brands
     backgroundColor: "#181717", // E4405F Reference https://simpleicons.org/?q=instagram
   },
+  {
+    name: "Twitch",
+    link: "https://www.twitch.tv/ajewdor",
+    fontAwesomeIcon: "fa-twitch", // Reference https://fontawesome.com/icons/instagram?style=brands
+    backgroundColor: "#181717", // E4405F Reference https://simpleicons.org/?q=instagram
+  },
 ];
 
 const skills = {

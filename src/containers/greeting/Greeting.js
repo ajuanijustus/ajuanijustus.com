@@ -12,7 +12,6 @@ var example = [
   "Gamer",
   "Photographer",
   "Musician",
-  "Artist",
 ];
 // var example = ['Data Scientist 🧑🏽‍💻', 'Artist 👨🏽‍🎨', 'Traveller 🚵🏽‍♂️', 'Gamer 👾', 'Photographer 📸', 'Musician 🎸'];
 // var example = ['🧑🏽‍💻', '👨🏽‍🎨', '🧎🏽‍♂️', '👾', '📸', '🎸'];

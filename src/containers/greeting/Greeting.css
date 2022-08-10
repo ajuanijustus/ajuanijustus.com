@@ -32,7 +32,8 @@
 
 .greeting-text {
   margin-top: 80px;
-  font-size: 80px;
+  font-size: 65px;
+  min-height: 150px;
   line-height: 1.1;
   font-family: "Montserrat";
   font-weight: normal;
@@ -60,6 +61,7 @@
 @media (max-width: 1380px) {
   .greeting-text {
     font-size: 40px;
+    min-height: 100px;
     margin-bottom: 10px;
   }
   .greeting-text-p {
@@ -73,6 +75,7 @@
   }
   .greeting-text {
     font-size: 30px;
+    min-height: 70px;
     margin-top: 0px;
     text-align: center;
   }

@@ -39,7 +39,7 @@ export default function Greeting(props) {
           <div className="greeting-text-div">
             <div>
               <p className="greeting-text" style={{ color: theme.text }}>
-                Hi, I am a{" "}
+                Hi, I am a <br />
                 <span style={{ color: "#e80000" }} id="sequence">
                   Data Scientist
                 </span>

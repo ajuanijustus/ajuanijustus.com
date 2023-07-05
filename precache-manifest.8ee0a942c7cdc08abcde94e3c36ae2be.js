@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0d83fcc131e7fd763b8cd5f893a254ce",
+    "revision": "8696dab10a370952023079ef2e02518e",
     "url": "./index.html"
   },
   {
-    "revision": "a9d0b774364b9aedc293",
-    "url": "./static/css/main.bd21603d.chunk.css"
+    "revision": "669612c7aac6fad58686",
+    "url": "./static/css/main.ace58cc0.chunk.css"
   },
   {
-    "revision": "954b96778afa871dee7c",
-    "url": "./static/js/2.b4988a73.chunk.js"
+    "revision": "7f51315b11ab53475b2c",
+    "url": "./static/js/2.9594f8c7.chunk.js"
   },
   {
-    "revision": "a9d0b774364b9aedc293",
-    "url": "./static/js/main.e1876b72.chunk.js"
+    "revision": "669612c7aac6fad58686",
+    "url": "./static/js/main.81bf1ac8.chunk.js"
   },
   {
     "revision": "1d0eea201b1978fb0eaa",
@@ -64,18 +64,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/media/_gcp0.377b79de.jpg"
   },
   {
-    "revision": "a2ce2560374a5fa65abf6a2365c1111c",
-    "url": "./static/media/_stanford.a2ce2560.jpg"
-  },
-  {
-    "revision": "c8a92757b80b180eedb7429d5197b46a",
-    "url": "./static/media/_udemy.c8a92757.jpg"
-  },
-  {
-    "revision": "3b021f8ffcf9f323ea72abc28382e234",
-    "url": "./static/media/address_image.3b021f8f.svg"
-  },
-  {
     "revision": "52e0714e5ea7e3b96f50dbfb62de21d1",
     "url": "./static/media/animated_logo.52e0714e.svg"
   },
@@ -84,40 +72,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/media/blogs_image.b6b12c7d.svg"
   },
   {
-    "revision": "13fcbd3df7507d3d7450169fb03757f5",
-    "url": "./static/media/cet_emblem.13fcbd3d.png"
-  },
-  {
-    "revision": "96233e4daacbbad18f905d980c31e0c2",
-    "url": "./static/media/cet_emblem.96233e4d.jpg"
-  },
-  {
-    "revision": "dfcb7a585547c0b125d208b980d6f57f",
-    "url": "./static/media/cloud_infrastructure.dfcb7a58.svg"
-  },
-  {
-    "revision": "b3685be8bafcd5fe4786b39cba69a561",
-    "url": "./static/media/codeInLogo.b3685be8.png"
-  },
-  {
-    "revision": "d6d4086fb1cade58b3f786620e17c3ef",
-    "url": "./static/media/contactMail.d6d4086f.png"
-  },
-  {
     "revision": "434d2b012c3efc3da1ef90549a50f46b",
     "url": "./static/media/data_science.434d2b01.svg"
   },
   {
     "revision": "59389695208d7454c6607bed51ed4316",
     "url": "./static/media/developerActivity.59389695.svg"
-  },
-  {
-    "revision": "f65ee6f64b46db0ae0f59279ea7853a8",
-    "url": "./static/media/dsc_logo.f65ee6f6.png"
-  },
-  {
-    "revision": "caed892b2a0b817a8e275ae29638edaf",
-    "url": "./static/media/education.caed892b.svg"
   },
   {
     "revision": "85d6957f6a0d678d1ac3932e5be4fcb2",
@@ -208,18 +168,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/media/hobbies.1e2848dd.svg"
   },
   {
-    "revision": "29152cf756a1facead5393c32e373371",
-    "url": "./static/media/intel_logo.29152cf7.jpg"
-  },
-  {
-    "revision": "b05ae5b575a7e1125610944dc152c35f",
-    "url": "./static/media/jsFramework.b05ae5b5.svg"
-  },
-  {
-    "revision": "4ba886bafb9ff0a5b71b800c47f45d90",
-    "url": "./static/media/legato_logo.4ba886ba.png"
-  },
-  {
     "revision": "32755f13a057d7e2bc18d8495474a404",
     "url": "./static/media/linkedin_dp_overlay_round.32755f13.png"
   },
@@ -236,10 +184,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/media/manOnTable.52be3144.svg"
   },
   {
-    "revision": "db6c1c0dddd4c868e00a3cffa1078e49",
-    "url": "./static/media/muffito_logo.db6c1c0d.png"
-  },
-  {
     "revision": "3f47dfbce4ffeaf82c777d90d57c5272",
     "url": "./static/media/multitasking.3f47dfbc.svg"
   },
@@ -252,23 +196,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/media/projects_image.f7964c6b.svg"
   },
   {
-    "revision": "bd5f4148a754968cb4444206539c565c",
-    "url": "./static/media/pwa.bd5f4148.png"
-  },
-  {
     "revision": "3c32edf15a117b4727802169e5a26fb7",
     "url": "./static/media/student.3c32edf1.svg"
-  },
-  {
-    "revision": "0288c5ec7a87ea73f8d14b12fc4bc94e",
-    "url": "./static/media/talksCardBack.0288c5ec.svg"
-  },
-  {
-    "revision": "b48e86c9a956d3a3a32ca4a5ae05ddc7",
-    "url": "./static/media/talksCardBackAlt.b48e86c9.svg"
-  },
-  {
-    "revision": "67a6a11c47edafb87cf24da66afe3dca",
-    "url": "./static/media/ui_ux_design.67a6a11c.svg"
   }
 ]);

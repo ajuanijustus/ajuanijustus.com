@@ -1,50 +1,26 @@
 import React, { Component } from "react";
-import { Route, Switch, HashRouter } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom"; // Swapped Switch for Routes
 import Home from "../pages/home/HomeComponent";
 import Splash from "../pages/splash/Splash";
 import Contact from "../pages/contact/ContactComponent";
-import ComingSoon from "../pages/comingsoon/ComingSoon";
 import { settings } from "../portfolio.js";
 
 export default class Main extends Component {
   render() {
     const theme = this.props.theme;
     console.log(theme);
+
     if (settings.isSplash) {
       return (
         <div>
           <HashRouter basename="/">
-            <Switch>
-              <Route
-                path="/"
-                exact
-                render={(props) => (
-                  <Splash {...props} theme={this.props.theme} />
-                )}
-              />
-              <Route
-                path="/home"
-                render={(props) => <Home {...props} theme={this.props.theme} />}
-              />
-              <Route
-                path="/contact"
-                render={(props) => (
-                  <Contact {...props} theme={this.props.theme} />
-                )}
-              />
-              <Route
-                path="/splash"
-                render={(props) => (
-                  <Splash {...props} theme={this.props.theme} />
-                )}
-              />
-              <Route
-                path="/coming-soon"
-                render={(props) => (
-                  <ComingSoon {...props} theme={this.props.theme} />
-                )}
-              />
-            </Switch>
+            <Routes>
+              {/* Changed 'render' functions to 'element' layout blocks and removed 'exact' */}
+              <Route path="/" element={<Splash theme={theme} />} />
+              <Route path="/home" element={<Home theme={theme} />} />
+              <Route path="/contact" element={<Contact theme={theme} />} />
+              <Route path="/splash" element={<Splash theme={theme} />} />
+            </Routes>
           </HashRouter>
         </div>
       );
@@ -52,29 +28,11 @@ export default class Main extends Component {
       return (
         <div>
           <HashRouter basename="/">
-            <Switch>
-              <Route
-                path="/"
-                exact
-                render={(props) => <Home {...props} theme={this.props.theme} />}
-              />
-              <Route
-                path="/home"
-                render={(props) => <Home {...props} theme={this.props.theme} />}
-              />
-              <Route
-                path="/contact"
-                render={(props) => (
-                  <Contact {...props} theme={this.props.theme} />
-                )}
-              />
-              <Route
-                path="/coming-soon"
-                render={(props) => (
-                  <ComingSoon {...props} theme={this.props.theme} />
-                )}
-              />
-            </Switch>
+            <Routes>
+              <Route path="/" element={<Home theme={theme} />} />
+              <Route path="/home" element={<Home theme={theme} />} />
+              <Route path="/contact" element={<Contact theme={theme} />} />
+            </Routes>
           </HashRouter>
         </div>
       );

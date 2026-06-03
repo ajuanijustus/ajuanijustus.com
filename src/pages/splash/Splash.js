@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import "./Splash.css";
-import { Redirect } from "react-router-dom";
+import { Navigate } from "react-router-dom"; // Swapped Redirect for Navigate
 import LoaderLogo from "../../components/Loader/LoaderLogo.js";
 
 function AnimatedSplash(props) {
@@ -13,29 +13,24 @@ function AnimatedSplash(props) {
   );
 }
 
-class Splash extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      redirect: false,
-    };
-  }
+function Splash(props) {
+  // 1. Replaced this.state with a simple state hook
+  const [redirect, setRedirect] = useState(false);
 
-  componentDidMount() {
-    this.id = setTimeout(() => this.setState({ redirect: true }), 2000);
-  }
+  // 2. Handled the 2-second timer and the cleanup inside a hook
+  useEffect(() => {
+    const timerId = setTimeout(() => setRedirect(true), 2000);
 
-  componentWillMount() {
-    clearTimeout(this.id);
-  }
+    // This clean-up function automatically clears the timer if the user leaves early
+    return () => clearTimeout(timerId);
+  }, []);
 
-  render() {
-    return this.state.redirect ? (
-      <Redirect to="/home" />
-    ) : (
-      <AnimatedSplash theme={this.props.theme} />
-    );
-  }
+  // 3. Render modern Navigate component instead of Redirect
+  return redirect ? (
+    <Navigate to="/home" replace />
+  ) : (
+    <AnimatedSplash theme={props.theme} />
+  );
 }
 
 export default Splash;

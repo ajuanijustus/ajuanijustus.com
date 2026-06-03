@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.css";
-import { Fade } from "react-reveal";
+import { Fade } from 'react-awesome-reveal';
 // import ToggleSwitch from "./ToggleSwitch.js";
 /* eslint-disable jsx-a11y/accessible-emoji */
 

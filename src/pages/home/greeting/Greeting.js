@@ -1,9 +1,9 @@
 import React from "react";
 import "./Greeting.css";
-import SocialMedia from "../../components/socialMedia/SocialMedia";
-import { greeting } from "../../portfolio";
+import SocialMedia from "../../../components/socialMedia/SocialMedia";
+import { greeting } from "../../../config/portfolio";
 import { Fade } from 'react-awesome-reveal';
-import multitaskingSvg from "../../assests/images/multitasking.svg";
+import multitaskingSvg from "../../../assets/images/multitasking.svg";
 
 var example = [
   "Data Scientist",

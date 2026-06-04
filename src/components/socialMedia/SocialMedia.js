@@ -1,6 +1,6 @@
 import React from "react";
 import "./SocialMedia.css";
-import { socialMediaLinks } from "../../portfolio";
+import { socialMediaLinks } from "../../config/portfolio";
 import styled from "styled-components";
 
 const IconWrapper = styled.span`

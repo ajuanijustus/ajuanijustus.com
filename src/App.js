@@ -7,8 +7,12 @@ import { settings } from "./config/portfolio.js";
 
 // Page Components
 import Home from "./pages/home/HomeComponent";
-import Splash from "./pages/splash/Splash";
 import Contact from "./pages/contact/ContactComponent";
+
+import LegacyHome from "./pages/legacy_home/HomeComponent.js";
+import LegacyContact from "./pages/legacy_contact/ContactComponent";
+
+import Splash from "./pages/splash/Splash";
 
 function App() {
   return (
@@ -27,6 +31,11 @@ function App() {
             {/* Standard Pages */}
             <Route path="/home" element={<Home theme={chosenTheme} />} />
             <Route path="/contact" element={<Contact theme={chosenTheme} />} />
+
+            {/* Legacy Pages */}
+            <Route path="/legacy/" element={<LegacyHome theme={chosenTheme} />} />
+            <Route path="/legacy/home" element={<LegacyHome theme={chosenTheme} />} />
+            <Route path="/legacy/contact" element={<LegacyContact theme={chosenTheme} />} />
             
             {/* Dedicated Splash Page (only if enabled) */}
             {settings.isSplash && (

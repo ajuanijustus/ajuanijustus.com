@@ -4,7 +4,7 @@
 }
 
 .skills-header {
-  font-size: 60px;
+  font-size: 50px;
   line-height: normal;
   font-family: "Montserrat";
   text-align: center;
@@ -30,6 +30,13 @@
   margin-top: 100px;
 }
 
+/* Fix to ensure the inner SVG/Image matches parent constraints smoothly */
+.skills-image-div img,
+.skills-image-div svg {
+  max-width: 100%;
+  height: auto;
+}
+
 .skills-heading {
   font-size: 56px;
   font-weight: thin;
@@ -43,19 +50,17 @@
     font-size: 30px;
   }
   .skills-header {
-    font-size: 40;
+    font-size: 30px;
   }
-  /* .skills-image-div > img {
-    margin-top: 0px;
-  } */
 }
+
 @media (max-width: 768px) {
   .skills-heading {
     font-size: 30px;
     text-align: center;
   }
   .skills-header {
-    font-size: 30px;
+    font-size: 20px;
   }
   .greeting-text-p {
     font-size: 16px;
@@ -76,7 +81,6 @@
     text-align: center;
   }
   .skills-image-div {
-    /* display: none; */
     order: 2;
   }
   .skills-image-div > * {

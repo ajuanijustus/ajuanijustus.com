@@ -22,3 +22,5 @@ Guide for myself since I'm gonna be just as lost, if not more when I look at thi
 
 git commit -m "stable updated baseline before research pivot restructuring"  --no-verify 
 ^to skip commit hooks
+
+for development/testing: npm start from terminal

@@ -26,11 +26,9 @@ class Header extends Component {
         <div>
           <header className="header">
             <NavLink to={link} tag={Link} className="logo">
-              {/* <span style={{ color: theme.text }}> &lt;</span> */}
               <span className="logo-name" style={{ color: theme.text }}>
                 {greeting.logo_name}
               </span>
-              {/* <span style={{ color: theme.text }}>/&gt;</span> */}
             </NavLink>
             <input className="menu-btn" type="checkbox" id="menu-btn" />
             <label className="menu-icon" htmlFor="menu-btn">
@@ -49,42 +47,6 @@ class Header extends Component {
                   Home
                 </NavLink>
               </li>
-              {/* <li>
-                <NavLink
-                  to="/education"
-                  tag={Link}
-                  activeStyle={{ fontWeight: "bold" }}
-                  style={{ color: theme.text }}
-                  onMouseEnter={(event) => onMouseEnter(event, theme.highlight)}
-                  onMouseOut={(event) => onMouseOut(event)}
-                >
-                  Education
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/coming-soon"
-                  tag={Link}
-                  activeStyle={{ fontWeight: "bold" }}
-                  style={{ color: theme.text }}
-                  onMouseEnter={(event) => onMouseEnter(event, theme.highlight)}
-                  onMouseOut={(event) => onMouseOut(event)}
-                >
-                  Experience
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/coming-soon"
-                  tag={Link}
-                  activeStyle={{ fontWeight: "bold" }}
-                  style={{ color: theme.text }}
-                  onMouseEnter={(event) => onMouseEnter(event, theme.highlight)}
-                  onMouseOut={(event) => onMouseOut(event)}
-                >
-                  Hobbies
-                </NavLink>
-              </li> */}
               <li>
                 <NavLink
                   to="/contact"
@@ -97,23 +59,6 @@ class Header extends Component {
                   Contact Me
                 </NavLink>
               </li>
-              {/* <li class="dropdown">
-                <NavLink
-                  to="/contact"
-                  tag={Link}
-                  activeStyle={{ fontWeight: "bold" }}
-                  style={{ color: theme.text }}
-                  onMouseEnter={(event) => onMouseEnter(event, theme.highlight)}
-                  onMouseOut={(event) => onMouseOut(event)}
-                >
-                    Drop down
-                    <div class="dropdown-content" style={{ color: theme.text }}>
-                      <div>Link 1</div>
-                      <div>Link 2</div>
-                      <div>Link 3</div>
-                    </div>
-                </NavLink>
-              </li> */}
             </ul>
           </header>
         </div>

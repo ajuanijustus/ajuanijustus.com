@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Header from "../../components/header/Header";
+import Header from "../../components/legacy_header/Header";
 import Footer from "../../components/footer/Footer";
 import TopButton from "../../components/topButton/TopButton";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
@@ -12,14 +12,14 @@ import { greeting, contactPageData } from "../../config/portfolio.js";
 const ContactData = contactPageData.contactSection;
 const blogSection = contactPageData.blogSection;
 
-class Contact extends Component {
+class LegacyContact extends Component {
   render() {
     const theme = this.props.theme;
     return (
       <div className="contact-main">
         <Header theme={theme} />
         <div className="basic-contact">
-          <Fade direction="up" duration={1000} distance="40px">
+          <Fade direction="right" duration={1000} distance="40px">
             <div className="contact-heading-div">
               <div className="contact-heading-img-div">
                 <img
@@ -52,7 +52,7 @@ class Contact extends Component {
               </div>
             </div>
           </Fade>
-          <Fade direction="up" duration={1000} distance="40px">
+          <Fade direction="left" duration={1000} distance="40px">
             <div className="blog-heading-div">
               <div className="blog-heading-text-div">
                 <h1 className="blog-heading-text" style={{ color: theme.text }}>
@@ -135,4 +135,4 @@ class Contact extends Component {
   }
 }
 
-export default Contact;
+export default LegacyContact;

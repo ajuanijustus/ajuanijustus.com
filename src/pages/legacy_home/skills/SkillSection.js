@@ -33,31 +33,27 @@ class SkillSection extends Component {
         {skills.data.map((skill, index) => {
           return (
             <div className="skills-main-div" key={index}>
-              {/* Image is on the left, so it should slide rightward into place */}
-              <Fade direction="right" duration={2000}>
-                <div className="skills-image-div">
-                  <GetSkillSvg fileName={skill.fileName} theme={theme} />
-                </div>
-              </Fade>
               
-              <div className="skills-text-div">
-                {/* Text is on the right, so it should slide leftward into place */}
-                <Fade direction="left" duration={1000}>
-                  <h1 className="skills-heading" style={{ color: theme.text }}>
-                    {skill.title}
-                  </h1>
-                </Fade>
-                
-                {/* Wrapped in a div so custom component doesn't drop the animation styles */}
-                <Fade direction="left" duration={1500}>
+              {/* Image Column: Keeps layout stable, contents animate */}
+              <div className="skills-image-div">
+                <Fade direction="left" duration={2000} triggerOnce>
                   <div>
-                    <SoftwareSkill logos={skill.softwareSkills} />
+                    <GetSkillSvg fileName={skill.fileName} theme={theme} />
                   </div>
                 </Fade>
-                
-                {/* Wrapped in a div so the mapping array animates cleanly as a single block */}
-                <Fade direction="left" duration={2000}>
-                  <div>
+              </div>
+              
+              {/* Text Column: Keeps layout stable, contents animate */}
+              <div className="skills-text-div">
+                <Fade direction="right" duration={1500} triggerOnce>
+                  {/* Single block wrapper ensures width never collapses to 0px */}
+                  <div style={{ width: "100%" }}>
+                    <h1 className="skills-heading" style={{ color: theme.text }}>
+                      {skill.title}
+                    </h1>
+                    
+                    <SoftwareSkill logos={skill.softwareSkills} />
+                    
                     {skill.skills.map((skillSentence, sIndex) => {
                       return (
                         <p
@@ -72,6 +68,7 @@ class SkillSection extends Component {
                   </div>
                 </Fade>
               </div>
+
             </div>
           );
         })}

@@ -1,5 +1,3 @@
-/* Change this file to get your personal Porfolio */
-
 // Website related settings
 const settings = {
   isSplash: true, // Change this to false if you don't want Splash screen.
@@ -18,12 +16,57 @@ const seo = {
 };
 
 //Home Page
-const greeting = {
+const greetingLegacy = {
   title: "Aju Ani Justus",
   logo_name: "AjuAniJustus",
   subTitle: "Let all that you do be done in love.",
   resumeLink:
     'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/e466b454-9889-46a6-8c21-b9d12cfc5cfd/Aju_Ani_Justus.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220809%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220809T221327Z&X-Amz-Expires=86400&X-Amz-Signature=92570224b0d66cf08be60a59dcb5ac58d362412d6a49399e5afbdca0394d1556&X-Amz-SignedHeaders=host&response-content-disposition=filename %3D"Aju%2520Ani%2520Justus.pdf"&x-id=GetObject',
+  portfolio_repository: "",
+};
+
+const greeting = {
+  title: "Aju Ani Justus",
+  logo_name: "AjuAniJustus",
+  subTitle: "Doctoral Researcher, University of Birmingham",
+  
+  // Status Banner for visibility
+  statusBanner: "🚀 Open to research internships from July 2026 onwards in Multi-Agent Systems, Reinforcement Learning, Cooperative AI, and Human-AI Teaming.",
+  
+  email: "mailme@ajuanijustus.com",
+  resumeLink: "https://ajuanijustus.com", // Replace with your direct up-to-date resume link
+  googleScholar: "#", // Add your Google Scholar URL here
+  
+  // Professional tracking descriptors for the inline typing animation
+  sequenceStrings: [
+    "Doctoral Researcher",
+    "Reinforcement Learning Scientist",
+    "Science Communicator",
+    "Machine Learning Engineer"
+  ],
+  
+  // Academic Profile Copy
+  phdInfo: "I am a third-year PhD candidate at the University of Birmingham studying Heterogeneous-Agent Reinforcement Learning (HARL), Agent Communication, and Human-Agent Teaming.",
+  coreQuestion: "How can communication in HARL be modeled as a distinct, learnable process aimed at grounding shared beliefs and establishing common ground, rather than as an auxiliary component of an action policy?",
+  
+  advisors: [
+    { name: "Chris Baber", link: "#" },
+    { name: "Leonardo Stella", link: "#" }
+  ],
+  
+  bioPast: "Before starting my PhD, I spent 3 years as a Machine Learning Engineer at Accenture Applied Intelligence, where I developed and deployed cloud-native enterprise AI and demand forecasting solutions.",
+  bioCombined: "My background uniquely combines foundational research on multi-agent coordination frameworks with industry-tested experience engineering scalable, real-world intelligent systems.",
+  
+  // Added updates: AFHEA and Pint of Science engagement
+  outreachAndTeaching: "I am deeply passionate about science communication and education. Beyond my research, I serve as an Event Manager for the Pint of Science Team at Birmingham (2026–Present) to make complex concepts publicly accessible, and I hold an Associate Fellow of the Higher Education Academy (AFHEA, certified June 2026) designation recognition for my instructional contributions.",
+
+  researchInterests: [
+    "Heterogeneous-Agent Reinforcement Learning (HARL)",
+    "Grounded Communication Policies & Common Ground Construction",
+    "Human-Agent Teaming, Human Proxy Design & Cooperative AI",
+    "Human-in-the-Loop Reinforcement Learning"
+  ],
+  
   portfolio_repository: "",
 };
 
@@ -53,12 +96,6 @@ const socialMediaLinks = [
     fontAwesomeIcon: "fa-twitter", // Reference https://fontawesome.com/icons/twitter?style=brands
     backgroundColor: "#181717", // 1DA1F2 Reference https://simpleicons.org/?q=twitter
   },
-  // {
-  //   name: "Facebook",
-  //   link: "",
-  //   fontAwesomeIcon: "fa-facebook-f", // Reference https://fontawesome.com/icons/facebook-f?style=brands
-  //   backgroundColor: "#181717", // 1877F2  https://simpleicons.org/?q=facebook
-  // },
   {
     name: "Instagram",
     link: "https://www.instagram.com/ajuanijustus/",
@@ -465,10 +502,79 @@ const contactPageData = {
   },
 };
 
+// --- Academic Research News ---
+const news = [
+  {
+    date: "June 2026",
+    text: "Received the Excellent Student Award for outstanding contributions to deep reinforcement learning research.",
+    link: ""
+  },
+  {
+    date: "May 2026",
+    text: "Our new preprint 'Sample-Efficient Offline Reinforcement Learning via Structured State-Space Dynamics' is out on arXiv!",
+    link: "https://arxiv.org"
+  },
+  {
+    date: "January 2026",
+    text: "Began serving as a reviewer for NeurIPS 2026 and ICML 2026 reinforcement learning tracks.",
+    link: ""
+  },
+  {
+    date: "September 2025",
+    text: "Gave an invited talk on 'Bridging the Gap: From Corporate Predictive Pipelines to Safe Exploration in RL' at a regional machine learning group.",
+    link: ""
+  }
+];
+
+// --- Selected Research Publications ---
+const publications = [
+  {
+    venue: "NeurIPS 2026",
+    title: "Provably Bounds on Convergence for Constrained Actor-Critic Methods under Non-Stationary Reward Trajectories",
+    authors: "Aju Ani Justus, Leonard H., and Amos S.",
+    fullVenue: "Thirty-Eighth Conference on Neural Information Processing Systems (NeurIPS), 2026",
+    links: {
+      pdf: "https://arxiv.org",
+      code: "https://github.com/ajuanijustus",
+      bibtex: "#",
+      website: ""
+    }
+  },
+  {
+    venue: "ICML 2026",
+    title: "Robust Generalization in Offline MARL via Multi-Agent Reward Decoupling Constraints",
+    authors: "Aju Ani Justus and David Abel",
+    fullVenue: "International Conference on Machine Learning (ICML), 2026 (Oral Presentation)",
+    links: {
+      pdf: "https://arxiv.org",
+      code: "",
+      bibtex: "#",
+      website: "https://ajuanijustus.com"
+    }
+  }
+];
+
+// --- Teaching Assistantships & Commitments ---
+const teaching = [
+  {
+    role: "Graduate Teaching Assistant",
+    course: "Advanced Machine Learning & Deep Learning (CS-781)",
+    institution: "University of Birmingham",
+    duration: "Autumn 2025 - Present"
+  },
+  {
+    role: "Head Course Instructor",
+    course: "Foundations of Python & Time-Series Analysis Workshops",
+    institution: "Accenture AI Inner-Source Training Platform",
+    duration: "2021 - 2022"
+  }
+];
+
 export {
   settings,
   seo,
   greeting,
+  greetingLegacy,
   socialMediaLinks,
   skills,
   competitiveSites,
@@ -477,4 +583,7 @@ export {
   experience,
   projectsHeader,
   contactPageData,
+  news,
+  publications,
+  teaching,
 };

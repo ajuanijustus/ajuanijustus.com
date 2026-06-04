@@ -7,7 +7,7 @@ import Button from "../../components/button/Button";
 import BlogsImg from "./BlogsImg";
 import { Fade } from 'react-awesome-reveal';
 import "./ContactComponent.css";
-import { greeting, contactPageData } from "../../portfolio.js";
+import { greeting, contactPageData } from "../../config/portfolio.js";
 
 const ContactData = contactPageData.contactSection;
 const blogSection = contactPageData.blogSection;
@@ -19,11 +19,11 @@ class Contact extends Component {
       <div className="contact-main">
         <Header theme={theme} />
         <div className="basic-contact">
-          <Fade bottom duration={1000} distance="40px">
+          <Fade direction="up" duration={1000} distance="40px">
             <div className="contact-heading-div">
               <div className="contact-heading-img-div">
                 <img
-                  src={require(`../../assests/images/${ContactData["profile_image_path"]}`)}
+                  src={require(`../../assets/images/${ContactData["profile_image_path"]}`)}
                   alt=""
                 />
               </div>
@@ -52,7 +52,7 @@ class Contact extends Component {
               </div>
             </div>
           </Fade>
-          <Fade bottom duration={1000} distance="40px">
+          <Fade direction="up" duration={1000} distance="40px">
             <div className="blog-heading-div">
               <div className="blog-heading-text-div">
                 <h1 className="blog-heading-text" style={{ color: theme.text }}>
@@ -75,7 +75,7 @@ class Contact extends Component {
               </div>
               <div className="blog-heading-img-div">
                 {/* <img
-											src={require(`../../assests/images/${blogSection["avatar_image_path"]}`)}
+											src={require(`../../assets/images/${blogSection["avatar_image_path"]}`)}
 											alt=""
 										/> */}
                 <BlogsImg theme={theme} />
@@ -86,7 +86,7 @@ class Contact extends Component {
             <div className="address-heading-div">
               <div className="contact-heading-img-div">
                 //   <img
-								// 			src={require(`../../assests/images/${addressSection["avatar_image_path"]}`)}
+								// 			src={require(`../../assets/images/${addressSection["avatar_image_path"]}`)}
 								// 			alt=""
 								// 		/>
                 <AddressImg theme={theme} />

@@ -20,7 +20,7 @@ As a reminder, because your portfolio is compiled locally and hosted as a collec
 
 Guide for myself since I'm gonna be just as lost, if not more when I look at this codebase anode decade later.
 
-git commit -m "stable updated baseline before research pivot restructuring"  --no-verify 
+git commit -m "stable initial commit of research focused restructuring and legacy support"  --no-verify 
 ^to skip commit hooks
 
 for development/testing: npm start from terminal

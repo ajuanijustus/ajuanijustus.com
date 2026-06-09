@@ -20,9 +20,6 @@ const greetingLegacy = {
   title: "Aju Ani Justus",
   logo_name: "AjuAniJustus",
   subTitle: "Let all that you do be done in love.",
-  resumeLink:
-    'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/e466b454-9889-46a6-8c21-b9d12cfc5cfd/Aju_Ani_Justus.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220809%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220809T221327Z&X-Amz-Expires=86400&X-Amz-Signature=92570224b0d66cf08be60a59dcb5ac58d362412d6a49399e5afbdca0394d1556&X-Amz-SignedHeaders=host&response-content-disposition=filename %3D"Aju%2520Ani%2520Justus.pdf"&x-id=GetObject',
-  portfolio_repository: "",
 };
 
 const greeting = {
@@ -34,8 +31,7 @@ const greeting = {
   statusBanner: "🚀 Open to research internships from July 2026 onwards in Multi-Agent Systems, Reinforcement Learning, Cooperative AI, and Human-AI Teaming.",
   
   email: "mailme@ajuanijustus.com",
-  resumeLink: "https://ajuanijustus.com", // Replace with your direct up-to-date resume link
-  googleScholar: "#", // Add your Google Scholar URL here
+  googleScholar: "https://scholar.google.com/citations?user=ktCUwwsAAAAJ&hl=en",
   
   // Professional tracking descriptors for the inline typing animation
   sequenceStrings: [
@@ -50,14 +46,13 @@ const greeting = {
   coreQuestion: "How can communication in HARL be modeled as a distinct, learnable process aimed at grounding shared beliefs and establishing common ground, rather than as an auxiliary component of an action policy?",
   
   advisors: [
-    { name: "Chris Baber", link: "#" },
-    { name: "Leonardo Stella", link: "#" }
+    { name: "Chris Baber", link: "https://scholar.google.co.uk/citations?user=MQ184fQAAAAJ&hl=en" },
+    { name: "Leonardo Stella", link: "https://www.leonardostella.com" }
   ],
   
   bioPast: "Before starting my PhD, I spent 3 years as a Machine Learning Engineer at Accenture Applied Intelligence, where I developed and deployed cloud-native enterprise AI and demand forecasting solutions.",
   bioCombined: "My background uniquely combines foundational research on multi-agent coordination frameworks with industry-tested experience engineering scalable, real-world intelligent systems.",
   
-  // Added updates: AFHEA and Pint of Science engagement
   outreachAndTeaching: "I am deeply passionate about science communication and education. Beyond my research, I serve as an Event Manager for the Pint of Science Team at Birmingham (2026–Present) to make complex concepts publicly accessible, and I hold an Associate Fellow of the Higher Education Academy (AFHEA, certified June 2026) designation recognition for my instructional contributions.",
 
   researchInterests: [
@@ -135,22 +130,21 @@ const skills = {
       softwareSkills: [
         {
           skillName: "Python",
-          fontAwesomeClassname: "ion-logo-python",
+          fontAwesomeClassname: "logos:python",
           style: {
             backgroundColor: "transparent",
-            color: "#3776AB",
           },
         },
         {
           skillName: "Tensorflow",
-          fontAwesomeClassname: "logos-tensorflow",
+          fontAwesomeClassname: "logos:tensorflow",
           style: {
             backgroundColor: "transparent",
           },
         },
         {
           skillName: "Keras",
-          fontAwesomeClassname: "simple-icons:keras",
+          fontAwesomeClassname: "logos:keras",
           style: {
             backgroundColor: "white",
             color: "#D00000",
@@ -158,46 +152,44 @@ const skills = {
         },
         {
           skillName: "MySQL",
-          fontAwesomeClassname: "simple-icons:mysql",
+          fontAwesomeClassname: "logos:mysql",
           style: {
             backgroundColor: "transparent",
-            color: "#4479A1",
           },
         },
         {
           skillName: "PySpark",
-          fontAwesomeClassname: "simple-icons:apachespark",
+          fontAwesomeClassname: "logos:apache-spark",
           style: {
             backgroundColor: "transparent",
-            color: "#E25A1C",
           },
         },
         {
           skillName: "GCP",
-          fontAwesomeClassname: "simple-icons:googlecloud",
+          fontAwesomeClassname: "logos:google-cloud",
           style: {
-            color: "#4285F4",
+            backgroundColor: "transparent",
           },
         },
         {
           skillName: "Azure",
-          fontAwesomeClassname: "simple-icons:microsoftazure",
+          fontAwesomeClassname: "logos:microsoft-azure",
           style: {
-            color: "#0089D6",
+            backgroundColor: "transparent",
           },
         },
         {
           skillName: "Docker",
-          fontAwesomeClassname: "simple-icons:docker",
+          fontAwesomeClassname: "logos:docker",
           style: {
-            color: "#1488C6",
+            backgroundColor: "transparent",
           },
         },
         {
           skillName: "react.js",
-          fontAwesomeClassname: "simple-icons:react",
+          fontAwesomeClassname: "logos:react",
           style: {
-            color: "#61DAFB",
+            backgroundColor: "transparent",
           },
         },
       ],
@@ -214,33 +206,39 @@ const skills = {
       softwareSkills: [
         {
           skillName: "Java",
-          fontAwesomeClassname: "simple-icons:java",
+          fontAwesomeClassname: "logos:java",
           style: {
-            color: "#E34F26",
+            backgroundColor: "transparent",
           },
         },
-        //   {
-        //     skillName: "CSS3",
-        //     fontAwesomeClassname: "fa-css3",
-        //     style: {
-        //       color: "#1572B6",
-        //     },
-        //   },
-        //   {
-        //     skillName: "JavaScript",
-        //     fontAwesomeClassname: "simple-icons:javascript",
-        //     style: {
-        //       backgroundColor: "#000000",
-        //       color: "#F7DF1E",
-        //     },
-        //   },
-        //   {
-        //     skillName: "ReactJS",
-        //     fontAwesomeClassname: "simple-icons:react",
-        //     style: {
-        //       color: "#61DAFB",
-        //     },
-        //   },
+        {
+          skillName: "Python",
+          fontAwesomeClassname: "logos:python",
+          style: {
+            backgroundColor: "transparent",
+          },
+        },
+        {
+          skillName: "C++",
+          fontAwesomeClassname: "logos:c-plusplus",
+          style: {
+            backgroundColor: "transparent",
+          },
+        },
+        {
+          skillName: "Git",
+          fontAwesomeClassname: "logos:git-icon",
+          style: {
+            backgroundColor: "transparent",
+          },
+        },
+        {
+          skillName: "Linux",
+          fontAwesomeClassname: "logos:linux-tux",
+          style: {
+            backgroundColor: "transparent",
+          },
+        },
       ],
     },
     {
@@ -256,223 +254,44 @@ const skills = {
         "✍🏽 Blogging",
       ],
       softwareSkills: [
-        // {
-        //   skillName: "Adobe Photoshop",
-        //   fontAwesomeClassname: "simple-icons:adobephotoshop",
-        //   style: {
-        //     color: "#31A8FF",
-        //   },
-        // },
-        // {
-        //   skillName: "Adobe Lightroom",
-        //   fontAwesomeClassname: "simple-icons:adobelightroom",
-        //   style: {
-        //     color: "#31A8FF",
-        //   },
-        // },
-        // {
-        //   skillName: "Photography",
-        //   fontAwesomeClassname: "fa-solid fa-camera-retro",
-        //   style: {
-        //     color: "#F24E1E",
-        //   },
-        // },
-      ],
-    },
-  ],
-};
-
-// Education Page
-const competitiveSites = {
-  competitiveSites: [
-    {
-      siteName: "HackerRank",
-      iconifyClassname: "simple-icons:hackerrank",
-      style: {
-        color: "#2EC866", //2EC866
-      },
-      profileLink: "https://www.hackerrank.com/ajuanijustus",
-    },
-    {
-      siteName: "Kaggle",
-      iconifyClassname: "simple-icons:kaggle",
-      style: {
-        color: "#20BEFF", // 20BEFF
-      },
-      profileLink: "https://www.kaggle.com/ajuanijustus",
-    },
-  ],
-};
-
-const degrees = {
-  degrees: [
-    {
-      title: "College of Engineering, Trivandrum",
-      subtitle: "B.Tech. in Civil Engineering",
-      logo_path: "cet_emblem.png",
-      alt_name: "CET",
-      duration: "2015 - 2019",
-      descriptions: [
-        "Graduated as a 𝐇𝐨𝐧𝐨𝐮𝐫𝐬 𝐒𝐭𝐮𝐝𝐞𝐧𝐭, having maintained a strong grade point average, and having earned additional credits by taking on 2 additional elective courses and 2 additional M.Tech courses, during the last 4 semesters of the program.",
-        "𝐏𝐎𝐒𝐈𝐓𝐈𝐎𝐍𝐒 𝐎𝐅 𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐈𝐁𝐈𝐋𝐈𝐓𝐘:",
-        "👷🏾 𝗜𝗻𝗱𝗶𝗮𝗻 𝗖𝗼𝗻𝗰𝗿𝗲𝘁𝗲 𝗜𝗻𝘀𝘁𝗶𝘁𝘂𝘁𝗲, 𝗖𝗘𝗧 𝗦𝘁𝘂𝗱𝗲𝗻𝘁 𝗖𝗵𝗮𝗽𝘁𝗲𝗿 (𝗜𝗖𝗜-𝗖𝗘𝗧)",
-        "• Secretary: Aug 2018 – Jun 2019",
-        "• Assistant Public Relations Head: Aug 2017 – Jul 2018",
-        "📚 𝗟𝗶𝘁𝗲𝗿𝗮𝗿𝘆 𝗦𝗼𝗰𝗶𝗲𝘁𝘆, 𝗖𝗘𝗧 (𝗟𝗶𝘁𝗦𝗼𝗰-𝗖𝗘𝗧)",
-        "• Chairperson: Aug 2017 – Jul 2018",
-        "• Vice Chairperson: Aug 2016 – Jul 2017",
-        "👨🏽‍💼 𝗜𝗻𝗻𝗼𝘃𝗮𝘁𝗶𝗼𝗻 𝗮𝗻𝗱 𝗘𝗻𝘁𝗿𝗲𝗽𝗿𝗲𝗻𝗲𝘂𝗿𝘀𝗵𝗶𝗽 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗺𝗲𝗻𝘁 𝗖𝗲𝗹𝗹, 𝗖𝗘𝗧 (𝗜𝗘𝗗𝗖-𝗖𝗘𝗧)",
-        "• Chief Operating Officer: Jul 2018 – May 2019",
-        "📷 𝗣𝗵𝗼𝘁𝗼𝗴𝗿𝗮𝗽𝗵𝘆 𝗖𝗹𝘂𝗯, 𝗖𝗘𝗧 𝗦𝗵𝘂𝘁𝘁𝗲𝗿𝗯𝘂𝗴𝘀",
-        "• Treasurer: Aug 2017 – Jul 2018",
-        "• Events Coordinator: Aug 2016 – Jul 2017",
-      ],
-      website_link: "https://www.cet.ac.in/",
-    },
-  ],
-};
-
-const certifications = {
-  certifications: [
-    {
-      title: "The Web Developer Bootcamp",
-      subtitle: "",
-      logo_path: "_udemy.jpg",
-      certificate_link:
-        "https://www.udemy.com/certificate/UC-0ea51c1a-d97e-4327-9990-2df80637a37d/",
-      alt_name: "Udemy",
-      color_code: "#EA5153",
-    },
-    {
-      title: "Neural Networks and Deep Learning",
-      subtitle: "",
-      logo_path: "_deeplearning_ai.png",
-      certificate_link:
-        "https://www.coursera.org/account/accomplishments/certificate/C64SUS5Y4TBT",
-      alt_name: "deeplearning.ai",
-      color_code: "#00000099",
-    },
-    {
-      title: "Applied Text Mining in Python",
-      subtitle: "",
-      logo_path: "_michigan.png",
-      certificate_link:
-        "https://www.coursera.org/account/accomplishments/certificate/UUJQA8WBWR9P",
-      alt_name: "University of Michigan",
-      color_code: "#FFFFFF",
-    },
-    {
-      title: "Cloud Engineering",
-      subtitle: "",
-      logo_path: "_gcp.jpg",
-      certificate_link:
-        "https://www.coursera.org/account/accomplishments/specialization/certificate/3JAVEXSWKTNW",
-      alt_name: "Google Cloud Platform",
-      color_code: "#1D1D1D",
-    },
-    {
-      title: "Game Theory",
-      subtitle: "",
-      logo_path: "_stanford.jpg",
-      certificate_link:
-        "https://www.coursera.org/account/accomplishments/certificate/VUXWU2HPAYTB",
-      alt_name: "Stanford online",
-      color_code: "#A80532",
-    },
-    {
-      title: "Data Engineering, Big Data, and Machine Learning on GCP",
-      subtitle: "",
-      logo_path: "_gcp.jpg",
-      certificate_link:
-        "https://www.coursera.org/account/accomplishments/specialization/certificate/WGXZ7E8FZZ5W",
-      alt_name: "Google Cloud Platform",
-      color_code: "#1D1D1D",
-    },
-    {
-      title: "Understanding and Visualizing Data with Python",
-      subtitle: "",
-      logo_path: "_michigan.png",
-      certificate_link:
-        "https://www.coursera.org/account/accomplishments/certificate/TV2C7F4T9RBP",
-      alt_name: "University of Michigan",
-      color_code: "#FFFFFF",
-    },
-    {
-      title: "Introduction to Data Science in Python",
-      subtitle: "",
-      logo_path: "_michigan.png",
-      certificate_link:
-        "https://www.coursera.org/account/accomplishments/certificate/WGCKN6NDD67Z",
-      alt_name: "University of Michigan",
-      color_code: "#FFFFFF",
-    },
-  ],
-};
-
-// Experience Page
-const experience = {
-  title: "Experience",
-  subtitle: "Work, Internship and Volunteership",
-  description:
-    "I have worked with many evolving startups as ML and DL Developer, Designer and Software Architect. I have also worked with some well established companies mostly as AI Developer. I love organising events and that is why I am also involved with many opensource communities as a representative.",
-  header_image_path: "experience.svg",
-  sections: [
-    {
-      title: "Work",
-      experiences: [
         {
-          title: "ML Engineering Consultant",
-          company: "Accenture AI",
-          company_url: "",
-          logo_path: "",
-          duration: "June 2020 - PRESENT",
-          location: "Bengaluru",
-          description:
-            "I am working on automating healthcare products. The projects involve automation for process improvements and for significantly enhancing the profits. I am currently working on Cancer Survival and Reoccurence Prediction. Our goal is to make AI system which scales and removes doctor dependency as much as possible.",
-          color: "#0879bf",
+          skillName: "Photoshop",
+          fontAwesomeClassname: "logos:adobe-photoshop",
+          style: {
+            backgroundColor: "transparent",
+          },
         },
-      ],
-    },
-    {
-      title: "Internships",
-      experiences: [
         {
-          title: "Civil Engg",
-          company: "",
-          company_url: "",
-          logo_path: ".png",
-          duration: "May 2019 - Sept 2019",
-          location: "Kerala",
-          description:
-            "I have worked on project of predicting freight rates based on previous data. There were two objectives: (1) To build a forecasting engine to predict daily freight rates. (2) To embed feature in the model which can explain the seasonal major changes in freight rate based on regions and locations. I have closely worked with deep learning models in combination with statistical methods to create solution for this. At the end of internship, I had created model deployed on AWS EC2 with the use of Kafka stream jobs, ElasticSearch and PostgreSQL.",
-          color: "#ee3c26",
+          skillName: "Lightroom",
+          fontAwesomeClassname: "logos:adobe-lightroom",
+          style: {
+            backgroundColor: "transparent",
+          },
         },
-      ],
-    },
-    {
-      title: "Volunteerships",
-      experiences: [
         {
-          title: "LIFE",
-          company: "Kerala Government",
-          company_url: "",
-          logo_path: ".png",
-          duration: "June 2019 - April 2020",
-          location: "Trivandrum, Kerala",
-          description: "",
-          color: "#4285F4",
+          skillName: "Spotify",
+          fontAwesomeClassname: "logos:spotify-icon",
+          style: {
+            backgroundColor: "transparent",
+          },
         },
+        {
+          skillName: "Twitch",
+          fontAwesomeClassname: "logos:twitch",
+          style: {
+            backgroundColor: "transparent",
+          },
+        },
+        {
+          skillName: "Goodreads",
+          fontAwesomeClassname: "simple-icons:goodreads",
+          style: {
+            backgroundColor: "transparent",
+          },
+        }
       ],
     },
   ],
-};
-
-// Projects Page
-const projectsHeader = {
-  title: "Projects",
-  description:
-    "My projects makes use of vast variety of latest technology tools. My best experience is to create Data Science projects and deploy them to web applications using cloud infrastructure.",
-  avatar_image_path: "projects_image.svg",
 };
 
 // Contact Page
@@ -505,23 +324,143 @@ const contactPageData = {
 // --- Academic Research News ---
 const news = [
   {
-    date: "June 2026",
-    text: "Received the Excellent Student Award for outstanding contributions to deep reinforcement learning research.",
+    date: "Jun 2026",
+    text: "Awarded AFHEA (Associate Fellowship of Advance HE) recognition through the BEACON scheme at the University of Birmingham.",
     link: ""
   },
   {
     date: "May 2026",
-    text: "Our new preprint 'Sample-Efficient Offline Reinforcement Learning via Structured State-Space Dynamics' is out on arXiv!",
-    link: "https://arxiv.org"
+    text: "Traveled to Paphos, Cyprus to present 'Grounded Communication Policies in Heterogeneous Agent Reinforcement Learning' at AAMAS 2026.",
+    link: "https://doi.org/10.65109/OAYF2008"
   },
   {
-    date: "January 2026",
-    text: "Began serving as a reviewer for NeurIPS 2026 and ICML 2026 reinforcement learning tracks.",
+    date: "May 2026",
+    text: "Delivered an oral presentation on 'voice2mode: Phonation Mode Classification in Singing' at the Speech, Music, and Mind (SMM) workshop at ICASSP 2026 in Barcelona, Spain.",
+    link: "https://doi.org/10.1109/ICASSP55912.2026.11460695"
+  },
+  {
+    date: "May 2026",
+    text: "Successfully managed and hosted 3 community science outreach events across Birmingham city centre for Pint of Science UK.",
+    link: "https://pintofscience.co.uk/team/Birmingham%20Team/"
+  },
+  {
+    date: "Mar 2026",
+    text: "Awarded a competitive international travel scholarship from AAMAS to attend and present at the conference.",
     link: ""
   },
   {
-    date: "September 2025",
-    text: "Gave an invited talk on 'Bridging the Gap: From Corporate Predictive Pipelines to Safe Exploration in RL' at a regional machine learning group.",
+    date: "Feb 2026",
+    text: "Accepted to present research progress at the prestigious AAMAS 2026 Doctoral Consortium.",
+    link: ""
+  },
+  {
+    date: "Jan 2026",
+    text: "Started volunteering as Event Manager for Pint of Science UK (Birmingham Team) alongside continuing PGTA teaching commitments for Software Workshop 2 and Building Usable Software.",
+    link: "https://pintofscience.co.uk/team/Birmingham%20Team/"
+  },
+  {
+    date: "Oct 2025",
+    text: "Traveled to Bologna, Italy to deliver an oral presentation on multi-agent collaboration frameworks at ECAI 2025.",
+    link: ""
+  },
+  {
+    date: "Sep 2025",
+    text: "Commenced second year of PhD; continued as PGTA for MSc Software Workshop (Python), Foundation Math/Logic modules, and technical interview mentor at ALGO Club.",
+    link: ""
+  },
+  {
+    date: "May 2025",
+    text: "Successfully defended PhD Thesis Proposal, officially qualifying to progress with doctoral research.",
+    link: ""
+  },
+  {
+    date: "Sep 2024",
+    text: "Continued PGTA teaching for Python and Math/Logic foundations. Joined the staff-led ALGO Club to coach students on Data Structures, Algorithms, and LeetCode.",
+    link: ""
+  },
+  {
+    date: "May 2024",
+    text: "Officially commenced PhD research in Human-Agent Teaming in Heterogenous-Agent Reinforcement Learning at the University of Birmingham following ATAS clearance.",
+    link: ""
+  },
+  {
+    date: "Jan 2024",
+    text: "Accepted a fully-funded PhD offer at the University of Birmingham, co-funded by the School of Computer Science and the Alan Turing Institute.",
+    link: ""
+  },
+  {
+    date: "Dec 2023",
+    text: "Published and presented first-ever peer-reviewed paper 'Music Generation using Human-In-The-Loop Reinforcement Learning' at the IEEE International Conference on Big Data.",
+    link: "https://doi.org/10.3233/FAIA251250"
+  },
+  {
+    date: "Sep 2023",
+    text: "Graduated with a Distinction (85.6%) in MSc Computer Science from the University of Birmingham and joined the faculty as a Post Graduate Teaching Assistant (PGTA) for Java OOP modules.",
+    link: ""
+  },
+  {
+    date: "Jun 2023",
+    text: "Received the Postgraduate Professional Development Award (PPDA).",
+    link: ""
+  },
+  {
+    date: "Jun 2023",
+    text: "Won 2nd Place at the UoB BEAR Challenge 2023 running deep learning workflows on the Baskerville HPC Cluster.",
+    link: ""
+  },
+  {
+    date: "Jan 2023",
+    text: "Appointed Equality, Diversity, and Inclusion (EDI) Student Representative, acting as a liaison between the student body and school leadership board.",
+    link: ""
+  },
+  {
+    date: "Oct 2022",
+    text: "Won 3 awards at HackTheMidlands 7.0 (3rd Overall, Spooooookiest Hack, Fun! Hack) and elected PGT Representative for the Computer Science Society.",
+    link: "https://devpost.com/software/digimusician"
+  },
+  {
+    date: "Sep 2022",
+    text: "Elected as the Post Graduate Taught (PGT) Rep at the Computer Science Society at University of Birmingham, working with the committee to organise events and make sure all postgrad students (from 7 PGT courses) feel welcomed at CSS!",
+    link: "https://cssbham.com/committee-archive"
+  },
+  {
+    date: "Sep 2022",
+    text: "Relocated to the UK to start an MSc in Computer Science at the University of Birmingham, serving as Student Representative for the cohort at Student-Staff Forum (SSF).",
+    link: "https://cssbham.com/committee-archive"
+  },
+  {
+    date: "Jan 2022",
+    text: "Transitioned to Machine Learning Engineer following the acquisition and integration of BRIDGEi2i into Accenture Applied Intelligence.",
+    link: ""
+  },
+  {
+    date: "Aug 2021",
+    text: "Received the BRIDGEi2i Team Award recognizing successful production deployment and client delivery milestones.",
+    link: ""
+  },
+  {
+    date: "Apr 2021",
+    text: "Promoted to Machine Learning Engineering Consultant at BRIDGEi2i, scaling responsibility to lead end-to-end enterprise client projects.",
+    link: ""
+  },
+  {
+    date: "Nov 2020",
+    text: "Awarded the corporate Rising Star Award at BRIDGEi2i for delivering high-impact Go-To-Market solution architectures and converting PoCs into client wins.",
+    link: ""
+  },
+  {
+    date: "Mar 2020",
+    text: "Promoted to Data Scientist at BRIDGEi2i in record time (under a year from hiring).",
+    link: ""
+  },
+  {
+    date: "Sep 2019",
+    text: "Received the corporate SPOT Award for leadership and driving continuous innovation initiatives inside the Humans of Analytics (HoA) community.",
+    link: ""
+  },
+  {
+    date: "Jun 2019",
+    text: "Graduated with a B.Tech (Honours) in Civil Engineering from College of Engineering, Trivandrum and started professional data science career as Junior Data Scientist at an analytics startup BRIDGEi2i.",
     link: ""
   }
 ];
@@ -529,27 +468,93 @@ const news = [
 // --- Selected Research Publications ---
 const publications = [
   {
-    venue: "NeurIPS 2026",
-    title: "Provably Bounds on Convergence for Constrained Actor-Critic Methods under Non-Stationary Reward Trajectories",
-    authors: "Aju Ani Justus, Leonard H., and Amos S.",
-    fullVenue: "Thirty-Eighth Conference on Neural Information Processing Systems (NeurIPS), 2026",
+    venue: "AAMAS 2026",
+    title: "Grounded Communication Policies in Heterogeneous Agent Reinforcement Learning",
+    authors: "Aju Ani Justus",
+    fullVenue: "25th International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2026) [Awarded scholarship from AAMAS to attend and present]",
     links: {
-      pdf: "https://arxiv.org",
-      code: "https://github.com/ajuanijustus",
-      bibtex: "#",
+      pdf: "https://doi.org/10.65109/OAYF2008",
+      code: "",
+      bibtex: `@inproceedings{justus2026grounded,
+        author = {Justus, Aju Ani},
+        title = {Grounded Communication Policies in Heterogeneous Agent Reinforcement Learning},
+        year = {2026},
+        isbn = {9798400723179},
+        publisher = {International Foundation for Autonomous Agents and Multiagent Systems},
+        address = {Richland, SC},
+        url = {https://doi.org/10.65109/OAYF2008},
+        doi = {10.65109/OAYF2008},
+        booktitle = {Proceedings of the 25th International Conference on Autonomous Agents and Multiagent Systems},
+        pages = {4026–4028},
+        numpages = {3},
+        keywords = {multi-agent systems, agent communication, multi-agent reinforcement learning, heterogeneous agents, coordination},
+        location = {Paphos, Cyprus},
+        series = {AAMAS '26}
+      }`,
       website: ""
     }
   },
   {
-    venue: "ICML 2026",
-    title: "Robust Generalization in Offline MARL via Multi-Agent Reward Decoupling Constraints",
-    authors: "Aju Ani Justus and David Abel",
-    fullVenue: "International Conference on Machine Learning (ICML), 2026 (Oral Presentation)",
+    venue: "ICASSP 2026",
+    title: "voice2mode: Phonation Mode Classification in Singing using Self-Supervised Speech Models",
+    authors: "Aju Ani Justus, Ruchit Agrawal, Sudarsana Reddy Kadiri, Shrikanth Narayanan",
+    fullVenue: "IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP 2026) [Oral presentation]",
     links: {
-      pdf: "https://arxiv.org",
+      pdf: "https://doi.org/10.1109/ICASSP55912.2026.11460695",
       code: "",
-      bibtex: "#",
-      website: "https://ajuanijustus.com"
+      bibtex: `@inproceedings{justus2026voice2mode,
+        author={Justus, Aju Ani and Agrawal, Ruchit and Kadiri, Sudarsana Reddy and Narayanan, Shrikanth},
+        booktitle={ICASSP 2026 - 2026 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}, 
+        title={VOICE2MODE: Phonation Mode Classification in Singing Using Self-Supervised Speech Models}, 
+        year={2026},
+        volume={},
+        number={},
+        pages={22072-22076},
+        doi={10.1109/ICASSP55912.2026.11460695}
+      }`,
+      website: "https://github.com/ajuanijustus/voice2mode"
+    }
+  },
+  {
+    venue: "ECAI 2025",
+    title: "LLMs as Policy-Agnostic Teammates: A Case Study in Human Proxy Design for Heterogeneous Agent Teams",
+    authors: "Aju Ani Justus, Chris Baber",
+    fullVenue: "Proceedings of the 28th European Conference on Artificial Intelligence (ECAI 2025) [Oral presentation]",
+    links: {
+      pdf: "https://doi.org/10.3233/FAIA251250",
+      code: "",
+      bibtex: `@inproceedings{justus2025llms,
+        title={LLMs as Policy-Agnostic Teammates: A Case Study in Human Proxy Design for Heterogeneous Agent Teams},
+        author={Justus, Aju Ani and Baber, Chris},
+        booktitle={Proceedings of the 28th European Conference on Artificial Intelligence (ECAI 2025)},
+        volume={413},
+        series={Frontiers in Artificial Intelligence and Applications},
+        pages={3711--3718},
+        year={2025},
+        publisher={IOS Press},
+        doi={10.3233/FAIA251250}
+      }`,
+      website: ""
+    }
+  },
+  {
+    venue: "BigData 2023",
+    title: "Music Generation using Human-In-The-Loop Reinforcement Learning",
+    authors: "Aju Ani Justus",
+    fullVenue: "Proceedings of the 2023 IEEE International Conference on Big Data (BigData) [Online presentation]",
+    links: {
+      pdf: "https://arxiv.org/pdf/2501.15304",
+      code: "",
+      bibtex: `@misc{justus2025musicgenerationusinghumanintheloop,
+        title={Music Generation using Human-In-The-Loop Reinforcement Learning}, 
+        author={Aju Ani Justus},
+        year={2025},
+        eprint={2501.15304},
+        archivePrefix={arXiv},
+        primaryClass={cs.SD},
+        url={https://arxiv.org/abs/2501.15304}
+      }`,
+      website: "https://github.com/ajuanijustus/music-gen-hitl-rl"
     }
   }
 ];
@@ -557,16 +562,16 @@ const publications = [
 // --- Teaching Assistantships & Commitments ---
 const teaching = [
   {
-    role: "Graduate Teaching Assistant",
-    course: "Advanced Machine Learning & Deep Learning (CS-781)",
+    role: "Post Graduate Teaching Associate",
+    course: "Math and Logic for Comp Sci, Software Workshop (Python), OOP (Java)",
     institution: "University of Birmingham",
-    duration: "Autumn 2025 - Present"
+    duration: "2023 - Present"
   },
   {
     role: "Head Course Instructor",
-    course: "Foundations of Python & Time-Series Analysis Workshops",
-    institution: "Accenture AI Inner-Source Training Platform",
-    duration: "2021 - 2022"
+    course: "Foundations of Python, Time-Series Analysis",
+    institution: "Center of Excellence, Accenture AI",
+    duration: "2020 - 2022"
   }
 ];
 
@@ -577,11 +582,6 @@ export {
   greetingLegacy,
   socialMediaLinks,
   skills,
-  competitiveSites,
-  degrees,
-  certifications,
-  experience,
-  projectsHeader,
   contactPageData,
   news,
   publications,

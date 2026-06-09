@@ -9,6 +9,8 @@ import { Fade } from 'react-awesome-reveal';
 import "./ContactComponent.css";
 import { greeting, contactPageData } from "../../config/portfolio.js";
 
+import myResume from "../../assets/resume.pdf";
+
 const ContactData = contactPageData.contactSection;
 const blogSection = contactPageData.blogSection;
 
@@ -45,7 +47,7 @@ class LegacyContact extends Component {
                   <Button
                     text="See My Resume"
                     newTab={true}
-                    href={greeting.resumeLink}
+                    href={myResume}
                     theme={theme}
                   />
                 </div>

@@ -1,0 +1,358 @@
+.bookshelf-main-div {
+  width: 95%;
+  max-width: none;
+  margin: 0 auto;
+  padding: 3rem 10px;
+}
+
+.bookshelf-heading {
+  font-size: 45px;
+  font-family: "Montserrat";
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.bookshelf-subtitle {
+  font-family: "Montserrat";
+  font-size: 18px;
+  margin-bottom: 2rem;
+}
+
+/* Quick Navigation Bar */
+.bookshelf-nav-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 3rem;
+}
+
+.year-nav-link {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 14px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: transform 0.2s, opacity 0.2s;
+  scroll-behavior: smooth;
+}
+
+.year-nav-link:hover {
+  transform: translateY(-2px);
+  opacity: 0.8;
+}
+
+/* Timeline & Year Grouping */
+.bookshelf-year-section {
+  margin-bottom: 4rem;
+  scroll-margin-top: 100px; 
+}
+
+.year-heading {
+  font-family: "Montserrat";
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid;
+}
+
+/* Responsive Grid - Fills available width without staggering */
+.bookshelf-grid {
+  display: grid;
+  /* Reduced base size slightly to maximize horizontal screen usage */
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 1.5rem;
+  /* Prevent holes by aligning items to start evenly */
+  align-items: start;
+}
+
+/* Card Styling */
+.book-card-small {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  position: relative;
+  /* Prevent flex/grid expansion bugs */
+  display: block; 
+}
+
+.book-card-small:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+.book-cover-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.book-cover-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Missing Cover Fallback Block */
+.missing-cover-fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.missing-cover-title {
+  font-family: "Montserrat";
+  font-weight: 800;
+  font-size: 14px;
+  margin-bottom: 8px;
+  line-height: 1.3;
+  /* Prevent absurdly long titles from breaking the box bounds */
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.missing-cover-author {
+  font-family: "Montserrat";
+  font-size: 11px;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+/* Rich Hover Overlay State */
+.book-hover-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  box-sizing: border-box;
+  opacity: 0;
+  backdrop-filter: blur(3px);
+  transition: opacity 0.25s ease-in-out;
+}
+
+.book-card-small:hover .book-hover-layer {
+  opacity: 1;
+}
+
+.hover-rating {
+  font-size: 12px;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.hover-review-snippet {
+  font-family: "Montserrat";
+  font-size: 12px;
+  line-height: 1.4;
+  margin: 0;
+  flex-grow: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.read-more-btn {
+  font-family: "Montserrat";
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(128, 128, 128, 0.3);
+}
+
+/* ---------------------------------
+   Clean Pop-Up Modal (Lightbox)
+---------------------------------- */
+.book-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(5px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  animation: fadeIn 0.2s ease-out forwards;
+}
+
+.book-modal-content {
+  position: relative;
+  width: 100%;
+  max-width: 850px;
+  max-height: 85vh;
+  border-radius: 12px;
+  overflow: hidden;
+  animation: scaleUp 0.2s ease-out forwards;
+  display: flex;
+  flex-direction: column;
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 32px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+  padding: 0;
+  line-height: 1;
+}
+
+.close-modal-btn:hover {
+  opacity: 1;
+}
+
+.modal-inner-layout {
+  display: flex;
+  gap: 2rem;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+/* Reuse the BookCard styles but scale it up for the modal */
+.modal-book-cover {
+  width: 200px;
+  flex-shrink: 0;
+}
+.modal-book-cover .book-card-small {
+  max-width: none;
+  cursor: default;
+  transform: none !important;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2) !important;
+}
+.modal-book-cover .book-hover-layer {
+  display: none; /* Hide hover layer inside the modal */
+}
+
+.modal-book-details {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-title {
+  font-family: "Montserrat";
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 0.5rem 0;
+  padding-right: 20px; 
+}
+
+.modal-author {
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+}
+
+.modal-rating {
+  font-size: 1.4rem;
+  color: #FFD700;
+  margin-bottom: 1.5rem;
+  letter-spacing: 3px;
+}
+
+.empty-stars {
+  color: rgba(128, 128, 128, 0.3);
+}
+
+.modal-review-content {
+  font-family: "Montserrat";
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.modal-review-content p {
+  margin: 0 0 1rem 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.modal-inner-layout::-webkit-scrollbar {
+  width: 6px;
+}
+.modal-inner-layout::-webkit-scrollbar-thumb {
+  background-color: rgba(128, 128, 128, 0.4);
+  border-radius: 10px;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .bookshelf-heading {
+    font-size: 32px;
+    text-align: center;
+  }
+  .bookshelf-subtitle {
+    text-align: center;
+  }
+  .bookshelf-nav-bar {
+    justify-content: center;
+  }
+  .bookshelf-grid {
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 1rem;
+  }
+  
+  .modal-inner-layout {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1.5rem;
+    gap: 1.5rem;
+  }
+  .modal-book-cover {
+    width: 140px;
+  }
+  .modal-title {
+    text-align: center;
+    font-size: 20px;
+    padding-right: 0;
+  }
+  .modal-author, .modal-rating {
+    text-align: center;
+  }
+  
+  /* Hide hover layer on mobile, as hover doesn't work well on touchscreens anyway */
+  .book-hover-layer {
+    display: none;
+  }
+}

@@ -9,6 +9,11 @@ import { settings } from "./config/portfolio.js";
 import Home from "./pages/home/HomeComponent";
 import Contact from "./pages/contact/ContactComponent";
 
+import PersonalHome from "./pages/personal_home/HomeComponent";
+import PersonalContact from "./pages/personal_contact/ContactComponent";
+import Bookshelf from "./pages/books/Bookshelf.js";
+import ReadingStats from "./pages/books/ReadingStats.js";
+
 import LegacyHome from "./pages/legacy_home/HomeComponent.js";
 import LegacyContact from "./pages/legacy_contact/ContactComponent";
 
@@ -31,6 +36,13 @@ function App() {
             {/* Standard Pages */}
             <Route path="/home" element={<Home theme={chosenTheme} />} />
             <Route path="/contact" element={<Contact theme={chosenTheme} />} />
+
+            {/* Fun Pages */}
+            <Route path="/secret/" element={<PersonalHome theme={chosenTheme} />} />
+            <Route path="/secret/home" element={<PersonalHome theme={chosenTheme} />} />
+            <Route path="/secret/contact" element={<PersonalContact theme={chosenTheme} />} />
+            <Route path="/secret/books" element={<Bookshelf theme={chosenTheme} />} />
+            <Route path="/secret/bookstats" element={<ReadingStats theme={chosenTheme} />} />
 
             {/* Legacy Pages */}
             <Route path="/legacy/" element={<LegacyHome theme={chosenTheme} />} />

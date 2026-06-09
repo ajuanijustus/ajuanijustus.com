@@ -1,193 +1,183 @@
 .contact-main {
   width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .basic-contact {
-  margin-left: 5%;
-  margin-right: 5%;
-}
-
-.contact-heading-div {
-  display: flex;
-}
-
-.blog-heading-div {
-  display: flex;
-}
-
-.address-heading-div {
-  display: flex;
-  margin-top: 80px;
-}
-
-.blog-heading-div > * {
   flex: 1;
-}
-
-.contact-heading-div > * {
-  flex: 1;
-}
-
-.address-heading-div > * {
-  flex: 1;
-}
-
-.contact-heading-img-div {
+  width: 90%;
+  max-width: 1100px;
+  margin: 4rem auto;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.blog-heading-img-div {
+.contact-card-container {
+  display: flex;
+  width: 100%;
+  border-radius: 16px;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.contact-image-panel {
+  flex: 1;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-profile-img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.contact-info-panel {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.contact-title {
+  font-size: 42px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+}
+
+.contact-description {
+  font-size: 17px;
+  line-height: 1.6;
+  font-family: "Montserrat", sans-serif;
+  margin: 0 0 1.5rem 0;
+}
+
+.contact-divider {
+  width: 100%;
+  border: 0;
+  border-top: 1px solid;
+  margin: 1.5rem 0;
+}
+
+.section-subtitle {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 1rem 0;
+}
+
+.address-text {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 0 0.5rem 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.office-text {
+  font-size: 15px;
+  margin: 0 0 0.8rem 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.maps-link-text {
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+.maps-link-text:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   ⚡ NEW COMPACT INLINE SOCIAL SECTIONS
+   ========================================================================== */
+.compact-social-grid {
+  display: grid;
+  /* Snug fit layout columns */
+  grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
+  gap: 10px 16px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.compact-social-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  padding: 4px 0;
+  transition: opacity 0.15s ease;
+}
+
+.compact-social-item:hover {
+  opacity: 0.8;
+}
+
+/* Pulls custom background bubble designs straight into icons */
+.compact-social-item i {
+  display: flex;
   align-items: center;
   justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 14px;
 }
 
-.contact-heading-text-div {
-  text-align: center;
+.compact-social-item span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
 }
 
-.blog-heading-text-div {
-  text-align: center;
-}
-
-.address-heading-text-div {
-  text-align: center;
-}
-
-.contact-heading-img-div > * {
-  max-width: 100%;
-  height: auto;
-}
-
-.blog-heading-img-div > * {
-  max-width: 100%;
-  height: auto;
-}
-
-.contact-heading-text {
-  font-size: 56px;
-  font-weight: 400;
-  font-family: "Google Sans Medium";
-  line-height: 1.1;
-  text-align: center;
-  margin-top: 60px;
-}
-
-.blog-heading-text {
-  font-size: 56px;
-  font-weight: 400;
-  font-family: "Google Sans Medium";
-  line-height: 1.1;
-  text-align: center;
-  margin-top: 40px;
-}
-
-.address-heading-text {
-  font-size: 30px;
-  font-family: "Google Sans Regular";
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.contact-header-detail-text {
-  font-size: 20px;
-  line-height: 30px;
-  margin-top: 0px;
-  margin-left: 20px;
-  margin-right: 20px;
-  font-family: "Google Sans Medium";
-}
-
-.blog-header-detail-text {
-  font-size: 20px;
-  line-height: 30px;
-  margin-top: 0px;
-  margin-left: 20px;
-  margin-right: 20px;
-  font-family: "Google Sans Medium";
-}
-
-.resume-btn-div {
-  width: 100%;
+.contact-resume-action {
+  margin-top: 2rem;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
-.blogsite-btn-div {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.address-btn-div {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: 0;
-}
-
-@media (max-width: 1380px) {
-  .contact-heading-text {
-    font-size: 50px;
-    margin-top: 60px;
+/* MEDIA INTERFACES */
+@media (max-width: 992px) {
+  .contact-card-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
   }
-
-  .blog-heading-text {
-    font-size: 50px;
-    margin-top: 40px;
+  .contact-image-panel {
+    max-width: 240px;
+  }
+  .contact-info-panel {
+    align-items: center;
+    text-align: center;
+  }
+  .compact-social-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 300px;
+    justify-items: start;
+  }
+  .contact-resume-action {
+    justify-content: center;
+    width: 100%;
   }
 }
 
 @media (max-width: 768px) {
-  .contact-heading-text {
-    font-size: 30px;
-    margin-top: 0px;
+  .basic-contact {
+    margin: 2rem auto;
   }
-
-  .blog-heading-text {
-    font-size: 30px;
-    margin-top: 0px;
-  }
-
-  .address-heading-text {
-    font-size: 20px;
-  }
-
-  .blog-heading-div {
-    flex-direction: column-reverse;
-    margin-top: 60px;
-  }
-
-  .address-heading-div {
-    flex-direction: column;
-    margin-top: 60px;
-  }
-
-  .blog-heading-text-div {
-    margin-top: 40px;
-  }
-
-  .address-heading-text-div {
-    margin-top: 40px;
-  }
-
-  .contact-heading-div {
-    flex-direction: column;
-  }
-
-  .contact-header-detail-text {
-    font-size: 16px;
-    margin-left: 0px;
-    margin-right: 0px;
-    line-height: normal;
-    text-align: center;
-  }
-
-  .blog-header-detail-text {
-    font-size: 16px;
-    margin-left: 0px;
-    margin-right: 0px;
-    line-height: normal;
-    text-align: center;
+  .contact-title {
+    font-size: 32px;
   }
 }

@@ -1,36 +1,44 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Greeting.css";
 import SocialMedia from "../../../components/socialMedia/SocialMedia";
-import { greeting } from "../../../config/portfolio";
+import { greetingLegacy } from "../../../config/portfolio";
 import { Fade } from 'react-awesome-reveal';
 import multitaskingSvg from "../../../assets/images/multitasking.svg";
 
-var example = [
+const example = [
   "Data Scientist",
   "Traveller",
   "Gamer",
   "Photographer",
   "Musician",
 ];
-// var example = ['Data Scientist 🧑🏽‍💻', 'Artist 👨🏽‍🎨', 'Traveller 🚵🏽‍♂️', 'Gamer 👾', 'Photographer 📸', 'Musician 🎸'];
-// var example = ['🧑🏽‍💻', '👨🏽‍🎨', '🧎🏽‍♂️', '👾', '📸', '🎸'];
-textSequence(0);
-function textSequence(i) {
-  if (example.length > i) {
-    setTimeout(function () {
-      try {
-        document.getElementById("sequence").innerHTML = example[i];
-      } catch {}
-      textSequence(++i);
-    }, 1000); // 1 second (in milliseconds)
-  } else if (example.length === i) {
-    // Loop
-    textSequence(0);
-  }
-}
 
 export default function Greeting(props) {
   const theme = props.theme;
+  
+  const [currentText, setCurrentText] = useState(example[0]);
+  const [isFading, setIsFading] = useState(false);
+
+  useEffect(() => {
+    let index = 0;
+
+    const sequenceInterval = setInterval(() => {
+      // Step 1: Start snappy fade-out
+      setIsFading(true);
+
+      // Step 2: Swap text
+      setTimeout(() => {
+        index = (index + 1) % example.length;
+        setCurrentText(example[index]);
+        // Step 3: Fade back in
+        setIsFading(false);
+      }, 0);
+
+    }, 1000); // Changed to exactly 1 second (1000ms)
+
+    return () => clearInterval(sequenceInterval);
+  }, []);
+
   return (
     <Fade bottom duration={2000} distance="40px">
       <div className="greet-main" id="greeting">
@@ -39,8 +47,11 @@ export default function Greeting(props) {
             <div>
               <p className="greeting-text" style={{ color: theme.text }}>
                 Hi, I am a <br />
-                <span style={{ color: "#e80000" }} id="sequence">
-                  Data Scientist
+                <span 
+                  style={{ color: "#e80000" }} 
+                  className={`sequence-span ${isFading ? "fade-out" : "fade-in"}`}
+                >
+                  {currentText}
                 </span>
                 .
               </p>
@@ -48,7 +59,7 @@ export default function Greeting(props) {
                 className="greeting-text-p subTitle"
                 style={{ color: theme.secondaryText }}
               >
-                {greeting.subTitle}
+                {greetingLegacy.subTitle}
               </p>
               <SocialMedia theme={theme} />
             </div>

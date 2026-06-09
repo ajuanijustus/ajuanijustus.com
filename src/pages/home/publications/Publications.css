@@ -86,7 +86,113 @@
   text-decoration: underline;
 }
 
-/* Media Query Breaking Systems */
+/* BIBTEX POPUP STYLES */
+.bibtex-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  animation: pubFadeIn 0.2s ease-out;
+}
+
+.bibtex-modal-content {
+  width: 90%;
+  max-width: 1200px;
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  animation: pubSlideUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bibtex-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.bibtex-modal-header h3 {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.bibtex-close-x {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  line-height: 0.5;
+  padding: 10px;
+  margin-right: -10px;
+  opacity: 0.6;
+  transition: opacity 0.15s;
+}
+
+.bibtex-close-x:hover {
+  opacity: 1;
+}
+
+.bibtex-pre {
+  padding: 16px;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-family: "Consolas", "Courier New", Courier, monospace;
+  font-size: 13.5px;
+  line-height: 1.5;
+  margin: 8px 0 20px 0;
+  text-align: left;
+  white-space: pre;
+  word-wrap: normal;
+}
+
+.bibtex-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.bibtex-copy-btn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 13.5px;
+  cursor: pointer;
+  transition: transform 0.1s ease, filter 0.15s ease;
+}
+
+.bibtex-copy-btn:hover {
+  filter: brightness(1.08);
+}
+
+.bibtex-copy-btn:active {
+  transform: scale(0.98);
+}
+
+@keyframes pubFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pubSlideUp {
+  from { transform: translateY(15px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+
+/* MEDIA QUERY BREAKING SYSTEMS */
 @media (max-width: 1380px) {
   .publications-heading {
     font-size: 35px;
@@ -123,5 +229,13 @@
   .pub-authors,
   .pub-full-venue {
     font-size: 14px;
+  }
+  /* Optimization for popup sizing on narrow screens */
+  .bibtex-modal-content {
+    padding: 16px;
+  }
+  .bibtex-pre {
+    font-size: 12px;
+    padding: 12px;
   }
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Publications.css";
 import { publications } from "../../../config/portfolio";
 import { Fade } from "react-awesome-reveal";
@@ -6,25 +6,7 @@ import { Fade } from "react-awesome-reveal";
 export default function Publications(props) {
   const theme = props.theme;
 
-  // State management for BibTeX Modal and Clipboard Actions
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [activeBibtex, setActiveBibtex] = useState("");
-  const [copied, setCopied] = useState(false);
-
   if (!publications || publications.length === 0) return null;
-
-  const openModal = (e, bibtexText) => {
-    e.preventDefault(); // Stop page from snapping to top
-    setActiveBibtex(bibtexText);
-    setIsModalOpen(true);
-    setCopied(false);
-  };
-
-  const copyToClipboard = () => {
-    navigator.clipboard.writeText(activeBibtex);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000); // Reset button text after 2 seconds
-  };
 
   return (
     /* Outer structural wrapper remains static to maintain perfect page layout rules */
@@ -98,13 +80,8 @@ export default function Publications(props) {
                           [Website]
                         </a>
                       )}
-                      {/* ⚡ Updated BibTeX node trigger to safely pass data literal down to modal hook */}
                       {pub.links.bibtex && (
-                        <a 
-                          href="#" 
-                          onClick={(e) => openModal(e, pub.links.bibtex)} 
-                          style={{ color: theme.highlight, cursor: "pointer" }}
-                        >
+                        <a href={pub.links.bibtex} style={{ color: theme.highlight }}>
                           [BibTeX]
                         </a>
                       )}
@@ -117,46 +94,6 @@ export default function Publications(props) {
           </div>
         </Fade>
       </div>
-
-      {/* THEMED BIBTEX POPUP MODAL */}
-      {isModalOpen && (
-        <div className="bibtex-modal-overlay" onClick={() => setIsModalOpen(false)}>
-          <div 
-            className="bibtex-modal-content" 
-            style={{ 
-              backgroundColor: theme.body, 
-              color: theme.text, 
-              border: `1px solid ${theme.secondaryText}30` 
-            }}
-            onClick={(e) => e.stopPropagation()} // Keeps modal open when clicking inside the window
-          >
-            <div className="bibtex-modal-header">
-              <h3 style={{ color: theme.text }}>BibTeX Citation</h3>
-              <button 
-                className="bibtex-close-x" 
-                onClick={() => setIsModalOpen(false)}
-                style={{ color: theme.text }}
-              >
-                &times;
-              </button>
-            </div>
-            
-            <pre className="bibtex-pre" style={{ backgroundColor: theme.secondaryText + "12", color: theme.text }}>
-              <code>{activeBibtex}</code>
-            </pre>
-            
-            <div className="bibtex-modal-footer">
-              <button 
-                className="bibtex-copy-btn" 
-                onClick={copyToClipboard}
-                style={{ backgroundColor: theme.highlight, color: theme.body }}
-              >
-                {copied ? "✓ Copied!" : "Copy to Clipboard"}
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
 
     </div>
   );

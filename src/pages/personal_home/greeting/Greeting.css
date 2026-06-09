@@ -92,6 +92,8 @@
 
 .inline-sequence-span {
   font-weight: 700;
+  border-bottom: 2px dashed rgba(232, 0, 0, 0.3);
+  padding-bottom: 2px;
 }
 
 /* Full Width Bottom Block Elements */

@@ -1,0 +1,1319 @@
+{
+  "byYear": {
+    "2026": {
+      "totalBooks": 19,
+      "totalPages": 6414,
+      "ratings": {
+        "1": 0,
+        "2": 0,
+        "3": 2,
+        "4": 5,
+        "5": 12
+      }
+    },
+    "2025": {
+      "totalBooks": 101,
+      "totalPages": 44560,
+      "ratings": {
+        "1": 0,
+        "2": 1,
+        "3": 8,
+        "4": 41,
+        "5": 50
+      }
+    },
+    "Before Tracking": {
+      "totalBooks": 134,
+      "totalPages": 47188,
+      "ratings": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0
+      }
+    },
+    "2024": {
+      "totalBooks": 31,
+      "totalPages": 14399,
+      "ratings": {
+        "1": 0,
+        "2": 1,
+        "3": 3,
+        "4": 13,
+        "5": 14
+      }
+    },
+    "2022": {
+      "totalBooks": 7,
+      "totalPages": 5939,
+      "ratings": {
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 4,
+        "5": 2
+      }
+    },
+    "2023": {
+      "totalBooks": 11,
+      "totalPages": 2825,
+      "ratings": {
+        "1": 0,
+        "2": 1,
+        "3": 3,
+        "4": 4,
+        "5": 3
+      }
+    },
+    "2021": {
+      "totalBooks": 4,
+      "totalPages": 2469,
+      "ratings": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 1,
+        "5": 3
+      }
+    }
+  },
+  "timeline": [
+    {
+      "date": "2021/06",
+      "booksCount": 3,
+      "pagesCount": 1928
+    },
+    {
+      "date": "2021/07",
+      "booksCount": 1,
+      "pagesCount": 541
+    },
+    {
+      "date": "2022/08",
+      "booksCount": 3,
+      "pagesCount": 2129
+    },
+    {
+      "date": "2022/10",
+      "booksCount": 1,
+      "pagesCount": 1007
+    },
+    {
+      "date": "2022/11",
+      "booksCount": 3,
+      "pagesCount": 2803
+    },
+    {
+      "date": "2023/01",
+      "booksCount": 1,
+      "pagesCount": 302
+    },
+    {
+      "date": "2023/02",
+      "booksCount": 1,
+      "pagesCount": 498
+    },
+    {
+      "date": "2023/11",
+      "booksCount": 3,
+      "pagesCount": 528
+    },
+    {
+      "date": "2023/12",
+      "booksCount": 6,
+      "pagesCount": 1497
+    },
+    {
+      "date": "2024/01",
+      "booksCount": 8,
+      "pagesCount": 5471
+    },
+    {
+      "date": "2024/02",
+      "booksCount": 1,
+      "pagesCount": 666
+    },
+    {
+      "date": "2024/03",
+      "booksCount": 2,
+      "pagesCount": 677
+    },
+    {
+      "date": "2024/04",
+      "booksCount": 1,
+      "pagesCount": 100
+    },
+    {
+      "date": "2024/07",
+      "booksCount": 4,
+      "pagesCount": 1259
+    },
+    {
+      "date": "2024/08",
+      "booksCount": 4,
+      "pagesCount": 1866
+    },
+    {
+      "date": "2024/09",
+      "booksCount": 1,
+      "pagesCount": 399
+    },
+    {
+      "date": "2024/10",
+      "booksCount": 4,
+      "pagesCount": 909
+    },
+    {
+      "date": "2024/11",
+      "booksCount": 2,
+      "pagesCount": 1116
+    },
+    {
+      "date": "2024/12",
+      "booksCount": 4,
+      "pagesCount": 1936
+    },
+    {
+      "date": "2025/01",
+      "booksCount": 9,
+      "pagesCount": 3587
+    },
+    {
+      "date": "2025/02",
+      "booksCount": 10,
+      "pagesCount": 4322
+    },
+    {
+      "date": "2025/03",
+      "booksCount": 3,
+      "pagesCount": 1600
+    },
+    {
+      "date": "2025/04",
+      "booksCount": 9,
+      "pagesCount": 3264
+    },
+    {
+      "date": "2025/05",
+      "booksCount": 6,
+      "pagesCount": 3431
+    },
+    {
+      "date": "2025/06",
+      "booksCount": 12,
+      "pagesCount": 4947
+    },
+    {
+      "date": "2025/07",
+      "booksCount": 11,
+      "pagesCount": 5634
+    },
+    {
+      "date": "2025/08",
+      "booksCount": 5,
+      "pagesCount": 2502
+    },
+    {
+      "date": "2025/09",
+      "booksCount": 4,
+      "pagesCount": 1765
+    },
+    {
+      "date": "2025/10",
+      "booksCount": 15,
+      "pagesCount": 6102
+    },
+    {
+      "date": "2025/11",
+      "booksCount": 6,
+      "pagesCount": 3082
+    },
+    {
+      "date": "2025/12",
+      "booksCount": 11,
+      "pagesCount": 4324
+    },
+    {
+      "date": "2026/02",
+      "booksCount": 2,
+      "pagesCount": 896
+    },
+    {
+      "date": "2026/03",
+      "booksCount": 7,
+      "pagesCount": 1580
+    },
+    {
+      "date": "2026/05",
+      "booksCount": 10,
+      "pagesCount": 3938
+    }
+  ],
+  "scatterPlot": [
+    {
+      "x": "2026/05",
+      "y": 2006,
+      "title": "The Lies of Locke Lamora"
+    },
+    {
+      "x": "2026/05",
+      "y": 2023,
+      "title": "Blood Over Bright Haven"
+    },
+    {
+      "x": "2026/05",
+      "y": 1886,
+      "title": "The Death of Ivan Ilych"
+    },
+    {
+      "x": "2026/05",
+      "y": 2014,
+      "title": "Seven Brief Lessons on Physics"
+    },
+    {
+      "x": "2026/05",
+      "y": 2025,
+      "title": "Reckoning"
+    },
+    {
+      "x": "2026/05",
+      "y": 2026,
+      "title": "Platform Decay"
+    },
+    {
+      "x": "2026/05",
+      "y": 2026,
+      "title": "A Parade of Horribles"
+    },
+    {
+      "x": "2026/05",
+      "y": 2023,
+      "title": "System Collapse"
+    },
+    {
+      "x": "2026/05",
+      "y": 2021,
+      "title": "Fugitive Telemetry"
+    },
+    {
+      "x": "2025/10",
+      "y": 2021,
+      "title": "Lore Olympus: Volume One"
+    },
+    {
+      "x": "2025/10",
+      "y": 2026,
+      "title": "Lore Olympus: Volume Eleven"
+    },
+    {
+      "x": "2025/10",
+      "y": 2026,
+      "title": "Lore Olympus: Volume Ten"
+    },
+    {
+      "x": "2025/10",
+      "y": 2025,
+      "title": "Lore Olympus: Volume Nine"
+    },
+    {
+      "x": "2025/10",
+      "y": 2024,
+      "title": "Lore Olympus: Volume Seven"
+    },
+    {
+      "x": "2025/10",
+      "y": 2025,
+      "title": "Lore Olympus: Volume Eight"
+    },
+    {
+      "x": "2025/10",
+      "y": 2024,
+      "title": "Lore Olympus: Volume Six"
+    },
+    {
+      "x": "2025/10",
+      "y": 2023,
+      "title": "Lore Olympus: Volume Five"
+    },
+    {
+      "x": "2025/10",
+      "y": 2023,
+      "title": "Lore Olympus: Volume Four"
+    },
+    {
+      "x": "2026/03",
+      "y": 2018,
+      "title": "Exit Strategy"
+    },
+    {
+      "x": "2026/05",
+      "y": 2020,
+      "title": "Network Effect"
+    },
+    {
+      "x": "2026/03",
+      "y": 2018,
+      "title": "Rogue Protocol"
+    },
+    {
+      "x": "2026/03",
+      "y": 2018,
+      "title": "Artificial Condition"
+    },
+    {
+      "x": "2026/03",
+      "y": 1848,
+      "title": "White Nights"
+    },
+    {
+      "x": "2026/03",
+      "y": 2017,
+      "title": "All Systems Red"
+    },
+    {
+      "x": "2026/03",
+      "y": 2021,
+      "title": "Project Hail Mary"
+    },
+    {
+      "x": "2026/03",
+      "y": 2025,
+      "title": "Mother Mary Comes to Me"
+    },
+    {
+      "x": "2026/02",
+      "y": 2026,
+      "title": "A War of Wyverns"
+    },
+    {
+      "x": "2025/02",
+      "y": 2014,
+      "title": "Words of Radiance"
+    },
+    {
+      "x": "2026/02",
+      "y": 2025,
+      "title": "A Language of Dragons"
+    },
+    {
+      "x": "2025/12",
+      "y": 2014,
+      "title": "Quantum Mechanics: The Theoretical Minimum"
+    },
+    {
+      "x": "2025/12",
+      "y": 1963,
+      "title": "Fahrenheit 451"
+    },
+    {
+      "x": "2025/12",
+      "y": 1996,
+      "title": "Into the Wild"
+    },
+    {
+      "x": "2025/12",
+      "y": 2021,
+      "title": "Jade Legacy"
+    },
+    {
+      "x": "2025/12",
+      "y": 2020,
+      "title": "Hamnet"
+    },
+    {
+      "x": "2025/12",
+      "y": 2022,
+      "title": "Perfection"
+    },
+    {
+      "x": "2025/12",
+      "y": 2019,
+      "title": "Anxious People"
+    },
+    {
+      "x": "2025/12",
+      "y": 2025,
+      "title": "The Book That Held Her Heart"
+    },
+    {
+      "x": "2025/12",
+      "y": 2024,
+      "title": "The Book That Broke the World"
+    },
+    {
+      "x": "2025/12",
+      "y": 2023,
+      "title": "The Book That Wouldn’t Burn"
+    },
+    {
+      "x": "2025/12",
+      "y": 2019,
+      "title": "Jade War"
+    },
+    {
+      "x": "2025/11",
+      "y": 2017,
+      "title": "Jade City"
+    },
+    {
+      "x": "2025/11",
+      "y": 1997,
+      "title": "Assassin's Quest"
+    },
+    {
+      "x": "2025/11",
+      "y": 1996,
+      "title": "Royal Assassin"
+    },
+    {
+      "x": "2025/11",
+      "y": 1995,
+      "title": "Assassin's Apprentice"
+    },
+    {
+      "x": "2025/11",
+      "y": 1962,
+      "title": "We Have Always Lived in the Castle"
+    },
+    {
+      "x": "2025/11",
+      "y": 2024,
+      "title": "Slow Productivity: The Lost Art of Accomplishment Without Burnout"
+    },
+    {
+      "x": "2025/10",
+      "y": 2019,
+      "title": "Holy Sister"
+    },
+    {
+      "x": "2025/10",
+      "y": 2018,
+      "title": "Grey Sister"
+    },
+    {
+      "x": "2025/10",
+      "y": 2017,
+      "title": "Red Sister"
+    },
+    {
+      "x": "2025/10",
+      "y": 2020,
+      "title": "Piranesi"
+    },
+    {
+      "x": "2025/10",
+      "y": 2022,
+      "title": "Lore Olympus: Volume Two"
+    },
+    {
+      "x": "2025/10",
+      "y": 2022,
+      "title": "Lore Olympus: Volume Three"
+    },
+    {
+      "x": "2025/09",
+      "y": 2023,
+      "title": "Thornhedge"
+    },
+    {
+      "x": "2025/09",
+      "y": 2024,
+      "title": "The Fury of the Gods"
+    },
+    {
+      "x": "2025/09",
+      "y": 2022,
+      "title": "The Hunger of the Gods"
+    },
+    {
+      "x": "2025/09",
+      "y": 2021,
+      "title": "The Shadow of the Gods"
+    },
+    {
+      "x": "2025/08",
+      "y": 2025,
+      "title": "Everything Is Tuberculosis: The History and Persistence of Our Deadliest Infection"
+    },
+    {
+      "x": "2025/08",
+      "y": 2023,
+      "title": "Vera Wong's Unsolicited Advice for Murderers"
+    },
+    {
+      "x": "2025/08",
+      "y": 2002,
+      "title": "House of Chains"
+    },
+    {
+      "x": "2025/08",
+      "y": 2025,
+      "title": "Sunrise on the Reaping"
+    },
+    {
+      "x": "2025/08",
+      "y": 2020,
+      "title": "The Ballad of Songbirds and Snakes"
+    },
+    {
+      "x": "2025/07",
+      "y": 2001,
+      "title": "Memories of Ice"
+    },
+    {
+      "x": "2025/07",
+      "y": 2020,
+      "title": "The Midnight Library"
+    },
+    {
+      "x": "2025/07",
+      "y": 2023,
+      "title": "Tress of the Emerald Sea"
+    },
+    {
+      "x": "2025/07",
+      "y": 1992,
+      "title": "The Secret History"
+    },
+    {
+      "x": "2025/07",
+      "y": 2000,
+      "title": "Storm Front"
+    },
+    {
+      "x": "2025/07",
+      "y": 2021,
+      "title": "The Anthropocene Reviewed: Essays on a Human-Centered Planet"
+    },
+    {
+      "x": "2025/07",
+      "y": 2014,
+      "title": "Show Your Work!: 10 Ways to Share Your Creativity and Get Discovered"
+    },
+    {
+      "x": "2025/07",
+      "y": 2024,
+      "title": "This Inevitable Ruin"
+    },
+    {
+      "x": "2025/07",
+      "y": 2023,
+      "title": "The Eye of the Bedlam Bride"
+    },
+    {
+      "x": "2025/07",
+      "y": 2015,
+      "title": "And Every Morning the Way Home Gets Longer and Longer"
+    },
+    {
+      "x": "2025/07",
+      "y": 2022,
+      "title": "The Butcher's Masquerade"
+    },
+    {
+      "x": "2025/06",
+      "y": 2021,
+      "title": "The Gate of the Feral Gods"
+    },
+    {
+      "x": "2025/06",
+      "y": 2020,
+      "title": "The Burning God"
+    },
+    {
+      "x": "2025/06",
+      "y": 2019,
+      "title": "The Dragon Republic"
+    },
+    {
+      "x": "2025/06",
+      "y": 2018,
+      "title": "The Poppy War"
+    },
+    {
+      "x": "2025/06",
+      "y": 2022,
+      "title": "The Six Deaths of the Saint"
+    },
+    {
+      "x": "2025/06",
+      "y": 2016,
+      "title": "Every Heart a Doorway"
+    },
+    {
+      "x": "2025/06",
+      "y": 2021,
+      "title": "The Dungeon Anarchist's Cookbook"
+    },
+    {
+      "x": "2025/06",
+      "y": 2021,
+      "title": "Carl's Doomsday Scenario"
+    },
+    {
+      "x": "2025/06",
+      "y": 2024,
+      "title": "The Wedding People"
+    },
+    {
+      "x": "2025/04",
+      "y": 2016,
+      "title": "Mr Salary"
+    },
+    {
+      "x": "2025/06",
+      "y": 2023,
+      "title": "Yellowface"
+    },
+    {
+      "x": "2025/06",
+      "y": 2020,
+      "title": "Dungeon Crawler Carl"
+    },
+    {
+      "x": "2025/06",
+      "y": 1963,
+      "title": "The Bell Jar"
+    },
+    {
+      "x": "2025/05",
+      "y": 1977,
+      "title": "The Faggots and Their Friends Between Revolutions"
+    },
+    {
+      "x": "2025/05",
+      "y": 2018,
+      "title": "Circe"
+    },
+    {
+      "x": "2025/05",
+      "y": 2010,
+      "title": "Days at the Morisaki Bookshop"
+    },
+    {
+      "x": "2025/05",
+      "y": 2024,
+      "title": "Wind and Truth"
+    },
+    {
+      "x": "2025/05",
+      "y": 2020,
+      "title": "Rhythm of War"
+    },
+    {
+      "x": "2025/05",
+      "y": 1973,
+      "title": "Sula"
+    },
+    {
+      "x": "2025/04",
+      "y": 2022,
+      "title": "What If? 2: Additional Serious Scientific Answers to Absurd Hypothetical Questions"
+    },
+    {
+      "x": "2025/04",
+      "y": 1977,
+      "title": "Bridge to Terabithia"
+    },
+    {
+      "x": "2025/04",
+      "y": 2017,
+      "title": "The Seven Husbands of Evelyn Hugo"
+    },
+    {
+      "x": "2025/04",
+      "y": 2005,
+      "title": "Never Let Me Go"
+    },
+    {
+      "x": "2025/04",
+      "y": 2020,
+      "title": "A Wizard’s Guide to Defensive Baking"
+    },
+    {
+      "x": "2025/04",
+      "y": 2018,
+      "title": "Educated"
+    },
+    {
+      "x": "2025/04",
+      "y": 1890,
+      "title": "The Picture of Dorian Gray"
+    },
+    {
+      "x": "2025/04",
+      "y": 2016,
+      "title": "The Ivory Throne: Chronicles of the House of Travancore"
+    },
+    {
+      "x": "2025/03",
+      "y": 2018,
+      "title": "The Distance Between Me and the Cherry Tree"
+    },
+    {
+      "x": "2025/03",
+      "y": 2017,
+      "title": "Oathbringer"
+    },
+    {
+      "x": "2025/03",
+      "y": 1922,
+      "title": "Letter from an Unknown Woman"
+    },
+    {
+      "x": "2025/02",
+      "y": 1929,
+      "title": "A Room of One’s Own"
+    },
+    {
+      "x": "2025/02",
+      "y": 2010,
+      "title": "Foster"
+    },
+    {
+      "x": "2025/02",
+      "y": 2021,
+      "title": "Small Things Like These"
+    },
+    {
+      "x": "2025/02",
+      "y": 2010,
+      "title": "The Way of Kings"
+    },
+    {
+      "x": "2025/02",
+      "y": 2018,
+      "title": "Children of Blood and Bone"
+    },
+    {
+      "x": "2025/02",
+      "y": 1848,
+      "title": "The Communist Manifesto"
+    },
+    {
+      "x": "2025/02",
+      "y": 2020,
+      "title": "The Fires of Vengeance"
+    },
+    {
+      "x": "2025/02",
+      "y": 2017,
+      "title": "The Rage of Dragons"
+    },
+    {
+      "x": "2025/01",
+      "y": 2003,
+      "title": "Regarding the Pain of Others"
+    },
+    {
+      "x": "2025/01",
+      "y": 2024,
+      "title": "Last Stand of the Stone Fist"
+    },
+    {
+      "x": "2025/01",
+      "y": 2023,
+      "title": "Defiant"
+    },
+    {
+      "x": "2025/01",
+      "y": 2021,
+      "title": "Unbound"
+    },
+    {
+      "x": "2024/08",
+      "y": 2005,
+      "title": "The Book Thief"
+    },
+    {
+      "x": "2025/01",
+      "y": 1963,
+      "title": "The Fire Next Time"
+    },
+    {
+      "x": "2025/01",
+      "y": 2020,
+      "title": "Ascendant"
+    },
+    {
+      "x": "2025/01",
+      "y": 1997,
+      "title": "The God of Small Things"
+    },
+    {
+      "x": "2025/01",
+      "y": 2016,
+      "title": "When Breath Becomes Air"
+    },
+    {
+      "x": "2025/01",
+      "y": 2023,
+      "title": "The Covenant of Water"
+    },
+    {
+      "x": "2024/12",
+      "y": 2019,
+      "title": "The Second Mountain"
+    },
+    {
+      "x": "2024/12",
+      "y": 2011,
+      "title": "Jerusalem: The Biography"
+    },
+    {
+      "x": "2024/12",
+      "y": 2022,
+      "title": "Babel"
+    },
+    {
+      "x": "2024/12",
+      "y": 2021,
+      "title": "Crying in H Mart"
+    },
+    {
+      "x": "2024/11",
+      "y": 2000,
+      "title": "Deadhouse Gates"
+    },
+    {
+      "x": "2024/11",
+      "y": 2011,
+      "title": "Sapiens: A Brief History of Humankind"
+    },
+    {
+      "x": "2024/10",
+      "y": 2018,
+      "title": "Normal People"
+    },
+    {
+      "x": "2024/10",
+      "y": 1980,
+      "title": "The Restaurant at the End of the Universe"
+    },
+    {
+      "x": "2024/10",
+      "y": 1979,
+      "title": "The Hitchhiker's Guide to the Galaxy"
+    },
+    {
+      "x": "2024/10",
+      "y": 1969,
+      "title": "ഖസാക്കിന്റെ ഇതിഹാസം | Khasakkinte Ithihasam | The Legends of Khasak"
+    },
+    {
+      "x": "2022/08",
+      "y": 1991,
+      "title": "The Dragon Reborn"
+    },
+    {
+      "x": "2024/07",
+      "y": 2011,
+      "title": "Thinking, Fast and Slow"
+    },
+    {
+      "x": "2024/09",
+      "y": 2022,
+      "title": "Tomorrow, and Tomorrow, and Tomorrow"
+    },
+    {
+      "x": "2024/08",
+      "y": 2011,
+      "title": "The Song of Achilles"
+    },
+    {
+      "x": "2024/08",
+      "y": 2013,
+      "title": "A Natural History of Dragons"
+    },
+    {
+      "x": "2024/08",
+      "y": 1847,
+      "title": "Jane Eyre"
+    },
+    {
+      "x": "2024/07",
+      "y": 2016,
+      "title": "Deep Work: Rules for Focused Success in a Distracted World"
+    },
+    {
+      "x": "2024/07",
+      "y": 2024,
+      "title": "The Last Enemy: Dark Marks"
+    },
+    {
+      "x": "2024/07",
+      "y": 2020,
+      "title": "The Last Enemy: The Howling Nights"
+    },
+    {
+      "x": "2024/04",
+      "y": 1936,
+      "title": "Annihilation of Caste"
+    },
+    {
+      "x": "2024/03",
+      "y": 1967,
+      "title": "One Hundred Years of Solitude"
+    },
+    {
+      "x": "2024/03",
+      "y": 2014,
+      "title": "The Storied Life of A.J. Fikry"
+    },
+    {
+      "x": "2024/02",
+      "y": 1999,
+      "title": "Gardens of the Moon"
+    },
+    {
+      "x": "2024/01",
+      "y": 2013,
+      "title": "A Memory of Light"
+    },
+    {
+      "x": "2024/01",
+      "y": 2010,
+      "title": "Towers of Midnight"
+    },
+    {
+      "x": "2024/01",
+      "y": 2009,
+      "title": "The Gathering Storm"
+    },
+    {
+      "x": "2024/01",
+      "y": 2005,
+      "title": "Knife of Dreams"
+    },
+    {
+      "x": "2024/01",
+      "y": 2003,
+      "title": "Crossroads of Twilight"
+    },
+    {
+      "x": "2024/01",
+      "y": 2000,
+      "title": "Winter's Heart"
+    },
+    {
+      "x": "2024/01",
+      "y": 1813,
+      "title": "Pride and Prejudice"
+    },
+    {
+      "x": "2024/01",
+      "y": 1817,
+      "title": "Persuasion"
+    },
+    {
+      "x": "2023/12",
+      "y": 1998,
+      "title": "The Path of Daggers"
+    },
+    {
+      "x": "2023/12",
+      "y": 2006,
+      "title": "The Metamorphosis of Prime Intellect"
+    },
+    {
+      "x": "2023/12",
+      "y": 1945,
+      "title": "Animal Farm"
+    },
+    {
+      "x": "2023/12",
+      "y": 2022,
+      "title": "Legends & Lattes"
+    },
+    {
+      "x": "2023/12",
+      "y": 2020,
+      "title": "Melodrama in the Multiverse"
+    },
+    {
+      "x": "2023/12",
+      "y": 2016,
+      "title": "The Subtle Art of Not Giving a F*ck: A Counterintuitive Approach to Living a Good Life"
+    },
+    {
+      "x": "2023/11",
+      "y": 2018,
+      "title": "Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones"
+    },
+    {
+      "x": "2023/11",
+      "y": 1984,
+      "title": "Bright Lights, Big City"
+    },
+    {
+      "x": "2023/11",
+      "y": 2016,
+      "title": "Ikigai: The Japanese Secret to a Long and Happy Life"
+    },
+    {
+      "x": "2023/02",
+      "y": 2019,
+      "title": "The Starless Sea"
+    },
+    {
+      "x": "2023/01",
+      "y": 1917,
+      "title": "Piccadilly Jim"
+    },
+    {
+      "x": "2022/11",
+      "y": 1996,
+      "title": "A Crown of Swords"
+    },
+    {
+      "x": "2022/11",
+      "y": 1994,
+      "title": "Lord of Chaos"
+    },
+    {
+      "x": "2022/11",
+      "y": 1993,
+      "title": "The Fires of Heaven"
+    },
+    {
+      "x": "2022/10",
+      "y": 1992,
+      "title": "The Shadow Rising"
+    },
+    {
+      "x": "2022/08",
+      "y": 1990,
+      "title": "The Great Hunt"
+    },
+    {
+      "x": "2022/08",
+      "y": 1990,
+      "title": "The Eye of the World"
+    },
+    {
+      "x": "2021/07",
+      "y": 2006,
+      "title": "Mistborn: The Final Empire"
+    },
+    {
+      "x": "2021/06",
+      "y": 2011,
+      "title": "The Wise Man's Fear"
+    },
+    {
+      "x": "2021/06",
+      "y": 2015,
+      "title": "The Hidden Life of Trees: What They Feel, How They Communicate: Discoveries from a Secret World"
+    },
+    {
+      "x": "2021/06",
+      "y": 2007,
+      "title": "The Name of the Wind"
+    }
+  ],
+  "byAuthor": [
+    {
+      "name": "Enid Blyton",
+      "count": 36,
+      "totalPages": 7120,
+      "avgRating": 0
+    },
+    {
+      "name": "Robert Jordan",
+      "count": 14,
+      "totalPages": 11567,
+      "avgRating": 4.14
+    },
+    {
+      "name": "Rick Riordan",
+      "count": 13,
+      "totalPages": 5932,
+      "avgRating": 0
+    },
+    {
+      "name": "Rachel  Smythe",
+      "count": 11,
+      "totalPages": 4544,
+      "avgRating": 4.27
+    },
+    {
+      "name": "Martha Wells",
+      "count": 8,
+      "totalPages": 1653,
+      "avgRating": 4.25
+    },
+    {
+      "name": "Matt Dinniman",
+      "count": 8,
+      "totalPages": 5116,
+      "avgRating": 4.75
+    },
+    {
+      "name": "J.K. Rowling",
+      "count": 8,
+      "totalPages": 4296,
+      "avgRating": 0
+    },
+    {
+      "name": "Eoin Colfer",
+      "count": 8,
+      "totalPages": 3112,
+      "avgRating": 0
+    },
+    {
+      "name": "Brandon Sanderson",
+      "count": 7,
+      "totalPages": 6844,
+      "avgRating": 4.57
+    },
+    {
+      "name": "C.S. Lewis",
+      "count": 7,
+      "totalPages": 1644,
+      "avgRating": 0
+    },
+    {
+      "name": "Mark  Lawrence",
+      "count": 6,
+      "totalPages": 2612,
+      "avgRating": 5.0
+    },
+    {
+      "name": "Jeff Kinney",
+      "count": 6,
+      "totalPages": 1329,
+      "avgRating": 0
+    },
+    {
+      "name": "Cassandra Clare",
+      "count": 6,
+      "totalPages": 3164,
+      "avgRating": 0
+    },
+    {
+      "name": "Michael R.  Miller",
+      "count": 5,
+      "totalPages": 3004,
+      "avgRating": 4.2
+    },
+    {
+      "name": "John  Green",
+      "count": 5,
+      "totalPages": 1341,
+      "avgRating": 5.0
+    }
+  ],
+  "byPublisher": [
+    {
+      "name": "Tor Books",
+      "count": 20,
+      "totalPages": 15143,
+      "avgRating": 4.45
+    },
+    {
+      "name": "Hodder",
+      "count": 18,
+      "totalPages": 3086,
+      "avgRating": 0
+    },
+    {
+      "name": "Hodder Children's Books",
+      "count": 14,
+      "totalPages": 3272,
+      "avgRating": 0
+    },
+    {
+      "name": "Ace",
+      "count": 10,
+      "totalPages": 5722,
+      "avgRating": 4.8
+    },
+    {
+      "name": "Orbit",
+      "count": 9,
+      "totalPages": 5331,
+      "avgRating": 4.44
+    },
+    {
+      "name": "Inklore",
+      "count": 8,
+      "totalPages": 3376,
+      "avgRating": 4.38
+    },
+    {
+      "name": "HarperCollins",
+      "count": 8,
+      "totalPages": 3403,
+      "avgRating": 5.0
+    },
+    {
+      "name": "Penguin Books",
+      "count": 6,
+      "totalPages": 1682,
+      "avgRating": 4.4
+    },
+    {
+      "name": "Harper Voyager",
+      "count": 6,
+      "totalPages": 3987,
+      "avgRating": 4.83
+    },
+    {
+      "name": "Margaret K. McElderry Books",
+      "count": 6,
+      "totalPages": 3164,
+      "avgRating": 0
+    },
+    {
+      "name": "Disney-Hyperion Books",
+      "count": 6,
+      "totalPages": 3177,
+      "avgRating": 0
+    },
+    {
+      "name": "Tor.com",
+      "count": 5,
+      "totalPages": 802,
+      "avgRating": 4.0
+    },
+    {
+      "name": "Scholastic Press",
+      "count": 5,
+      "totalPages": 2083,
+      "avgRating": 3.5
+    },
+    {
+      "name": "Little, Brown and Company",
+      "count": 5,
+      "totalPages": 2839,
+      "avgRating": 4.0
+    },
+    {
+      "name": "Amulet Books",
+      "count": 5,
+      "totalPages": 1112,
+      "avgRating": 0
+    }
+  ],
+  "funStats": {
+    "longestBook": {
+      "title": "Wind and Truth",
+      "pages": 1344,
+      "author": "Brandon Sanderson"
+    },
+    "shortestBook": {
+      "title": "Ikigai: The Japanese Secret to a Long and Happy Life",
+      "pages": 1,
+      "author": "Héctor  García"
+    },
+    "bindingDistribution": {
+      "Hardcover": 122,
+      "Paperback": 121,
+      "Kindle Edition": 38,
+      "Mass Market Paperback": 18,
+      "ebook": 6,
+      "Unknown Binding": 1
+    }
+  }
+}

@@ -5,8 +5,6 @@ import { greeting } from "../../../config/portfolio";
 import { Fade } from "react-awesome-reveal";
 import profilePic from "../../../assets/images/linkedin_dp_overlay_round_repos.png";
 
-import myResume from "../../../assets/resume.pdf";
-
 export default function Greeting(props) {
   const theme = props.theme;
   const [seqIndex, setSeqIndex] = useState(0);
@@ -54,8 +52,7 @@ export default function Greeting(props) {
                 <div className="banner-links">
                   <a href={`mailto:${greeting.email}`} style={{ color: theme.highlight }}>{greeting.email}</a>
                   <span style={{ color: theme.secondaryText }}>•</span>
-                  {/* Updated Link to use the local imported resume asset */}
-                  <a href={myResume} target="_blank" rel="noopener noreferrer" style={{ color: theme.highlight }}>Resumé</a>
+                  <a href={greeting.resumeLink} target="_blank" rel="noopener noreferrer" style={{ color: theme.highlight }}>Resumé</a>
                 </div>
               </div>
             )}
@@ -87,25 +84,7 @@ export default function Greeting(props) {
             </p>
 
             <p>{greeting.bioPast} {greeting.bioCombined}</p>
-            
-            {/* Splitting string map to dynamically inject the Pint of Science Link */}
-            <p>
-              {greeting.outreachAndTeaching.split("Pint of Science Team at Birmingham").map((part, i, arr) => (
-                <React.Fragment key={i}>
-                  {part}
-                  {i < arr.length - 1 && (
-                    <a 
-                      href="https://pintofscience.co.uk/team/Birmingham%20Team/" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      style={{ color: theme.highlight, fontWeight: 600 }}
-                    >
-                      Pint of Science Team at Birmingham
-                    </a>
-                  )}
-                </React.Fragment>
-              ))}
-            </p>
+            <p>{greeting.outreachAndTeaching}</p>
           </div>
 
           {/* Research Interests List */}
@@ -125,8 +104,7 @@ export default function Greeting(props) {
             <SocialMedia theme={theme} />
             <div className="academic-meta-links" style={{ color: theme.secondaryText }}>
               For more info, browse my{" "}
-              {/* Updated Link to use the local imported resume asset */}
-              <a href={myResume} target="_blank" rel="noopener noreferrer" style={{ color: theme.highlight }}>Resumé</a>
+              <a href={greeting.resumeLink} target="_blank" rel="noopener noreferrer" style={{ color: theme.highlight }}>Resumé</a>
               {" "}and{" "}
               <a href={greeting.googleScholar} target="_blank" rel="noopener noreferrer" style={{ color: theme.highlight }}>Google Scholar</a>.
             </div>

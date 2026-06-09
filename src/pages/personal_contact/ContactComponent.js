@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Header from "../../components/legacy_header/Header";
+import Header from "../../components/personal_header/Header";
 import Footer from "../../components/footer/Footer";
 import TopButton from "../../components/topButton/TopButton";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
@@ -8,8 +8,6 @@ import BlogsImg from "./BlogsImg";
 import { Fade } from 'react-awesome-reveal';
 import "./ContactComponent.css";
 import { greeting, contactPageData } from "../../config/portfolio.js";
-
-import myResume from "../../assets/resume.pdf";
 
 const ContactData = contactPageData.contactSection;
 const blogSection = contactPageData.blogSection;
@@ -47,7 +45,7 @@ class LegacyContact extends Component {
                   <Button
                     text="See My Resume"
                     newTab={true}
-                    href={myResume}
+                    href={greeting.resumeLink}
                     theme={theme}
                   />
                 </div>

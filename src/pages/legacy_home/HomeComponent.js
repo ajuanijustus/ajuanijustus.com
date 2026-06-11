@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Header from "../../components/legacy_header/Header";
+import LegacyHeader from "../../components/legacy_header/Header";
 import Greeting from "./greeting/Greeting";
 import Skills from "./skills/Skills";
 import Footer from "../../components/footer/Footer";
@@ -10,7 +10,7 @@ class LegacyHome extends Component {
     console.log(this.props.theme);
     return (
       <div>
-        <Header theme={this.props.theme} />
+        <LegacyHeader theme={this.props.theme} />
         <Greeting theme={this.props.theme} />
         <Skills theme={this.props.theme} />
         <Footer theme={this.props.theme} onToggle={this.props.onToggle} />

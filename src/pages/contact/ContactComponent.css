@@ -99,9 +99,6 @@
   text-decoration: underline;
 }
 
-/* ==========================================================================
-   ⚡ NEW COMPACT INLINE SOCIAL SECTIONS
-   ========================================================================== */
 .compact-social-grid {
   display: grid;
   /* Snug fit layout columns */
@@ -117,23 +114,6 @@
   gap: 10px;
   text-decoration: none;
   padding: 4px 0;
-  transition: opacity 0.15s ease;
-}
-
-.compact-social-item:hover {
-  opacity: 0.8;
-}
-
-/* Pulls custom background bubble designs straight into icons */
-.compact-social-item i {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  color: #ffffff;
-  font-size: 14px;
 }
 
 .compact-social-item span {

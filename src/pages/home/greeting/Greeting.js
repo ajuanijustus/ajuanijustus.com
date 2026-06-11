@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Greeting.css";
 import SocialMedia from "../../../components/socialMedia/SocialMedia";
-import { greeting } from "../../../config/portfolio";
+import { greeting, socialMediaLinks } from "../../../config/portfolio";
 import { Fade } from "react-awesome-reveal";
 import profilePic from "../../../assets/images/linkedin_dp_overlay_round_repos.png";
 
@@ -122,7 +122,7 @@ export default function Greeting(props) {
 
           {/* Metadata Footer Utilities */}
           <div className="greeting-footer-links">
-            <SocialMedia theme={theme} />
+            <SocialMedia theme={theme} links={socialMediaLinks} />
             <div className="academic-meta-links" style={{ color: theme.secondaryText }}>
               For more info, browse my{" "}
               {/* Updated Link to use the local imported resume asset */}

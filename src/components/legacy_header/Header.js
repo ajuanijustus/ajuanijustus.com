@@ -15,7 +15,7 @@ const onMouseOut = (event) => {
   el.style.backgroundColor = "transparent";
 };
 
-class Header extends Component {
+class LegacyHeader extends Component {
   render() {
     const theme = this.props.theme;
     console.log(theme);
@@ -66,4 +66,4 @@ class Header extends Component {
     );
   }
 }
-export default Header;
+export default LegacyHeader;

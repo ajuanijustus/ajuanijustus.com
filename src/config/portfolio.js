@@ -4,6 +4,7 @@ import {
   faYoutube, 
   faGoogle, 
   faXTwitter, 
+  faTwitter,
   faInstagram, 
   faGithub, 
   faGoodreads, 
@@ -90,9 +91,21 @@ const greeting = {
 
 const socialMediaLinks = [
   { name: "LinkedIn", link: "https://www.linkedin.com/in/ajuanijustus/", icon: faLinkedinIn },
+  { name: "Email", link: "mailto:research@ajuanijustus.com", icon: faGoogle },
+  { name: "GitHub", link: "https://github.com/ajuanijustus", icon: faGithub },
+  { name: "Goodreads", link: "https://www.goodreads.com/user/show/50358068-aju-justus", icon: faGoodreads },
+  { name: "Bluesky", link: "https://bsky.app/profile/ajuanijustus.bsky.social", icon: faBluesky },
+  { name: "Google Scholar", link: "https://scholar.google.com/citations?user=ktCUwwsAAAAJ&hl=en", icon: faGoogleScholar },
+  { name: "ResearchGate", link: "https://www.researchgate.net/profile/Aju-Ani-Justus", icon: faResearchgate },
+  { name: "ORCID", link: "https://orcid.org/0009-0002-7125-9397", icon: faOrcid },
+  { name: "UOB Research Pure", link: "https://research.birmingham.ac.uk/en/persons/aju-ani-justus/publications/", icon: faUniversity }
+];
+
+const socialMediaLinksPersonal = [
+  { name: "LinkedIn", link: "https://www.linkedin.com/in/ajuanijustus/", icon: faLinkedinIn },
   { name: "YouTube (Reward Signal)", link: "https://www.youtube.com/@TheRewardSignal", icon: faYoutube },
   { name: "YouTube (Personal)", link: "https://www.youtube.com/@ajewdor", icon: faYoutube },
-  { name: "Email", link: "mailto:ajuani1997@gmail.com", icon: faGoogle },
+  { name: "Email", link: "mailto:research@ajuanijustus.com", icon: faGoogle },
   { name: "Twitter (X)", link: "https://twitter.com/ajuanijustus", icon: faXTwitter },
   { name: "Instagram", link: "https://www.instagram.com/ajuanijustus/", icon: faInstagram },
   { name: "GitHub", link: "https://github.com/ajuanijustus", icon: faGithub },
@@ -105,6 +118,16 @@ const socialMediaLinks = [
   { name: "Fable", link: "https://fable.co/fabler/aju-174512380413?referralID=r5kkUPaqRR", icon: faBookOpen },
   { name: "ORCID", link: "https://orcid.org/0009-0002-7125-9397", icon: faOrcid },
   { name: "UOB Research Pure", link: "https://research.birmingham.ac.uk/en/persons/aju-ani-justus/publications/", icon: faUniversity }
+];
+
+const socialMediaLinksLegacy = [
+  { name: "LinkedIn", link: "https://www.linkedin.com/in/ajuanijustus/", icon: faLinkedinIn },
+  { name: "Email", link: "mailto:ajuani1997@gmail.com", icon: faGoogle },
+  { name: "Twitter", link: "https://twitter.com/ajuanijustus", icon: faTwitter },
+  { name: "Instagram", link: "https://www.instagram.com/ajuanijustus/", icon: faInstagram },
+  { name: "GitHub", link: "https://github.com/ajuanijustus", icon: faGithub },
+  { name: "Goodreads", link: "https://www.goodreads.com/user/show/50358068-aju-justus", icon: faGoodreads },
+  { name: "Twitch", link: "https://www.twitch.tv/ajewdor", icon: faTwitch }
 ];
 
 const skills = {
@@ -288,9 +311,7 @@ const skills = {
 const contactPageData = {
   contactSection: {
     title: "Contact Me",
-    profile_image_path: "linkedin_dp_overlay_round_repos.png",
-    description:
-      "Feel free to reach out to me on any of my social media. Always up for a chat.",
+    profile_image_path: "linkedin_dp_overlay_round_repos.png"
   },
   blogSection: {
     title: "Blogs",
@@ -608,6 +629,8 @@ export {
   greeting,
   greetingLegacy,
   socialMediaLinks,
+  socialMediaLinksPersonal,
+  socialMediaLinksLegacy,
   skills,
   contactPageData,
   news,

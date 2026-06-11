@@ -3,8 +3,11 @@ import "./ReadingStats.css";
 import statsData from "../../config/stats.json";
 import { Fade } from "react-awesome-reveal";
 import Header from "../../components/personal_header/Header";
+import Footer from "../../components/footer/Footer";
+import TopButton from "../../components/topButton/TopButton";
 
-export default function ReadingStats({ theme }) {
+export default function ReadingStats(props) {
+  const theme = props.theme;
   // Click state for interactive book scatter node
   const [activeDot, setActiveDot] = useState(null);
   
@@ -300,6 +303,8 @@ export default function ReadingStats({ theme }) {
           </div>
         </div>
       </div>
+      <Footer theme={theme} onToggle={props.onToggle} />
+      <TopButton theme={theme} />
     </>
   );
 }

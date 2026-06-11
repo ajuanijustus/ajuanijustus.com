@@ -3,6 +3,8 @@ import "./Bookshelf.css";
 import booksData from "../../config/books.json";
 import { Fade } from "react-awesome-reveal";
 import Header from "../../components/personal_header/Header";
+import Footer from "../../components/footer/Footer";
+import TopButton from "../../components/topButton/TopButton";
 
 const BookCard = ({ book, theme, onClick }) => {
   const stripHtml = (html) => html ? html.replace(/<[^>]*>?/gm, '') : "";
@@ -204,6 +206,8 @@ export default function Bookshelf(props) {
         </div>
       )}
       </div>
+      <Footer theme={theme} onToggle={props.onToggle} />
+      <TopButton theme={theme} />
     </>
   );
 }

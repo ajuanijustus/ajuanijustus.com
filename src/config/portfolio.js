@@ -1,3 +1,26 @@
+// Brand logos from the Brands library
+import { 
+  faLinkedinIn, 
+  faYoutube, 
+  faGoogle, 
+  faXTwitter, 
+  faInstagram, 
+  faGithub, 
+  faGoodreads, 
+  faTwitch, 
+  faBluesky,
+  faGoogleScholar,
+  faResearchgate,
+  faOrcid        // Added ORCID Brand Icon
+} from '@fortawesome/free-brands-svg-icons';
+
+// General utility vectors from the Solid library
+import { 
+  faChartLine, 
+  faBookOpen,    // Added semantic icon for Fable
+  faUniversity   // Added semantic icon for UOB Pure Portal
+} from '@fortawesome/free-solid-svg-icons';
+
 // Website related settings
 const settings = {
   isSplash: true, // Change this to false if you don't want Splash screen.
@@ -66,55 +89,22 @@ const greeting = {
 };
 
 const socialMediaLinks = [
-  /* Your Social Media Link */
-  {
-    name: "LinkedIn",
-    link: "https://www.linkedin.com/in/ajuanijustus/",
-    fontAwesomeIcon: "fa-linkedin-in", // Reference https://fontawesome.com/icons/linkedin-in?style=brands
-    backgroundColor: "#181717", // 0077B5 Reference https://simpleicons.org/?q=linkedin
-  },
-  // {
-  //   name: "YouTube",
-  //   link: "https://www.youtube.com/channel/UC_amoXmmxSY9KusoDczDTXQ",
-  //   fontAwesomeIcon: "fa-youtube", // Reference https://fontawesome.com/icons/youtube?style=brands
-  //   backgroundColor: "#181717", // FF0000 Reference https://simpleicons.org/?q=youtube
-  // },
-  {
-    name: "Gmail",
-    link: "mailto:ajuani1997@gmail.com",
-    fontAwesomeIcon: "fa-google", // Reference https://fontawesome.com/icons/google?style=brands
-    backgroundColor: "#181717", // D14836 Reference https://simpleicons.org/?q=gmail
-  },
-  {
-    name: "Twitter",
-    link: "https://twitter.com/ajuanijustus",
-    fontAwesomeIcon: "fa-twitter", // Reference https://fontawesome.com/icons/twitter?style=brands
-    backgroundColor: "#181717", // 1DA1F2 Reference https://simpleicons.org/?q=twitter
-  },
-  {
-    name: "Instagram",
-    link: "https://www.instagram.com/ajuanijustus/",
-    fontAwesomeIcon: "fa-instagram", // Reference https://fontawesome.com/icons/instagram?style=brands
-    backgroundColor: "#181717", // E4405F Reference https://simpleicons.org/?q=instagram
-  },
-  {
-    name: "Github",
-    link: "https://github.com/ajuanijustus",
-    fontAwesomeIcon: "fa-github", // Reference https://fontawesome.com/icons/github?style=brands
-    backgroundColor: "#181717", // Reference https://simpleicons.org/?q=github
-  },
-  {
-    name: "Goodreads",
-    link: "https://www.goodreads.com/user/show/50358068-aju-justus",
-    fontAwesomeIcon: "fa-goodreads", // Reference https://fontawesome.com/icons/instagram?style=brands
-    backgroundColor: "#181717", // E4405F Reference https://simpleicons.org/?q=instagram
-  },
-  {
-    name: "Twitch",
-    link: "https://www.twitch.tv/ajewdor",
-    fontAwesomeIcon: "fa-twitch", // Reference https://fontawesome.com/icons/instagram?style=brands
-    backgroundColor: "#181717", // E4405F Reference https://simpleicons.org/?q=instagram
-  },
+  { name: "LinkedIn", link: "https://www.linkedin.com/in/ajuanijustus/", icon: faLinkedinIn },
+  { name: "YouTube (Reward Signal)", link: "https://www.youtube.com/@TheRewardSignal", icon: faYoutube },
+  { name: "YouTube (Personal)", link: "https://www.youtube.com/@ajewdor", icon: faYoutube },
+  { name: "Email", link: "mailto:ajuani1997@gmail.com", icon: faGoogle },
+  { name: "Twitter (X)", link: "https://twitter.com/ajuanijustus", icon: faXTwitter },
+  { name: "Instagram", link: "https://www.instagram.com/ajuanijustus/", icon: faInstagram },
+  { name: "GitHub", link: "https://github.com/ajuanijustus", icon: faGithub },
+  { name: "Goodreads", link: "https://www.goodreads.com/user/show/50358068-aju-justus", icon: faGoodreads },
+  { name: "Twitch", link: "https://www.twitch.tv/ajewdor", icon: faTwitch },
+  { name: "Bluesky", link: "https://bsky.app/profile/ajuanijustus.bsky.social", icon: faBluesky },
+  { name: "Google Scholar", link: "https://scholar.google.com/citations?user=ktCUwwsAAAAJ&hl=en", icon: faGoogleScholar },
+  { name: "ResearchGate", link: "https://www.researchgate.net/profile/Aju-Ani-Justus", icon: faResearchgate },
+  { name: "StoryGraph", link: "https://app.thestorygraph.com/profile/ajuanijustus", icon: faChartLine },
+  { name: "Fable", link: "https://fable.co/fabler/aju-174512380413?referralID=r5kkUPaqRR", icon: faBookOpen },
+  { name: "ORCID", link: "https://orcid.org/0009-0002-7125-9397", icon: faOrcid },
+  { name: "UOB Research Pure", link: "https://research.birmingham.ac.uk/en/persons/aju-ani-justus/publications/", icon: faUniversity }
 ];
 
 const skills = {
@@ -574,6 +564,43 @@ const teaching = [
     duration: "2020 - 2022"
   }
 ];
+
+// TEACHING
+// Teaching & Talks - also add talks to news
+// Spring 2024
+// Data Structures and Algorithms (Conversion MSc CS)
+// University of Birmingham
+// Postgraduate Teaching Assistant.
+// Autumn 2023
+// Computer-Aided Verification (BSc/MSci CS, years 3 and 4)
+// University of Birmingham
+// Postgraduate Teaching Assistant.
+
+// RECOGNITION
+// Awards & Scholarships
+
+// SERVICE
+// Academic Service
+// 2025
+// General Chair, BASiC'25
+// Chairing the Birmingham Algorithms, Synthesis, and Computability seminar series.
+// 2024–present
+// PGR Representative, UoB CS Research Committee
+// 2024
+// Artifact Evaluation Committee Member
+// CAV'24, SAS'24, ECOOP'24.
+// 2024–present
+// Mentor, SIGPLAN-M
+// 2023
+// Student Volunteer, CIKM'23
+
+// Email
+// a.pal@bham.ac.uk
+// Primary academic email
+// abhinandan.mike123@gmail.com
+// Personal email
+
+// include sociotechnical systems, eq2rl, AA + MAS reading group
 
 export {
   settings,

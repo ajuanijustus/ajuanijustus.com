@@ -6,7 +6,6 @@ import { Client as Styletron } from "styletron-engine-atomic";
 import "./index.css";
 
 import App from "./App";
-import "./assets/font-awesome/css/all.css";
 
 const engine = new Styletron();
 const container = document.getElementById("root");

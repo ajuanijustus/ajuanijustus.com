@@ -7,7 +7,7 @@ import Button from "../../components/button/Button";
 import BlogsImg from "./BlogsImg";
 import { Fade } from 'react-awesome-reveal';
 import "./ContactComponent.css";
-import { greeting, contactPageData } from "../../config/portfolio.js";
+import { contactPageData } from "../../config/portfolio.js";
 
 import myResume from "../../assets/resume.pdf";
 

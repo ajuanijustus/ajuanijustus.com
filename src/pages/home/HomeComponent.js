@@ -17,7 +17,7 @@ class Home extends Component {
         <News theme={this.props.theme} />
         <Publications theme={this.props.theme} />
         <Teaching theme={this.props.theme} />
-        <Footer theme={this.props.theme} />
+        <Footer theme={this.props.theme} onToggle={this.props.onToggle} />
         <TopButton theme={this.props.theme} />
       </div>
     );

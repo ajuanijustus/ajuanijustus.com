@@ -60,7 +60,7 @@ export default function Greeting(props) {
           
           {/* Slightly larger, dedicated image container for photo */}
           <div className="greeting-image-block">
-            <img alt={`${greeting.title} Profile Picture`} src={profilePic} />
+            <img alt={`${greeting.title}`} src={profilePic} />
           </div>
         </div>
 

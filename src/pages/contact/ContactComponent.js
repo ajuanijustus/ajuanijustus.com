@@ -19,7 +19,7 @@ export default function Contact(props) {
       <Header theme={theme} />
       
       <div className="basic-contact">
-        <Fade direction="up" duration={1000} distance="30px">
+        <Fade>
           <div className="contact-card-container" style={{ backgroundColor: theme.body }}>
             
             {/* Left Side: Profile Image */}

@@ -4,8 +4,6 @@ import booksData from "../../config/books.json";
 import { Fade } from "react-awesome-reveal";
 import Header from "../../components/personal_header/Header";
 
-import { socialMediaLinks } from "../../config/portfolio";
-
 const BookCard = ({ book, theme, onClick }) => {
   const stripHtml = (html) => html ? html.replace(/<[^>]*>?/gm, '') : "";
 
@@ -110,24 +108,38 @@ export default function Bookshelf(props) {
             A chronological archive of the books I've devoured, loved, and reviewed. This log was last 
             updated on <strong style={{ color: theme.text }}>{lastUpdatedDate}</strong>. As much as I 
             absolutely hate Amazon and all it has done for books and Goodreads; you will find my most up to date 
-            updates on <a href="YOUR_GOODREADS_LINK_HERE" target="_blank" rel="noopener noreferrer" style={{ color: theme.highlight, textDecoration: "underline" }}>Goodreads</a>. 
-            I'm also on <a href="YOUR_FABLE_LINK_HERE" target="_blank" rel="noopener noreferrer" style={{ color: theme.highlight, textDecoration: "underline" }}>Fable</a> and <a href="YOUR_STORYGRAPH_LINK_HERE" target="_blank" rel="noopener noreferrer" style={{ color: theme.highlight, textDecoration: "underline" }}>Storygraph</a> (but 
-            those, much like this website I only periodically updated based on my Goodreads data export). Also, if you're anything like me, and love looking at the stats, look at my <a href="/bookstats" style={{ color: theme.highlight, textDecoration: "underline" }}>reading stats</a>. If you 
-            want something similar to this for your website, <a href="YOUR_CONTACT_LINK_HERE" style={{ color: theme.highlight, textDecoration: "underline" }}>contact me</a>.
+            updates on <a href="https://www.goodreads.com/user/show/50358068-aju-ani-justus" target="_blank" rel="noopener noreferrer" style={{ color: theme.highlight, textDecoration: "underline" }}>Goodreads</a>. 
+            I'm also on <a href="https://fable.co/fabler/aju-174512380413?referralID=r5kkUPaqRR" target="_blank" rel="noopener noreferrer" style={{ color: theme.highlight, textDecoration: "underline" }}>Fable</a> and <a href="https://app.thestorygraph.com/profile/ajuanijustus" target="_blank" rel="noopener noreferrer" style={{ color: theme.highlight, textDecoration: "underline" }}>Storygraph</a> (but 
+            those, much like this website I only periodically updated based on my Goodreads data export). Also, if you're anything like me, and love looking at the stats, look at my <a href="#/secret/bookstats" style={{ color: theme.highlight, textDecoration: "underline" }}>reading stats</a>. If you 
+            want something similar to this for your website, <a href="#/secret/contact" style={{ color: theme.highlight, textDecoration: "underline" }}>contact me</a>.
             </p>
 
             {/* Quick Navigation Bar */}
             <div className="bookshelf-nav-bar">
-            {sortedYears.map((year) => (
-                <a 
-                key={year} 
-                href={`#year-${year.replace(/\s+/g, '-')}`} 
-                className="year-nav-link"
-                style={{ backgroundColor: theme.highlight + "15", color: theme.text }}
+              {sortedYears.map((year) => (
+                <button 
+                  key={year} 
+                  onClick={() => {
+                    const targetId = `year-${year.replace(/\s+/g, '-')}`;
+                    const element = document.getElementById(targetId);
+                    if (element) {
+                      element.scrollIntoView({ behavior: "smooth", block: "start" });
+                    }
+                  }}
+                  className="year-nav-link"
+                  style={{ 
+                    backgroundColor: theme.highlight + "15", 
+                    color: theme.text,
+                    border: "none",
+                    cursor: "pointer",
+                    padding: "8px 16px",
+                    borderRadius: "4px",
+                    fontFamily: "inherit"
+                  }}
                 >
-                {year}
-                </a>
-            ))}
+                  {year}
+                </button>
+              ))}
             </div>
         </div>
       </Fade>

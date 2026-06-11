@@ -31,17 +31,15 @@ export default function Publications(props) {
     <div className="publications-main-div" id="publications">
       
       {/* 1. Header Animation Block */}
-      <Fade direction="up" duration={1200} fraction={0.2}>
+      <Fade>
         <div className="publications-header-div">
           <h1 className="publications-heading" style={{ color: theme.text }}>
             Selected Publications
           </h1>
         </div>
-      </Fade>
 
-      {/* 2. Body List Animation Block */}
-      <div className="publications-body-div">
-        <Fade direction="up" duration={1500} fraction={0.1}>
+        {/* 2. Body List Animation Block */}
+        <div className="publications-body-div">
           {/* Inner block container prevents flex-child collapse glitches */}
           <div className="publications-list-container">
             {publications.map((pub, index) => {
@@ -98,7 +96,7 @@ export default function Publications(props) {
                           [Website]
                         </a>
                       )}
-                      {/* ⚡ Updated BibTeX node trigger to safely pass data literal down to modal hook */}
+                      {/* Updated BibTeX node trigger to safely pass data literal down to modal hook */}
                       {pub.links.bibtex && (
                         <a 
                           href="#" 
@@ -115,8 +113,8 @@ export default function Publications(props) {
               );
             })}
           </div>
-        </Fade>
-      </div>
+        </div>
+      </Fade>
 
       {/* THEMED BIBTEX POPUP MODAL */}
       {isModalOpen && (

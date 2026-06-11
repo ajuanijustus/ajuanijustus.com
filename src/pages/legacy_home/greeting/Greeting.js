@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Greeting.css";
 import SocialMedia from "../../../components/socialMedia/SocialMedia";
-import { greetingLegacy } from "../../../config/portfolio";
+import { greetingLegacy, socialMediaLinksLegacy } from "../../../config/portfolio";
 import { Fade } from 'react-awesome-reveal';
 import multitaskingSvg from "../../../assets/images/multitasking.svg";
 
@@ -61,7 +61,7 @@ export default function Greeting(props) {
               >
                 {greetingLegacy.subTitle}
               </p>
-              <SocialMedia theme={theme} />
+              <SocialMedia theme={theme} links={socialMediaLinksLegacy} />
             </div>
           </div>
           <div className="greeting-image-div">

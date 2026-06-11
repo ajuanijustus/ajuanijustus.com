@@ -5,6 +5,10 @@
 .basic-contact {
   margin-left: 5%;
   margin-right: 5%;
+  display: flex;
+  flex-direction: column; /* This stacks them vertically */
+  align-items: center;    /* Optional: centers them horizontally */
+  gap: 2rem;              /* Adds space between the two divs */
 }
 
 .contact-heading-div {

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Header from "../../components/legacy_header/Header";
+import LegacyHeader from "../../components/legacy_header/Header";
 import Footer from "../../components/footer/Footer";
 import TopButton from "../../components/topButton/TopButton";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
@@ -7,7 +7,7 @@ import Button from "../../components/button/Button";
 import BlogsImg from "./BlogsImg";
 import { Fade } from 'react-awesome-reveal';
 import "./ContactComponent.css";
-import { contactPageData } from "../../config/portfolio.js";
+import { contactPageData, socialMediaLinksLegacy } from "../../config/portfolio.js";
 
 import myResume from "../../assets/resume.pdf";
 
@@ -19,9 +19,9 @@ class LegacyContact extends Component {
     const theme = this.props.theme;
     return (
       <div className="contact-main">
-        <Header theme={theme} />
+        <LegacyHeader theme={theme} />
         <div className="basic-contact">
-          <Fade direction="right" duration={1000} distance="40px">
+          <Fade direction="right">
             <div className="contact-heading-div">
               <div className="contact-heading-img-div">
                 <img
@@ -40,9 +40,9 @@ class LegacyContact extends Component {
                   className="contact-header-detail-text subTitle"
                   style={{ color: theme.secondaryText }}
                 >
-                  {ContactData["description"]}
+                  Feel free to reach out to me on any of my social media. Always up for a chat.
                 </p>
-                <SocialMedia theme={theme} />
+                <SocialMedia theme={theme} links={socialMediaLinksLegacy} />
                 <div className="resume-btn-div">
                   <Button
                     text="See My Resume"
@@ -54,7 +54,7 @@ class LegacyContact extends Component {
               </div>
             </div>
           </Fade>
-          <Fade direction="left" duration={1000} distance="40px">
+          <Fade direction="left">
             <div className="blog-heading-div">
               <div className="blog-heading-text-div">
                 <h1 className="blog-heading-text" style={{ color: theme.text }}>
@@ -76,59 +76,10 @@ class LegacyContact extends Component {
                 </div>
               </div>
               <div className="blog-heading-img-div">
-                {/* <img
-											src={require(`../../assets/images/${blogSection["avatar_image_path"]}`)}
-											alt=""
-										/> */}
                 <BlogsImg theme={theme} />
               </div>
             </div>
           </Fade>
-          {/* <Fade bottom duration={1000} distance="40px">
-            <div className="address-heading-div">
-              <div className="contact-heading-img-div">
-                //   <img
-								// 			src={require(`../../assets/images/${addressSection["avatar_image_path"]}`)}
-								// 			alt=""
-								// 		/>
-                <AddressImg theme={theme} />
-              </div>
-              <div className="address-heading-text-div">
-                <h1
-                  className="address-heading-text"
-                  style={{ color: theme.text }}
-                >
-                  {addressSection["title"]}
-                </h1>
-                <p
-                  className="contact-header-detail-text subTitle"
-                  style={{ color: theme.secondaryText }}
-                >
-                  {addressSection["subtitle"]}
-                </p>
-                <h1
-                  className="address-heading-text"
-                  style={{ color: theme.text }}
-                >
-                  {phoneSection["title"]}
-                </h1>
-                <p
-                  className="contact-header-detail-text subTitle"
-                  style={{ color: theme.secondaryText }}
-                >
-                  {phoneSection["subtitle"]}
-                </p>
-                <div className="address-btn-div">
-                  <Button
-                    text="Visit on Google Maps"
-                    newTab={true}
-                    href={addressSection.location_map_link}
-                    theme={theme}
-                  />
-                </div>
-              </div>
-            </div>
-          </Fade> */}
         </div>
         <Footer theme={this.props.theme} onToggle={this.props.onToggle} />
         <TopButton theme={this.props.theme} />

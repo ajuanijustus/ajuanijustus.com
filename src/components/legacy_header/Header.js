@@ -21,7 +21,7 @@ class Header extends Component {
     console.log(theme);
     const link = settings.isSplash ? "/splash" : "home";
     return (
-      <Fade direction="down" duration={1000}>
+      <Fade direction="down" duration={500}>
         <SeoHeader />
         <div>
           <header className="header">

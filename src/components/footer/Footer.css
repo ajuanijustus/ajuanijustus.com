@@ -1,10 +1,14 @@
-.footer-text {
-  text-align: center;
-  /* color: #868e96; */
-  font-weight: thin;
-  font-family: "Montserrat";
+.footer-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 30px; 
 }
 
-.footer-div {
-  margin-top: 2rem;
+.footer-text {
+  margin: 0;
+  text-align: center;
+  font-weight: thin;
+  font-family: "Montserrat";
 }

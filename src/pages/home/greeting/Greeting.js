@@ -63,7 +63,7 @@ export default function Greeting(props) {
           
           {/* Slightly larger, dedicated image container for photo */}
           <div className="greeting-image-block">
-            <img alt={`${greeting.title} Profile Picture`} src={profilePic} />
+            <img alt={`${greeting.title}`} src={profilePic} />
           </div>
         </div>
 
@@ -71,7 +71,7 @@ export default function Greeting(props) {
         <div className="greeting-content-body-block">
           <div className="academic-bio-paragraphs" style={{ color: theme.text }}>
             <p>
-              {greeting.phdInfo} I am fortunately advised by{" "}
+              {greeting.phdInfo} I am advised by{" "}
               {greeting.advisors.map((advisor, i) => (
                 <span key={i}>
                   <a href={advisor.link} className="academic-link" style={{ color: theme.highlight }}>

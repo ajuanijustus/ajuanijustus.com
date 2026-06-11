@@ -21,7 +21,7 @@ class Header extends Component {
     console.log(theme);
     const link = settings.isSplash ? "/splash" : "home";
     return (
-      <Fade direction="down" duration={1000}>
+      <Fade direction="down" duration={500}>
         <SeoHeader />
         <div>
           <header className="header">
@@ -73,7 +73,7 @@ class Header extends Component {
               </li>
               <li>
                 <NavLink
-                  to="/contact"
+                  to="/secret/contact"
                   tag={Link}
                   activeStyle={{ fontWeight: "bold" }}
                   style={{ color: theme.text }}

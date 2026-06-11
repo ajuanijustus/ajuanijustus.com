@@ -63,8 +63,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover; /* Ensures square framing cuts cleanly if image isn't perfectly 1:1 */
-  border-radius: 50%; /* Optional fallback if image edges aren't pre-cropped round */
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12); /* Clean elevation styling for photo portraits */
+  border-radius: 0%; /* Optional fallback if image edges aren't pre-cropped round */
 }
 
 /* Typographic Baselines */

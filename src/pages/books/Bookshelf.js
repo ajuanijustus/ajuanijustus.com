@@ -100,7 +100,7 @@ export default function Bookshelf(props) {
     <>
       <Header theme={theme} />
       <div className="bookshelf-main-div" id="bookshelf">
-        <Fade direction="up" duration={1200} triggerOnce>
+        <Fade triggerOnce>
           <div className="bookshelf-header-div">
             <h1 className="bookshelf-heading" style={{ color: theme.text }}>
             Reading Log
@@ -150,13 +150,13 @@ export default function Bookshelf(props) {
         {sortedYears.map((year, yearIndex) => (
           <div className="bookshelf-year-section" key={yearIndex} id={`year-${year.replace(/\s+/g, '-')}`}>
             
-            <Fade direction="up" duration={1000} triggerOnce>
+            <Fade triggerOnce>
               <h2 className="year-heading" style={{ color: theme.text, borderBottomColor: theme.highlight + "40" }}>
                 {year}
               </h2>
             </Fade>
 
-            <Fade direction="up" duration={1000} triggerOnce>
+            <Fade triggerOnce>
               <div className="bookshelf-grid">
                 {groupedBooks[year].map((book, index) => (
                   <BookCard key={index} book={book} theme={theme} onClick={setSelectedBook} />

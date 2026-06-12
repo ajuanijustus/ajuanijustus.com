@@ -148,29 +148,11 @@
 }
 
 .scatter-chart-container {
-  height: 350px;
   position: relative;
-  margin-bottom: 0.5rem;
-  background-image: linear-gradient(rgba(128,128,128,0.05) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(128,128,128,0.05) 1px, transparent 1px);
-  background-size: 20px 20px;
-  overflow: hidden;
-}
-
-.scatter-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  position: absolute;
-  transform: translate(-50%, 50%);
-  transition: transform 0.2s, box-shadow 0.2s;
-  cursor: crosshair;
-}
-
-.scatter-dot:hover {
-  transform: translate(-50%, 50%) scale(2);
-  box-shadow: 0 0 8px #FFF;
-  z-index: 10;
+  flex-grow: 1;
+  height: 400px;
+  min-height: 400px;
+  padding: 16px 24px 24px 16px;
 }
 
 .scatter-axis-labels {
@@ -269,7 +251,10 @@
   .stats-title { font-size: 32px; text-align: center; }
   .stats-subtitle { text-align: center; }
   .stats-charts-row, .stats-leaderboard-row { grid-template-columns: 1fr; }
-  .scatter-chart-container { height: 240px; }
+  .scatter-chart-container {
+    height: 250px;
+    min-height: 250px;
+  }
 }
 
 /* Layout Alignment for Y-Axis Sidebar Grid Integration */
@@ -310,23 +295,18 @@
   padding-bottom: 8px;
 }
 
-.scatter-chart-container {
-  position: relative;
-  flex-grow: 1;
-  height: 320px; /* Standardize graph heights across screen ratios */
-}
-
 .scatter-dot {
-  position: absolute;
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  position: absolute;
+  transform: translate(-50%, 50%);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: crosshair;
 }
 
 .scatter-dot:hover {
-  transform: translate(-50%, 50%) scale(1.4) !important;
-  filter: brightness(1.2);
+  transform: translate(-50%, 50%) scale(1.2) !important;
 }
 
 /* Floating Click Interactive Metadata Tooltip */

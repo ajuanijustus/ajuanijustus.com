@@ -143,7 +143,7 @@ def parse_library(file_path, books_json_path, stats_json_path):
                 timeline_stats[month_year_key]["pagesCount"] += pages
                 
                 if pub_year and pub_year > 1000:
-                    scatter_data.append({"x": month_year_key, "y": pub_year, "title": title})
+                    scatter_data.append({"x": month_year_key, "y": pub_year, "title": title, "author": author})
 
             if author:
                 author_data[author]["count"] += 1

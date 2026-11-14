@@ -8,10 +8,8 @@ import TopButton from "../../components/topButton/TopButton";
 
 export default function ReadingStats(props) {
   const theme = props.theme;
-  // Click state for interactive book scatter node
   const [hoveredDot, setHoveredDot] = useState(null);
   
-  // Calculate global baseline metrics
   const globalAggregates = useMemo(() => {
     let books = 0; let pages = 0; let scoreSum = 0; let scoredCount = 0;
     Object.values(statsData.byYear).forEach(y => {
@@ -29,22 +27,17 @@ export default function ReadingStats(props) {
     };
   }, []);
 
-  // Compute boundaries safely for math normalization layouts
   const maxBooksInMonth = Math.max(...statsData.timeline.map(d => d.booksCount), 1);
   const maxPagesInMonth = Math.max(...statsData.timeline.map(d => d.pagesCount), 1);
 
-  // Robust formatter that handles any date format string perfectly
   const formatMonthYear = (dateStr) => {
     if (!dateStr) return "";
     
-    // Create a clean date object (appending day if it's just YYYY-MM)
     const safeDateStr = dateStr.length === 7 ? `${dateStr}-02` : dateStr;
     const dateObj = new Date(safeDateStr);
     
-    // Fallback check if the date string is completely corrupted
     if (isNaN(dateObj.getTime())) return dateStr;
 
-    // Formats cleanly to "Jan '26"
     return dateObj.toLocaleDateString("en-US", {
       month: "short",
       year: "2-digit"
@@ -72,7 +65,6 @@ export default function ReadingStats(props) {
             <p className="stats-subtitle" style={{ color: theme.secondaryText }}>Data analytics extracted from my library archive.</p>
           </div>
 
-          {/* Grid Summary Row */}
           <div className="stats-summary-grid">
             <div className="stat-metric-card" style={{ backgroundColor: theme.highlight + "10", border: `1px solid ${theme.highlight}30` }}>
               <span className="metric-num" style={{ color: theme.highlight }}>{globalAggregates.totalBooks}</span>
@@ -88,7 +80,6 @@ export default function ReadingStats(props) {
             </div>
           </div>
 
-          {/* Year over Year Performance Log */}
           <div className="stats-section">
             <h2 className="section-title" style={{ color: theme.text }}>Yearly Milestones</h2>
             <div className="table-responsive">
@@ -126,7 +117,6 @@ export default function ReadingStats(props) {
             </div>
           </div>
 
-          {/* Histograms Time Series Row */}
           <div className="stats-charts-row">
             {/* Books Over Time */}
             <div className="chart-wrapper-box">
@@ -171,7 +161,6 @@ export default function ReadingStats(props) {
 
             <div className="scatter-outer-wrapper">
 
-              {/* Dynamic Y Axis */}
               <div
                 className="scatter-y-axis"
                 style={{ color: theme.secondaryText }}
@@ -316,7 +305,6 @@ export default function ReadingStats(props) {
             </div>
           </div>
 
-          {/* Authors, Publishers, and Leaderboard Layouts */}
           <div className="stats-leaderboard-row">
             <div className="leaderboard-block">
               <h3 className="chart-box-title" style={{ color: theme.text }}>Top Authors</h3>
@@ -349,7 +337,6 @@ export default function ReadingStats(props) {
             </div>
           </div>
 
-          {/* Fun Analytics Blocks */}
           <div className="fun-stats-section" style={{ borderTop: `1px solid ${theme.secondaryText}30` }}>
             <h3 className="chart-box-title" style={{ color: theme.text, marginTop: "2rem" }}>Library Superlatives</h3>
             <div className="stats-summary-grid">
@@ -384,7 +371,6 @@ export default function ReadingStats(props) {
   );
 }
 
-// Quick inline array validation mappings
 function int(str) { return parseInt(str, 10); }
 function range(start, end) { return Array.from({ length: end - start }, (_, i) => start + i); }
 function list(val) { return val; }

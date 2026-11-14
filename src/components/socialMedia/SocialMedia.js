@@ -34,12 +34,10 @@ const IconWrapper = styled.span`
 `;
 
 export default function SocialMedia(props) {
-  // 1. Check if the parent passed a specific 'links' array. If not, use defaultLinks.
   const linksToDisplay = props.links || defaultLinks;
 
   return (
     <div className="social-media-div">
-      {/* 2. Map over our dynamic variable instead of the hardcoded import */}
       {linksToDisplay.map((media, index) => {
         return (
           <a

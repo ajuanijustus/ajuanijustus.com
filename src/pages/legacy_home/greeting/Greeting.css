@@ -59,19 +59,16 @@
   height: auto;
 }
 
-/* TEXT SEQUENCE SWAPPING TRANSITIONS */
 .sequence-span {
   display: inline-block;
   opacity: 1;
   transition: opacity 0.05s;
 }
 
-/* Visibility state: Active and reading */
 .sequence-span.fade-in {
   opacity: 1;
 }
 
-/* Visibility state: Hidden state (swapping) */
 .sequence-span.fade-out {
   opacity: 0;
 }

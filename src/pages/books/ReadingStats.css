@@ -16,7 +16,6 @@
   margin-bottom: 2.5rem;
 }
 
-/* Metric Display Layout Counters */
 .stats-summary-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -47,7 +46,6 @@
   font-weight: 600;
 }
 
-/* Tabular Analytics Tables */
 .section-title {
   font-size: 26px;
   font-weight: 700;
@@ -83,7 +81,6 @@
   border-radius: 6px;
 }
 
-/* Pure CSS Column Histograms */
 .stats-charts-row {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -140,7 +137,6 @@
   font-weight: bold;
 }
 
-/* Scatter Coordinate Graphs */
 .chart-desc {
   font-size: 14px;
   margin-top: -1rem;
@@ -202,7 +198,6 @@
   border-radius: 4px;
 }
 
-/* Superlatives Block Styles */
 .fun-stat-card {
   padding: 1.5rem;
   border-radius: 8px;
@@ -246,7 +241,6 @@
   padding-bottom: 2px;
 }
 
-/* Responsive UI Normalizations */
 @media(max-width: 768px) {
   .stats-title { font-size: 32px; text-align: center; }
   .stats-subtitle { text-align: center; }
@@ -257,7 +251,6 @@
   }
 }
 
-/* Layout Alignment for Y-Axis Sidebar Grid Integration */
 .chart-layout-with-y {
   display: flex;
   align-items: stretch;
@@ -273,10 +266,9 @@
   font-weight: 600;
   text-align: right;
   min-width: 28px;
-  padding-bottom: 24px; /* Matches bar height offset spacing alignment */
+  padding-bottom: 24px;
 }
 
-/* Scatter Outer Wrapper with Integrated Y Axis Layout */
 .scatter-outer-wrapper {
   display: flex;
   gap: 12px;
@@ -309,7 +301,6 @@
   transform: translate(-50%, 50%) scale(1.2) !important;
 }
 
-/* Floating Click Interactive Metadata Tooltip */
 .scatter-tooltip-card {
   position: absolute;
   transform: translateX(-50%);
@@ -321,7 +312,7 @@
   flex-direction: column;
   gap: 4px;
   font-size: 12px;
-  pointer-events: none; /* Stops popup itself from stealing cursor selections */
+  pointer-events: none;
   animation: popInUp 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 

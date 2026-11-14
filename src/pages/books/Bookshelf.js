@@ -2,6 +2,7 @@ import React, { useState, useMemo, useEffect } from "react";
 import "./Bookshelf.css";
 import booksData from "../../config/books.json";
 import { Fade } from "react-awesome-reveal";
+import { Link } from "react-router-dom";
 import Header from "../../components/personal_header/Header";
 import Footer from "../../components/footer/Footer";
 import TopButton from "../../components/topButton/TopButton";
@@ -21,14 +22,12 @@ const BookCard = ({ book, theme, onClick }) => {
             decoding="async" 
           />
         ) : (
-          /* Render colorful text fallback if no cover exists anywhere on OpenLibrary */
           <div className="missing-cover-fallback" style={{ backgroundColor: theme.highlight + "20", color: theme.text, border: `1px solid ${theme.highlight}40` }}>
             <span className="missing-cover-title">{book.title}</span>
             <span className="missing-cover-author">{book.author}</span>
           </div>
         )}
 
-        {/* Rich Hover Overlay */}
         <div className="book-hover-layer" style={{ backgroundColor: theme.body + "E6" }}>
           <div className="hover-rating">
             <span style={{ color: "#FFD700" }}>{"★".repeat(book.rating)}</span>
@@ -75,20 +74,18 @@ export default function Bookshelf(props) {
     return b - a; 
   });
 
-  // Calculate the dynamic "Last Updated" date from your JSON data
   const lastUpdatedDate = useMemo(() => {
       const validBooks = booksData.filter(b => b.shelf === "read" || b.shelf === "before-goodreads");
 
       const timestamps = validBooks
       .map(book => book.dateRead || book.dateAdded)
-      .filter(Boolean) // Ignores entries missing a date string
+      .filter(Boolean)
       .map(dateStr => new Date(dateStr).getTime());
 
       if (timestamps.length === 0) return "Recently";
 
       const latestTimestamp = Math.max(...timestamps);
 
-      // Formats to a clean aesthetic style like "May 31, 2026"
       return new Date(latestTimestamp).toLocaleDateString("en-US", {
       year: "numeric",
       month: "long",
@@ -112,8 +109,8 @@ export default function Bookshelf(props) {
             absolutely hate Amazon and all it has done for books and Goodreads; you will find my most up to date 
             updates on <a href="https://www.goodreads.com/user/show/50358068-aju-ani-justus" target="_blank" rel="noopener noreferrer" style={{ color: theme.highlight, textDecoration: "underline" }}>Goodreads</a>. 
             I'm also on <a href="https://fable.co/fabler/aju-174512380413?referralID=r5kkUPaqRR" target="_blank" rel="noopener noreferrer" style={{ color: theme.highlight, textDecoration: "underline" }}>Fable</a> and <a href="https://app.thestorygraph.com/profile/ajuanijustus" target="_blank" rel="noopener noreferrer" style={{ color: theme.highlight, textDecoration: "underline" }}>Storygraph</a> (but 
-            those, much like this website I only periodically updated based on my Goodreads data export). Also, if you're anything like me, and love looking at the stats, look at my <a href="#/secret/bookstats" style={{ color: theme.highlight, textDecoration: "underline" }}>reading stats</a>. If you 
-            want something similar to this for your website, <a href="#/secret/contact" style={{ color: theme.highlight, textDecoration: "underline" }}>contact me</a>.
+            those, much like this website I only periodically updated based on my Goodreads data export). Also, if you're anything like me, and love looking at the stats, look at my <Link to="/secret/bookstats" style={{ color: theme.highlight, textDecoration: "underline" }}>reading stats</Link>. If you 
+            want something similar to this for your website, <Link to="/secret/contact" style={{ color: theme.highlight, textDecoration: "underline" }}>contact me</Link>.
             </p>
 
             {/* Quick Navigation Bar */}
@@ -195,7 +192,6 @@ export default function Bookshelf(props) {
                         <p><em>No detailed review written for this book.</em></p>
                     )}
                     
-                    {/* Injecting requested reading duration logs directly below the entry review body */}
                     <div className="modal-reading-duration" style={{ color: theme.highlight, marginTop: "1.5rem", fontSize: "13px", fontWeight: "600", fontFamily: "Montserrat", letterSpacing: "0.5px", opacity: 0.85 }}>
                         [{selectedBook.dateAdded || "Not Logged"} — {selectedBook.dateRead || "Before Tracking"}]
                     </div>

@@ -9,7 +9,8 @@ import { Fade } from 'react-awesome-reveal';
 import "./ContactComponent.css";
 import { contactPageData, socialMediaLinksLegacy } from "../../config/portfolio.js";
 
-import myResume from "../../assets/resume.pdf";
+const myResume = `${process.env.PUBLIC_URL}/cv.pdf`;
+
 
 const ContactData = contactPageData.contactSection;
 const blogSection = contactPageData.blogSection;

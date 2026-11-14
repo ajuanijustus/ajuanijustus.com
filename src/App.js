@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { chosenTheme, lightTheme, darkTheme } from "./config/theme.js";
 import { GlobalStyles } from "./config/global.js";
 import { settings } from "./config/portfolio.js";
+import SeoHeader from "./components/seoHeader/SeoHeader";
 
-// Page Components
 import Home from "./pages/home/HomeComponent";
 import Contact from "./pages/contact/ContactComponent";
 
@@ -20,50 +20,39 @@ import LegacyContact from "./pages/legacy_contact/ContactComponent";
 import Splash from "./pages/splash/Splash";
 
 function App() {
-  // 1. Initialize your dynamic theme state using the configuration's chosenTheme as default
   const [currentTheme, setCurrentTheme] = useState(chosenTheme);
 
-  // 2. Define the toggle engine that alternates between light and dark objects
   const handleThemeToggle = () => {
     setCurrentTheme(currentTheme === lightTheme ? darkTheme : lightTheme);
   };
 
+  const pageProps = { theme: currentTheme, onToggle: handleThemeToggle };
+  const landing = settings.isSplash ? <Splash {...pageProps} /> : <Home {...pageProps} />;
+
   return (
-    <ThemeProvider theme={currentTheme}> {/* ◄ Swapped chosenTheme out for currentTheme state */}
-      <>
-        <GlobalStyles />
-        <HashRouter basename="/">
-          <Routes>
-            {/* Dynamic Root Route based on Splash setting */}
-            {settings.isSplash ? (
-              <Route path="/" element={<Splash theme={currentTheme} onToggle={handleThemeToggle} />} />
-            ) : (
-              <Route path="/" element={<Home theme={currentTheme} onToggle={handleThemeToggle} />} />
-            )}
-            
-            {/* Standard Pages */}
-            <Route path="/home" element={<Home theme={currentTheme} onToggle={handleThemeToggle} />} />
-            <Route path="/contact" element={<Contact theme={currentTheme} onToggle={handleThemeToggle} />} />
+    <ThemeProvider theme={currentTheme}>
+      <GlobalStyles />
+      <BrowserRouter>
+        <SeoHeader />
+        <Routes>
+          <Route path="/" element={landing} />
+          <Route path="/splash" element={landing} />
+          <Route path="/home" element={<Home {...pageProps} />} />
+          <Route path="/contact" element={<Contact {...pageProps} />} />
 
-            {/* Fun Pages */}
-            <Route path="/secret/" element={<PersonalHome theme={currentTheme} onToggle={handleThemeToggle} />} />
-            <Route path="/secret/home" element={<PersonalHome theme={currentTheme} onToggle={handleThemeToggle} />} />
-            <Route path="/secret/contact" element={<PersonalContact theme={currentTheme} onToggle={handleThemeToggle} />} />
-            <Route path="/secret/books" element={<Bookshelf theme={currentTheme} onToggle={handleThemeToggle} />} />
-            <Route path="/secret/bookstats" element={<ReadingStats theme={currentTheme} onToggle={handleThemeToggle} />} />
+          <Route path="/secret" element={<PersonalHome {...pageProps} />} />
+          <Route path="/secret/home" element={<PersonalHome {...pageProps} />} />
+          <Route path="/secret/contact" element={<PersonalContact {...pageProps} />} />
+          <Route path="/secret/books" element={<Bookshelf {...pageProps} />} />
+          <Route path="/secret/bookstats" element={<ReadingStats {...pageProps} />} />
 
-            {/* Legacy Pages */}
-            <Route path="/legacy/" element={<LegacyHome theme={currentTheme} onToggle={handleThemeToggle} />} />
-            <Route path="/legacy/home" element={<LegacyHome theme={currentTheme} onToggle={handleThemeToggle} />} />
-            <Route path="/legacy/contact" element={<LegacyContact theme={currentTheme} onToggle={handleThemeToggle} />} />
-            
-            {/* Dedicated Splash Page (only if enabled) */}
-            {settings.isSplash && (
-              <Route path="/splash" element={<Splash theme={currentTheme} onToggle={handleThemeToggle} />} />
-            )}
-          </Routes>
-        </HashRouter>
-      </>
+          <Route path="/legacy" element={<LegacyHome {...pageProps} />} />
+          <Route path="/legacy/home" element={<LegacyHome {...pageProps} />} />
+          <Route path="/legacy/contact" element={<LegacyContact {...pageProps} />} />
+
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </BrowserRouter>
     </ThemeProvider>
   );
 }

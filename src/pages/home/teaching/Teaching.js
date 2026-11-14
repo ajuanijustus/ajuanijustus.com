@@ -9,7 +9,6 @@ export default function Teaching(props) {
   if (!teaching || teaching.length === 0) return null;
 
   return (
-    /* Outer structural layout wrapper remains static on the page */
     <div className="teaching-main-div" id="teaching">
       
       <Fade>
@@ -20,20 +19,17 @@ export default function Teaching(props) {
         </div>
 
         <div className="teaching-body-div">
-            {/* Inner block wrapper ensures layout widths remain uncollapsed */}
             <div className="teaching-list-container">
               {teaching.map((item, index) => {
                 return (
                   <div className="teaching-item-row" key={index}>
                     
-                    {/* Left Column: Timeline Bounds */}
                     <div className="teaching-duration-col">
                       <span className="teaching-duration-text" style={{ color: theme.highlight }}>
                         {item.duration}
                       </span>
                     </div>
 
-                    {/* Right Column: Role Title, Course Context & Affiliation */}
                     <div className="teaching-details-col">
                       <p className="teaching-text" style={{ color: theme.text }}>
                         <span className="teaching-role" style={{ color: theme.text }}>

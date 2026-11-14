@@ -3,7 +3,6 @@ import "./SoftwareSkill.css";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
 
 class SoftwareSkill extends React.Component {
-  // ⚡ Force icon scan when the component first appears on screen
   componentDidMount() {
     try {
       if (window.Iconify) {
@@ -14,7 +13,6 @@ class SoftwareSkill extends React.Component {
     }
   }
 
-  // ⚡ Force icon scan if the skills change or finish loading late
   componentDidUpdate() {
     try {
       if (window.Iconify) {

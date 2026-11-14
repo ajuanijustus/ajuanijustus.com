@@ -4,15 +4,12 @@ import { Fade } from 'react-awesome-reveal';
 import { lightTheme } from "../../config/theme";
 import styled from "styled-components";
 
-// We keep ONLY the dynamic icon styling here because it needs your JS theme variables
 const ThemeIcon = styled.svg`
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   
-  /* Bumped inactive opacity from 0.4 to 0.6 so it doesn't disappear */
   opacity: ${(props) => (props.$isActive ? 1 : 0.6)};
   
-  /* Linked inactive state to secondaryText so it matches your copyright text perfectly */
   stroke: ${(props) => (props.$isActive ? props.theme.highlight : (props.theme.secondaryText || props.theme.text))};
   
   &:hover {
@@ -56,7 +53,6 @@ export default function Footer(props) {
             <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
           </ThemeIcon>
 
-          {/* Inline margin style removed; handled by Footer.css now */}
           <p className="footer-text" style={{ color: props.theme.secondaryText }}>
             aju ani justus © 2026
           </p>

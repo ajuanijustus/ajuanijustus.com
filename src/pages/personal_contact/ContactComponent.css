@@ -101,7 +101,6 @@
 
 .compact-social-grid {
   display: grid;
-  /* Snug fit layout columns */
   grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
   gap: 10px 16px;
   width: 100%;
@@ -128,7 +127,6 @@
   justify-content: flex-start;
 }
 
-/* MEDIA INTERFACES */
 @media (max-width: 992px) {
   .contact-card-container {
     flex-direction: column;

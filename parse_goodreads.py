@@ -12,21 +12,18 @@ def clean_isbn(isbn_str):
     return cleaned if len(cleaned) in [10, 13] else None
 
 def check_isbn_cover(session, isbn):
-    """Checks OpenLibrary for a valid cover, forcing errors and filtering blank pixels."""
     if not isbn:
         return False
     
-    # 1. ?default=false tells OpenLibrary's server to throw a 404 instead of a blank pixel
+    # default=false makes openlibrary 404 instead of returning a blank pixel
     url = f"https://covers.openlibrary.org/b/isbn/{isbn}-L.jpg?default=false"
     try:
-        # Use GET instead of HEAD so we can verify the actual file content size
         res = session.get(url, timeout=4, allow_redirects=True)
         
         if res.status_code != 200:
             return False
             
-        # 2. Safety Valve: OpenLibrary's empty 1x1 pixel image is exactly 43 bytes.
-        # If the response is under 100 bytes, it's an empty placeholder!
+        # blank placeholder image is 43 bytes
         if len(res.content) < 100:
             return False
             
@@ -35,26 +32,24 @@ def check_isbn_cover(session, isbn):
         return False
 
 def get_fallback_cover_by_search(session, title, author):
-    """Searches OpenLibrary by Title + Author using an open session link."""
     try:
         search_title = re.sub(r'\s*\(.*?\)\s*', '', title).strip()
         url = "https://openlibrary.org/search.json"
         params = {"title": search_title, "author": author, "limit": 1}
-        print(f"   🔍 Cover missing. Searching OpenLibrary for alternative edition: '{search_title}'...")
+        print(f"   no cover, searching openlibrary for '{search_title}'")
         res = session.get(url, params=params, timeout=6)
         if res.status_code == 200:
             docs = res.json().get("docs", [])
             if docs and docs[0].get("cover_i"):
                 return f"https://covers.openlibrary.org/b/id/{docs[0]['cover_i']}-L.jpg"
     except Exception as e:
-        print(f"   ⚠️ Search API error for {title}: {e}")
+        print(f"   search failed for {title}: {e}")
     return None
 
 def parse_library(file_path, books_json_path, stats_json_path):
     books = []
     
-    # --- STEP 1: Load Existing Cache ---
-    # If you've already processed covers before, let's remember them so we never hit the web for them again!
+    # reuse covers from the last run so we only look up new books
     cached_covers = {}
     if os.path.exists(books_json_path):
         try:
@@ -63,9 +58,9 @@ def parse_library(file_path, books_json_path, stats_json_path):
                 for b in old_data:
                     if b.get('id') and b.get('coverUrl'):
                         cached_covers[b['id']] = b['coverUrl']
-            print(f"💾 Found existing cache! Loaded {len(cached_covers)} pre-verified book covers.")
+            print(f"loaded {len(cached_covers)} cached covers")
         except Exception:
-            print("⚠️ Could not read old books.json asset cache, doing full clean rebuild.")
+            print("could not read books.json, fetching all covers again")
 
     from collections import defaultdict
     by_year = defaultdict(lambda: {"totalBooks": 0, "totalPages": 0, "ratings": {1:0, 2:0, 3:0, 4:0, 5:0}})
@@ -78,7 +73,6 @@ def parse_library(file_path, books_json_path, stats_json_path):
     shortest_book = {"title": None, "pages": 999999, "author": None}
     binding_counts = defaultdict(int)
 
-    # Initialize a persistent web session adapter
     session = requests.Session()
 
     with open(file_path, 'r', encoding='utf-8-sig') as f:
@@ -103,18 +97,15 @@ def parse_library(file_path, books_json_path, stats_json_path):
             date_read = row.get('Date Read', '').strip()
             date_added = row.get('Date Added', '').strip()
             
-            # --- STEP 2: Smart Cover Check (Cache vs Web) ---
             if book_id in cached_covers:
-                # ⚡ INSTANT SKIP: We already have this cover saved! No network requests made.
                 cover_url = cached_covers[book_id]
             else:
-                # New book found! Process it over the internet connection
-                print(f"✨ New Entry Detected: Fetching assets for '{title}'...")
+                print(f"new book: '{title}'")
                 isbn = clean_isbn(row.get('ISBN13')) or clean_isbn(row.get('ISBN'))
                 cover_url = f"https://covers.openlibrary.org/b/isbn/{isbn}-L.jpg" if (isbn and check_isbn_cover(session, isbn)) else None
                 if not cover_url:
                     cover_url = get_fallback_cover_by_search(session, title, author)
-                    time.sleep(0.4) # Brief polite gap delay only on newly queried items
+                    time.sleep(0.4)
 
             book_obj = {
                 'id': book_id,
@@ -130,7 +121,7 @@ def parse_library(file_path, books_json_path, stats_json_path):
             }
             books.append(book_obj)
 
-            # --- Analytical Math Processing ---
+            # stats
             year_label = "Before Tracking" if shelf == "before-goodreads" else (date_read[:4] if date_read else "Unknown Year")
             by_year[year_label]["totalBooks"] += 1
             by_year[year_label]["totalPages"] += pages
@@ -166,10 +157,8 @@ def parse_library(file_path, books_json_path, stats_json_path):
             if binding:
                 binding_counts[binding] += 1
 
-    # Close the hot session
     session.close()
 
-    # --- Structural Calculations Re-Mapping ---
     sorted_timeline = sorted([{"date": k, **v} for k, v in timeline_stats.items()], key=lambda x: x["date"])
     
     formatted_authors = []
@@ -200,7 +189,7 @@ def parse_library(file_path, books_json_path, stats_json_path):
     with open(stats_json_path, 'w', encoding='utf-8') as f:
         json.dump(stats_matrix, f, indent=2, ensure_ascii=False)
         
-    print(f"🎉 Build Complete! Cached data generated seamlessly inside {books_json_path} and {stats_json_path}!")
+    print(f"wrote {books_json_path} and {stats_json_path}")
 
 if __name__ == "__main__":
     parse_library('goodreads_library_export.csv', 'src/config/books.json', 'src/config/stats.json')

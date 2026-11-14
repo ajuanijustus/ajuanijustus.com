@@ -29,3 +29,5 @@ Thumbs.db
 
 # --- Testing ---
 /coverage
+# --- Personal data exports (contain private notes; keep local only) ---
+goodreads_library_export*.csv

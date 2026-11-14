@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import "./Header.css";
 import { Fade } from 'react-awesome-reveal';
 import { NavLink, Link } from "react-router-dom";
-import { greeting, settings } from "../../config/portfolio.js";
-import SeoHeader from "../seoHeader/SeoHeader";
+import { greeting } from "../../config/portfolio.js";
 
 const onMouseEnter = (event, color) => {
   const el = event.target;
@@ -18,11 +17,9 @@ const onMouseOut = (event) => {
 class LegacyHeader extends Component {
   render() {
     const theme = this.props.theme;
-    console.log(theme);
-    const link = settings.isSplash ? "/splash" : "home";
+    const link = "/";
     return (
       <Fade direction="down" duration={500}>
-        <SeoHeader />
         <div>
           <header className="header">
             <NavLink to={link} tag={Link} className="logo">

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Splash.css";
-import { Navigate } from "react-router-dom"; // Swapped Redirect for Navigate
 import LoaderLogo from "../../components/Loader/LoaderLogo.js";
+import Home from "../home/HomeComponent";
 
 function AnimatedSplash(props) {
   return (
@@ -13,23 +13,33 @@ function AnimatedSplash(props) {
   );
 }
 
+// splash plays on top of the home page so the home content is in the page from the start
 function Splash(props) {
-  // 1. Replaced this.state with a simple state hook
-  const [redirect, setRedirect] = useState(false);
+  const [done, setDone] = useState(false);
 
-  // 2. Handled the 2-second timer and the cleanup inside a hook
   useEffect(() => {
-    const timerId = setTimeout(() => setRedirect(true), 2000);
-
-    // This clean-up function automatically clears the timer if the user leaves early
-    return () => clearTimeout(timerId);
+    document.body.style.overflow = "hidden";
+    const timerId = setTimeout(() => setDone(true), 2000);
+    return () => {
+      clearTimeout(timerId);
+      document.body.style.overflow = "";
+    };
   }, []);
 
-  // 3. Render modern Navigate component instead of Redirect
-  return redirect ? (
-    <Navigate to="/home" replace />
-  ) : (
-    <AnimatedSplash theme={props.theme} />
+  useEffect(() => {
+    if (done) document.body.style.overflow = "";
+  }, [done]);
+
+  return (
+    <>
+      {/* remount when the splash ends so the fade-ins play like before */}
+      <Home key={done ? "shown" : "hidden"} theme={props.theme} onToggle={props.onToggle} />
+      {!done && (
+        <div className="splash_overlay" style={{ backgroundColor: props.theme.body }}>
+          <AnimatedSplash theme={props.theme} />
+        </div>
+      )}
+    </>
   );
 }
 

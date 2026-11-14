@@ -6,10 +6,11 @@ import TopButton from "../../components/topButton/TopButton";
 import Button from "../../components/button/Button";
 import { Fade } from "react-awesome-reveal";
 import { greeting, contactPageData, socialMediaLinks } from "../../config/portfolio.js";
-import myResume from "../../assets/resume.pdf";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import styled from "styled-components";
+
+const myResume = `${process.env.PUBLIC_URL}/cv.pdf`;
 
 const CompactIconWrapper = styled.span`
   display: inline-flex;
@@ -56,7 +57,6 @@ export default function Contact(props) {
         <Fade>
           <div className="contact-card-container" style={{ backgroundColor: theme.body }}>
             
-            {/* Left Side: Profile Image */}
             <div className="contact-image-panel">
               <img
                 src={require(`../../assets/images/${ContactData["profile_image_path"]}`)}
@@ -65,7 +65,6 @@ export default function Contact(props) {
               />
             </div>
 
-            {/* Right Side: Details */}
             <div className="contact-info-panel">
               <h1 className="contact-title" style={{ color: theme.text }}>
                 {ContactData["title"]}
@@ -106,7 +105,6 @@ export default function Contact(props) {
 
               <hr className="contact-divider" style={{ borderColor: theme.secondaryText + "30" }} />
 
-              {/* SELFCONTAINED COMPACT SOCIAL DIRECTORY */}
               <div className="contact-social-directory">
                 <h3 className="section-subtitle" style={{ color: theme.highlight }}>Digital Profiles</h3>
                 <div className="compact-social-grid">
@@ -129,7 +127,6 @@ export default function Contact(props) {
                   ))}
                 </div>
 
-                {/* Action Button */}
                 <div className="contact-resume-action">
                   <Button text="See My Resume" newTab={true} href={myResume} theme={theme} />
                 </div>

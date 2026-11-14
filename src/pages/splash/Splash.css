@@ -55,3 +55,9 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.splash_overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+}

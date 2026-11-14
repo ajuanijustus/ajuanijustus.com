@@ -23,18 +23,15 @@ export default function Greeting(props) {
     let index = 0;
 
     const sequenceInterval = setInterval(() => {
-      // Step 1: Start snappy fade-out
       setIsFading(true);
 
-      // Step 2: Swap text
       setTimeout(() => {
         index = (index + 1) % example.length;
         setCurrentText(example[index]);
-        // Step 3: Fade back in
         setIsFading(false);
       }, 0);
 
-    }, 1000); // Changed to exactly 1 second (1000ms)
+    }, 1000);
 
     return () => clearInterval(sequenceInterval);
   }, []);

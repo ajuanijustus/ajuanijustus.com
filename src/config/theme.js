@@ -1,4 +1,3 @@
-// Cleaned Core UI Themes
 
 export const darkTheme = {
   body: "#121212",
@@ -24,5 +23,4 @@ export const lightTheme = {
   headerColor: "#b30000",
 };
 
-// Your chosen deployment theme
 export const chosenTheme = darkTheme;

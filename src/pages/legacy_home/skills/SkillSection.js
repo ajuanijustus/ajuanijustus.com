@@ -34,7 +34,6 @@ class SkillSection extends Component {
           return (
             <div className="skills-main-div" key={index}>
               
-              {/* Image Column: Keeps layout stable, contents animate */}
               <div className="skills-image-div">
                 <Fade direction="left" duration={2000} triggerOnce>
                   <div>
@@ -43,10 +42,8 @@ class SkillSection extends Component {
                 </Fade>
               </div>
               
-              {/* Text Column: Keeps layout stable, contents animate */}
               <div className="skills-text-div">
                 <Fade direction="right" duration={1500} triggerOnce>
-                  {/* Single block wrapper ensures width never collapses to 0px */}
                   <div style={{ width: "100%" }}>
                     <h1 className="skills-heading" style={{ color: theme.text }}>
                       {skill.title}

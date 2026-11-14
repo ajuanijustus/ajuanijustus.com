@@ -12,31 +12,19 @@ import {
   faBluesky,
   faGoogleScholar,
   faResearchgate,
-  faOrcid        // Added ORCID Brand Icon
+  faOrcid
 } from '@fortawesome/free-brands-svg-icons';
 
 // General utility vectors from the Solid library
 import { 
   faChartLine, 
-  faBookOpen,    // Added semantic icon for Fable
-  faUniversity   // Added semantic icon for UOB Pure Portal
+  faBookOpen,
+  faUniversity
 } from '@fortawesome/free-solid-svg-icons';
 
 // Website related settings
 const settings = {
   isSplash: true, // Change this to false if you don't want Splash screen.
-};
-
-//SEO Related settings
-const seo = {
-  title: "Aju Ani Justus",
-  description:
-    "A passionate individual who always thrives to work on end to end products which develop sustainable and scalable social and technical systems to create impact.",
-  og: {
-    title: "Aju Ani Justus",
-    type: "website",
-    url: "http://ajuanijustus.com/",
-  },
 };
 
 //Home Page
@@ -51,13 +39,11 @@ const greeting = {
   logo_name: "AjuAniJustus",
   subTitle: "Doctoral Researcher, University of Birmingham",
   
-  // Status Banner for visibility
   statusBanner: "🚀 Open to research internships from July 2026 onwards in Multi-Agent Systems, Reinforcement Learning, Cooperative AI, and Human-AI Teaming.",
   
   email: "mailme@ajuanijustus.com",
   googleScholar: "https://scholar.google.com/citations?user=ktCUwwsAAAAJ&hl=en",
   
-  // Professional tracking descriptors for the inline typing animation
   sequenceStrings: [
     "Doctoral Researcher",
     "Reinforcement Learning Scientist",
@@ -65,7 +51,6 @@ const greeting = {
     "Machine Learning Engineer"
   ],
   
-  // Academic Profile Copy
   phdInfo: "I am a third-year PhD candidate at the University of Birmingham studying Heterogeneous-Agent Reinforcement Learning (HARL), Agent Communication, and Human-Agent Teaming.",
   coreQuestion: "How can communication in HARL be modeled as a distinct, learnable process aimed at grounding shared beliefs and establishing common ground, rather than as an auxiliary component of an action policy?",
   
@@ -402,7 +387,7 @@ const news = [
   {
     date: "Dec 2023",
     text: "Published and presented first-ever peer-reviewed paper 'Music Generation using Human-In-The-Loop Reinforcement Learning' at the IEEE International Conference on Big Data.",
-    link: "https://doi.org/10.3233/FAIA251250"
+    link: "https://arxiv.org/abs/2501.15304"
   },
   {
     date: "Sep 2023",
@@ -586,46 +571,13 @@ const teaching = [
   }
 ];
 
-// TEACHING
-// Teaching & Talks - also add talks to news
-// Spring 2024
-// Data Structures and Algorithms (Conversion MSc CS)
-// University of Birmingham
-// Postgraduate Teaching Assistant.
-// Autumn 2023
-// Computer-Aided Verification (BSc/MSci CS, years 3 and 4)
-// University of Birmingham
-// Postgraduate Teaching Assistant.
-
-// RECOGNITION
-// Awards & Scholarships
-
-// SERVICE
-// Academic Service
-// 2025
-// General Chair, BASiC'25
-// Chairing the Birmingham Algorithms, Synthesis, and Computability seminar series.
-// 2024–present
-// PGR Representative, UoB CS Research Committee
-// 2024
-// Artifact Evaluation Committee Member
-// CAV'24, SAS'24, ECOOP'24.
-// 2024–present
-// Mentor, SIGPLAN-M
-// 2023
-// Student Volunteer, CIKM'23
-
-// Email
-// removed
-// Primary academic email
-// removed
-// Personal email
+// TODO sections to add later: Teaching & Talks (also add talks to news),
+// Recognition (Awards & Scholarships), Academic Service.
 
 // include sociotechnical systems, eq2rl, AA + MAS reading group
 
 export {
   settings,
-  seo,
   greeting,
   greetingLegacy,
   socialMediaLinks,

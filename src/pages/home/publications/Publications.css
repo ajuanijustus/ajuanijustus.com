@@ -18,7 +18,6 @@
   align-items: flex-start;
 }
 
-/* Left side fixed alignment panel */
 .pub-venue-col {
   min-width: 140px;
   flex-shrink: 0;
@@ -36,7 +35,6 @@
   display: inline-block;
 }
 
-/* Right side flexible layout details block */
 .pub-details-col {
   flex-grow: 1;
 }
@@ -68,7 +66,6 @@
   margin: 0 0 0.6rem 0;
 }
 
-/* Structural flex layout for custom download utility tabs */
 .pub-links-div {
   display: flex;
   gap: 1rem;
@@ -86,7 +83,6 @@
   text-decoration: underline;
 }
 
-/* BIBTEX POPUP STYLES */
 .bibtex-modal-overlay {
   position: fixed;
   top: 0;
@@ -192,7 +188,6 @@
 }
 
 
-/* MEDIA QUERY BREAKING SYSTEMS */
 @media (max-width: 1380px) {
   .publications-heading {
     font-size: 35px;
@@ -230,7 +225,6 @@
   .pub-full-venue {
     font-size: 14px;
   }
-  /* Optimization for popup sizing on narrow screens */
   .bibtex-modal-content {
     padding: 16px;
   }

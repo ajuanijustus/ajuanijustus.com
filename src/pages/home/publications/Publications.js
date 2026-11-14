@@ -6,7 +6,6 @@ import { Fade } from "react-awesome-reveal";
 export default function Publications(props) {
   const theme = props.theme;
 
-  // State management for BibTeX Modal and Clipboard Actions
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [activeBibtex, setActiveBibtex] = useState("");
   const [copied, setCopied] = useState(false);
@@ -14,7 +13,7 @@ export default function Publications(props) {
   if (!publications || publications.length === 0) return null;
 
   const openModal = (e, bibtexText) => {
-    e.preventDefault(); // Stop page from snapping to top
+    e.preventDefault();
     setActiveBibtex(bibtexText);
     setIsModalOpen(true);
     setCopied(false);
@@ -23,14 +22,12 @@ export default function Publications(props) {
   const copyToClipboard = () => {
     navigator.clipboard.writeText(activeBibtex);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000); // Reset button text after 2 seconds
+    setTimeout(() => setCopied(false), 2000);
   };
 
   return (
-    /* Outer structural wrapper remains static to maintain perfect page layout rules */
     <div className="publications-main-div" id="publications">
       
-      {/* 1. Header Animation Block */}
       <Fade>
         <div className="publications-header-div">
           <h1 className="publications-heading" style={{ color: theme.text }}>
@@ -38,15 +35,12 @@ export default function Publications(props) {
           </h1>
         </div>
 
-        {/* 2. Body List Animation Block */}
         <div className="publications-body-div">
-          {/* Inner block container prevents flex-child collapse glitches */}
           <div className="publications-list-container">
             {publications.map((pub, index) => {
               return (
                 <div className="pub-item-row" key={index}>
                   
-                  {/* Left Column: Fixed Venue Identifier Tag */}
                   <div className="pub-venue-col">
                     <span 
                       className="pub-venue-badge"
@@ -59,14 +53,12 @@ export default function Publications(props) {
                     </span>
                   </div>
 
-                  {/* Right Column: Title, Authors, Citation Meta & Links */}
                   <div className="pub-details-col">
                     <h3 className="pub-title" style={{ color: theme.text }}>
                       {pub.title}
                     </h3>
                     
                     <p className="pub-authors" style={{ color: theme.text }}>
-                      {/* Splitting logic maps through strings to explicitly bold your identity */}
                       {pub.authors.split("Aju Ani Justus").map((part, i, arr) => (
                         <React.Fragment key={i}>
                           {part}
@@ -79,7 +71,6 @@ export default function Publications(props) {
                       {pub.fullVenue}
                     </p>
 
-                    {/* Action Item Nodes */}
                     <div className="pub-links-div">
                       {pub.links.pdf && (
                         <a href={pub.links.pdf} target="_blank" rel="noopener noreferrer" style={{ color: theme.highlight }}>
@@ -96,7 +87,6 @@ export default function Publications(props) {
                           [Website]
                         </a>
                       )}
-                      {/* Updated BibTeX node trigger to safely pass data literal down to modal hook */}
                       {pub.links.bibtex && (
                         <a 
                           href="#" 
@@ -116,7 +106,6 @@ export default function Publications(props) {
         </div>
       </Fade>
 
-      {/* THEMED BIBTEX POPUP MODAL */}
       {isModalOpen && (
         <div className="bibtex-modal-overlay" onClick={() => setIsModalOpen(false)}>
           <div 
@@ -126,7 +115,7 @@ export default function Publications(props) {
               color: theme.text, 
               border: `1px solid ${theme.secondaryText}30` 
             }}
-            onClick={(e) => e.stopPropagation()} // Keeps modal open when clicking inside the window
+            onClick={(e) => e.stopPropagation()}
           >
             <div className="bibtex-modal-header">
               <h3 style={{ color: theme.text }}>BibTeX Citation</h3>

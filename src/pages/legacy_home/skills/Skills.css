@@ -30,7 +30,6 @@
   margin-top: 100px;
 }
 
-/* Fix to ensure the inner SVG/Image matches parent constraints smoothly */
 .skills-image-div img,
 .skills-image-div svg {
   max-width: 100%;

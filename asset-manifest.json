@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.02288517.css",
-    "main.js": "/static/js/main.5d441c37.js",
+    "main.css": "/static/css/main.dabfc00d.css",
+    "main.js": "/static/js/main.94566b90.js",
     "static/media/linkedin_dp_overlay_round_repos.png": "/static/media/linkedin_dp_overlay_round_repos.b20ef125c2bce2bef358.png",
     "static/media/Montserrat-Regular.ttf": "/static/media/Montserrat-Regular.3cd786652b8a2e9d41f2.ttf",
     "static/media/GoogleSans-Italic.ttf": "/static/media/GoogleSans-Italic.40bb50bd202405745006.ttf",
@@ -11,16 +11,15 @@
     "static/media/GoogleSans-Medium.ttf": "/static/media/GoogleSans-Medium.963c3e555aaada9ef8a9.ttf",
     "static/media/GoogleSans-Bold.ttf": "/static/media/GoogleSans-Bold.d907e4bf3e32637a636e.ttf",
     "static/media/Agustina.woff": "/static/media/Agustina.eb0c59dda4cc308cba96.woff",
-    "static/media/resume.pdf": "/static/media/resume.cbb300e827682ded829b.pdf",
     "static/media/hobbies.svg": "/static/media/hobbies.f891bb15c6369d67bfcf7a65f3ae8cc5.svg",
     "static/media/multitasking.svg": "/static/media/multitasking.1aa818969289a5dee140405e1b8d04b2.svg",
-    "static/media/student.svg": "/static/media/student.d37b06a544e16cd5796b057fc9e07f51.svg",
     "index.html": "/index.html",
-    "main.02288517.css.map": "/static/css/main.02288517.css.map",
-    "main.5d441c37.js.map": "/static/js/main.5d441c37.js.map"
+    "static/media/student.svg": "/static/media/student.d37b06a544e16cd5796b057fc9e07f51.svg",
+    "main.dabfc00d.css.map": "/static/css/main.dabfc00d.css.map",
+    "main.94566b90.js.map": "/static/js/main.94566b90.js.map"
   },
   "entrypoints": [
-    "static/css/main.02288517.css",
-    "static/js/main.5d441c37.js"
+    "static/css/main.dabfc00d.css",
+    "static/js/main.94566b90.js"
   ]
 }

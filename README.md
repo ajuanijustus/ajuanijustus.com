@@ -21,9 +21,25 @@ npm run deploy
 - CV: public/cv.pdf (always at ajuanijustus.com/cv.pdf)
 - if I add a new page: add the route in App.js AND in seo.json
 
-## books
+## secret pages
 
-export library from goodreads -> save as goodreads_library_export.csv in the repo root (it's gitignored, has private notes) -> python3 parse_goodreads.py
+all the data is in src/data/. pages are in src/pages/secret/ (books ones in src/pages/books/).
+
+updates itself every night (.github/workflows/update.yml), or run it by hand from the actions tab:
+- books: goodreads. GOODREADS_RSS secret = the rss link at the bottom of my "read" shelf page (has a key in it)
+- films: letterboxd. LETTERBOXD_USER variable
+- anime + manga: anilist. ANILIST_USER variable
+- tv: trakt. TRAKT_USER variable, TRAKT_CLIENT_ID secret
+the action commits "update data" to master, so git pull before pushing.
+
+by hand, rarely:
+- travel: src/data/travel.json ({ "country": "Japan", "year": 2027, "note": "..." }, names as on the map)
+- games: src/data/games.json ({ "title", "steam": app id from the store url, "platform", "year", "hours", "note" }). non steam: image in public/secret/games/ and "cover": "file.jpg"
+- plants: src/data/plants.json ({ "name", "species", "since": "2025-04-01", "water": "weekly", "photo": "file.jpg", "note" }), photos in public/secret/plants/
+- recipes: one .md file per recipe in src/data/recipes/ (format at the top of scripts/data/recipes.js), photos in public/secret/kitchen/
+- videos/photos: src/data/media.json. youtube: { "id", "title" }. twitch: { "clip": clip slug, "title", "thumb": "file.jpg" in public/secret/videos/ }. photos: { "file" in public/secret/photos/, "link": instagram post url, "alt" }
+
+full goodreads rebuild (gets format, read count etc that the rss doesn't have): export library -> goodreads_library_export.csv in the repo root (gitignored, has private notes) -> python3 scripts/data/goodreads.py --csv goodreads_library_export.csv
 
 ## broken install
 

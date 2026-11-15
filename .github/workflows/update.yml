@@ -1,0 +1,80 @@
+name: update data
+
+# every night: pull goodreads, letterboxd, anilist and trakt, and redeploy if anything changed.
+# usernames are repo variables, keys are repo secrets (settings > secrets and variables > actions).
+
+on:
+  schedule:
+    - cron: "30 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install requests
+
+      - name: fetch
+        env:
+          GOODREADS_RSS: ${{ secrets.GOODREADS_RSS }}
+          LETTERBOXD_USER: ${{ vars.LETTERBOXD_USER }}
+          ANILIST_USER: ${{ vars.ANILIST_USER }}
+          TRAKT_USER: ${{ vars.TRAKT_USER }}
+          TRAKT_CLIENT_ID: ${{ secrets.TRAKT_CLIENT_ID }}
+        # one broken source shouldn't stop the others
+        run: |
+          python scripts/data/goodreads.py || echo "goodreads failed"
+          python scripts/data/letterboxd.py || echo "letterboxd failed"
+          python scripts/data/anilist.py || echo "anilist failed"
+          python scripts/data/trakt.py || echo "trakt failed"
+
+      - name: commit
+        id: commit
+        run: |
+          if [ -z "$(git status --porcelain src/data)" ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name "ajuanijustus"
+          git config user.email "35808017+ajuanijustus@users.noreply.github.com"
+          git add src/data
+          git commit -m "update data"
+          git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - if: steps.commit.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - if: steps.commit.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
+        # CI=false so lint warnings don't fail the build
+        env:
+          CI: false
+        run: |
+          npm ci --ignore-scripts
+          npm run build
+
+      - if: steps.commit.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+          publish_branch: gh-pages
+          user_name: ajuanijustus
+          user_email: 35808017+ajuanijustus@users.noreply.github.com
+          commit_message: update data

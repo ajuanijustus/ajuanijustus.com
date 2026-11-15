@@ -1,376 +1,294 @@
 import React, { useMemo, useState } from "react";
+import { Link } from "react-router-dom";
 import "./ReadingStats.css";
-import statsData from "../../config/stats.json";
-import { Fade } from "react-awesome-reveal";
-import Header from "../../components/personal_header/Header";
-import Footer from "../../components/footer/Footer";
-import TopButton from "../../components/topButton/TopButton";
+import books from "../../data/books.json";
+import computeStats from "./bookStats";
+import SecretPage, { Section, Tiles, Tile, Tabs, PosterGrid } from "../../components/secret/SecretPage";
+import { Bars, HBars, Heatmap, Donut, Ring, Radial } from "../../components/secret/charts";
 
-export default function ReadingStats(props) {
-  const theme = props.theme;
-  const [hoveredDot, setHoveredDot] = useState(null);
-  
-  const globalAggregates = useMemo(() => {
-    let books = 0; let pages = 0; let scoreSum = 0; let scoredCount = 0;
-    Object.values(statsData.byYear).forEach(y => {
-      books += y.totalBooks;
-      pages += y.totalPages;
-      Object.entries(y.ratings).forEach(([rate, count]) => {
-        scoreSum += (int(rate) * count);
-        scoredCount += count;
-      });
-    });
-    return {
-      totalBooks: books,
-      totalPages: pages,
-      avgRating: scoredCount > 0 ? (scoreSum / scoredCount).toFixed(2) : "0.00"
-    };
-  }, []);
+const fmt = (n) => Math.round(n).toLocaleString("en-GB");
+const shortDate = (s) =>
+  s ? new Date(s.replace(/\//g, "-")).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" }) : "";
+const asPosters = (list) => list.map((b) => ({ title: b.title, image: b.coverUrl, meta: b.author }));
 
-  const maxBooksInMonth = Math.max(...statsData.timeline.map(d => d.booksCount), 1);
-  const maxPagesInMonth = Math.max(...statsData.timeline.map(d => d.pagesCount), 1);
-
-  const formatMonthYear = (dateStr) => {
-    if (!dateStr) return "";
-    
-    const safeDateStr = dateStr.length === 7 ? `${dateStr}-02` : dateStr;
-    const dateObj = new Date(safeDateStr);
-    
-    if (isNaN(dateObj.getTime())) return dateStr;
-
-    return dateObj.toLocaleDateString("en-US", {
-      month: "short",
-      year: "2-digit"
-    }).replace(" ", " '");
-  };
-
-  const publicationYears = statsData.scatterPlot
-  .map(book => Number(book.y))
-  .filter(Number.isFinite);
-
-  const minPublicationYear = Math.min(...publicationYears);
-  const maxPublicationYear = Math.max(...publicationYears);
-
-  const timelineIndexMap = Object.fromEntries(
-    statsData.timeline.map((item, idx) => [item.date, idx])
-  );
-
+function Shelf({ list }) {
+  const [hover, setHover] = useState(null);
   return (
     <>
-      <Header theme={theme} />
-      <div className="stats-main-div" style={{ backgroundColor: theme.body }}>
-        <Fade triggerOnce>
-          <div className="stats-header">
-            <h1 className="stats-title" style={{ color: theme.text }}>Reading Insights</h1>
-            <p className="stats-subtitle" style={{ color: theme.secondaryText }}>Data analytics extracted from my library archive.</p>
-          </div>
-
-          <div className="stats-summary-grid">
-            <div className="stat-metric-card" style={{ backgroundColor: theme.highlight + "10", border: `1px solid ${theme.highlight}30` }}>
-              <span className="metric-num" style={{ color: theme.highlight }}>{globalAggregates.totalBooks}</span>
-              <span className="metric-lbl" style={{ color: theme.text }}>Books Devoured</span>
-            </div>
-            <div className="stat-metric-card" style={{ backgroundColor: theme.highlight + "10", border: `1px solid ${theme.highlight}30` }}>
-              <span className="metric-num" style={{ color: theme.highlight }}>{globalAggregates.totalPages.toLocaleString()}</span>
-              <span className="metric-lbl" style={{ color: theme.text }}>Pages Logged</span>
-            </div>
-            <div className="stat-metric-card" style={{ backgroundColor: theme.highlight + "10", border: `1px solid ${theme.highlight}30` }}>
-              <span className="metric-num" style={{ color: theme.highlight }}>★ {globalAggregates.avgRating}</span>
-              <span className="metric-lbl" style={{ color: theme.text }}>Lifetime Rating</span>
-            </div>
-          </div>
-
-          <div className="stats-section">
-            <h2 className="section-title" style={{ color: theme.text }}>Yearly Milestones</h2>
-            <div className="table-responsive">
-              <table className="stats-table" style={{ color: theme.text }}>
-                <thead>
-                  <tr style={{ borderBottom: `2px solid ${theme.highlight}40` }}>
-                    <th>Year</th>
-                    <th>Books Read</th>
-                    <th>Total Pages</th>
-                    <th>Ratings Distribution (1★ - 5★)</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {Object.keys(statsData.byYear).sort((a,b) => b.localeCompare(a)).map(year => {
-                    const data = statsData.byYear[year];
-                    return (
-                      <tr key={year} style={{ borderBottom: `1px solid ${theme.secondaryText}20` }}>
-                        <td style={{ fontWeight: "700" }}>{year}</td>
-                        <td>{data.totalBooks}</td>
-                        <td>{data.totalPages.toLocaleString()}</td>
-                        <td>
-                          <div className="rating-spread-row">
-                            {list(range(1, 6)).map(star => (
-                              <span key={star} className="spread-pill" style={{ backgroundColor: theme.highlight + (data.ratings[star] > 0 ? "30" : "05"), color: data.ratings[star] > 0 ? theme.text : theme.secondaryText }}>
-                                {star}★: <strong>{data.ratings[star]}</strong>
-                              </span>
-                            ))}
-                          </div>
-                        </td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          <div className="stats-charts-row">
-            {/* Books Over Time */}
-            <div className="chart-wrapper-box">
-              <h3 className="chart-box-title" style={{ color: theme.text }}>Books Over Time (Histogram)</h3>
-              <div className="histogram-container">
-                {statsData.timeline.map((item, idx) => (
-                  <div key={idx} className="histogram-bar-column" title={`${item.date}: ${item.booksCount} books`}>
-                    <div className="bar-fill" style={{ height: `${(item.booksCount / maxBooksInMonth) * 100}%`, backgroundColor: theme.highlight }} />
-                    <span className="bar-label" style={{ color: theme.secondaryText }}>{item.date.substring(5,7) === "01" ? item.date.substring(2,4) : ""}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            {/* Pages Over Time */}
-            <div className="chart-wrapper-box">
-              <h3 className="chart-box-title" style={{ color: theme.text }}>Pages Over Time (Histogram)</h3>
-              <div className="histogram-container">
-                {statsData.timeline.map((item, idx) => (
-                  <div key={idx} className="histogram-bar-column" title={`${item.date}: ${item.pagesCount} pages`}>
-                    <div className="bar-fill" style={{ height: `${(item.pagesCount / maxPagesInMonth) * 100}%`, backgroundColor: theme.text }} />
-                    <span className="bar-label" style={{ color: theme.secondaryText }}>{item.date.substring(5,7) === "01" ? item.date.substring(2,4) : ""}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-          </div>
-
-          {/* Scatter Plot Visualization */}
-          <div className="stats-section">
-            <h2 className="section-title" style={{ color: theme.text }}>
-              Reading Recency vs Book Publication Year
-            </h2>
-
-            <p
-              className="chart-desc"
-              style={{ color: theme.secondaryText }}
-            >
-              Each point represents a book. The X-axis shows when it was read,
-              while the Y-axis shows the original publication year.
-            </p>
-
-            <div className="scatter-outer-wrapper">
-
-              <div
-                className="scatter-y-axis"
-                style={{ color: theme.secondaryText }}
-              >
-                <span>{maxPublicationYear}</span>
-                <span>
-                  {Math.round((maxPublicationYear + minPublicationYear) / 2)}
-                </span>
-                <span>{minPublicationYear}</span>
-              </div>
-
-              <div
-                className="scatter-chart-container"
-                style={{
-                  borderLeft: `2px solid ${theme.text}30`,
-                  borderBottom: `2px solid ${theme.text}30`,
-                  position: "relative",
-                  overflow: "visible"
-                }}
-              >
-                {/* Gridlines */}
-                {[25, 50, 75].map(grid => (
-                  <div
-                    key={grid}
-                    style={{
-                      position: "absolute",
-                      left: 0,
-                      right: 0,
-                      bottom: `${grid}%`,
-                      borderTop: `1px dashed ${theme.secondaryText}20`,
-                      pointerEvents: "none",
-                      zIndex: 0
-                    }}
-                  />
-                ))}
-
-                {statsData.scatterPlot.map((pt, index) => {
-                  const timelineIndex = timelineIndexMap[pt.x];
-
-                  const xPercent =
-                    timelineIndex !== undefined &&
-                    statsData.timeline.length > 1
-                      ? (timelineIndex /
-                          (statsData.timeline.length - 1)) *
-                        100
-                      : 0;
-
-                  const yPercent =
-                    maxPublicationYear === minPublicationYear
-                      ? 50
-                      : (
-                          ((pt.y - minPublicationYear) /
-                            (maxPublicationYear - minPublicationYear)) *
-                          100
-                        );
-
-                  const isHovered = hoveredDot === index;
-
-                  return (
-                    <React.Fragment key={index}>
-                      <div
-                        className={`scatter-dot ${
-                          isHovered ? "active" : ""
-                        }`}
-                        style={{
-                          left: `${xPercent}%`,
-                          bottom: `${yPercent}%`,
-                          backgroundColor: isHovered
-                            ? theme.text
-                            : theme.highlight,
-                          transform: isHovered
-                            ? "translate(-50%, 50%) scale(1.4)"
-                            : "translate(-50%, 50%)",
-                          zIndex: isHovered ? 20 : 5,
-                          border: `2px solid ${theme.body}`,
-                          boxShadow: isHovered
-                            ? `0 0 0 6px ${theme.highlight}30`
-                            : "none",
-                          cursor: "pointer"
-                        }}
-                        onMouseEnter={() => setHoveredDot(index)}
-                        onMouseLeave={() => setHoveredDot(null)}
-                        title={pt.title}
-                      />
-
-                      {isHovered && (
-                        <div
-                          className="scatter-tooltip-card"
-                          style={{
-                            left: `${xPercent}%`,
-                            bottom: `calc(${yPercent}% + 20px)`,
-                            backgroundColor: theme.body,
-                            color: theme.text,
-                            border: `1px solid ${theme.highlight}70`,
-                            boxShadow:
-                              "0 12px 30px rgba(0,0,0,0.18)",
-                            zIndex: 50
-                          }}
-                        >
-                          <strong className="tooltip-title">
-                            {pt.title}
-                          </strong>
-
-                          <span
-                            className="tooltip-author"
-                            style={{
-                              color: theme.secondaryText
-                            }}
-                          >
-                            by {pt.author || "Unknown Author"}
-                          </span>
-
-                          <div
-                            className="tooltip-meta-split"
-                            style={{
-                              color: theme.highlight
-                            }}
-                          >
-                            <span>Published: {pt.y}</span>
-                            <span>
-                              Read: {formatMonthYear(pt.x)}
-                            </span>
-                          </div>
-                        </div>
-                      )}
-                    </React.Fragment>
-                  );
-                })}
-              </div>
-            </div>
-
-            <div
-              className="scatter-axis-labels"
-              style={{
-                color: theme.secondaryText,
-                paddingLeft: "40px"
-              }}
-            >
-              <span>Earlier Reads</span>
-              <span>Reading Timeline</span>
-              <span>Recent Reads</span>
-            </div>
-          </div>
-
-          <div className="stats-leaderboard-row">
-            <div className="leaderboard-block">
-              <h3 className="chart-box-title" style={{ color: theme.text }}>Top Authors</h3>
-              {statsData.byAuthor.map((author, i) => (
-                <div key={i} className="leaderboard-item" style={{ color: theme.text }}>
-                  <div className="lb-header">
-                    <span>{author.name}</span>
-                    <strong>{author.count} books <small style={{ color: theme.secondaryText }}>({author.avgRating} ★ avg)</small></strong>
-                  </div>
-                  <div className="lb-bar-bg" style={{ backgroundColor: theme.secondaryText + "20" }}>
-                    <div className="lb-bar-fill" style={{ width: `${(author.count / statsData.byAuthor[0].count) * 100}%`, backgroundColor: theme.highlight }} />
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="leaderboard-block">
-              <h3 className="chart-box-title" style={{ color: theme.text }}>Top Publishers</h3>
-              {statsData.byPublisher.map((pub, i) => (
-                <div key={i} className="leaderboard-item" style={{ color: theme.text }}>
-                  <div className="lb-header">
-                    <span>{pub.name}</span>
-                    <strong>{pub.count} books</strong>
-                  </div>
-                  <div className="lb-bar-bg" style={{ backgroundColor: theme.secondaryText + "20" }}>
-                    <div className="lb-bar-fill" style={{ width: `${(pub.count / statsData.byPublisher[0].count) * 100}%`, backgroundColor: theme.text }} />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="fun-stats-section" style={{ borderTop: `1px solid ${theme.secondaryText}30` }}>
-            <h3 className="chart-box-title" style={{ color: theme.text, marginTop: "2rem" }}>Library Superlatives</h3>
-            <div className="stats-summary-grid">
-              <div className="fun-stat-card" style={{ border: `1px solid ${theme.secondaryText}30` }}>
-                <span className="fun-lbl" style={{ color: theme.secondaryText }}>Thickest Tome</span>
-                <h4 style={{ color: theme.text }}>{statsData.funStats.longestBook.title}</h4>
-                <p style={{ color: theme.highlight }}>{statsData.funStats.longestBook.pages} pages — by {statsData.funStats.longestBook.author}</p>
-              </div>
-              <div className="fun-stat-card" style={{ border: `1px solid ${theme.secondaryText}30` }}>
-                <span className="fun-lbl" style={{ color: theme.secondaryText }}>Shortest Read</span>
-                <h4 style={{ color: theme.text }}>{statsData.funStats.shortestBook.title}</h4>
-                <p style={{ color: theme.highlight }}>{statsData.funStats.shortestBook.pages} pages — by {statsData.funStats.shortestBook.author}</p>
-              </div>
-              <div className="fun-stat-card" style={{ border: `1px solid ${theme.secondaryText}30` }}>
-                <span className="fun-lbl" style={{ color: theme.secondaryText }}>Preferred Mediums</span>
-                <div className="binding-list" style={{ color: theme.text }}>
-                  {Object.entries(statsData.funStats.bindingDistribution).map(([medium, count]) => (
-                    <div key={medium} className="medium-row">
-                      <span>{medium}</span>
-                      <strong>{count}</strong>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </Fade>
+      <div className="rs-shelf" onMouseLeave={() => setHover(null)}>
+        {list.map((b, i) => {
+          const pages = b.pages || 300;
+          return (
+            <span
+              key={b.id}
+              className={`rs-spine rs-r${b.rating || 0}`}
+              style={{ "--h": `${Math.min(56 + pages / 9, 130)}px`, "--w": `${Math.min(Math.max(pages / 45, 5), 18)}px` }}
+              onMouseEnter={() => setHover(i)}
+              onClick={() => setHover(i)}
+            />
+          );
+        })}
       </div>
-      <Footer theme={theme} onToggle={props.onToggle} />
-      <TopButton theme={theme} />
+      <div className="sp-readout">
+        {hover !== null ? (
+          <>
+            <strong>{list[hover].title}</strong> by {list[hover].author}
+            {list[hover].pages ? `, ${list[hover].pages} pages` : ""}
+            {list[hover].rating ? `, ${"★".repeat(list[hover].rating)}` : ""}
+          </>
+        ) : (
+          "every book i've read, oldest on the left. taller = more pages, red = five stars"
+        )}
+      </div>
     </>
   );
 }
 
-function int(str) { return parseInt(str, 10); }
-function range(start, end) { return Array.from({ length: end - start }, (_, i) => start + i); }
-function list(val) { return val; }
+export default function ReadingStats(props) {
+  const s = useMemo(() => computeStats(books), []);
+  const [year, setYear] = useState(s.years[0]);
+  const [allFive, setAllFive] = useState(false);
+  const { totals, pace } = s;
+
+  return (
+    <SecretPage
+      {...props}
+      title="Reading stats"
+      subtitle={
+        <>
+          all of this is worked out from my <Link to="/secret/books">bookshelf</Link>. {fmt(totals.tracked)} of the{" "}
+          {fmt(totals.books)} books have a finish date, the rest were read before i started tracking.
+        </>
+      }
+    >
+      <Section>
+        <Tiles>
+          <Tile value={fmt(totals.books)} label="books read" foot={`${s.series.length} different series`} />
+          <Tile value={fmt(totals.pages)} label="pages" foot={`about ${totals.lotr.toFixed(0)} Lord of the Rings, back to back`} />
+          <Tile value={`${fmt(totals.hours)}h`} label="spent reading" foot={`roughly ${fmt(totals.hours / 24)} full days`} />
+          <Tile value={fmt(totals.avgPages)} label="pages per book" foot="on average" />
+          <Tile value={`★ ${totals.avgRating.toFixed(2)}`} label="average rating" foot={`${s.fiveStars.length} five star reads`} />
+          <Tile value={fmt(s.tbr.count)} label="on the to-read pile" foot={s.tbr.months ? `about ${s.tbr.months} months at my current pace` : ""} />
+        </Tiles>
+      </Section>
+
+      <Section title={`${pace.thisYear} so far`}>
+        <div className="sp-row">
+          <Ring
+            value={pace.thisYearCount}
+            max={pace.lastYearTotal}
+            label={`${pace.thisYearCount} books this year`}
+            sub={`${pace.lastYearTotal} in all of ${pace.thisYear - 1}, and ${pace.lastYearByNow} by this point last year`}
+          />
+          <div>
+            <h3 className="sp-h3">books finished per month</h3>
+            <Bars data={s.timeline} format={(d) => `${d.label}: ${d.value} book${d.value === 1 ? "" : "s"}`} />
+          </div>
+        </div>
+      </Section>
+
+      <Section title="Reading calendar" desc="a square for every day i finished a book. tap one to see what it was.">
+        <Tabs tabs={s.years.map((y) => ({ id: y, label: y }))} active={year} onChange={setYear} />
+        <Heatmap year={year} days={s.byDay} />
+      </Section>
+
+      <Section title="Year in books">
+        <div className="rs-wrapped">
+          {s.wrapped.map((w) => (
+            <div className="rs-year" key={w.year}>
+              <span className="rs-year-label">{w.year}</span>
+              <span className="rs-year-big">{w.count}</span>
+              <span className="rs-year-sub">books, {fmt(w.pages)} pages</span>
+              <dl>
+                {w.top && w.top.rating > 0 && (
+                  <>
+                    <dt>favourite</dt>
+                    <dd>{w.top.title}</dd>
+                  </>
+                )}
+                {w.longest && w.longest.pages > 0 && (
+                  <>
+                    <dt>longest</dt>
+                    <dd>
+                      {w.longest.title} ({w.longest.pages}p)
+                    </dd>
+                  </>
+                )}
+                {w.author && (
+                  <>
+                    <dt>most read</dt>
+                    <dd>
+                      {w.author[0]} ×{w.author[1]}
+                    </dd>
+                  </>
+                )}
+                {w.month && (
+                  <>
+                    <dt>busiest month</dt>
+                    <dd>
+                      {w.month[0]} ({w.month[1]})
+                    </dd>
+                  </>
+                )}
+              </dl>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      <Section title="The shelf">
+        <Shelf list={s.shelf} />
+      </Section>
+
+      <Section title="When i read" desc="which months and days of the week i tend to finish books.">
+        <div className="sp-row">
+          <Radial data={s.byMonth} />
+          <Radial data={s.byWeekday} />
+          <Tiles>
+            {s.streaks.busiest && <Tile value={s.streaks.busiest.value} label="busiest month ever" foot={s.streaks.busiest.label} />}
+            <Tile value={s.streaks.bestMonths} label="months in a row" foot="finishing at least one book" />
+            {s.streaks.longestGap && (
+              <Tile
+                value={`${s.streaks.longestGap.days}d`}
+                label="longest dry spell"
+                foot={`between ${s.streaks.longestGap.from.title} and ${s.streaks.longestGap.to.title}`}
+              />
+            )}
+          </Tiles>
+        </div>
+      </Section>
+
+      {s.series.length > 0 && (
+        <Section title="Series" desc="series i've started, with the next one on my list if it's there.">
+          <div className="rs-series">
+            {s.series.slice(0, 18).map((x) => (
+              <div className="rs-series-row" key={x.name}>
+                <div>
+                  <strong>{x.name}</strong>
+                  <span>{x.author}</span>
+                </div>
+                <div className="rs-series-dots" aria-label={`${x.count} read`}>
+                  {Array.from({ length: Math.min(x.count, 20) }).map((_, i) => (
+                    <i key={i} />
+                  ))}
+                </div>
+                <span className="rs-series-next">{x.next ? `next: #${x.next.seriesNum}` : x.upTo ? `up to #${x.upTo}` : ""}</span>
+              </div>
+            ))}
+          </div>
+        </Section>
+      )}
+
+      <Section title="Time travel" desc="when the books i read were first published.">
+        <div className="sp-row">
+          <Bars data={s.decades} height={140} format={(d) => `${d.label}: ${d.value} books`} />
+          <Tiles>
+            {s.oldest && <Tile value={s.oldest.pubYear} label="oldest book" foot={`${s.oldest.title}, ${s.oldest.author}`} />}
+            {s.medianAge !== null && <Tile value={`${s.medianAge}y`} label="typical age" foot="of a book when i get to it" />}
+            <Tile value={s.newestOnRelease} label="read the year they came out" />
+          </Tiles>
+        </div>
+      </Section>
+
+      <Section title="Size">
+        <div className="sp-row">
+          <div>
+            <h3 className="sp-h3">by length</h3>
+            <HBars data={s.buckets} />
+          </div>
+          <Tiles>
+            {s.longest && <Tile value={s.longest.pages} label="longest" foot={s.longest.title} />}
+            {s.shortest && <Tile value={s.shortest.pages} label="shortest" foot={s.shortest.title} />}
+          </Tiles>
+        </div>
+      </Section>
+
+      <Section title="How i rate">
+        <div className="sp-row">
+          <div>
+            <h3 className="sp-h3">stars given</h3>
+            <HBars data={s.ratingDist} />
+          </div>
+          <div>
+            <h3 className="sp-h3">authors i keep coming back to</h3>
+            <HBars
+              data={s.authors.map((a) => ({
+                label: a.name,
+                value: a.count,
+                display: `${a.count}${a.rated ? ` · ★${(a.sum / a.rated).toFixed(1)}` : ""}`,
+              }))}
+            />
+          </div>
+          {s.formats.length > 0 && (
+            <div>
+              <h3 className="sp-h3">formats</h3>
+              <Donut data={s.formats} />
+            </div>
+          )}
+        </div>
+      </Section>
+
+      <Section title="Five stars" desc={`${s.fiveStars.length} books i'd hand to anyone.`}>
+        <PosterGrid small items={asPosters(allFive ? s.fiveStars : s.fiveStars.slice(0, 16))} />
+        {s.fiveStars.length > 16 && (
+          <button className="sp-tab rs-more" onClick={() => setAllFive(!allFive)}>
+            {allFive ? "show fewer" : `show all ${s.fiveStars.length}`}
+          </button>
+        )}
+      </Section>
+
+      <Section title="The to-read pile">
+        <Tiles>
+          <Tile value={fmt(s.tbr.count)} label="books waiting" foot={`${fmt(s.tbr.pages)} pages`} />
+          <Tile value={s.tbr.perMonth.toFixed(1)} label="books a month" foot="my pace over the last year" />
+          {s.tbr.months && <Tile value={`${(s.tbr.months / 12).toFixed(1)}y`} label="to clear it" foot="if i never added another (i will)" />}
+          {s.tbr.oldest && <Tile value={shortDate(s.tbr.oldest.dateAdded)} label="waiting the longest" foot={s.tbr.oldest.title} />}
+        </Tiles>
+      </Section>
+
+      <Section title="Reviews">
+        <div className="sp-row">
+          <Tiles>
+            <Tile value={s.reviews.count} label="reviews written" foot={`${fmt(s.reviews.totalWords)} words in total`} />
+            {s.reviews.longest && <Tile value={s.reviews.longestWords} label="words in my longest" foot={s.reviews.longest.title} />}
+          </Tiles>
+          <div>
+            <h3 className="sp-h3">words i use the most</h3>
+            <div className="rs-words">
+              {s.reviews.topWords.map(([w, n]) => (
+                <span key={w}>
+                  {w} <b>{n}</b>
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      {(s.current.length > 0 || s.rereads.length > 0 || s.dnf.length > 0) && (
+        <Section title="Odds and ends">
+          <div className="sp-row">
+            {s.current.length > 0 && (
+              <div>
+                <h3 className="sp-h3">reading now</h3>
+                <PosterGrid small items={asPosters(s.current)} />
+              </div>
+            )}
+            {s.rereads.length > 0 && (
+              <div>
+                <h3 className="sp-h3">want to reread</h3>
+                <PosterGrid small items={asPosters(s.rereads)} />
+              </div>
+            )}
+            {s.dnf.length > 0 && (
+              <div>
+                <h3 className="sp-h3">gave up on</h3>
+                <PosterGrid small items={asPosters(s.dnf)} />
+              </div>
+            )}
+          </div>
+        </Section>
+      )}
+    </SecretPage>
+  );
+}

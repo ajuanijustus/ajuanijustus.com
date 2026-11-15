@@ -36,6 +36,41 @@
       "description": "Charts and fun facts from Aju Ani Justus's reading history.",
       "index": false
     },
+    "/secret/watching": {
+      "title": "Watching | Aju Ani Justus",
+      "description": "Films, TV and anime Aju Ani Justus has been watching.",
+      "index": false
+    },
+    "/secret/manga": {
+      "title": "Manga | Aju Ani Justus",
+      "description": "Manga Aju Ani Justus is reading.",
+      "index": false
+    },
+    "/secret/travel": {
+      "title": "Travel | Aju Ani Justus",
+      "description": "Countries Aju Ani Justus has been to.",
+      "index": false
+    },
+    "/secret/games": {
+      "title": "Games | Aju Ani Justus",
+      "description": "Aju Ani Justus's favourite video games.",
+      "index": false
+    },
+    "/secret/plants": {
+      "title": "Plants | Aju Ani Justus",
+      "description": "Aju Ani Justus's plants.",
+      "index": false
+    },
+    "/secret/kitchen": {
+      "title": "Kitchen | Aju Ani Justus",
+      "description": "Aju Ani Justus's go-to recipes.",
+      "index": false
+    },
+    "/secret/videos": {
+      "title": "Videos | Aju Ani Justus",
+      "description": "Streams, clips and videos by Aju Ani Justus.",
+      "index": false
+    },
     "/legacy": {
       "title": "Legacy | Aju Ani Justus",
       "description": "The previous version of ajuanijustus.com.",

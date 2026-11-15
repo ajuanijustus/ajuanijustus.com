@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useEffect } from "react";
 import "./Bookshelf.css";
-import booksData from "../../config/books.json";
+import booksData from "../../data/books.json";
 import { Fade } from "react-awesome-reveal";
 import { Link } from "react-router-dom";
 import Header from "../../components/personal_header/Header";

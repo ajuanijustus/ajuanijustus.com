@@ -1,0 +1,155 @@
+.egg-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.6);
+  animation: egg-fade 0.2s ease-out;
+}
+
+.egg-panel {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  padding: 28px 22px 18px;
+  border: 2px solid;
+  border-radius: 14px;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  animation: egg-pop 0.25s ease-out;
+}
+
+.egg-close {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.egg-stats {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-bottom: 14px;
+  font-variant-numeric: tabular-nums;
+}
+
+.egg-board {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  aspect-ratio: 1;
+  touch-action: none;
+  user-select: none;
+}
+
+.egg-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid;
+  font-size: clamp(20px, 7vw, 28px);
+}
+
+.egg-wall {
+  border-radius: 4px;
+}
+
+.egg-agent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(22px, 8vw, 30px);
+  transition: transform 0.15s ease-out;
+  pointer-events: none;
+}
+
+.egg-agent img {
+  width: 72%;
+  height: 72%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.egg-agent-fell {
+  animation: egg-sink 0.6s ease-in forwards;
+}
+
+.egg-agent-won {
+  animation: egg-bounce 0.5s ease-in-out 3;
+}
+
+.egg-message {
+  min-height: 2.6em;
+  margin: 14px 0 8px;
+  font-size: 14px;
+}
+
+.egg-pad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.egg-pad div {
+  display: flex;
+  gap: 6px;
+}
+
+.egg-pad button {
+  width: 44px;
+  height: 40px;
+  background: none;
+  border: 1px solid;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.egg-hint {
+  margin: 10px 0 0;
+  font-size: 11px;
+}
+
+.footer-text.egg-tap {
+  animation: egg-wobble 0.3s ease-in-out;
+}
+
+@keyframes egg-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes egg-pop {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes egg-sink {
+  to { opacity: 0; scale: 0.2; rotate: 180deg; }
+}
+
+@keyframes egg-bounce {
+  50% { margin-top: -14px; }
+}
+
+@keyframes egg-wobble {
+  25% { transform: rotate(-4deg); }
+  75% { transform: rotate(4deg); }
+}

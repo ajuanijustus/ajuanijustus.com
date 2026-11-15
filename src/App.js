@@ -5,6 +5,7 @@ import { chosenTheme, lightTheme, darkTheme } from "./config/theme.js";
 import { GlobalStyles } from "./config/global.js";
 import { settings } from "./config/portfolio.js";
 import SeoHeader from "./components/seoHeader/SeoHeader";
+import EasterEgg from "./components/easterEgg/EasterEgg";
 
 import Home from "./pages/home/HomeComponent";
 import Contact from "./pages/contact/ContactComponent";
@@ -34,6 +35,7 @@ function App() {
       <GlobalStyles />
       <BrowserRouter>
         <SeoHeader />
+        <EasterEgg theme={currentTheme} />
         <Routes>
           <Route path="/" element={landing} />
           <Route path="/splash" element={landing} />

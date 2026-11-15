@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./Footer.css";
 import { Fade } from 'react-awesome-reveal';
 import { lightTheme } from "../../config/theme";
@@ -21,6 +21,24 @@ const ThemeIcon = styled.svg`
 
 export default function Footer(props) {
   const isLightTheme = props.theme === lightTheme;
+  const taps = useRef({ count: 0, timer: null });
+
+  const onSecretTap = (e) => {
+    const t = taps.current;
+    clearTimeout(t.timer);
+    t.count += 1;
+    t.timer = setTimeout(() => (t.count = 0), 1500);
+    if (t.count >= 3) {
+      const el = e.currentTarget;
+      el.classList.remove("egg-tap");
+      void el.offsetWidth;
+      el.classList.add("egg-tap");
+    }
+    if (t.count >= 7) {
+      t.count = 0;
+      window.dispatchEvent(new Event("secret:open"));
+    }
+  };
 
   return (
     <div className="footer-div">
@@ -53,7 +71,7 @@ export default function Footer(props) {
             <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
           </ThemeIcon>
 
-          <p className="footer-text" style={{ color: props.theme.secondaryText }}>
+          <p className="footer-text" onClick={onSecretTap} style={{ color: props.theme.secondaryText, userSelect: "none" }}>
             aju ani justus © 2026
           </p>
 

@@ -1,20 +1,18 @@
 """
-builds src/data/books.json from goodreads.
+builds src/data/books.json from a goodreads library export
+(my books > import and export > export library).
 
-  python3 scripts/data/goodreads.py --csv goodreads_library_export.csv   # full rebuild from an export
-  GOODREADS_RSS="<rss link from my shelf page>" python3 scripts/data/goodreads.py   # nightly update
+  python3 scripts/data/goodreads.py --csv goodreads_library_export.csv
 
-the csv has everything (format, publisher, read count). the rss feed only has
-the recent stuff, so it gets merged on top of what's already in books.json.
+goodreads dropped rss in oct 2025, so this is the only way to get the data out.
+covers already in books.json are reused, so only new books get looked up.
 """
 import argparse
 import csv
-import html
 import json
 import os
 import re
 import time
-import xml.etree.ElementTree as ET
 
 import requests
 
@@ -45,16 +43,8 @@ def to_int(s):
 
 
 def iso_date(s):
-    # csv uses 2025/03/01, rss uses rfc 822 dates
     s = (s or "").strip()
-    if not s:
-        return ""
-    if re.match(r"^\d{4}/\d{2}/\d{2}$", s):
-        return s
-    try:
-        return time.strftime("%Y/%m/%d", time.strptime(s[:16], "%a, %d %b %Y"))
-    except ValueError:
-        return ""
+    return s if re.match(r"^\d{4}/\d{2}/\d{2}$", s) else ""
 
 
 def openlibrary_cover(session, isbn, title, author):
@@ -113,53 +103,11 @@ def from_csv(path):
     return books
 
 
-def from_rss(url):
-    books, page = [], 1
-    while page < 30:
-        sep = "&" if "?" in url else "?"
-        r = requests.get(f"{url}{sep}shelf=%23ALL%23&page={page}", timeout=20, headers={"User-Agent": "Mozilla/5.0"})
-        r.raise_for_status()
-        items = ET.fromstring(r.content).findall("./channel/item")
-        if not items:
-            break
-        for it in items:
-            g = lambda tag: (it.findtext(tag) or "").strip()
-            title, series, num = split_title(g("title"))
-            shelves = [s.strip() for s in g("user_shelves").split(",") if s.strip()]
-            exclusive = next((s for s in shelves if s in ("to-read", "currently-reading", "before-goodreads", "lost-interest-dnf", "read-in-part")), "read")
-            pub = to_int(g("book_published"))
-            books.append({
-                "id": g("book_id"),
-                "title": title,
-                "series": series,
-                "seriesNum": num,
-                "author": g("author_name"),
-                "isbn": clean_isbn(g("isbn")),
-                "rating": to_int(g("user_rating")) or 0,
-                "review": html.unescape(g("user_review")),
-                "dateRead": iso_date(g("user_read_at")),
-                "dateAdded": iso_date(g("user_date_added")),
-                "shelf": exclusive,
-                "shelves": [s for s in shelves if s != exclusive],
-                "pages": to_int(it.findtext("./book/num_pages")) or 0,
-                "pubYear": pub if pub and pub > 0 else None,
-                "rssCover": g("book_large_image_url"),
-            })
-        page += 1
-    return books
-
-
-def merge(existing, fresh, full):
-    out = {} if full else dict(existing)
+def merge(existing, fresh):
+    out = {}
     for b in fresh:
         old = existing.get(b["id"], {})
         merged = {**old, **{k: v for k, v in b.items() if v not in (None, "") or k not in old}}
-        # rss doesn't know format or read count, keep what the csv gave
-        for k in ("format", "readCount", "pages", "pubYear"):
-            if not merged.get(k) and old.get(k):
-                merged[k] = old[k]
-        merged.setdefault("format", None)
-        merged.setdefault("readCount", 1 if merged["shelf"] == "read" else 0)
         merged["coverUrl"] = old.get("coverUrl")
         out[b["id"]] = merged
     return out
@@ -168,12 +116,7 @@ def merge(existing, fresh, full):
 def fill_covers(books):
     session = requests.Session()
     for b in books.values():
-        rss_cover = b.pop("rssCover", None)
         if b.get("coverUrl") or b["shelf"] not in HAS_COVER:
-            continue
-        # goodreads placeholder covers have "nophoto" in the url
-        if rss_cover and "nophoto" not in rss_cover:
-            b["coverUrl"] = rss_cover
             continue
         print(f"cover: {b['title']}")
         b["coverUrl"] = openlibrary_cover(session, b.get("isbn"), b["title"], b["author"])
@@ -182,17 +125,10 @@ def fill_covers(books):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--csv", help="goodreads library export")
+    ap.add_argument("--csv", required=True, help="goodreads library export")
     args = ap.parse_args()
 
-    existing = load_existing()
-    if args.csv:
-        books = merge(existing, from_csv(args.csv), full=True)
-    elif os.environ.get("GOODREADS_RSS"):
-        books = merge(existing, from_rss(os.environ["GOODREADS_RSS"]), full=False)
-    else:
-        print("nothing to do: pass --csv or set GOODREADS_RSS")
-        return
+    books = merge(load_existing(), from_csv(args.csv))
 
     fill_covers(books)
     order = sorted(books.values(), key=lambda b: (b.get("dateRead") or b.get("dateAdded") or ""), reverse=True)

@@ -1,6 +1,7 @@
 name: update data
 
-# every night: pull goodreads, letterboxd, anilist and trakt, and redeploy if anything changed.
+# every night: pull letterboxd, anilist and trakt, and redeploy if anything changed.
+# books are updated by hand from a goodreads export (see README).
 # usernames are repo variables, keys are repo secrets (settings > secrets and variables > actions).
 
 on:
@@ -29,14 +30,12 @@ jobs:
 
       - name: fetch
         env:
-          GOODREADS_RSS: ${{ secrets.GOODREADS_RSS }}
           LETTERBOXD_USER: ${{ vars.LETTERBOXD_USER }}
           ANILIST_USER: ${{ vars.ANILIST_USER }}
           TRAKT_USER: ${{ vars.TRAKT_USER }}
           TRAKT_CLIENT_ID: ${{ secrets.TRAKT_CLIENT_ID }}
         # one broken source shouldn't stop the others
         run: |
-          python scripts/data/goodreads.py || echo "goodreads failed"
           python scripts/data/letterboxd.py || echo "letterboxd failed"
           python scripts/data/anilist.py || echo "anilist failed"
           python scripts/data/trakt.py || echo "trakt failed"

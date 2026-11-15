@@ -26,7 +26,6 @@ npm run deploy
 all the data is in src/data/. pages are in src/pages/secret/ (books ones in src/pages/books/).
 
 updates itself every night (.github/workflows/update.yml), or run it by hand from the actions tab:
-- books: goodreads. GOODREADS_RSS secret = the rss link at the bottom of my "read" shelf page (has a key in it)
 - films: letterboxd. LETTERBOXD_USER variable
 - anime + manga: anilist. ANILIST_USER variable
 - tv: trakt. TRAKT_USER variable, TRAKT_CLIENT_ID secret
@@ -39,7 +38,7 @@ by hand, rarely:
 - recipes: one .md file per recipe in src/data/recipes/ (format at the top of scripts/data/recipes.js), photos in public/secret/kitchen/
 - videos/photos: src/data/media.json. youtube: { "id", "title" }. twitch: { "clip": clip slug, "title", "thumb": "file.jpg" in public/secret/videos/ }. photos: { "file" in public/secret/photos/, "link": instagram post url, "alt" }
 
-full goodreads rebuild (gets format, read count etc that the rss doesn't have): export library -> goodreads_library_export.csv in the repo root (gitignored, has private notes) -> python3 scripts/data/goodreads.py --csv goodreads_library_export.csv
+books (goodreads dropped rss in oct 2025, so this one stays manual): my books > import and export > export library -> save as goodreads_library_export.csv in the repo root (gitignored, has private notes) -> python3 scripts/data/goodreads.py --csv goodreads_library_export.csv -> commit, push, deploy
 
 ## broken install
 

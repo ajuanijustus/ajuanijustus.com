@@ -97,7 +97,7 @@ def write(path, items):
 
 
 def main():
-    user = os.environ.get("ANILIST_USER")
+    user = (os.environ.get("ANILIST_USER") or "").strip().lstrip("@")
     if not user:
         print("anilist: no ANILIST_USER, skipping")
         return

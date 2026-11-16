@@ -141,7 +141,7 @@ def shows(s, user, posters):
 
 
 def main():
-    user = os.environ.get("TRAKT_USER")
+    user = (os.environ.get("TRAKT_USER") or "").strip().lstrip("@")
     client = os.environ.get("TRAKT_CLIENT_ID")
     if not user or not client:
         missing = " and ".join(n for n, v in (("TRAKT_USER variable", user), ("TRAKT_CLIENT_ID secret", client)) if not v)

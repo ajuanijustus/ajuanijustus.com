@@ -134,6 +134,16 @@ function arc(cx, cy, r, a0, a1) {
   return `M ${x0} ${y0} A ${r} ${r} 0 ${a1 - a0 > Math.PI ? 1 : 0} 1 ${x1} ${y1}`;
 }
 
+// alternate red and the text colour so neighbouring slices stay distinct in both themes
+const SHADES = [
+  ["var(--accent)", 1],
+  ["var(--fg)", 0.85],
+  ["var(--accent)", 0.45],
+  ["var(--fg)", 0.4],
+  ["var(--fg)", 0.18],
+];
+const shade = (i) => SHADES[Math.min(i, SHADES.length - 1)];
+
 export function Donut({ data, center, sub }) {
   const total = data.reduce((s, d) => s + d.value, 0) || 1;
   let a = 0;
@@ -150,8 +160,7 @@ export function Donut({ data, center, sub }) {
               key={i}
               d={arc(60, 60, 46, a0 + 0.02, a1 - 0.02)}
               fill="none"
-              strokeWidth="14"
-              style={{ stroke: "var(--accent)", opacity: 1 - i * (0.7 / Math.max(data.length - 1, 1)) }}
+              style={{ stroke: shade(i)[0], strokeWidth: 14, opacity: shade(i)[1] }}
             >
               <title>{`${d.label}: ${d.value}`}</title>
             </path>
@@ -171,7 +180,7 @@ export function Donut({ data, center, sub }) {
       <div className="sp-legend">
         {data.map((d, i) => (
           <span key={i}>
-            <i style={{ opacity: 1 - i * (0.7 / Math.max(data.length - 1, 1)) }} />
+            <i style={{ background: shade(i)[0], opacity: shade(i)[1] }} />
             {d.label} <b style={{ color: "var(--muted)", fontWeight: 500 }}>{d.value}</b>
           </span>
         ))}
@@ -190,9 +199,8 @@ export function Ring({ value, max, label, sub }) {
           <path
             d={arc(60, 60, 48, 0, Math.max(pct * Math.PI * 2 - 0.0001, 0.01))}
             fill="none"
-            strokeWidth="10"
             strokeLinecap="round"
-            style={{ stroke: "var(--accent)" }}
+            style={{ stroke: "var(--accent)", strokeWidth: 10 }}
           />
         )}
         <text x="60" y="60" textAnchor="middle" style={{ fill: "var(--fg)", fontSize: 24, fontWeight: 800 }}>

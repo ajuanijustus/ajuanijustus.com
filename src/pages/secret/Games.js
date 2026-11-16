@@ -59,6 +59,20 @@ export default function Games(props) {
             );
           })}
         </div>
+        {games.games.some((g) => g.credit) && (
+          <p className="gm-credit">
+            {games.games
+              .filter((g) => g.credit)
+              .map((g, i) => (
+                <React.Fragment key={g.title}>
+                  {i > 0 && " · "}
+                  <a href={g.credit.url} target="_blank" rel="noopener noreferrer">
+                    {g.credit.text}
+                  </a>
+                </React.Fragment>
+              ))}
+          </p>
+        )}
       </Section>
 
       <Section

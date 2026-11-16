@@ -1,6 +1,6 @@
 {
  "games": [
-  { "title": "Minecraft" },
+  { "title": "Minecraft", "cover": "minecraft.jpg", "credit": { "text": "Minecraft art: Mojang Studios, via Xbox MENA, CC BY 3.0", "url": "https://commons.wikimedia.org/wiki/File:Minecraft_Trails_and_Tales_Art.png" } },
   { "title": "Valheim", "steam": 892970 },
   { "title": "Timberborn", "steam": 1062090 },
   { "title": "The Witcher 3: Wild Hunt", "steam": 292030 },

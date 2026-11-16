@@ -71,7 +71,3 @@ rm -rf node_modules package-lock.json
 npm install
 
 npm audit warnings are from create-react-app's build tools. the site is static files, so they don't affect the live site.
-
-## skip commit hooks
-
-git commit -m "message" --no-verify

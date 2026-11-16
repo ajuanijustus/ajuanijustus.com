@@ -2,11 +2,19 @@ import React from "react";
 import SecretPage, { Section, Tiles, Tile, PosterGrid, Empty } from "../../components/secret/SecretPage";
 import manga from "../../data/manga.json";
 
+const DROPPED_MANGA =
+  "and how far i got, where i remember. if it says not logged, i don't remember exactly, but i read a good chunk of it, or everything that was out at the time, before i dropped it. trust me bro.";
+
 const card = (x) => ({
   title: x.title,
   image: x.poster,
   rating: x.score ? x.score / 2 : null,
-  meta: x.status !== "completed" && x.progress ? `ch ${x.progress}${x.total ? ` / ${x.total}` : ""}` : x.year,
+  meta:
+    x.status === "dropped" && !x.progress
+      ? "not logged"
+      : x.status !== "completed" && x.progress
+      ? `ch ${x.progress}${x.total ? ` / ${x.total}` : ""}`
+      : x.year,
 });
 
 export default function Manga(props) {
@@ -45,7 +53,7 @@ export default function Manga(props) {
             </Section>
           )}
           {dropped.length > 0 && (
-            <Section title="Dropped" desc="and how far i got.">
+            <Section title="Dropped" desc={DROPPED_MANGA}>
               <PosterGrid small items={dropped.map(card)} />
             </Section>
           )}

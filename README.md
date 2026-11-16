@@ -37,7 +37,7 @@ films + tv on trakt, anime + manga on anilist, books on goodreads. the site sort
   - watching / reading: what i'm on now, or about to start following
   - completed: finished
   - paused: shown as "on hold"
-  - dropped: shown as "dropped", with how far i got
+  - dropped: shown as "dropped", with how far i got. no progress logged shows "not logged"
   - planning: kept off the site
 - update progress: the "+" next to the episode/chapter count on my list, or the entry's edit box
 - list: https://anilist.co/user/ajewdor/animelist
@@ -50,14 +50,15 @@ trakt has no status buttons, so the site works the status out from what's logged
 |---|---|
 | still watching | episodes left to watch, or on my watchlist and not started |
 | caught up | every aired episode watched, show still running |
-| completed | every aired episode watched, show ended or cancelled |
-| dropped | on my public list called "dropped" |
+| completed | every aired episode watched and the show has ended, or on my public list called "done" (counts as all watched, whatever's logged) |
+| dropped | on my public list called "dropped". shows how far i got from logged episodes, or "not logged" |
 
 - films: search, hit "watched": https://trakt.tv/search. rating is optional
 - shows i'm on: tick episodes as i go, or "mark as watched" on a whole season to catch up in one go
 - shows i'm about to start: add to the watchlist (bookmark icon on the show page)
-- dropping a show: show page -> lists -> "dropped". taking it off the list puts it back
-- lists: https://trakt.tv/users/ajewdor/lists. the only one needed is "dropped", set to public, named exactly that. my old "done" list still counts as dropped
+- dropping a show: show page -> lists -> "dropped". log episodes up to where i stopped if i remember, otherwise leave it. taking it off the list puts it back
+- finished a show long ago and can't be bothered logging every episode: show page -> lists -> "done"
+- lists: https://trakt.tv/users/ajewdor/lists. two of them, "dropped" and "done", both public and named exactly that. shows on them appear even with nothing logged
 - trakt's own "drop show" button doesn't work for the site, it's private and the update only reads the public profile
 
 then either wait for sunday, or run it now: https://github.com/ajuanijustus/ajuanijustus.com/actions/workflows/update.yml -> run workflow.

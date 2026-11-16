@@ -6,6 +6,9 @@ import tv from "../../data/tv.json";
 import anime from "../../data/anime.json";
 import "./secret-pages.css";
 
+const DROPPED =
+  "and how far i got, where i remember. if it says not logged, i don't remember exactly, but i watched a good chunk of it, or everything that was out at the time, before i dropped it. trust me bro.";
+
 const avg = (xs) => (xs.length ? xs.reduce((a, b) => a + b, 0) / xs.length : 0);
 
 let languageNames = null;
@@ -119,7 +122,8 @@ function ShowCard({ show }) {
             {left} episode{left === 1 ? "" : "s"} to go
           </span>
         )}
-        {show.seasons && show.seasons.length > 0 && (
+        {show.status === "dropped" && !show.progress && <span className="tv-left">not logged</span>}
+        {show.seasons && show.seasons.length > 0 && !(show.status === "dropped" && !show.progress) && (
           <div className="tv-seasons">
             {show.seasons.map((s) => {
               const full = s.watched >= s.aired;
@@ -168,8 +172,8 @@ function Shows() {
       </Section>
       {group("Still watching", watching, "shows with episodes i haven't seen yet, new seasons, and ones i'm about to start.")}
       {group("Caught up", caughtUp, "seen everything that's out so far. these move back up when a new season drops.")}
-      {group("Completed", completed, "seen it all, and the show has ended.")}
-      {group("Dropped", dropped)}
+      {group("Completed", completed, "seen it all.")}
+      {group("Dropped", dropped, DROPPED)}
       <Breakdown items={items} unit="shows" />
     </>
   );
@@ -189,7 +193,12 @@ function Anime() {
     title: x.title,
     image: x.poster,
     rating: x.score ? x.score / 2 : null,
-    meta: x.status !== "completed" && x.progress ? `ep ${x.progress}${x.total ? ` / ${x.total}` : ""}` : x.year,
+    meta:
+      x.status === "dropped" && !x.progress
+        ? "not logged"
+        : x.status !== "completed" && x.progress
+        ? `ep ${x.progress}${x.total ? ` / ${x.total}` : ""}`
+        : x.year,
   });
   return (
     <>
@@ -218,7 +227,7 @@ function Anime() {
         </Section>
       )}
       {dropped.length > 0 && (
-        <Section title="Dropped" desc="and how far i got.">
+        <Section title="Dropped" desc={DROPPED}>
           <PosterGrid small items={dropped.map(card)} />
         </Section>
       )}

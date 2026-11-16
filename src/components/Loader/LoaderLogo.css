@@ -1,4 +1,5 @@
-path {
+/* only the splash logo, not every svg on the site */
+#ajuanijustusSplash path {
   stroke-width: 10;
   stroke-dasharray: 800;
   stroke-dashoffset: 800;

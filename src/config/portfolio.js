@@ -39,7 +39,7 @@ const greeting = {
   logo_name: "AjuAniJustus",
   subTitle: "Doctoral Researcher, University of Birmingham",
   
-  statusBanner: "🚀 Open to research internships from July 2026 onwards in Multi-Agent Systems, Reinforcement Learning, Cooperative AI, and Human-AI Teaming.",
+  statusBanner: "🚀 Open to research internships from April 2027 onwards in Multi-Agent Systems, Reinforcement Learning, Cooperative AI, and Human-AI Teaming.",
   
   email: "mailme@ajuanijustus.com",
   googleScholar: "https://scholar.google.com/citations?user=ktCUwwsAAAAJ&hl=en",

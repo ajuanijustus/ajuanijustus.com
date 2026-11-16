@@ -19,6 +19,21 @@
       "description": "Get in touch with Aju Ani Justus at the School of Computer Science, University of Birmingham: email, office location, CV and academic profiles.",
       "index": true
     },
+    "/research": {
+      "title": "Research | Aju Ani Justus",
+      "description": "Research by Aju Ani Justus on heterogeneous-agent reinforcement learning, learned communication and human-agent teaming: publications, talks, awards and service.",
+      "index": true
+    },
+    "/teaching": {
+      "title": "Teaching & Outreach | Aju Ani Justus",
+      "description": "Teaching at the University of Birmingham and science communication by Aju Ani Justus, including Pint of Science Birmingham and schools outreach.",
+      "index": true
+    },
+    "/news": {
+      "title": "News | Aju Ani Justus",
+      "description": "All news and updates from Aju Ani Justus, doctoral researcher at the University of Birmingham.",
+      "index": true
+    },
     "/secret": {
       "title": "Secrets | Aju Ani Justus",
       "description": "You found the secret side of ajuanijustus.com.",

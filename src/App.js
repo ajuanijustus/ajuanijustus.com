@@ -16,6 +16,9 @@ import LegacyHome from "./pages/legacy_home/HomeComponent.js";
 import LegacyContact from "./pages/legacy_contact/ContactComponent";
 
 import Splash from "./pages/splash/Splash";
+import Research from "./pages/academic/Research";
+import Outreach from "./pages/academic/Outreach";
+import NewsPage from "./pages/academic/NewsPage";
 
 // secret pages carry most of the data, so they load only when someone opens one
 const SecretHome = lazy(() => import("./pages/secret/SecretHome"));
@@ -50,6 +53,9 @@ function App() {
             <Route path="/splash" element={landing} />
             <Route path="/home" element={<Home {...pageProps} />} />
             <Route path="/contact" element={<Contact {...pageProps} />} />
+            <Route path="/research" element={<Research {...pageProps} />} />
+            <Route path="/teaching" element={<Outreach {...pageProps} />} />
+            <Route path="/news" element={<NewsPage {...pageProps} />} />
 
             <Route path="/secret" element={<SecretHome {...pageProps} />} />
             <Route path="/secret/home" element={<SecretHome {...pageProps} />} />

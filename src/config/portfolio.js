@@ -62,7 +62,7 @@ const greeting = {
   bioPast: "Before starting my PhD, I spent 3 years as a Machine Learning Engineer at Accenture Applied Intelligence, where I developed and deployed cloud-native enterprise AI and demand forecasting solutions.",
   bioCombined: "My background uniquely combines foundational research on multi-agent coordination frameworks with industry-tested experience engineering scalable, real-world intelligent systems.",
   
-  outreachAndTeaching: "I am deeply passionate about science communication and education. Beyond my research, I serve as an Event Manager for the Pint of Science Team at Birmingham (2026–Present) to make complex concepts publicly accessible, and I hold an Associate Fellow of the Higher Education Academy (AFHEA, certified June 2026) designation recognition for my instructional contributions.",
+  outreachAndTeaching: "I am deeply passionate about science communication and education. Beyond my research, I am City Coordinator for Pint of Science Birmingham (2025–present), bringing researchers into pubs to talk about their work, and I hold an Associate Fellow of the Higher Education Academy (AFHEA, certified June 2026) designation recognition for my instructional contributions.",
 
   researchInterests: [
     "Heterogeneous-Agent Reinforcement Learning (HARL)",
@@ -320,6 +320,11 @@ const contactPageData = {
 // --- Academic Research News ---
 const news = [
   {
+    date: "Jul 2026",
+    text: "Invited to give a talk to high school students at the University of Birmingham CS Summer School on 'How do Computers Learn to Play Games', a first look at reinforcement learning.",
+    link: ""
+  },
+  {
     date: "Jun 2026",
     text: "Awarded AFHEA (Associate Fellowship of Advance HE) recognition through the BEACON scheme at the University of Birmingham.",
     link: ""
@@ -558,8 +563,8 @@ const publications = [
 // --- Teaching Assistantships & Commitments ---
 const teaching = [
   {
-    role: "Post Graduate Teaching Associate",
-    course: "Math and Logic for Comp Sci, Software Workshop (Python), OOP (Java)",
+    role: "Post Graduate Teaching Assistant",
+    course: "Software Workshop 1 & 2 (Python), Object-Oriented Programming (Java), Mathematical and Logical Foundations of Computer Science, ALGO Club (Python), Building Usable Software",
     institution: "University of Birmingham",
     duration: "2023 - Present"
   },
@@ -571,8 +576,77 @@ const teaching = [
   }
 ];
 
-// TODO sections to add later: Teaching & Talks (also add talks to news),
-// Recognition (Awards & Scholarships), Academic Service.
+const underReview = [
+  {
+    title: "removed",
+    authors: "Aju Ani Justus, Chris Baber",
+    venue: "removed"
+  },
+  {
+    title: "removed",
+    authors: "Aju Ani Justus, Chris Baber, removed, removed",
+    venue: "Under review at a journal"
+  },
+  {
+    title: "removed",
+    authors: "Chris Baber, Aju Ani Justus, removed",
+    venue: "Under review at a journal",
+    link: "removed",
+    linkLabel: "Preprint"
+  }
+];
+
+const talks = [
+  { date: "Jul 2026", title: "How do Computers Learn to Play Games", kind: "Invited talk", where: "University of Birmingham CS Summer School, for high school students" },
+  { date: "May 2026", title: "voice2mode: Phonation Mode Classification in Singing", kind: "Oral presentation", where: "ICASSP 2026, Barcelona" },
+  { date: "May 2026", title: "Grounded Communication Policies in Heterogeneous Agent Reinforcement Learning", kind: "Spotlight talk and poster", where: "AAMAS 2026 Doctoral Consortium, Paphos" },
+  { date: "Oct 2025", title: "LLMs as Policy-Agnostic Teammates", kind: "Oral presentation", where: "ECAI 2025, Bologna" }
+];
+
+const awards = [
+  { year: "2026", title: "AAMAS Doctoral Consortium Scholarship", detail: "to attend and present at AAMAS 2026" },
+  { year: "2026", title: "Associate Fellow of the Higher Education Academy (AFHEA)", detail: "Advance HE, through the BEACON scheme" },
+  { year: "2023", title: "Postgraduate Professional Development Award", detail: "University of Birmingham" },
+  { year: "2023", title: "2nd place, BEAR Challenge", detail: "deep learning on the Baskerville HPC cluster" },
+  { year: "2022", title: "3 awards at HackTheMidlands 7.0", detail: "3rd overall, Spooooookiest Hack, Fun! Hack" },
+  { year: "2021", title: "BRIDGEi2i Team Award", detail: "production deployment and client delivery" }
+];
+
+const service = [
+  { role: "Organiser", org: "MAS@B, Multi-Agent Systems Interest Group, University of Birmingham", detail: "An interdisciplinary group for PhD students, postdocs and faculty working on multi-agent systems, with work-in-progress discussions, student-led tutorials and internal workshops." },
+  { role: "Postgraduate Research Representative", org: "School of Computer Science, University of Birmingham", detail: "Representing doctoral researchers and organising PGR experience events with the School's operations team." },
+  { role: "Student Representative", org: "Equality, Diversity & Inclusion Committee", detail: "" },
+  { role: "Reviewer", org: "IEEE Signal Processing Letters", detail: "On the reviewer registry for RL and ML-heavy submissions." }
+];
+
+const outreach = [
+  {
+    role: "City Coordinator",
+    org: "Pint of Science Birmingham",
+    duration: "2025 - Present",
+    detail: "Coordinated the 2026 Birmingham festival across 3 venues on all 3 nights, bringing researchers to talk about their work with the public.",
+    link: "https://pintofscience.co.uk/team/Birmingham%20Team/"
+  },
+  {
+    role: "Schools Outreach",
+    org: "University of Birmingham",
+    duration: "Present",
+    detail: "Introductory machine learning and hands-on robotics sessions for school pupils, working closely with the University's outreach team."
+  },
+  {
+    role: "Invited talk",
+    org: "University of Birmingham CS Summer School",
+    duration: "Jul 2026",
+    detail: "'How do Computers Learn to Play Games', an introduction to reinforcement learning for selected high school students."
+  }
+];
+
+const summerSchools = [{ year: "2026", name: "European Agent Systems Summer School (EASSS 2026), held with EUMAS 2026" }];
+
+const openSource = [
+  { name: "voice2mode", detail: "open-source framework for singing phonation-mode classification using self-supervised speech-model embeddings" },
+  { name: "music-gen-hitl-rl", detail: "music generation with human-in-the-loop reinforcement learning (my MSc dissertation)" }
+];
 
 // include sociotechnical systems, eq2rl, AA + MAS reading group
 
@@ -588,4 +662,11 @@ export {
   news,
   publications,
   teaching,
+  underReview,
+  talks,
+  awards,
+  service,
+  outreach,
+  summerSchools,
+  openSource,
 };

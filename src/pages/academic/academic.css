@@ -1,0 +1,142 @@
+.ac-page {
+  width: 90%;
+  margin: 0 auto;
+  padding: 3rem 10px 2rem;
+  font-family: "Montserrat", sans-serif;
+  color: var(--fg);
+}
+
+.ac-title {
+  font-size: 45px;
+  font-weight: bold;
+  margin: 0 0 1rem;
+}
+
+.ac-intro {
+  max-width: 820px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin-bottom: 3rem;
+}
+
+.ac-intro p {
+  margin: 0 0 1rem;
+}
+
+.ac-intro strong {
+  color: var(--fg);
+}
+
+.ac-intro a,
+.ac-link {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.ac-section {
+  margin-bottom: 3.5rem;
+}
+
+.ac-h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0 0 1.4rem;
+}
+
+.ac-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.ac-row {
+  display: flex;
+  align-items: flex-start;
+}
+
+.ac-when {
+  min-width: 140px;
+  flex-shrink: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.ac-what {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.ac-what-title {
+  color: var(--fg);
+  font-weight: 600;
+}
+
+.ac-what-sub {
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.ac-what-detail {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.ac-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.ac-list strong {
+  color: var(--fg);
+}
+
+.ac-more {
+  display: inline-block;
+  margin-top: 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.ac-more:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .ac-title {
+    font-size: 32px;
+    text-align: center;
+  }
+  .ac-intro {
+    font-size: 16px;
+  }
+  .ac-row {
+    flex-direction: column;
+    gap: 2px;
+  }
+  .ac-when,
+  .ac-what {
+    font-size: 16px;
+  }
+}
+
+.ac-page .publications-main-div {
+  width: 100%;
+  padding: 0;
+  margin: 0 0 3.5rem;
+}
+
+.ac-page .publications-heading {
+  font-size: 30px;
+}

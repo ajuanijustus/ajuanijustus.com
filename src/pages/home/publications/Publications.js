@@ -31,7 +31,7 @@ export default function Publications(props) {
       <Fade>
         <div className="publications-header-div">
           <h1 className="publications-heading" style={{ color: theme.text }}>
-            Selected Publications
+            {props.title || "Selected Publications"}
           </h1>
         </div>
 

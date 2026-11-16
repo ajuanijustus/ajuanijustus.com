@@ -181,3 +181,11 @@
     font-size: 12px;
   }
 }
+
+.main-header .menu li a {
+  transition: background-color 0.15s ease;
+}
+
+.main-header .menu li a:hover {
+  background-color: var(--hover);
+}

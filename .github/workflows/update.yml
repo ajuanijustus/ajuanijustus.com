@@ -1,12 +1,12 @@
 name: update data
 
-# every night: pull trakt (films + tv) and anilist (anime + manga), and redeploy if anything changed.
+# every sunday (or by hand from the actions tab): pull trakt (films + tv) and anilist (anime + manga), and redeploy if anything changed.
 # books are updated by hand from a goodreads export (see README).
 # usernames are repo variables, keys are repo secrets (settings > secrets and variables > actions).
 
 on:
   schedule:
-    - cron: "30 3 * * *"
+    - cron: "30 3 * * 0"
   workflow_dispatch:
 
 permissions:

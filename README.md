@@ -15,7 +15,8 @@ npm run deploy
 
 ## where things live
 
-- content (bio, news, publications, teaching, socials): src/config/portfolio.js
+- content (bio, news, publications, teaching, talks, awards, outreach, service, socials): src/config/portfolio.js
+- main pages: home, research (/research), teaching & outreach (/teaching), all news (/news, not in the menu, linked from the home page)
 - page titles / descriptions for google: src/config/seo.json
 - structured data about me (for google knowledge panel): the ld+json block in public/index.html. update it when portfolio.js changes
 - CV: public/cv.pdf (always at ajuanijustus.com/cv.pdf)
@@ -25,19 +26,38 @@ npm run deploy
 
 all the data is in src/data/. pages are in src/pages/secret/ (books ones in src/pages/books/).
 
-updates itself every night (.github/workflows/update.yml), or run it by hand from the actions tab:
-- anime + manga: anilist. ANILIST_USER variable
-- films + tv: trakt. TRAKT_USER variable, TRAKT_CLIENT_ID secret. posters come from trakt; if some films have none, add a free tmdb key as the TMDB_API_KEY secret. to mark a show as done, add it to a public trakt list called "done"
-the action commits "update data" to master, so git pull before pushing.
+### logging, every once in a while
 
-by hand, rarely:
+- films + tv: trakt. search and hit "watched": https://trakt.tv/search
+  - mark a show as done: add it to my "done" list (create it once, public): https://trakt.tv/users/ajewdor/lists
+- anime: https://anilist.co/search/anime
+- manga: https://anilist.co/search/manga
+- books: goodreads as usual, then export (see below)
+
+then either wait for sunday, or run it now: https://github.com/ajuanijustus/ajuanijustus.com/actions/workflows/update.yml -> run workflow.
+it commits "update data" to master, so git pull before pushing.
+
+### books (manual, goodreads dropped rss in oct 2025)
+
+1. export: https://www.goodreads.com/review/import -> "export library", wait, download
+2. save it in the repo root as goodreads_library_export.csv (gitignored, has private notes)
+3. python3 scripts/data/goodreads.py --csv goodreads_library_export.csv
+4. commit, push, npm run deploy
+
+### the automation
+
+.github/workflows/update.yml runs every sunday, or by hand from the actions tab.
+- trakt: TRAKT_USER variable, TRAKT_CLIENT_ID secret (from https://trakt.tv/oauth/applications). posters come from trakt; if some films have none, add a free tmdb key as the TMDB_API_KEY secret
+- anilist: ANILIST_USER variable
+- settings for both: https://github.com/ajuanijustus/ajuanijustus.com/settings/secrets/actions
+
+### by hand, rarely
+
 - travel: src/data/travel.json ({ "country": "Japan", "flag": "🇯🇵", "note": "..." }, names as on the map)
 - games: src/data/games.json ({ "title", "steam": app id from the store url, "platform", "year", "hours", "note" }). non steam: image in public/secret/games/ and "cover": "file.jpg"
+- videos (shown on the games page): src/data/media.json. youtube: { "id", "title" }. twitch: { "clip": clip slug, "title", "thumb": "file.jpg" in public/secret/games/ }
 - plants: src/data/plants.json ({ "name", "species", "since": "2025-04-01", "water": "weekly", "photo": "file.jpg", "note" }), photos in public/secret/plants/
 - recipes: one .md file per recipe in src/data/recipes/ (format at the top of scripts/data/recipes.js), photos in public/secret/kitchen/
-- videos (shown on the games page): src/data/media.json. youtube: { "id", "title" }. twitch: { "clip": clip slug, "title", "thumb": "file.jpg" in public/secret/games/ }
-
-books (goodreads dropped rss in oct 2025, so this one stays manual): my books > import and export > export library -> save as goodreads_library_export.csv in the repo root (gitignored, has private notes) -> python3 scripts/data/goodreads.py --csv goodreads_library_export.csv -> commit, push, deploy
 
 ## broken install
 

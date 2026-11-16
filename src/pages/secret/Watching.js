@@ -180,6 +180,8 @@ function Anime() {
   if (!items.length) return <Empty>nothing here yet.</Empty>;
   const now = items.filter((x) => x.status === "watching");
   const done = items.filter((x) => x.status === "completed");
+  const paused = items.filter((x) => x.status === "paused");
+  const dropped = items.filter((x) => x.status === "dropped");
   const scored = items.filter((x) => x.score);
   const total = items.reduce((s, x) => s + (x.progress || 0), 0);
   const minutes = items.reduce((s, x) => s + (x.minutes || 0), 0);
@@ -187,7 +189,7 @@ function Anime() {
     title: x.title,
     image: x.poster,
     rating: x.score ? x.score / 2 : null,
-    meta: x.status === "watching" && x.progress ? `ep ${x.progress}${x.total ? ` / ${x.total}` : ""}` : x.year,
+    meta: x.status !== "completed" && x.progress ? `ep ${x.progress}${x.total ? ` / ${x.total}` : ""}` : x.year,
   });
   return (
     <>
@@ -208,6 +210,16 @@ function Anime() {
       {done.length > 0 && (
         <Section title="Finished" desc="newest releases first.">
           <PosterGrid small items={done.map(card)} />
+        </Section>
+      )}
+      {paused.length > 0 && (
+        <Section title="On hold">
+          <PosterGrid small items={paused.map(card)} />
+        </Section>
+      )}
+      {dropped.length > 0 && (
+        <Section title="Dropped" desc="and how far i got.">
+          <PosterGrid small items={dropped.map(card)} />
         </Section>
       )}
       <Breakdown items={items} unit="anime" />

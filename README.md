@@ -36,8 +36,9 @@ films + tv on trakt, anime + manga on anilist, books on goodreads. the site sort
 - set the status on each entry:
   - watching / reading: what i'm on now, or about to start following
   - completed: finished
-  - paused: manga only, shown under its own heading
-  - dropped, planning: kept off the site
+  - paused: shown as "on hold"
+  - dropped: shown as "dropped", with how far i got
+  - planning: kept off the site
 - update progress: the "+" next to the episode/chapter count on my list, or the entry's edit box
 - list: https://anilist.co/user/ajewdor/animelist
 

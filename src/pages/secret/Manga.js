@@ -6,7 +6,7 @@ const card = (x) => ({
   title: x.title,
   image: x.poster,
   rating: x.score ? x.score / 2 : null,
-  meta: x.status === "reading" && x.progress ? `ch ${x.progress}${x.total ? ` / ${x.total}` : ""}` : x.year,
+  meta: x.status !== "completed" && x.progress ? `ch ${x.progress}${x.total ? ` / ${x.total}` : ""}` : x.year,
 });
 
 export default function Manga(props) {
@@ -14,9 +14,10 @@ export default function Manga(props) {
   const reading = items.filter((x) => x.status === "reading");
   const done = items.filter((x) => x.status === "completed");
   const paused = items.filter((x) => x.status === "paused");
+  const dropped = items.filter((x) => x.status === "dropped");
   const chapters = items.reduce((s, x) => s + (x.progress || 0), 0);
   return (
-    <SecretPage {...props} title="Manga" subtitle="what i'm reading and what i've finished. updated every so often, with older stuff added as i remember it.">
+    <SecretPage {...props} title="Manga" subtitle="what i'm reading, what i've finished and what i gave up on. updated every so often, with older stuff added as i remember it.">
       {!items.length ? (
         <Empty>nothing here yet.</Empty>
       ) : (
@@ -41,6 +42,11 @@ export default function Manga(props) {
           {paused.length > 0 && (
             <Section title="On hold">
               <PosterGrid small items={paused.map(card)} />
+            </Section>
+          )}
+          {dropped.length > 0 && (
+            <Section title="Dropped" desc="and how far i got.">
+              <PosterGrid small items={dropped.map(card)} />
             </Section>
           )}
         </>

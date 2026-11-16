@@ -1,6 +1,6 @@
 import sys
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
-root, out = sys.argv[1], sys.argv[2]  # python3 scripts/og/card.py . public/og-card.jpg
+root, out = sys.argv[1], sys.argv[2]  # python3 scripts/photo/card.py . public/og-card.jpg
 F = root + "/src/assets/fonts/"
 W, H = 1200, 630
 BG, TEXT, MUTED, RED = (18, 18, 18), (224, 224, 224), (150, 150, 150), (179, 0, 0)

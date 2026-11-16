@@ -86,13 +86,27 @@ it commits "update data" to master, so git pull before pushing.
 - plants: src/data/plants.json ({ "name", "species", "since": "2025-04-01", "water": "weekly", "photo": "file.jpg", "note" }), photos in public/secret/plants/
 - recipes: one .md file per recipe in src/data/recipes/ (format at the top of scripts/data/recipes.js), photos in public/secret/kitchen/
 
+### new photo
+
+1. get a square photo, 1000px or more. best is a png cut-out with a transparent background, like the current one with my head popping out of the circle (remove.bg or photoshop). a normal photo works too, it gets cropped to a circle.
+2. python3 scripts/photo/update.py path/to/photo.png
+   rebuilds every copy: home and contact page photo, public/profile.png, the browser tab and home screen icons (the footer easter egg uses one), and the link preview card public/og-card.jpg
+3. npm start, check the home page, contact page and the tab icon
+4. commit, push, npm run deploy
+5. elsewhere, same photo everywhere so google ties them together:
+   - google scholar, orcid, linkedin, github, researchgate, semantic scholar
+   - university pure profile and school staff/phd page
+   - x, bluesky, instagram, youtube, twitch, substack, goodreads, trakt, anilist
+   - google account photo (shows in the knowledge panel once it's claimed)
+   - cv, if it has a photo
+
 ### link previews (whatsapp, linkedin, x...)
 
-public/og-card.jpg, 1200x630. made by scripts/og/card.py from public/profile.png and the site fonts. after changing the title or photo:
+public/og-card.jpg, 1200x630. scripts/photo/card.py draws it from public/profile.png and the site fonts. after changing the name, title or research line in that script:
 
-python3 scripts/og/card.py . public/og-card.jpg
+python3 scripts/photo/card.py . public/og-card.jpg
 
-apps cache previews for days. to see a new one straight away, share the link with ?v=2 on the end, or use https://www.linkedin.com/post-inspector/ and https://developers.facebook.com/tools/debug/ (whatsapp uses facebook's cache) to refresh it.
+apps cache previews for days. to see a new one straight away, share the link with ?v=2 on the end, or refresh it with https://www.linkedin.com/post-inspector/ and https://developers.facebook.com/tools/debug/ (whatsapp uses facebook's cache).
 
 ## broken install
 

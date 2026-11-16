@@ -11,18 +11,18 @@
    "seasons": [
     {
      "n": 1,
-     "watched": 0,
+     "watched": 13,
      "aired": 13
     },
     {
      "n": 2,
-     "watched": 0,
+     "watched": 4,
      "aired": 7
     }
    ],
-   "progress": 0,
+   "progress": 17,
    "total": 20,
-   "minutes": 0,
+   "minutes": 714,
    "score": null,
    "genres": [
     "comedy",
@@ -37,23 +37,23 @@
    "year": 2025,
    "poster": "https://static.tvmaze.com/uploads/images/medium_portrait/641/1603022.jpg",
    "posterKey": "show-250203",
-   "status": "watching",
+   "status": "caught up",
    "showStatus": "returning series",
    "seasons": [
     {
      "n": 1,
-     "watched": 0,
+     "watched": 9,
      "aired": 9
     },
     {
      "n": 2,
-     "watched": 0,
+     "watched": 8,
      "aired": 8
     }
    ],
-   "progress": 0,
+   "progress": 17,
    "total": 17,
-   "minutes": 0,
+   "minutes": 425,
    "score": null,
    "genres": [
     "comedy"
@@ -72,23 +72,23 @@
    "seasons": [
     {
      "n": 1,
-     "watched": 0,
+     "watched": 10,
      "aired": 10
     },
     {
      "n": 2,
-     "watched": 0,
+     "watched": 22,
      "aired": 22
     },
     {
      "n": 3,
-     "watched": 0,
+     "watched": 3,
      "aired": 7
     }
    ],
-   "progress": 0,
+   "progress": 35,
    "total": 39,
-   "minutes": 0,
+   "minutes": 1540,
    "score": null,
    "genres": [
     "drama"
@@ -107,12 +107,12 @@
    "seasons": [
     {
      "n": 1,
-     "watched": 0,
+     "watched": 10,
      "aired": 10
     },
     {
      "n": 2,
-     "watched": 0,
+     "watched": 10,
      "aired": 10
     },
     {
@@ -121,9 +121,9 @@
      "aired": 10
     }
    ],
-   "progress": 0,
+   "progress": 20,
    "total": 30,
-   "minutes": 0,
+   "minutes": 1200,
    "score": null,
    "genres": [
     "drama",
@@ -138,33 +138,33 @@
    "year": 2022,
    "poster": "https://static.tvmaze.com/uploads/images/medium_portrait/636/1591350.jpg",
    "posterKey": "show-155536",
-   "status": "watching",
+   "status": "caught up",
    "showStatus": "returning series",
    "seasons": [
     {
      "n": 1,
-     "watched": 0,
+     "watched": 8,
      "aired": 8
     },
     {
      "n": 2,
-     "watched": 0,
+     "watched": 8,
      "aired": 8
     },
     {
      "n": 3,
-     "watched": 0,
+     "watched": 8,
      "aired": 8
     },
     {
      "n": 4,
-     "watched": 0,
+     "watched": 8,
      "aired": 8
     }
    ],
-   "progress": 0,
+   "progress": 32,
    "total": 32,
-   "minutes": 0,
+   "minutes": 1568,
    "score": null,
    "genres": [
     "action",

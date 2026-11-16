@@ -136,6 +136,20 @@ def list_shows(s, user, slug):
     return {x["show"]["ids"]["trakt"]: x["show"] for x in r.json() if x.get("show")}
 
 
+def history(s, user):
+    # every episode play, a page at a time
+    page, pages = 1, 1
+    while page <= pages:
+        r = s.get(f"https://api.trakt.tv/users/{user}/history/episodes", params={"page": page, "limit": 1000, "extended": "full,images"}, timeout=60)
+        if not r.ok:
+            print(f"::warning::trakt history said {r.status_code}, episode counts may be short")
+            return
+        pages = int(r.headers.get("X-Pagination-Page-Count", 1))
+        yield from (h for h in r.json() if h.get("show") and h.get("episode"))
+        page += 1
+        time.sleep(0.2)
+
+
 def shows(s, user, posters):
     ratings = {r["show"]["ids"]["trakt"]: r["rating"] for r in s.get(f"https://api.trakt.tv/users/{user}/ratings/shows", timeout=30).json()}
     dropped = list_shows(s, user, "dropped")
@@ -143,8 +157,31 @@ def shows(s, user, posters):
     watched = s.get(f"https://api.trakt.tv/users/{user}/watched/shows", params={"extended": "full,images"}, timeout=30)
     watched.raise_for_status()
 
-    entries = [(w["show"], {season["number"]: len(season.get("episodes", [])) for season in w.get("seasons", [])}) for w in watched.json()]
-    seen_ids = {show["ids"]["trakt"] for show, _ in entries}
+    # episodes seen, from both the watched summary and the full history, since
+    # episodes marked with an unknown date don't always show up in the summary
+    seen_eps = {}
+    shows_by_id = {}
+    for w in watched.json():
+        show = w["show"]
+        shows_by_id[show["ids"]["trakt"]] = show
+        eps = seen_eps.setdefault(show["ids"]["trakt"], set())
+        for season in w.get("seasons", []):
+            eps.update((season["number"], e["number"]) for e in season.get("episodes", []))
+    from_summary = sum(len(v) for v in seen_eps.values())
+    for h in history(s, user):
+        show = h["show"]
+        shows_by_id.setdefault(show["ids"]["trakt"], show)
+        seen_eps.setdefault(show["ids"]["trakt"], set()).add((h["episode"]["season"], h["episode"]["number"]))
+    print(f"::notice::trakt: {len(seen_eps)} shows watched, {from_summary} episodes in the summary, {sum(len(v) for v in seen_eps.values())} with history")
+
+    def by_season(eps):
+        out = {}
+        for season, _ in eps:
+            out[season] = out.get(season, 0) + 1
+        return out
+
+    entries = [(shows_by_id[tid], by_season(eps)) for tid, eps in seen_eps.items()]
+    seen_ids = set(seen_eps)
     # shows on my lists with nothing logged still belong on the site
     for tid, show in {**dropped, **done}.items():
         if tid not in seen_ids:

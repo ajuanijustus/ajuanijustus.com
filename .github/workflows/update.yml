@@ -36,8 +36,8 @@ jobs:
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
         # one broken source shouldn't stop the others
         run: |
-          python scripts/data/anilist.py || echo "::warning::anilist failed, see the fetch step for why"
-          python scripts/data/trakt.py || echo "::warning::trakt failed, see the fetch step for why"
+          python scripts/data/anilist.py || true
+          python scripts/data/trakt.py || true
 
       - name: commit
         id: commit

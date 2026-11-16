@@ -213,4 +213,9 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except (Exception, SystemExit) as e:
+        # shows up in the run summary, which anyone can read without signing in
+        print(f"::warning::trakt failed: {type(e).__name__}: {str(e)[:300]}")
+        raise

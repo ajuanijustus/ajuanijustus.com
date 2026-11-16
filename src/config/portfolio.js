@@ -62,7 +62,7 @@ const greeting = {
   bioPast: "Before starting my PhD, I spent 3 years as a Machine Learning Engineer at Accenture Applied Intelligence, where I developed and deployed cloud-native enterprise AI and demand forecasting solutions.",
   bioCombined: "My background uniquely combines foundational research on multi-agent coordination frameworks with industry-tested experience engineering scalable, real-world intelligent systems.",
   
-  outreachAndTeaching: "I am deeply passionate about science communication and education. Beyond my research, I am City Coordinator for [Pint of Science Birmingham](https://pintofscience.co.uk/team/Birmingham%20Team/) (2025–present), bringing researchers into pubs to talk about their work, and I hold an Associate Fellow of the Higher Education Academy (AFHEA, certified June 2026) designation recognition for my instructional contributions.",
+  outreachAndTeaching: "I am deeply passionate about science communication and education. Beyond my research, I am an Event Manager for [Pint of Science Birmingham](https://pintofscience.co.uk/team/Birmingham%20Team/) (2026–present), bringing researchers into pubs to talk about their work, and I hold an Associate Fellow of the Higher Education Academy (AFHEA, certified June 2026) designation recognition for my instructional contributions.",
 
   community: "I also organise [MAS@B](https://mas-at-birmingham.github.io), an interdisciplinary multi-agent systems interest group at the University of Birmingham, with work-in-progress talks, student-led tutorials and workshops.",
 
@@ -603,10 +603,10 @@ const service = [
 
 const outreach = [
   {
-    role: "City Coordinator",
+    role: "Event Manager",
     org: "[Pint of Science Birmingham](https://pintofscience.co.uk/team/Birmingham%20Team/)",
-    duration: "2025 - Present",
-    detail: "Coordinated the 2026 Birmingham festival across 3 venues on all 3 nights, bringing researchers to talk about their work with the public."
+    duration: "2026 - Present",
+    detail: "Managed and hosted 3 community science events across Birmingham city centre for the 2026 festival, bringing researchers to talk about their work with the public."
   },
   {
     role: "Schools Outreach",

@@ -2,6 +2,25 @@
  "updated": "2026-11-16",
  "items": [
   {
+   "id": 151801,
+   "title": "MASHLE: MAGIC AND MUSCLES",
+   "poster": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx151801-XxVf22Le6C8o.png",
+   "url": "https://anilist.co/anime/151801",
+   "status": "dropped",
+   "progress": 0,
+   "total": 12,
+   "minutes": 0,
+   "score": null,
+   "year": 2023,
+   "format": "TV",
+   "genres": [
+    "Action",
+    "Comedy",
+    "Fantasy"
+   ],
+   "released": "2023-04-08"
+  },
+  {
    "id": 142770,
    "title": "Suzume",
    "poster": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx142770-dDaDIRnsv5jN.jpg",
@@ -202,6 +221,25 @@
    "released": "2016-08-26"
   },
   {
+   "id": 21459,
+   "title": "My Hero Academia",
+   "poster": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21459-nYh85uj2Fuwr.jpg",
+   "url": "https://anilist.co/anime/21459",
+   "status": "dropped",
+   "progress": 0,
+   "total": 13,
+   "minutes": 0,
+   "score": null,
+   "year": 2016,
+   "format": "TV",
+   "genres": [
+    "Action",
+    "Adventure",
+    "Comedy"
+   ],
+   "released": "2016-04-03"
+  },
+  {
    "id": 20665,
    "title": "Your lie in April",
    "poster": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20665-TLgkL8T8IRFd.png",
@@ -220,6 +258,47 @@
     "Slice of Life"
    ],
    "released": "2014-10-10"
+  },
+  {
+   "id": 20605,
+   "title": "Tokyo Ghoul",
+   "poster": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b20605-k665mVkSug8D.jpg",
+   "url": "https://anilist.co/anime/20605",
+   "status": "completed",
+   "progress": 12,
+   "total": 12,
+   "minutes": 288,
+   "score": null,
+   "year": 2014,
+   "format": "TV",
+   "genres": [
+    "Action",
+    "Drama",
+    "Horror",
+    "Mystery",
+    "Psychological",
+    "Supernatural"
+   ],
+   "released": "2014-07-04"
+  },
+  {
+   "id": 20464,
+   "title": "HAIKYU!!",
+   "poster": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20464-ooZUyBe4ptp9.png",
+   "url": "https://anilist.co/anime/20464",
+   "status": "completed",
+   "progress": 25,
+   "total": 25,
+   "minutes": 600,
+   "score": null,
+   "year": 2014,
+   "format": "TV",
+   "genres": [
+    "Comedy",
+    "Drama",
+    "Sports"
+   ],
+   "released": "2014-04-06"
   },
   {
    "id": 16498,
@@ -242,6 +321,24 @@
    "released": "2013-04-07"
   },
   {
+   "id": 11771,
+   "title": "Kuroko's Basketball",
+   "poster": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx11771-uvr44RAwRxPw.jpg",
+   "url": "https://anilist.co/anime/11771",
+   "status": "completed",
+   "progress": 25,
+   "total": 25,
+   "minutes": 600,
+   "score": null,
+   "year": 2012,
+   "format": "TV",
+   "genres": [
+    "Comedy",
+    "Sports"
+   ],
+   "released": "2012-04-08"
+  },
+  {
    "id": 6702,
    "title": "Fairy Tail",
    "poster": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b6702-KI4qgSMyI8Pm.png",
@@ -260,6 +357,26 @@
     "Fantasy"
    ],
    "released": "2009-10-12"
+  },
+  {
+   "id": 5114,
+   "title": "Fullmetal Alchemist: Brotherhood",
+   "poster": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx5114-nSWCgQlmOMtj.jpg",
+   "url": "https://anilist.co/anime/5114",
+   "status": "completed",
+   "progress": 64,
+   "total": 64,
+   "minutes": 1600,
+   "score": null,
+   "year": 2009,
+   "format": "TV",
+   "genres": [
+    "Action",
+    "Adventure",
+    "Drama",
+    "Fantasy"
+   ],
+   "released": "2009-04-05"
   },
   {
    "id": 1735,
@@ -282,6 +399,88 @@
     "Supernatural"
    ],
    "released": "2007-02-15"
+  },
+  {
+   "id": 1604,
+   "title": "REBORN!",
+   "poster": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx1604-W2q38L4OCGLI.png",
+   "url": "https://anilist.co/anime/1604",
+   "status": "completed",
+   "progress": 203,
+   "total": 203,
+   "minutes": 4872,
+   "score": null,
+   "year": 2006,
+   "format": "TV",
+   "genres": [
+    "Action",
+    "Comedy",
+    "Sci-Fi",
+    "Slice of Life",
+    "Supernatural"
+   ],
+   "released": "2006-10-07"
+  },
+  {
+   "id": 1575,
+   "title": "Code Geass: Lelouch of the Rebellion",
+   "poster": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx1575-hsmWM2ydNm1m.jpg",
+   "url": "https://anilist.co/anime/1575",
+   "status": "completed",
+   "progress": 25,
+   "total": 25,
+   "minutes": 600,
+   "score": null,
+   "year": 2006,
+   "format": "TV",
+   "genres": [
+    "Action",
+    "Drama",
+    "Mecha",
+    "Sci-Fi",
+    "Thriller"
+   ],
+   "released": "2006-10-06"
+  },
+  {
+   "id": 1535,
+   "title": "Death Note",
+   "poster": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx1535-kUgkcrfOrkUM.jpg",
+   "url": "https://anilist.co/anime/1535",
+   "status": "completed",
+   "progress": 37,
+   "total": 37,
+   "minutes": 851,
+   "score": null,
+   "year": 2006,
+   "format": "TV",
+   "genres": [
+    "Mystery",
+    "Psychological",
+    "Supernatural",
+    "Thriller"
+   ],
+   "released": "2006-10-04"
+  },
+  {
+   "id": 918,
+   "title": "Gintama",
+   "poster": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx918-iOaeBVUn4uK7.jpg",
+   "url": "https://anilist.co/anime/918",
+   "status": "dropped",
+   "progress": 0,
+   "total": 201,
+   "minutes": 0,
+   "score": null,
+   "year": 2006,
+   "format": "TV",
+   "genres": [
+    "Action",
+    "Comedy",
+    "Drama",
+    "Sci-Fi"
+   ],
+   "released": "2006-04-04"
   },
   {
    "id": 269,
@@ -323,6 +522,111 @@
     "Supernatural"
    ],
    "released": "2002-10-03"
+  },
+  {
+   "id": 527,
+   "title": "Pokémon",
+   "poster": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b527-t6dBVJ5OVcXK.png",
+   "url": "https://anilist.co/anime/527",
+   "status": "dropped",
+   "progress": 0,
+   "total": 276,
+   "minutes": 0,
+   "score": null,
+   "year": 1997,
+   "format": "TV",
+   "genres": [
+    "Action",
+    "Adventure",
+    "Comedy",
+    "Fantasy"
+   ],
+   "released": "1997-04-01"
+  },
+  {
+   "id": 235,
+   "title": "Detective Conan",
+   "poster": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx235-MyYT7K3chBdO.jpg",
+   "url": "https://anilist.co/anime/235",
+   "status": "dropped",
+   "progress": 0,
+   "total": null,
+   "minutes": 0,
+   "score": null,
+   "year": 1996,
+   "format": "TV",
+   "genres": [
+    "Adventure",
+    "Comedy",
+    "Mystery",
+    "Psychological"
+   ],
+   "released": "1996-01-08"
+  },
+  {
+   "id": 30,
+   "title": "Neon Genesis Evangelion",
+   "poster": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx30-AI1zr74Dh4ye.jpg",
+   "url": "https://anilist.co/anime/30",
+   "status": "completed",
+   "progress": 26,
+   "total": 26,
+   "minutes": 624,
+   "score": null,
+   "year": 1995,
+   "format": "TV",
+   "genres": [
+    "Action",
+    "Drama",
+    "Mecha",
+    "Mystery",
+    "Psychological",
+    "Sci-Fi"
+   ],
+   "released": "1995-10-03"
+  },
+  {
+   "id": 813,
+   "title": "Dragon Ball Z",
+   "poster": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx813-ZhnFNOeCU5dQ.png",
+   "url": "https://anilist.co/anime/813",
+   "status": "completed",
+   "progress": 291,
+   "total": 291,
+   "minutes": 6984,
+   "score": null,
+   "year": 1989,
+   "format": "TV",
+   "genres": [
+    "Action",
+    "Adventure",
+    "Comedy",
+    "Fantasy",
+    "Supernatural"
+   ],
+   "released": "1989-04-26"
+  },
+  {
+   "id": 223,
+   "title": "Dragon Ball",
+   "poster": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx223-scE5uJfXqqj8.png",
+   "url": "https://anilist.co/anime/223",
+   "status": "completed",
+   "progress": 153,
+   "total": 153,
+   "minutes": 3825,
+   "score": null,
+   "year": 1986,
+   "format": "TV",
+   "genres": [
+    "Action",
+    "Adventure",
+    "Comedy",
+    "Fantasy",
+    "Sci-Fi",
+    "Supernatural"
+   ],
+   "released": "1986-02-26"
   }
  ]
 }

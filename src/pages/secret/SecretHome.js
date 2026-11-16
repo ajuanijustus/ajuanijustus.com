@@ -14,8 +14,14 @@ import media from "../../data/media.json";
 
 const read = books.filter((b) => b.shelf === "read" || b.shelf === "before-goodreads");
 const reading = books.find((b) => b.shelf === "currently-reading");
-const lastMovie = movies.items[0];
-const watchingNow = [...tv.items, ...anime.items].find((x) => x.status === "watching");
+const watchedCounts = [
+  [movies.items.length, "film"],
+  [tv.items.length, "show"],
+  [anime.items.length, "anime"],
+]
+  .filter(([n]) => n)
+  .map(([n, w]) => `${n} ${w}${n === 1 || w === "anime" ? "" : "s"}`)
+  .join(", ");
 const readingManga = manga.items.find((x) => x.status === "reading");
 
 const sections = [
@@ -30,7 +36,7 @@ const sections = [
     to: "/secret/watching",
     icon: "🎬",
     title: "Watching",
-    teaser: lastMovie ? `last film: ${lastMovie.title}.` : watchingNow ? `watching ${watchingNow.title}.` : "films, shows and anime.",
+    teaser: watchedCounts ? `${watchedCounts} so far.` : "films, shows and anime.",
     soon: !movies.items.length && !tv.items.length && !anime.items.length,
   },
   {
@@ -63,7 +69,7 @@ export default function SecretHome(props) {
     <SecretPage
       {...props}
       title="You found it"
-      subtitle="this is the part of the site that's just for fun: what i'm reading, watching, playing, growing and cooking. it updates itself, so it's (mostly) never out of date."
+      subtitle="this is the part of the site that's just for fun: what i'm reading, watching, playing, growing and cooking. i update it every now and then, and backlog things as i remember them, so it's never quite complete."
     >
       <Section>
         <div className="sp-cards">

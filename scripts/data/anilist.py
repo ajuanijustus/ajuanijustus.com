@@ -19,8 +19,6 @@ query ($user: String, $type: MediaType) {
         status
         progress
         score(format: POINT_10)
-        updatedAt
-        completedAt { year month day }
         media {
           id
           siteUrl
@@ -31,7 +29,7 @@ query ($user: String, $type: MediaType) {
           duration
           format
           seasonYear
-          startDate { year }
+          startDate { year month day }
           genres
         }
       }
@@ -44,6 +42,13 @@ STATUS = {
     "ANIME": {"CURRENT": "watching", "REPEATING": "watching", "COMPLETED": "completed", "PAUSED": "paused", "DROPPED": "dropped", "PLANNING": "planning"},
     "MANGA": {"CURRENT": "reading", "REPEATING": "reading", "COMPLETED": "completed", "PAUSED": "paused", "DROPPED": "dropped", "PLANNING": "planning"},
 }
+
+
+def release_date(d):
+    d = d or {}
+    if not d.get("year"):
+        return None
+    return "-".join(f"{v:02d}" if i else str(v) for i, v in enumerate([d["year"], d.get("month"), d.get("day")]) if v)
 
 
 def fetch(user, kind):
@@ -60,7 +65,6 @@ def fetch(user, kind):
     for lst in body["data"]["MediaListCollection"]["lists"]:
         for e in lst["entries"]:
             m = e["media"]
-            done = e.get("completedAt") or {}
             items.append({
                 "id": m["id"],
                 "title": m["title"]["english"] or m["title"]["romaji"],
@@ -74,11 +78,10 @@ def fetch(user, kind):
                 "year": m["seasonYear"] or (m["startDate"] or {}).get("year"),
                 "format": m["format"],
                 "genres": m["genres"],
-                "completed": f"{done['year']}-{done['month']:02d}-{done['day']:02d}" if done.get("year") and done.get("month") and done.get("day") else None,
-                "updatedAt": e["updatedAt"],
+                "released": release_date(m.get("startDate")),
             })
-    # most recently touched first
-    items.sort(key=lambda x: x["updatedAt"] or 0, reverse=True)
+    # newest release first. when i watched or read something isn't kept, i backlog stuff whenever
+    items.sort(key=lambda x: (x["released"] or str(x["year"] or ""), x["title"]), reverse=True)
     return items
 
 

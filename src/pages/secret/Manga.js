@@ -17,25 +17,25 @@ export default function Manga(props) {
   const paused = items.filter((x) => x.status === "paused");
   const chapters = items.reduce((s, x) => s + (x.progress || 0), 0);
   return (
-    <SecretPage {...props} title="Manga" subtitle="what i'm reading right now and what i've finished. synced from AniList every night.">
+    <SecretPage {...props} title="Manga" subtitle="what i'm reading and what i've finished. updated every so often, with older stuff added as i remember it.">
       {!items.length ? (
-        <Empty>nothing here yet. this fills in a day after i log something on AniList.</Empty>
+        <Empty>nothing here yet.</Empty>
       ) : (
         <>
           <Section>
             <Tiles>
-              <Tile value={reading.length} label="reading now" />
+              <Tile value={reading.length} label="reading" />
               <Tile value={done.length} label="finished" />
               <Tile value={chapters.toLocaleString("en-GB")} label="chapters read" />
             </Tiles>
           </Section>
           {reading.length > 0 && (
-            <Section title="Reading now">
+            <Section title="Reading">
               <PosterGrid items={reading.map(card)} />
             </Section>
           )}
           {done.length > 0 && (
-            <Section title="Finished">
+            <Section title="Finished" desc="newest releases first.">
               <PosterGrid small items={done.map(card)} />
             </Section>
           )}

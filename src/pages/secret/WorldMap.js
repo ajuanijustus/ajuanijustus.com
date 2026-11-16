@@ -118,7 +118,10 @@ export default function WorldMap({ visited }) {
             `${active.country}: not yet`
           ) : (
             <>
-              <strong>{active.country}</strong>
+              <strong>
+                {active.flag ? `${active.flag} ` : ""}
+                {active.country}
+              </strong>
               {active.year ? `, ${active.year}` : ""}
               {active.note ? `: ${active.note}` : ""}
             </>

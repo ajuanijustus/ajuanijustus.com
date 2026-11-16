@@ -10,7 +10,7 @@ export default function Travel(props) {
   const { visited, next } = travel;
   const years = visited.map((v) => v.year).filter(Boolean);
   return (
-    <SecretPage {...props} title="Travel" subtitle="places i've been. tap a country to see when.">
+    <SecretPage {...props} title="Travel" subtitle="places i've been. tap a country on the map.">
       <Section>
         <WorldMap visited={visited} />
       </Section>
@@ -26,7 +26,10 @@ export default function Travel(props) {
           <ul className="tr-list">
             {visited.map((v) => (
               <li key={v.country}>
-                <strong>{v.country}</strong>
+                <strong>
+                  {v.flag && <span className="tr-flag">{v.flag}</span>}
+                  {v.country}
+                </strong>
                 <span>{[v.year, v.note].filter(Boolean).join(" · ")}</span>
               </li>
             ))}

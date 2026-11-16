@@ -2,6 +2,44 @@
  "updated": "2026-11-16",
  "items": [
   {
+   "id": 169355,
+   "title": "Kagurabachi",
+   "poster": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx169355-5pqzh1Wb4NOQ.png",
+   "url": "https://anilist.co/manga/169355",
+   "status": "reading",
+   "progress": 134,
+   "total": null,
+   "minutes": 0,
+   "score": null,
+   "year": 2023,
+   "format": "MANGA",
+   "genres": [
+    "Action",
+    "Drama",
+    "Fantasy"
+   ],
+   "released": "2023-09-18"
+  },
+  {
+   "id": 118586,
+   "title": "Frieren: Beyond Journey’s End",
+   "poster": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx118586-CXKgWikBFQgS.jpg",
+   "url": "https://anilist.co/manga/118586",
+   "status": "completed",
+   "progress": 0,
+   "total": null,
+   "minutes": 0,
+   "score": null,
+   "year": 2020,
+   "format": "MANGA",
+   "genres": [
+    "Adventure",
+    "Drama",
+    "Fantasy"
+   ],
+   "released": "2020-04-28"
+  },
+  {
    "id": 30598,
    "title": "Fairy Tail",
    "poster": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx30598-UOCymo2vPcWe.png",
@@ -20,8 +58,7 @@
     "Ecchi",
     "Fantasy"
    ],
-   "completed": null,
-   "updatedAt": 1794788310
+   "released": "2006-08-02"
   },
   {
    "id": 30013,
@@ -41,48 +78,7 @@
     "Comedy",
     "Fantasy"
    ],
-   "completed": null,
-   "updatedAt": 1794787972
-  },
-  {
-   "id": 169355,
-   "title": "Kagurabachi",
-   "poster": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx169355-5pqzh1Wb4NOQ.png",
-   "url": "https://anilist.co/manga/169355",
-   "status": "reading",
-   "progress": 134,
-   "total": null,
-   "minutes": 0,
-   "score": null,
-   "year": 2023,
-   "format": "MANGA",
-   "genres": [
-    "Action",
-    "Drama",
-    "Fantasy"
-   ],
-   "completed": null,
-   "updatedAt": 1794787380
-  },
-  {
-   "id": 118586,
-   "title": "Frieren: Beyond Journey’s End",
-   "poster": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx118586-CXKgWikBFQgS.jpg",
-   "url": "https://anilist.co/manga/118586",
-   "status": "completed",
-   "progress": 0,
-   "total": null,
-   "minutes": 0,
-   "score": null,
-   "year": 2020,
-   "format": "MANGA",
-   "genres": [
-    "Adventure",
-    "Drama",
-    "Fantasy"
-   ],
-   "completed": null,
-   "updatedAt": 1794787293
+   "released": "1997-07-22"
   }
  ]
 }

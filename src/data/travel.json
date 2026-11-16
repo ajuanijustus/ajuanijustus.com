@@ -1,7 +1,63 @@
 {
-  "visited": [
-    { "country": "India", "note": "home" },
-    { "country": "United Kingdom", "note": "home now" }
-  ],
-  "next": []
+ "visited": [
+  {
+   "country": "Austria",
+   "flag": "🇦🇹"
+  },
+  {
+   "country": "Cyprus",
+   "flag": "🇨🇾"
+  },
+  {
+   "country": "Denmark",
+   "flag": "🇩🇰"
+  },
+  {
+   "country": "India",
+   "flag": "🇮🇳",
+   "note": "home"
+  },
+  {
+   "country": "Ireland",
+   "flag": "🇮🇪"
+  },
+  {
+   "country": "Italy",
+   "flag": "🇮🇹"
+  },
+  {
+   "country": "Netherlands",
+   "flag": "🇳🇱"
+  },
+  {
+   "country": "Portugal",
+   "flag": "🇵🇹"
+  },
+  {
+   "country": "Qatar",
+   "flag": "🇶🇦"
+  },
+  {
+   "country": "Spain",
+   "flag": "🇪🇸"
+  },
+  {
+   "country": "Sweden",
+   "flag": "🇸🇪"
+  },
+  {
+   "country": "Thailand",
+   "flag": "🇹🇭"
+  },
+  {
+   "country": "United Arab Emirates",
+   "flag": "🇦🇪"
+  },
+  {
+   "country": "United Kingdom",
+   "flag": "🇬🇧",
+   "note": "home now"
+  }
+ ],
+ "next": []
 }

@@ -12,13 +12,12 @@ tvmaze (no key needed) and films to tmdb if TMDB_API_KEY is set.
 import json
 import os
 import time
-from datetime import date, datetime, timedelta, timezone
+from datetime import date
 
 import requests
 
 MOVIES = "src/data/movies.json"
 TV = "src/data/tv.json"
-WATCHING_WINDOW = timedelta(days=60)
 
 
 def load(path):
@@ -85,42 +84,30 @@ class Posters:
         return key, self.cache[key]
 
 
-def get_all(s, url, params):
-    out, page = [], 1
-    while True:
-        r = s.get(url, params={**params, "page": page, "limit": 100}, timeout=30)
-        r.raise_for_status()
-        out += r.json()
-        if page >= int(r.headers.get("X-Pagination-Page-Count", 1)):
-            return out
-        page += 1
-
-
 def movies(s, user, posters):
+    # one entry per film. when i watched it isn't kept, i backlog stuff whenever and the dates mean nothing
     ratings = {r["movie"]["ids"]["trakt"]: r["rating"] for r in s.get(f"https://api.trakt.tv/users/{user}/ratings/movies", timeout=30).json()}
-    history = get_all(s, f"https://api.trakt.tv/users/{user}/history/movies", {"extended": "full,images"})
-    history.sort(key=lambda h: h["watched_at"])
-    seen = set()
+    watched = s.get(f"https://api.trakt.tv/users/{user}/watched/movies", params={"extended": "full,images"}, timeout=30)
+    watched.raise_for_status()
     items = []
-    for h in history:
-        m = h["movie"]
+    for w in watched.json():
+        m = w["movie"]
         tid = m["ids"]["trakt"]
         key, poster = posters.movie(m)
         rating = ratings.get(tid)
         items.append({
-            "id": f"trakt-{h['id']}",
+            "id": f"trakt-{tid}",
             "title": m["title"],
             "year": m.get("year"),
+            "released": m.get("released"),
             "rating": rating / 2 if rating else None,
-            "watched": h["watched_at"][:10],
-            "rewatch": tid in seen,
+            "rewatch": (w.get("plays") or 1) > 1,
             "liked": bool(rating and rating >= 9),
             "poster": poster,
             "posterKey": key,
             "url": f"https://trakt.tv/movies/{m['ids'].get('slug')}",
         })
-        seen.add(tid)
-    items.reverse()
+    items.sort(key=lambda x: (x["released"] or str(x["year"] or ""), x["title"]), reverse=True)
     return items
 
 
@@ -128,19 +115,13 @@ def shows(s, user, posters):
     ratings = {r["show"]["ids"]["trakt"]: r["rating"] for r in s.get(f"https://api.trakt.tv/users/{user}/ratings/shows", timeout=30).json()}
     watched = s.get(f"https://api.trakt.tv/users/{user}/watched/shows", params={"extended": "full,images"}, timeout=30)
     watched.raise_for_status()
-    now = datetime.now(timezone.utc)
     items = []
     for w in watched.json():
         show = w["show"]
         ids = show.get("ids", {})
         seen = sum(len(season.get("episodes", [])) for season in w.get("seasons", []) if season.get("number", 1) > 0)
         aired = show.get("aired_episodes") or 0
-        last = w.get("last_watched_at")
-        recent = last and now - datetime.fromisoformat(last.replace("Z", "+00:00")) < WATCHING_WINDOW
-        if aired and seen >= aired:
-            status = "completed"
-        else:
-            status = "watching" if recent else "paused"
+        status = "completed" if aired and seen >= aired else "watching"
         key, poster = posters.show(show)
         items.append({
             "title": show["title"],
@@ -153,9 +134,9 @@ def shows(s, user, posters):
             "total": aired or None,
             "minutes": seen * (show.get("runtime") or 0),
             "score": ratings.get(ids.get("trakt")),
-            "lastWatched": last[:10] if last else None,
+            "released": (show.get("first_aired") or "")[:10] or None,
         })
-    items.sort(key=lambda x: x["lastWatched"] or "", reverse=True)
+    items.sort(key=lambda x: (x["released"] or str(x["year"] or ""), x["title"]), reverse=True)
     return items
 
 
@@ -163,12 +144,20 @@ def main():
     user = os.environ.get("TRAKT_USER")
     client = os.environ.get("TRAKT_CLIENT_ID")
     if not user or not client:
-        print("trakt: no TRAKT_USER or TRAKT_CLIENT_ID, skipping")
+        missing = " and ".join(n for n, v in (("TRAKT_USER variable", user), ("TRAKT_CLIENT_ID secret", client)) if not v)
+        print(f"::warning::trakt skipped, the {missing} isn't set in the repo settings")
         return
 
     s = requests.Session()
     s.headers.update({"trakt-api-key": client, "trakt-api-version": "2", "Content-Type": "application/json"})
     posters = Posters(MOVIES, TV)
+
+    check = s.get(f"https://api.trakt.tv/users/{user}", timeout=30)
+    if check.status_code in (401, 403):
+        raise SystemExit(f"trakt said {check.status_code}: either the TRAKT_CLIENT_ID secret is wrong (it should be the client id, not the client secret) or the profile is private")
+    if check.status_code == 404:
+        raise SystemExit(f"trakt said 404: no user called {user}, or the profile is set to private")
+    check.raise_for_status()
 
     film_list = movies(s, user, posters)
     show_list = shows(s, user, posters)

@@ -2,47 +2,6 @@
  "updated": "2026-11-16",
  "items": [
   {
-   "id": 21519,
-   "title": "Your Name.",
-   "poster": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21519-SUo3ZQuCbYhJ.png",
-   "url": "https://anilist.co/anime/21519",
-   "status": "completed",
-   "progress": 1,
-   "total": 1,
-   "minutes": 107,
-   "score": null,
-   "year": 2016,
-   "format": "MOVIE",
-   "genres": [
-    "Drama",
-    "Romance",
-    "Supernatural"
-   ],
-   "completed": "2026-11-16",
-   "updatedAt": 1794788288
-  },
-  {
-   "id": 106286,
-   "title": "Weathering With You",
-   "poster": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx106286-5COcpd0J9VbL.png",
-   "url": "https://anilist.co/anime/106286",
-   "status": "completed",
-   "progress": 1,
-   "total": 1,
-   "minutes": 115,
-   "score": null,
-   "year": 2019,
-   "format": "MOVIE",
-   "genres": [
-    "Drama",
-    "Romance",
-    "Slice of Life",
-    "Supernatural"
-   ],
-   "completed": "2026-11-16",
-   "updatedAt": 1794788281
-  },
-  {
    "id": 142770,
    "title": "Suzume",
    "poster": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx142770-dDaDIRnsv5jN.jpg",
@@ -60,157 +19,27 @@
     "Mystery",
     "Supernatural"
    ],
-   "completed": "2026-11-16",
-   "updatedAt": 1794788266
+   "released": "2022-11-11"
   },
   {
-   "id": 20954,
-   "title": "A Silent Voice",
-   "poster": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20954-sYRfE5jQRtSB.jpg",
-   "url": "https://anilist.co/anime/20954",
+   "id": 140960,
+   "title": "SPY x FAMILY",
+   "poster": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx140960-Kb6R5nYQfjmP.jpg",
+   "url": "https://anilist.co/anime/140960",
    "status": "completed",
-   "progress": 1,
-   "total": 1,
-   "minutes": 130,
+   "progress": 12,
+   "total": 12,
+   "minutes": 288,
    "score": null,
-   "year": 2016,
-   "format": "MOVIE",
-   "genres": [
-    "Drama",
-    "Romance",
-    "Slice of Life"
-   ],
-   "completed": "2026-11-16",
-   "updatedAt": 1794788242
-  },
-  {
-   "id": 20665,
-   "title": "Your lie in April",
-   "poster": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20665-TLgkL8T8IRFd.png",
-   "url": "https://anilist.co/anime/20665",
-   "status": "completed",
-   "progress": 22,
-   "total": 22,
-   "minutes": 506,
-   "score": null,
-   "year": 2014,
-   "format": "TV",
-   "genres": [
-    "Drama",
-    "Music",
-    "Romance",
-    "Slice of Life"
-   ],
-   "completed": "2026-11-16",
-   "updatedAt": 1794788213
-  },
-  {
-   "id": 16498,
-   "title": "Attack on Titan",
-   "poster": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx16498-buvcRTBx4NSm.jpg",
-   "url": "https://anilist.co/anime/16498",
-   "status": "completed",
-   "progress": 25,
-   "total": 25,
-   "minutes": 600,
-   "score": null,
-   "year": 2013,
+   "year": 2022,
    "format": "TV",
    "genres": [
     "Action",
-    "Drama",
-    "Fantasy",
-    "Mystery"
-   ],
-   "completed": "2026-11-16",
-   "updatedAt": 1794788165
-  },
-  {
-   "id": 6702,
-   "title": "Fairy Tail",
-   "poster": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b6702-KI4qgSMyI8Pm.png",
-   "url": "https://anilist.co/anime/6702",
-   "status": "completed",
-   "progress": 175,
-   "total": 175,
-   "minutes": 4200,
-   "score": null,
-   "year": 2009,
-   "format": "TV",
-   "genres": [
-    "Action",
-    "Adventure",
     "Comedy",
-    "Fantasy"
-   ],
-   "completed": "2026-11-16",
-   "updatedAt": 1794788139
-  },
-  {
-   "id": 269,
-   "title": "Bleach",
-   "poster": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx269-d2GmRkJbMopq.png",
-   "url": "https://anilist.co/anime/269",
-   "status": "completed",
-   "progress": 366,
-   "total": 366,
-   "minutes": 8784,
-   "score": null,
-   "year": 2004,
-   "format": "TV",
-   "genres": [
-    "Action",
-    "Adventure",
+    "Slice of Life",
     "Supernatural"
    ],
-   "completed": "2026-11-16",
-   "updatedAt": 1794788115
-  },
-  {
-   "id": 1735,
-   "title": "Naruto: Shippuden",
-   "poster": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx1735-kGfVm0YqCPcu.png",
-   "url": "https://anilist.co/anime/1735",
-   "status": "completed",
-   "progress": 500,
-   "total": 500,
-   "minutes": 11500,
-   "score": null,
-   "year": 2007,
-   "format": "TV",
-   "genres": [
-    "Action",
-    "Adventure",
-    "Comedy",
-    "Drama",
-    "Fantasy",
-    "Supernatural"
-   ],
-   "completed": "2026-11-16",
-   "updatedAt": 1794788108
-  },
-  {
-   "id": 20,
-   "title": "Naruto",
-   "poster": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20-dE6UHbFFg1A5.jpg",
-   "url": "https://anilist.co/anime/20",
-   "status": "completed",
-   "progress": 220,
-   "total": 220,
-   "minutes": 5060,
-   "score": null,
-   "year": 2002,
-   "format": "TV",
-   "genres": [
-    "Action",
-    "Adventure",
-    "Comedy",
-    "Drama",
-    "Fantasy",
-    "Supernatural"
-   ],
-   "completed": "2026-11-16",
-   "updatedAt": 1794788103
+   "released": "2022-04-09"
   },
   {
    "id": 142329,
@@ -230,8 +59,7 @@
     "Fantasy",
     "Supernatural"
    ],
-   "completed": "2026-11-16",
-   "updatedAt": 1794788090
+   "released": "2021-12-05"
   },
   {
    "id": 129874,
@@ -253,8 +81,46 @@
     "Mystery",
     "Supernatural"
    ],
-   "completed": "2026-11-16",
-   "updatedAt": 1794788080
+   "released": "2021-10-10"
+  },
+  {
+   "id": 113415,
+   "title": "JUJUTSU KAISEN",
+   "poster": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx113415-LHBAeoZDIsnF.jpg",
+   "url": "https://anilist.co/anime/113415",
+   "status": "completed",
+   "progress": 24,
+   "total": 24,
+   "minutes": 576,
+   "score": null,
+   "year": 2020,
+   "format": "TV",
+   "genres": [
+    "Action",
+    "Drama",
+    "Supernatural"
+   ],
+   "released": "2020-10-03"
+  },
+  {
+   "id": 106286,
+   "title": "Weathering With You",
+   "poster": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx106286-5COcpd0J9VbL.png",
+   "url": "https://anilist.co/anime/106286",
+   "status": "completed",
+   "progress": 1,
+   "total": 1,
+   "minutes": 115,
+   "score": null,
+   "year": 2019,
+   "format": "MOVIE",
+   "genres": [
+    "Drama",
+    "Romance",
+    "Slice of Life",
+    "Supernatural"
+   ],
+   "released": "2019-07-19"
   },
   {
    "id": 101922,
@@ -275,49 +141,7 @@
     "Fantasy",
     "Supernatural"
    ],
-   "completed": "2026-11-16",
-   "updatedAt": 1794788069
-  },
-  {
-   "id": 113415,
-   "title": "JUJUTSU KAISEN",
-   "poster": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx113415-LHBAeoZDIsnF.jpg",
-   "url": "https://anilist.co/anime/113415",
-   "status": "completed",
-   "progress": 24,
-   "total": 24,
-   "minutes": 576,
-   "score": null,
-   "year": 2020,
-   "format": "TV",
-   "genres": [
-    "Action",
-    "Drama",
-    "Supernatural"
-   ],
-   "completed": "2026-11-16",
-   "updatedAt": 1794788033
-  },
-  {
-   "id": 140960,
-   "title": "SPY x FAMILY",
-   "poster": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx140960-Kb6R5nYQfjmP.jpg",
-   "url": "https://anilist.co/anime/140960",
-   "status": "completed",
-   "progress": 12,
-   "total": 12,
-   "minutes": 288,
-   "score": null,
-   "year": 2022,
-   "format": "TV",
-   "genres": [
-    "Action",
-    "Comedy",
-    "Slice of Life",
-    "Supernatural"
-   ],
-   "completed": "2026-11-16",
-   "updatedAt": 1794788005
+   "released": "2019-04-06"
   },
   {
    "id": 97940,
@@ -337,8 +161,168 @@
     "Comedy",
     "Fantasy"
    ],
-   "completed": "2026-11-16",
-   "updatedAt": 1794787990
+   "released": "2017-10-03"
+  },
+  {
+   "id": 20954,
+   "title": "A Silent Voice",
+   "poster": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20954-sYRfE5jQRtSB.jpg",
+   "url": "https://anilist.co/anime/20954",
+   "status": "completed",
+   "progress": 1,
+   "total": 1,
+   "minutes": 130,
+   "score": null,
+   "year": 2016,
+   "format": "MOVIE",
+   "genres": [
+    "Drama",
+    "Romance",
+    "Slice of Life"
+   ],
+   "released": "2016-09-17"
+  },
+  {
+   "id": 21519,
+   "title": "Your Name.",
+   "poster": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21519-SUo3ZQuCbYhJ.png",
+   "url": "https://anilist.co/anime/21519",
+   "status": "completed",
+   "progress": 1,
+   "total": 1,
+   "minutes": 107,
+   "score": null,
+   "year": 2016,
+   "format": "MOVIE",
+   "genres": [
+    "Drama",
+    "Romance",
+    "Supernatural"
+   ],
+   "released": "2016-08-26"
+  },
+  {
+   "id": 20665,
+   "title": "Your lie in April",
+   "poster": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20665-TLgkL8T8IRFd.png",
+   "url": "https://anilist.co/anime/20665",
+   "status": "completed",
+   "progress": 22,
+   "total": 22,
+   "minutes": 506,
+   "score": null,
+   "year": 2014,
+   "format": "TV",
+   "genres": [
+    "Drama",
+    "Music",
+    "Romance",
+    "Slice of Life"
+   ],
+   "released": "2014-10-10"
+  },
+  {
+   "id": 16498,
+   "title": "Attack on Titan",
+   "poster": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx16498-buvcRTBx4NSm.jpg",
+   "url": "https://anilist.co/anime/16498",
+   "status": "completed",
+   "progress": 25,
+   "total": 25,
+   "minutes": 600,
+   "score": null,
+   "year": 2013,
+   "format": "TV",
+   "genres": [
+    "Action",
+    "Drama",
+    "Fantasy",
+    "Mystery"
+   ],
+   "released": "2013-04-07"
+  },
+  {
+   "id": 6702,
+   "title": "Fairy Tail",
+   "poster": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b6702-KI4qgSMyI8Pm.png",
+   "url": "https://anilist.co/anime/6702",
+   "status": "completed",
+   "progress": 175,
+   "total": 175,
+   "minutes": 4200,
+   "score": null,
+   "year": 2009,
+   "format": "TV",
+   "genres": [
+    "Action",
+    "Adventure",
+    "Comedy",
+    "Fantasy"
+   ],
+   "released": "2009-10-12"
+  },
+  {
+   "id": 1735,
+   "title": "Naruto: Shippuden",
+   "poster": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx1735-kGfVm0YqCPcu.png",
+   "url": "https://anilist.co/anime/1735",
+   "status": "completed",
+   "progress": 500,
+   "total": 500,
+   "minutes": 11500,
+   "score": null,
+   "year": 2007,
+   "format": "TV",
+   "genres": [
+    "Action",
+    "Adventure",
+    "Comedy",
+    "Drama",
+    "Fantasy",
+    "Supernatural"
+   ],
+   "released": "2007-02-15"
+  },
+  {
+   "id": 269,
+   "title": "Bleach",
+   "poster": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx269-d2GmRkJbMopq.png",
+   "url": "https://anilist.co/anime/269",
+   "status": "completed",
+   "progress": 366,
+   "total": 366,
+   "minutes": 8784,
+   "score": null,
+   "year": 2004,
+   "format": "TV",
+   "genres": [
+    "Action",
+    "Adventure",
+    "Supernatural"
+   ],
+   "released": "2004-10-05"
+  },
+  {
+   "id": 20,
+   "title": "Naruto",
+   "poster": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20-dE6UHbFFg1A5.jpg",
+   "url": "https://anilist.co/anime/20",
+   "status": "completed",
+   "progress": 220,
+   "total": 220,
+   "minutes": 5060,
+   "score": null,
+   "year": 2002,
+   "format": "TV",
+   "genres": [
+    "Action",
+    "Adventure",
+    "Comedy",
+    "Drama",
+    "Fantasy",
+    "Supernatural"
+   ],
+   "released": "2002-10-03"
   }
  ]
 }

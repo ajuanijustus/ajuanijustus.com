@@ -31,7 +31,7 @@ updates itself every night (.github/workflows/update.yml), or run it by hand fro
 the action commits "update data" to master, so git pull before pushing.
 
 by hand, rarely:
-- travel: src/data/travel.json ({ "country": "Japan", "year": 2027, "note": "..." }, names as on the map)
+- travel: src/data/travel.json ({ "country": "Japan", "flag": "🇯🇵", "note": "..." }, names as on the map)
 - games: src/data/games.json ({ "title", "steam": app id from the store url, "platform", "year", "hours", "note" }). non steam: image in public/secret/games/ and "cover": "file.jpg"
 - plants: src/data/plants.json ({ "name", "species", "since": "2025-04-01", "water": "weekly", "photo": "file.jpg", "note" }), photos in public/secret/plants/
 - recipes: one .md file per recipe in src/data/recipes/ (format at the top of scripts/data/recipes.js), photos in public/secret/kitchen/

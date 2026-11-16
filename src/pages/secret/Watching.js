@@ -5,29 +5,13 @@ import movies from "../../data/movies.json";
 import tv from "../../data/tv.json";
 import anime from "../../data/anime.json";
 
-const thisYear = new Date().getFullYear();
 const avg = (xs) => (xs.length ? xs.reduce((a, b) => a + b, 0) / xs.length : 0);
-
-function lastTwelveMonths(dates) {
-  const now = new Date();
-  const out = [];
-  for (let i = 11; i >= 0; i--) {
-    const d = new Date(now.getFullYear(), now.getMonth() - i, 1);
-    const key = d.toISOString().slice(0, 7);
-    out.push({
-      label: d.toLocaleDateString("en-GB", { month: "short", year: "numeric" }),
-      short: d.toLocaleDateString("en-GB", { month: "narrow" }),
-      value: dates.filter((x) => x && x.startsWith(key)).length,
-    });
-  }
-  return out;
-}
 
 function Movies() {
   const items = movies.items;
-  if (!items.length) return <Empty>nothing logged yet. films show up here a day after i log them on Trakt.</Empty>;
+  if (!items.length) return <Empty>nothing here yet.</Empty>;
   const rated = items.filter((m) => m.rating);
-  const favourites = [...rated].sort((a, b) => b.rating - a.rating || (a.watched < b.watched ? 1 : -1)).slice(0, 12);
+  const favourites = [...rated].sort((a, b) => b.rating - a.rating || (b.year || 0) - (a.year || 0)).slice(0, 12);
   const decades = {};
   items.forEach((m) => m.year && (decades[Math.floor(m.year / 10) * 10] = (decades[Math.floor(m.year / 10) * 10] || 0) + 1));
   return (
@@ -35,20 +19,16 @@ function Movies() {
       <Section>
         <Tiles>
           <Tile value={items.length} label="films logged" />
-          <Tile value={items.filter((m) => m.watched && m.watched.startsWith(String(thisYear))).length} label={`watched in ${thisYear}`} />
           <Tile value={rated.length ? `★ ${avg(rated.map((m) => m.rating)).toFixed(1)}` : "–"} label="average rating" />
           <Tile value={items.filter((m) => m.rewatch).length} label="rewatches" foot="some films deserve it" />
         </Tiles>
       </Section>
-      <Section title="Recently watched">
+      <Section title="Films" desc="newest releases first.">
         <PosterGrid
-          items={items.slice(0, 18).map((m) => ({ title: m.title, image: m.poster, url: m.url, rating: m.rating, meta: m.year, badge: m.liked ? "♥" : null }))}
+          items={items.map((m) => ({ title: m.title, image: m.poster, url: m.url, rating: m.rating, meta: m.year, badge: m.liked ? "♥" : null }))}
         />
       </Section>
       <div className="sp-row">
-        <Section title="Films per month">
-          <Bars data={lastTwelveMonths(items.map((m) => m.watched))} height={120} format={(d) => `${d.label}: ${d.value} films`} />
-        </Section>
         <Section title="By decade">
           <Bars
             data={Object.entries(decades)
@@ -68,9 +48,9 @@ function Movies() {
   );
 }
 
-function Shows({ data, unit, source }) {
+function Shows({ data, unit }) {
   const items = data.items;
-  if (!items.length) return <Empty>nothing here yet. this fills in a day after i log something on {source}.</Empty>;
+  if (!items.length) return <Empty>nothing here yet.</Empty>;
   const now = items.filter((x) => x.status === "watching");
   const done = items.filter((x) => x.status === "completed");
   const scored = items.filter((x) => x.score);
@@ -95,12 +75,12 @@ function Shows({ data, unit, source }) {
         </Tiles>
       </Section>
       {now.length > 0 && (
-        <Section title="Watching now">
+        <Section title="Watching">
           <PosterGrid items={now.map(card)} />
         </Section>
       )}
       {done.length > 0 && (
-        <Section title="Finished">
+        <Section title="Finished" desc="newest releases first.">
           <PosterGrid small items={done.map(card)} />
         </Section>
       )}
@@ -111,7 +91,7 @@ function Shows({ data, unit, source }) {
 export default function Watching(props) {
   const [tab, setTab] = useState(movies.items.length || (!tv.items.length && !anime.items.length) ? "movies" : tv.items.length ? "tv" : "anime");
   return (
-    <SecretPage {...props} title="Watching" subtitle="films, shows and anime. logged as i go, and pulled in here every night.">
+    <SecretPage {...props} title="Watching" subtitle="films, shows and anime. i only update this every so often, and backlog things as i remember them, so it's far from everything.">
       <Tabs
         tabs={[
           { id: "movies", label: "films" },
@@ -122,8 +102,8 @@ export default function Watching(props) {
         onChange={setTab}
       />
       {tab === "movies" && <Movies />}
-      {tab === "tv" && <Shows data={tv} unit="episode" source="Trakt" />}
-      {tab === "anime" && <Shows data={anime} unit="episode" source="AniList" />}
+      {tab === "tv" && <Shows data={tv} unit="episode" />}
+      {tab === "anime" && <Shows data={anime} unit="episode" />}
     </SecretPage>
   );
 }

@@ -48,7 +48,7 @@ export default function News({ theme, limit, full }) {
             ))}
           </div>
           {limit && news.length > limit && (
-            <Link to="/news" className="news-view-all" style={{ color: theme.highlight }}>
+            <Link to="/news/" className="news-view-all" style={{ color: theme.highlight }}>
               View all news →
             </Link>
           )}

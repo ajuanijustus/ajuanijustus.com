@@ -62,7 +62,9 @@ const greeting = {
   bioPast: "Before starting my PhD, I spent 3 years as a Machine Learning Engineer at Accenture Applied Intelligence, where I developed and deployed cloud-native enterprise AI and demand forecasting solutions.",
   bioCombined: "My background uniquely combines foundational research on multi-agent coordination frameworks with industry-tested experience engineering scalable, real-world intelligent systems.",
   
-  outreachAndTeaching: "I am deeply passionate about science communication and education. Beyond my research, I am City Coordinator for Pint of Science Birmingham (2025–present), bringing researchers into pubs to talk about their work, and I hold an Associate Fellow of the Higher Education Academy (AFHEA, certified June 2026) designation recognition for my instructional contributions.",
+  outreachAndTeaching: "I am deeply passionate about science communication and education. Beyond my research, I am City Coordinator for [Pint of Science Birmingham](https://pintofscience.co.uk/team/Birmingham%20Team/) (2025–present), bringing researchers into pubs to talk about their work, and I hold an Associate Fellow of the Higher Education Academy (AFHEA, certified June 2026) designation recognition for my instructional contributions.",
+
+  community: "I also organise [MAS@B](https://mas-at-birmingham.github.io), an interdisciplinary multi-agent systems interest group at the University of Birmingham, with work-in-progress talks, student-led tutorials and workshops.",
 
   researchInterests: [
     "Heterogeneous-Agent Reinforcement Learning (HARL)",
@@ -593,7 +595,7 @@ const awards = [
 ];
 
 const service = [
-  { role: "Organiser", org: "MAS@B, Multi-Agent Systems Interest Group, University of Birmingham", detail: "An interdisciplinary group for PhD students, postdocs and faculty working on multi-agent systems, with work-in-progress discussions, student-led tutorials and internal workshops." },
+  { role: "Organiser", org: "[MAS@B](https://mas-at-birmingham.github.io), Multi-Agent Systems Interest Group, University of Birmingham", detail: "An interdisciplinary group for PhD students, postdocs and faculty working on multi-agent systems, with work-in-progress discussions, student-led tutorials and internal workshops." },
   { role: "Postgraduate Research Representative", org: "School of Computer Science, University of Birmingham", detail: "Representing doctoral researchers and organising PGR experience events with the School's operations team." },
   { role: "Student Representative", org: "Equality, Diversity & Inclusion Committee", detail: "" },
   { role: "Reviewer", org: "IEEE Signal Processing Letters", detail: "On the reviewer registry for RL and ML-heavy submissions." }
@@ -602,10 +604,9 @@ const service = [
 const outreach = [
   {
     role: "City Coordinator",
-    org: "Pint of Science Birmingham",
+    org: "[Pint of Science Birmingham](https://pintofscience.co.uk/team/Birmingham%20Team/)",
     duration: "2025 - Present",
-    detail: "Coordinated the 2026 Birmingham festival across 3 venues on all 3 nights, bringing researchers to talk about their work with the public.",
-    link: "https://pintofscience.co.uk/team/Birmingham%20Team/"
+    detail: "Coordinated the 2026 Birmingham festival across 3 venues on all 3 nights, bringing researchers to talk about their work with the public."
   },
   {
     role: "Schools Outreach",

@@ -56,7 +56,7 @@ function GridWorld({ theme, onClose }) {
     if (status === "won") {
       const t = setTimeout(() => {
         onClose();
-        navigate("/secret");
+        navigate("/secret/");
       }, 1600);
       return () => clearTimeout(t);
     }

@@ -56,7 +56,7 @@ export default function ReadingStats(props) {
       title="Reading stats"
       subtitle={
         <>
-          all of this is worked out from my <Link to="/secret/books">bookshelf</Link>. {fmt(totals.tracked)} of the{" "}
+          all of this is worked out from my <Link to="/secret/books/">bookshelf</Link>. {fmt(totals.tracked)} of the{" "}
           {fmt(totals.books)} books have a finish date, the rest were read before i started tracking.
         </>
       }

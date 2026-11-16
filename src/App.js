@@ -68,7 +68,7 @@ function App() {
             <Route path="/secret/games" element={<Games {...pageProps} />} />
             <Route path="/secret/plants" element={<Plants {...pageProps} />} />
             <Route path="/secret/kitchen" element={<Kitchen {...pageProps} />} />
-            <Route path="/secret/videos" element={<Navigate to="/secret/games" replace />} />
+            <Route path="/secret/videos" element={<Navigate to="/secret/games/" replace />} />
 
             <Route path="/legacy" element={<LegacyHome {...pageProps} />} />
             <Route path="/legacy/home" element={<LegacyHome {...pageProps} />} />

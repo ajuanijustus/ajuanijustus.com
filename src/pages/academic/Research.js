@@ -1,6 +1,7 @@
 import React from "react";
 import AcademicPage, { AcSection, AcRows } from "./AcademicPage";
 import Publications from "../home/publications/Publications";
+import RichText from "../../components/richText/RichText";
 import { greeting, talks, awards, service, summerSchools, openSource } from "../../config/portfolio";
 
 export default function Research(props) {
@@ -13,6 +14,9 @@ export default function Research(props) {
           <p>{greeting.phdInfo}</p>
           <p>
             <strong>The question I keep coming back to:</strong> {greeting.coreQuestion}
+          </p>
+          <p>
+            <RichText text={greeting.community} />
           </p>
           <p>
             Supervised by{" "}
@@ -52,7 +56,7 @@ export default function Research(props) {
         <ul className="ac-list">
           {service.map((s) => (
             <li key={s.role}>
-              <strong>{s.role}</strong>, {s.org}
+              <strong>{s.role}</strong>, <RichText text={s.org} />
               {s.detail && `. ${s.detail}`}
             </li>
           ))}

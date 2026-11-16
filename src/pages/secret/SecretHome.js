@@ -25,35 +25,35 @@ const readingManga = manga.items.find((x) => x.status === "reading");
 
 const sections = [
   {
-    to: "/secret/books",
+    to: "/secret/books/",
     icon: "📚",
     title: "Bookshelf",
     teaser: reading ? `${read.length} books read. reading ${reading.title} right now.` : `${read.length} books read, with my reviews.`,
   },
-  { to: "/secret/bookstats", icon: "📊", title: "Reading stats", teaser: "every chart i could squeeze out of my reading history." },
+  { to: "/secret/bookstats/", icon: "📊", title: "Reading stats", teaser: "every chart i could squeeze out of my reading history." },
   {
-    to: "/secret/watching",
+    to: "/secret/watching/",
     icon: "🎬",
     title: "Watching",
     teaser: watchedCounts ? `${watchedCounts} so far.` : "films, shows and anime.",
     soon: !movies.items.length && !tv.items.length && !anime.items.length,
   },
   {
-    to: "/secret/manga",
+    to: "/secret/manga/",
     icon: "🗯️",
     title: "Manga",
     teaser: readingManga ? `reading ${readingManga.title}.` : "what i'm reading and what i've finished.",
     soon: !manga.items.length,
   },
   {
-    to: "/secret/travel",
+    to: "/secret/travel/",
     icon: "🌍",
     title: "Travel",
     teaser: `${travel.visited.length} ${travel.visited.length === 1 ? "country" : "countries"} so far.`,
   },
-  { to: "/secret/games", icon: "🎮", title: "Games", teaser: `${games.games.length} favourites, plus my streams.` },
-  { to: "/secret/plants", icon: "🪴", title: "Plants", teaser: plants.plants.length ? `${plants.plants.length} plants, all still alive.` : "the green roommates.", soon: !plants.plants.length },
-  { to: "/secret/kitchen", icon: "🍳", title: "Kitchen", teaser: recipes.length ? `${recipes.length} go-to recipes.` : "my go-to recipes.", soon: !recipes.length },
+  { to: "/secret/games/", icon: "🎮", title: "Games", teaser: `${games.games.length} favourites, plus my streams.` },
+  { to: "/secret/plants/", icon: "🪴", title: "Plants", teaser: plants.plants.length ? `${plants.plants.length} plants, all still alive.` : "the green roommates.", soon: !plants.plants.length },
+  { to: "/secret/kitchen/", icon: "🍳", title: "Kitchen", teaser: recipes.length ? `${recipes.length} go-to recipes.` : "my go-to recipes.", soon: !recipes.length },
 ];
 
 export default function SecretHome(props) {

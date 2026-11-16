@@ -6,14 +6,14 @@ import { greeting } from "../../config/portfolio.js";
 
 // plants and kitchen are reachable from the secret home cards
 const LINKS = [
-  { to: "/secret", label: "Home", end: true },
-  { to: "/secret/books", label: "Books" },
-  { to: "/secret/bookstats", label: "Stats" },
-  { to: "/secret/watching", label: "Watching" },
-  { to: "/secret/manga", label: "Manga" },
-  { to: "/secret/travel", label: "Travel" },
-  { to: "/secret/games", label: "Games" },
-  { to: "/secret/contact", label: "Contact" },
+  { to: "/secret/", label: "Home", end: true },
+  { to: "/secret/books/", label: "Books" },
+  { to: "/secret/bookstats/", label: "Stats" },
+  { to: "/secret/watching/", label: "Watching" },
+  { to: "/secret/manga/", label: "Manga" },
+  { to: "/secret/travel/", label: "Travel" },
+  { to: "/secret/games/", label: "Games" },
+  { to: "/secret/contact/", label: "Contact" },
 ];
 
 export default function PersonalHeader({ theme }) {

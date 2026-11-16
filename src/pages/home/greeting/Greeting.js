@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import RichText from "../../../components/richText/RichText";
 import "./Greeting.css";
 import SocialMedia from "../../../components/socialMedia/SocialMedia";
 import { greeting, socialMediaLinks } from "../../../config/portfolio";
@@ -85,21 +86,8 @@ export default function Greeting(props) {
             <p>{greeting.bioPast} {greeting.bioCombined}</p>
             
             <p>
-              {greeting.outreachAndTeaching.split("Pint of Science Team at Birmingham").map((part, i, arr) => (
-                <React.Fragment key={i}>
-                  {part}
-                  {i < arr.length - 1 && (
-                    <a 
-                      href="https://pintofscience.co.uk/team/Birmingham%20Team/" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      style={{ color: theme.highlight, fontWeight: 600 }}
-                    >
-                      Pint of Science Team at Birmingham
-                    </a>
-                  )}
-                </React.Fragment>
-              ))}
+              <RichText text={greeting.outreachAndTeaching} linkStyle={{ color: theme.highlight, fontWeight: 600 }} />{" "}
+              <RichText text={greeting.community} linkStyle={{ color: theme.highlight, fontWeight: 600 }} />
             </p>
           </div>
 

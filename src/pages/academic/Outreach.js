@@ -1,18 +1,19 @@
 import React from "react";
 import AcademicPage, { AcSection, AcRows } from "./AcademicPage";
+import RichText from "../../components/richText/RichText";
 import { greeting, teaching, outreach, awards } from "../../config/portfolio";
 
 const afhea = awards.find((a) => a.title.includes("AFHEA"));
 
 export default function Outreach(props) {
   return (
-    <AcademicPage {...props} title="Teaching & Outreach" intro={<p>{greeting.outreachAndTeaching}</p>}>
+    <AcademicPage {...props} title="Teaching & Outreach" intro={<p><RichText text={greeting.outreachAndTeaching} /></p>}>
       <AcSection title="Teaching">
         <AcRows rows={teaching.map((t) => ({ when: t.duration, title: `${t.role}, ${t.institution}`, detail: t.course }))} />
       </AcSection>
 
       <AcSection title="Science communication and outreach">
-        <AcRows rows={outreach.map((o) => ({ when: o.duration, title: `${o.role}, ${o.org}`, detail: o.detail, link: o.link }))} />
+        <AcRows rows={outreach.map((o) => ({ when: o.duration, title: <>{o.role}, <RichText text={o.org} /></>, detail: o.detail, link: o.link }))} />
       </AcSection>
 
       {afhea && (

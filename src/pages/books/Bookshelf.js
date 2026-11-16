@@ -109,8 +109,8 @@ export default function Bookshelf(props) {
             absolutely hate Amazon and all it has done for books and Goodreads; you will find my most up to date 
             updates on <a href="https://www.goodreads.com/user/show/50358068-aju-ani-justus" target="_blank" rel="noopener noreferrer" style={{ color: theme.highlight, textDecoration: "underline" }}>Goodreads</a>. 
             I'm also on <a href="https://fable.co/fabler/aju-174512380413?referralID=r5kkUPaqRR" target="_blank" rel="noopener noreferrer" style={{ color: theme.highlight, textDecoration: "underline" }}>Fable</a> and <a href="https://app.thestorygraph.com/profile/ajuanijustus" target="_blank" rel="noopener noreferrer" style={{ color: theme.highlight, textDecoration: "underline" }}>Storygraph</a> (but 
-            those, much like this website I only periodically updated based on my Goodreads data export). Also, if you're anything like me, and love looking at the stats, look at my <Link to="/secret/bookstats" style={{ color: theme.highlight, textDecoration: "underline" }}>reading stats</Link>. If you 
-            want something similar to this for your website, <Link to="/secret/contact" style={{ color: theme.highlight, textDecoration: "underline" }}>contact me</Link>.
+            those, much like this website I only periodically updated based on my Goodreads data export). Also, if you're anything like me, and love looking at the stats, look at my <Link to="/secret/bookstats/" style={{ color: theme.highlight, textDecoration: "underline" }}>reading stats</Link>. If you 
+            want something similar to this for your website, <Link to="/secret/contact/" style={{ color: theme.highlight, textDecoration: "underline" }}>contact me</Link>.
             </p>
 
             {/* Quick Navigation Bar */}

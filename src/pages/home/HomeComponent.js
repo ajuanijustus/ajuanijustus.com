@@ -18,10 +18,10 @@ class Home extends Component {
         <Publications theme={this.props.theme} />
         <Teaching theme={this.props.theme} />
         <div className="home-more-links">
-          <Link to="/research" style={{ color: this.props.theme.highlight }}>
+          <Link to="/research/" style={{ color: this.props.theme.highlight }}>
             More on my research →
           </Link>
-          <Link to="/teaching" style={{ color: this.props.theme.highlight }}>
+          <Link to="/teaching/" style={{ color: this.props.theme.highlight }}>
             Teaching & outreach →
           </Link>
         </div>

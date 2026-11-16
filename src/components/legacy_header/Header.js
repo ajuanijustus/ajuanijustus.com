@@ -34,7 +34,7 @@ class LegacyHeader extends Component {
             <ul className="menu" style={{ backgroundColor: theme.body }}>
               <li>
                 <NavLink
-                  to="/legacy/home"
+                  to="/legacy/home/"
                   tag={Link}
                   activeStyle={{ fontWeight: "bold" }}
                   style={{ color: theme.text }}
@@ -46,7 +46,7 @@ class LegacyHeader extends Component {
               </li>
               <li>
                 <NavLink
-                  to="/legacy/contact"
+                  to="/legacy/contact/"
                   tag={Link}
                   activeStyle={{ fontWeight: "bold" }}
                   style={{ color: theme.text }}

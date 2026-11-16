@@ -5,10 +5,10 @@ import { NavLink, Link } from "react-router-dom";
 import { greeting } from "../../config/portfolio.js";
 
 const LINKS = [
-  { to: "/home", label: "Home" },
-  { to: "/research", label: "Research" },
-  { to: "/teaching", label: "Teaching & Outreach" },
-  { to: "/contact", label: "Contact Me" },
+  { to: "/home/", label: "Home" },
+  { to: "/research/", label: "Research" },
+  { to: "/teaching/", label: "Teaching & Outreach" },
+  { to: "/contact/", label: "Contact Me" },
 ];
 
 export default function Header({ theme }) {

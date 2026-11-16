@@ -576,26 +576,6 @@ const teaching = [
   }
 ];
 
-const underReview = [
-  {
-    title: "removed",
-    authors: "Aju Ani Justus, Chris Baber",
-    venue: "removed"
-  },
-  {
-    title: "removed",
-    authors: "Aju Ani Justus, Chris Baber, removed, removed",
-    venue: "Under review at a journal"
-  },
-  {
-    title: "removed",
-    authors: "Chris Baber, Aju Ani Justus, removed",
-    venue: "Under review at a journal",
-    link: "removed",
-    linkLabel: "Preprint"
-  }
-];
-
 const talks = [
   { date: "Jul 2026", title: "How do Computers Learn to Play Games", kind: "Invited talk", where: "University of Birmingham CS Summer School, for high school students" },
   { date: "May 2026", title: "voice2mode: Phonation Mode Classification in Singing", kind: "Oral presentation", where: "ICASSP 2026, Barcelona" },
@@ -662,7 +642,6 @@ export {
   news,
   publications,
   teaching,
-  underReview,
   talks,
   awards,
   service,

@@ -1,7 +1,7 @@
 import React from "react";
 import AcademicPage, { AcSection, AcRows } from "./AcademicPage";
 import Publications from "../home/publications/Publications";
-import { greeting, underReview, talks, awards, service, summerSchools, openSource } from "../../config/portfolio";
+import { greeting, talks, awards, service, summerSchools, openSource } from "../../config/portfolio";
 
 export default function Research(props) {
   return (
@@ -39,10 +39,6 @@ export default function Research(props) {
       </AcSection>
 
       <Publications theme={props.theme} title="Publications" />
-
-      <AcSection title="Under review">
-        <AcRows rows={underReview.map((p) => ({ when: "In review", title: p.title, sub: `${p.authors} · ${p.venue}`, link: p.link, linkLabel: p.linkLabel }))} />
-      </AcSection>
 
       <AcSection title="Talks">
         <AcRows rows={talks.map((t) => ({ when: t.date, title: t.title, sub: `${t.kind}, ${t.where}` }))} />

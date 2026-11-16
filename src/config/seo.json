@@ -1,7 +1,7 @@
 {
   "_readme": "page titles/descriptions. index false = hidden from google. same = copy another page and use its url",
   "siteUrl": "https://www.ajuanijustus.com",
-  "image": "/profile.png",
+  "image": "/og-card.jpg",
   "routes": {
     "/": {
       "title": "Aju Ani Justus | Doctoral Researcher, University of Birmingham",

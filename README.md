@@ -86,6 +86,14 @@ it commits "update data" to master, so git pull before pushing.
 - plants: src/data/plants.json ({ "name", "species", "since": "2025-04-01", "water": "weekly", "photo": "file.jpg", "note" }), photos in public/secret/plants/
 - recipes: one .md file per recipe in src/data/recipes/ (format at the top of scripts/data/recipes.js), photos in public/secret/kitchen/
 
+### link previews (whatsapp, linkedin, x...)
+
+public/og-card.jpg, 1200x630. made by scripts/og/card.py from public/profile.png and the site fonts. after changing the title or photo:
+
+python3 scripts/og/card.py . public/og-card.jpg
+
+apps cache previews for days. to see a new one straight away, share the link with ?v=2 on the end, or use https://www.linkedin.com/post-inspector/ and https://developers.facebook.com/tools/debug/ (whatsapp uses facebook's cache) to refresh it.
+
 ## broken install
 
 rm -rf node_modules

@@ -2,6 +2,49 @@
  "updated": "2026-11-16",
  "items": [
   {
+   "id": 30598,
+   "title": "Fairy Tail",
+   "poster": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx30598-UOCymo2vPcWe.png",
+   "url": "https://anilist.co/manga/30598",
+   "status": "completed",
+   "progress": 549,
+   "total": 549,
+   "minutes": 0,
+   "score": null,
+   "year": 2006,
+   "format": "MANGA",
+   "genres": [
+    "Action",
+    "Adventure",
+    "Comedy",
+    "Ecchi",
+    "Fantasy"
+   ],
+   "completed": null,
+   "updatedAt": 1794788310
+  },
+  {
+   "id": 30013,
+   "title": "One Piece",
+   "poster": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx30013-BeslEMqiPhlk.jpg",
+   "url": "https://anilist.co/manga/30013",
+   "status": "reading",
+   "progress": 1198,
+   "total": null,
+   "minutes": 0,
+   "score": null,
+   "year": 1997,
+   "format": "MANGA",
+   "genres": [
+    "Action",
+    "Adventure",
+    "Comedy",
+    "Fantasy"
+   ],
+   "completed": null,
+   "updatedAt": 1794787972
+  },
+  {
    "id": 169355,
    "title": "Kagurabachi",
    "poster": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx169355-5pqzh1Wb4NOQ.png",
@@ -40,27 +83,6 @@
    ],
    "completed": null,
    "updatedAt": 1794787293
-  },
-  {
-   "id": 30013,
-   "title": "One Piece",
-   "poster": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx30013-BeslEMqiPhlk.jpg",
-   "url": "https://anilist.co/manga/30013",
-   "status": "reading",
-   "progress": 0,
-   "total": null,
-   "minutes": 0,
-   "score": null,
-   "year": 1997,
-   "format": "MANGA",
-   "genres": [
-    "Action",
-    "Adventure",
-    "Comedy",
-    "Fantasy"
-   ],
-   "completed": null,
-   "updatedAt": 1794787260
   }
  ]
 }

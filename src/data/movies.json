@@ -1,6 +1,28 @@
 {
- "updated": "2026-11-15",
+ "updated": "2026-11-16",
  "items": [
+  {
+   "id": "letterboxd-watch-1588858542",
+   "title": "Jacob's Kingdom of Heaven",
+   "year": 2016,
+   "rating": null,
+   "watched": "2026-11-15",
+   "rewatch": false,
+   "liked": false,
+   "poster": "https://a.ltrbxd.com/resized/film-poster/3/2/2/8/1/0/322810-jacob-s-kingdom-of-heaven-0-600-0-900-crop.jpg?v=28cca12b0f",
+   "url": "https://letterboxd.com/ajewdor/film/jacobs-kingdom-of-heaven/"
+  },
+  {
+   "id": "letterboxd-watch-1588857907",
+   "title": "The Love Hypothesis",
+   "year": 2026,
+   "rating": null,
+   "watched": "2026-11-15",
+   "rewatch": false,
+   "liked": false,
+   "poster": "https://a.ltrbxd.com/resized/film-poster/9/3/1/1/8/1/931181-the-love-hypothesis-0-600-0-900-crop.jpg?v=af3d1729f2",
+   "url": "https://letterboxd.com/ajewdor/film/the-love-hypothesis/"
+  },
   {
    "id": "letterboxd-watch-1438072696",
    "title": "The Odyssey",

@@ -2,44 +2,52 @@
  "updated": "2026-11-16",
  "items": [
   {
-   "id": "letterboxd-watch-1438072696",
-   "title": "The Odyssey",
-   "year": 2026,
-   "rating": 3.5,
-   "rewatch": false,
-   "liked": false,
-   "poster": "https://a.ltrbxd.com/resized/film-poster/1/2/5/5/3/9/4/1255394-the-odyssey-2026-0-600-0-900-crop.jpg?v=1eed046d0c",
-   "url": "https://letterboxd.com/ajewdor/film/the-odyssey-2026/"
-  },
-  {
-   "id": "letterboxd-watch-1588857907",
+   "id": "trakt-830859",
    "title": "The Love Hypothesis",
    "year": 2026,
+   "released": "2026-09-23",
    "rating": null,
    "rewatch": false,
    "liked": false,
-   "poster": "https://a.ltrbxd.com/resized/film-poster/9/3/1/1/8/1/931181-the-love-hypothesis-0-600-0-900-crop.jpg?v=af3d1729f2",
-   "url": "https://letterboxd.com/ajewdor/film/the-love-hypothesis/"
+   "poster": "https://media.trakt.tv/movies/830859/medium/poster.webp",
+   "posterKey": "movie-830859",
+   "url": "https://trakt.tv/movies/the-love-hypothesis-2026"
   },
   {
-   "id": "letterboxd-watch-1438072371",
+   "id": "trakt-1237164",
+   "title": "Bethlehem Kudumba Unit",
+   "year": 2026,
+   "released": "2026-08-21",
+   "rating": null,
+   "rewatch": false,
+   "liked": false,
+   "poster": "https://media.trakt.tv/movies/1237164/medium/poster.webp",
+   "posterKey": "movie-1237164",
+   "url": "https://trakt.tv/movies/bethlehem-kudumba-unit-2026"
+  },
+  {
+   "id": "trakt-905132",
    "title": "Spider-Man: Brand New Day",
    "year": 2026,
-   "rating": 4.0,
-   "rewatch": false,
-   "liked": false,
-   "poster": "https://a.ltrbxd.com/resized/film-poster/8/7/2/8/7/1/872871-spider-man-brand-new-day-0-600-0-900-crop.jpg?v=ebe6beb4fc",
-   "url": "https://letterboxd.com/ajewdor/film/spider-man-brand-new-day/"
-  },
-  {
-   "id": "letterboxd-watch-1588858542",
-   "title": "Jacob's Kingdom of Heaven",
-   "year": 2016,
+   "released": "2026-07-31",
    "rating": null,
    "rewatch": false,
    "liked": false,
-   "poster": "https://a.ltrbxd.com/resized/film-poster/3/2/2/8/1/0/322810-jacob-s-kingdom-of-heaven-0-600-0-900-crop.jpg?v=28cca12b0f",
-   "url": "https://letterboxd.com/ajewdor/film/jacobs-kingdom-of-heaven/"
+   "poster": "https://media.trakt.tv/movies/905132/medium/poster.webp",
+   "posterKey": "movie-905132",
+   "url": "https://trakt.tv/movies/spider-man-brand-new-day-2026"
+  },
+  {
+   "id": "trakt-1117351",
+   "title": "The Odyssey",
+   "year": 2026,
+   "released": "2026-07-17",
+   "rating": null,
+   "rewatch": false,
+   "liked": false,
+   "poster": "https://media.trakt.tv/movies/1117351/medium/poster.webp",
+   "posterKey": "movie-1117351",
+   "url": "https://trakt.tv/movies/the-odyssey-2026"
   }
  ]
 }

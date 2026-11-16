@@ -1,1 +1,70 @@
-{ "updated": null, "items": [] }
+{
+ "updated": "2026-11-16",
+ "items": [
+  {
+   "title": "Best Medicine",
+   "year": 2026,
+   "poster": "https://static.tvmaze.com/uploads/images/medium_portrait/639/1597644.jpg",
+   "posterKey": "show-285217",
+   "url": "https://trakt.tv/shows/best-medicine",
+   "status": "watching",
+   "progress": 0,
+   "total": 20,
+   "minutes": 0,
+   "score": null,
+   "released": "2026-01-05"
+  },
+  {
+   "title": "Adults",
+   "year": 2025,
+   "poster": "https://static.tvmaze.com/uploads/images/medium_portrait/641/1603022.jpg",
+   "posterKey": "show-250203",
+   "url": "https://trakt.tv/shows/adults-2025",
+   "status": "watching",
+   "progress": 0,
+   "total": 17,
+   "minutes": 0,
+   "score": null,
+   "released": "2025-05-29"
+  },
+  {
+   "title": "Doc",
+   "year": 2025,
+   "poster": "https://static.tvmaze.com/uploads/images/medium_portrait/639/1597647.jpg",
+   "posterKey": "show-241215",
+   "url": "https://trakt.tv/shows/doc-2025",
+   "status": "watching",
+   "progress": 0,
+   "total": 39,
+   "minutes": 0,
+   "score": null,
+   "released": "2025-01-08"
+  },
+  {
+   "title": "Silo",
+   "year": 2023,
+   "poster": "https://static.tvmaze.com/uploads/images/medium_portrait/631/1577677.jpg",
+   "posterKey": "show-180770",
+   "url": "https://trakt.tv/shows/silo",
+   "status": "watching",
+   "progress": 0,
+   "total": 30,
+   "minutes": 0,
+   "score": null,
+   "released": "2023-05-05"
+  },
+  {
+   "title": "Reacher",
+   "year": 2022,
+   "poster": "https://static.tvmaze.com/uploads/images/medium_portrait/636/1591350.jpg",
+   "posterKey": "show-155536",
+   "url": "https://trakt.tv/shows/reacher",
+   "status": "watching",
+   "progress": 0,
+   "total": 32,
+   "minutes": 0,
+   "score": null,
+   "released": "2022-02-03"
+  }
+ ]
+}

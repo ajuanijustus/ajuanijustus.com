@@ -26,9 +26,8 @@ npm run deploy
 all the data is in src/data/. pages are in src/pages/secret/ (books ones in src/pages/books/).
 
 updates itself every night (.github/workflows/update.yml), or run it by hand from the actions tab:
-- films: letterboxd. LETTERBOXD_USER variable
 - anime + manga: anilist. ANILIST_USER variable
-- tv: trakt. TRAKT_USER variable, TRAKT_CLIENT_ID secret
+- films + tv: trakt. TRAKT_USER variable, TRAKT_CLIENT_ID secret. posters come from trakt; if some films have none, add a free tmdb key as the TMDB_API_KEY secret
 the action commits "update data" to master, so git pull before pushing.
 
 by hand, rarely:

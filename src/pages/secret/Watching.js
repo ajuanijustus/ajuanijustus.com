@@ -25,7 +25,7 @@ function lastTwelveMonths(dates) {
 
 function Movies() {
   const items = movies.items;
-  if (!items.length) return <Empty>nothing logged yet. films show up here a day after i log them on Letterboxd.</Empty>;
+  if (!items.length) return <Empty>nothing logged yet. films show up here a day after i log them on Trakt.</Empty>;
   const rated = items.filter((m) => m.rating);
   const favourites = [...rated].sort((a, b) => b.rating - a.rating || (a.watched < b.watched ? 1 : -1)).slice(0, 12);
   const decades = {};

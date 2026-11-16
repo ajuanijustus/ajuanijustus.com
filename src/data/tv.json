@@ -2,6 +2,89 @@
  "updated": "2026-11-16",
  "items": [
   {
+   "title": "Neagley",
+   "year": 2026,
+   "poster": "https://media.trakt.tv/shows/258222/medium/poster.webp",
+   "posterKey": "show-258222",
+   "status": "caught up",
+   "showStatus": "returning series",
+   "seasons": [
+    {
+     "n": 1,
+     "watched": 8,
+     "aired": 8
+    }
+   ],
+   "progress": 8,
+   "total": 8,
+   "minutes": 320,
+   "score": null,
+   "genres": [
+    "drama",
+    "mystery",
+    "crime"
+   ],
+   "language": "en",
+   "network": "Prime Video",
+   "released": "2026-09-16"
+  },
+  {
+   "title": "Rooster",
+   "year": 2026,
+   "poster": "https://media.trakt.tv/shows/240718/medium/poster.webp",
+   "posterKey": "show-240718",
+   "status": "caught up",
+   "showStatus": "returning series",
+   "seasons": [
+    {
+     "n": 1,
+     "watched": 10,
+     "aired": 10
+    }
+   ],
+   "progress": 10,
+   "total": 10,
+   "minutes": 300,
+   "score": null,
+   "genres": [
+    "comedy"
+   ],
+   "language": "en",
+   "network": "HBO",
+   "released": "2026-03-09"
+  },
+  {
+   "title": "R.J. Decker",
+   "year": 2026,
+   "poster": "https://media.trakt.tv/shows/301095/medium/poster.webp",
+   "posterKey": "show-301095",
+   "status": "dropped",
+   "showStatus": "returning series",
+   "seasons": [
+    {
+     "n": 1,
+     "watched": 9,
+     "aired": 9
+    },
+    {
+     "n": 2,
+     "watched": 7,
+     "aired": 7
+    }
+   ],
+   "progress": 16,
+   "total": 16,
+   "minutes": 720,
+   "score": null,
+   "genres": [
+    "crime",
+    "mystery"
+   ],
+   "language": "en",
+   "network": "ABC",
+   "released": "2026-03-04"
+  },
+  {
    "title": "Best Medicine",
    "year": 2026,
    "poster": "https://static.tvmaze.com/uploads/images/medium_portrait/639/1597644.jpg",
@@ -33,6 +116,37 @@
    "released": "2026-01-05"
   },
   {
+   "title": "Stick",
+   "year": 2025,
+   "poster": "https://media.trakt.tv/shows/230595/medium/poster.webp",
+   "posterKey": "show-230595",
+   "status": "dropped",
+   "showStatus": "returning series",
+   "seasons": [
+    {
+     "n": 1,
+     "watched": 10,
+     "aired": 10
+    },
+    {
+     "n": 2,
+     "watched": 0,
+     "aired": 3
+    }
+   ],
+   "progress": 10,
+   "total": 13,
+   "minutes": 330,
+   "score": null,
+   "genres": [
+    "comedy",
+    "drama"
+   ],
+   "language": "en",
+   "network": "Apple TV",
+   "released": "2025-06-04"
+  },
+  {
    "title": "Adults",
    "year": 2025,
    "poster": "https://static.tvmaze.com/uploads/images/medium_portrait/641/1603022.jpg",
@@ -61,6 +175,66 @@
    "language": "en",
    "network": "FXX",
    "released": "2025-05-29"
+  },
+  {
+   "title": "Running Point",
+   "year": 2025,
+   "poster": "https://media.trakt.tv/shows/221851/medium/poster.webp",
+   "posterKey": "show-221851",
+   "status": "dropped",
+   "showStatus": "returning series",
+   "seasons": [
+    {
+     "n": 1,
+     "watched": 10,
+     "aired": 10
+    },
+    {
+     "n": 2,
+     "watched": 10,
+     "aired": 10
+    }
+   ],
+   "progress": 20,
+   "total": 20,
+   "minutes": 600,
+   "score": null,
+   "genres": [
+    "comedy"
+   ],
+   "language": "en",
+   "network": "Netflix",
+   "released": "2025-02-27"
+  },
+  {
+   "title": "The Pitt",
+   "year": 2025,
+   "poster": "https://media.trakt.tv/shows/232884/medium/poster.webp",
+   "posterKey": "show-232884",
+   "status": "caught up",
+   "showStatus": "returning series",
+   "seasons": [
+    {
+     "n": 1,
+     "watched": 15,
+     "aired": 15
+    },
+    {
+     "n": 2,
+     "watched": 15,
+     "aired": 15
+    }
+   ],
+   "progress": 30,
+   "total": 30,
+   "minutes": 1440,
+   "score": null,
+   "genres": [
+    "drama"
+   ],
+   "language": "en",
+   "network": "HBO Max",
+   "released": "2025-01-10"
   },
   {
    "title": "Doc",
@@ -98,6 +272,142 @@
    "released": "2025-01-08"
   },
   {
+   "title": "Nobody Wants This",
+   "year": 2024,
+   "poster": "https://media.trakt.tv/shows/233797/medium/poster.webp",
+   "posterKey": "show-233797",
+   "status": "dropped",
+   "showStatus": "returning series",
+   "seasons": [
+    {
+     "n": 1,
+     "watched": 10,
+     "aired": 10
+    },
+    {
+     "n": 2,
+     "watched": 0,
+     "aired": 10
+    },
+    {
+     "n": 3,
+     "watched": 0,
+     "aired": 10
+    }
+   ],
+   "progress": 10,
+   "total": 30,
+   "minutes": 270,
+   "score": null,
+   "genres": [
+    "comedy",
+    "romance",
+    "drama"
+   ],
+   "language": "en",
+   "network": "Netflix",
+   "released": "2024-09-26"
+  },
+  {
+   "title": "High Potential",
+   "year": 2024,
+   "poster": "https://media.trakt.tv/shows/205414/medium/poster.webp",
+   "posterKey": "show-205414",
+   "status": "watching",
+   "showStatus": "returning series",
+   "seasons": [
+    {
+     "n": 1,
+     "watched": 13,
+     "aired": 13
+    },
+    {
+     "n": 2,
+     "watched": 0,
+     "aired": 18
+    }
+   ],
+   "progress": 13,
+   "total": 31,
+   "minutes": 585,
+   "score": null,
+   "genres": [
+    "drama",
+    "crime",
+    "mystery"
+   ],
+   "language": "en",
+   "network": "ABC",
+   "released": "2024-09-18"
+  },
+  {
+   "title": "Percy Jackson and the Olympians",
+   "year": 2023,
+   "poster": "https://media.trakt.tv/shows/194518/medium/poster.webp",
+   "posterKey": "show-194518",
+   "status": "caught up",
+   "showStatus": "returning series",
+   "seasons": [
+    {
+     "n": 1,
+     "watched": 8,
+     "aired": 8
+    },
+    {
+     "n": 2,
+     "watched": 8,
+     "aired": 8
+    }
+   ],
+   "progress": 16,
+   "total": 16,
+   "minutes": 640,
+   "score": null,
+   "genres": [
+    "action",
+    "adventure",
+    "drama",
+    "fantasy",
+    "family"
+   ],
+   "language": "en",
+   "network": "Disney+",
+   "released": "2023-12-19"
+  },
+  {
+   "title": "ONE PIECE",
+   "year": 2023,
+   "poster": "https://media.trakt.tv/shows/184618/medium/poster.webp",
+   "posterKey": "show-184618",
+   "status": "watching",
+   "showStatus": "returning series",
+   "seasons": [
+    {
+     "n": 1,
+     "watched": 8,
+     "aired": 8
+    },
+    {
+     "n": 2,
+     "watched": 0,
+     "aired": 8
+    }
+   ],
+   "progress": 8,
+   "total": 16,
+   "minutes": 480,
+   "score": null,
+   "genres": [
+    "action",
+    "adventure",
+    "fantasy",
+    "science-fiction"
+   ],
+   "language": "en",
+   "network": "Netflix",
+   "released": "2023-08-31"
+  },
+  {
    "title": "Silo",
    "year": 2023,
    "poster": "https://static.tvmaze.com/uploads/images/medium_portrait/631/1577677.jpg",
@@ -132,6 +442,38 @@
    "language": "en",
    "network": "Apple TV",
    "released": "2023-05-05"
+  },
+  {
+   "title": "Wednesday",
+   "year": 2022,
+   "poster": "https://media.trakt.tv/shows/173996/medium/poster.webp",
+   "posterKey": "show-173996",
+   "status": "caught up",
+   "showStatus": "returning series",
+   "seasons": [
+    {
+     "n": 1,
+     "watched": 8,
+     "aired": 8
+    },
+    {
+     "n": 2,
+     "watched": 8,
+     "aired": 8
+    }
+   ],
+   "progress": 16,
+   "total": 16,
+   "minutes": 880,
+   "score": null,
+   "genres": [
+    "fantasy",
+    "mystery",
+    "comedy"
+   ],
+   "language": "en",
+   "network": "Netflix",
+   "released": "2022-11-23"
   },
   {
    "title": "Reacher",
@@ -174,6 +516,451 @@
    "language": "en",
    "network": "Prime Video",
    "released": "2022-02-03"
+  },
+  {
+   "title": "Abbott Elementary",
+   "year": 2021,
+   "poster": "https://media.trakt.tv/shows/180675/medium/poster.webp",
+   "posterKey": "show-180675",
+   "status": "dropped",
+   "showStatus": "returning series",
+   "seasons": [
+    {
+     "n": 1,
+     "watched": 13,
+     "aired": 13
+    },
+    {
+     "n": 2,
+     "watched": 22,
+     "aired": 22
+    },
+    {
+     "n": 3,
+     "watched": 13,
+     "aired": 13
+    },
+    {
+     "n": 4,
+     "watched": 22,
+     "aired": 22
+    },
+    {
+     "n": 5,
+     "watched": 0,
+     "aired": 22
+    },
+    {
+     "n": 6,
+     "watched": 0,
+     "aired": 6
+    }
+   ],
+   "progress": 70,
+   "total": 98,
+   "minutes": 1610,
+   "score": null,
+   "genres": [
+    "comedy"
+   ],
+   "language": "en",
+   "network": "ABC",
+   "released": "2021-12-08"
+  },
+  {
+   "title": "Ted Lasso",
+   "year": 2020,
+   "poster": "https://media.trakt.tv/shows/162639/medium/poster.webp",
+   "posterKey": "show-162639",
+   "status": "completed",
+   "showStatus": "returning series",
+   "seasons": [
+    {
+     "n": 1,
+     "watched": 10,
+     "aired": 10
+    },
+    {
+     "n": 2,
+     "watched": 12,
+     "aired": 12
+    },
+    {
+     "n": 3,
+     "watched": 12,
+     "aired": 12
+    },
+    {
+     "n": 4,
+     "watched": 10,
+     "aired": 10
+    }
+   ],
+   "progress": 44,
+   "total": 44,
+   "minutes": 1980,
+   "score": null,
+   "genres": [
+    "comedy",
+    "drama"
+   ],
+   "language": "en",
+   "network": "Apple TV",
+   "released": "2020-08-15"
+  },
+  {
+   "title": "The Mandalorian",
+   "year": 2019,
+   "poster": "https://media.trakt.tv/shows/137178/medium/poster.webp",
+   "posterKey": "show-137178",
+   "status": "completed",
+   "showStatus": "ended",
+   "seasons": [
+    {
+     "n": 1,
+     "watched": 8,
+     "aired": 8
+    },
+    {
+     "n": 2,
+     "watched": 8,
+     "aired": 8
+    },
+    {
+     "n": 3,
+     "watched": 8,
+     "aired": 8
+    }
+   ],
+   "progress": 24,
+   "total": 24,
+   "minutes": 1080,
+   "score": null,
+   "genres": [
+    "fantasy",
+    "science-fiction",
+    "action",
+    "adventure"
+   ],
+   "language": "en",
+   "network": "Disney+",
+   "released": "2019-11-12"
+  },
+  {
+   "title": "The Boys",
+   "year": 2019,
+   "poster": "https://media.trakt.tv/shows/139960/medium/poster.webp",
+   "posterKey": "show-139960",
+   "status": "dropped",
+   "showStatus": "ended",
+   "seasons": [
+    {
+     "n": 1,
+     "watched": 8,
+     "aired": 8
+    },
+    {
+     "n": 2,
+     "watched": 8,
+     "aired": 8
+    },
+    {
+     "n": 3,
+     "watched": 0,
+     "aired": 8
+    },
+    {
+     "n": 4,
+     "watched": 0,
+     "aired": 8
+    },
+    {
+     "n": 5,
+     "watched": 0,
+     "aired": 8
+    }
+   ],
+   "progress": 16,
+   "total": 40,
+   "minutes": 1040,
+   "score": null,
+   "genres": [
+    "action",
+    "fantasy",
+    "science-fiction",
+    "adventure",
+    "superhero"
+   ],
+   "language": "en",
+   "network": "Prime Video",
+   "released": "2019-07-25"
+  },
+  {
+   "title": "The Good Place",
+   "year": 2016,
+   "poster": "https://media.trakt.tv/shows/107700/medium/poster.webp",
+   "posterKey": "show-107700",
+   "status": "completed",
+   "showStatus": "ended",
+   "seasons": [
+    {
+     "n": 1,
+     "watched": 13,
+     "aired": 13
+    },
+    {
+     "n": 2,
+     "watched": 12,
+     "aired": 12
+    },
+    {
+     "n": 3,
+     "watched": 12,
+     "aired": 12
+    },
+    {
+     "n": 4,
+     "watched": 13,
+     "aired": 13
+    }
+   ],
+   "progress": 50,
+   "total": 50,
+   "minutes": 1100,
+   "score": null,
+   "genres": [
+    "comedy",
+    "fantasy"
+   ],
+   "language": "en",
+   "network": "NBC",
+   "released": "2016-09-20"
+  },
+  {
+   "title": "Stranger Things",
+   "year": 2016,
+   "poster": "https://media.trakt.tv/shows/104439/medium/poster.webp",
+   "posterKey": "show-104439",
+   "status": "dropped",
+   "showStatus": "ended",
+   "seasons": [
+    {
+     "n": 1,
+     "watched": 8,
+     "aired": 8
+    },
+    {
+     "n": 2,
+     "watched": 9,
+     "aired": 9
+    },
+    {
+     "n": 3,
+     "watched": 8,
+     "aired": 8
+    },
+    {
+     "n": 4,
+     "watched": 9,
+     "aired": 9
+    },
+    {
+     "n": 5,
+     "watched": 0,
+     "aired": 8
+    }
+   ],
+   "progress": 34,
+   "total": 42,
+   "minutes": 2210,
+   "score": null,
+   "genres": [
+    "fantasy",
+    "science-fiction",
+    "mystery",
+    "action",
+    "adventure",
+    "horror"
+   ],
+   "language": "en",
+   "network": "Netflix",
+   "released": "2016-07-16"
+  },
+  {
+   "title": "Superstore",
+   "year": 2015,
+   "poster": "https://media.trakt.tv/shows/98985/medium/poster.webp",
+   "posterKey": "show-98985",
+   "status": "completed",
+   "showStatus": "ended",
+   "seasons": [
+    {
+     "n": 1,
+     "watched": 11,
+     "aired": 11
+    },
+    {
+     "n": 2,
+     "watched": 22,
+     "aired": 22
+    },
+    {
+     "n": 3,
+     "watched": 22,
+     "aired": 22
+    },
+    {
+     "n": 4,
+     "watched": 22,
+     "aired": 22
+    },
+    {
+     "n": 5,
+     "watched": 21,
+     "aired": 21
+    },
+    {
+     "n": 6,
+     "watched": 15,
+     "aired": 15
+    }
+   ],
+   "progress": 113,
+   "total": 113,
+   "minutes": 2260,
+   "score": null,
+   "genres": [
+    "comedy"
+   ],
+   "language": "en",
+   "network": "NBC",
+   "released": "2015-12-01"
+  },
+  {
+   "title": "Brooklyn Nine-Nine",
+   "year": 2013,
+   "poster": "https://media.trakt.tv/shows/48587/medium/poster.webp",
+   "posterKey": "show-48587",
+   "status": "completed",
+   "showStatus": "ended",
+   "seasons": [
+    {
+     "n": 1,
+     "watched": 22,
+     "aired": 22
+    },
+    {
+     "n": 2,
+     "watched": 23,
+     "aired": 23
+    },
+    {
+     "n": 3,
+     "watched": 23,
+     "aired": 23
+    },
+    {
+     "n": 4,
+     "watched": 22,
+     "aired": 22
+    },
+    {
+     "n": 5,
+     "watched": 22,
+     "aired": 22
+    },
+    {
+     "n": 6,
+     "watched": 18,
+     "aired": 18
+    },
+    {
+     "n": 7,
+     "watched": 13,
+     "aired": 13
+    },
+    {
+     "n": 8,
+     "watched": 9,
+     "aired": 9
+    }
+   ],
+   "progress": 152,
+   "total": 152,
+   "minutes": 3040,
+   "score": null,
+   "genres": [
+    "comedy",
+    "crime"
+   ],
+   "language": "en",
+   "network": "FOX",
+   "released": "2013-09-18"
+  },
+  {
+   "title": "Suits",
+   "year": 2011,
+   "poster": "https://media.trakt.tv/shows/37522/medium/poster.webp",
+   "posterKey": "show-37522",
+   "status": "completed",
+   "showStatus": "ended",
+   "seasons": [
+    {
+     "n": 1,
+     "watched": 12,
+     "aired": 12
+    },
+    {
+     "n": 2,
+     "watched": 16,
+     "aired": 16
+    },
+    {
+     "n": 3,
+     "watched": 16,
+     "aired": 16
+    },
+    {
+     "n": 4,
+     "watched": 16,
+     "aired": 16
+    },
+    {
+     "n": 5,
+     "watched": 16,
+     "aired": 16
+    },
+    {
+     "n": 6,
+     "watched": 16,
+     "aired": 16
+    },
+    {
+     "n": 7,
+     "watched": 16,
+     "aired": 16
+    },
+    {
+     "n": 8,
+     "watched": 16,
+     "aired": 16
+    },
+    {
+     "n": 9,
+     "watched": 10,
+     "aired": 10
+    }
+   ],
+   "progress": 134,
+   "total": 134,
+   "minutes": 5628,
+   "score": null,
+   "genres": [
+    "drama"
+   ],
+   "language": "en",
+   "network": "USA Network",
+   "released": "2011-06-24"
   },
   {
    "title": "Parks and Recreation",
@@ -229,6 +1016,76 @@
    "language": "en",
    "network": "NBC",
    "released": "2009-04-10"
+  },
+  {
+   "title": "Friends",
+   "year": 1994,
+   "poster": "https://media.trakt.tv/shows/1657/medium/poster.webp",
+   "posterKey": "show-1657",
+   "status": "completed",
+   "showStatus": "ended",
+   "seasons": [
+    {
+     "n": 1,
+     "watched": 24,
+     "aired": 24
+    },
+    {
+     "n": 2,
+     "watched": 24,
+     "aired": 24
+    },
+    {
+     "n": 3,
+     "watched": 25,
+     "aired": 25
+    },
+    {
+     "n": 4,
+     "watched": 23,
+     "aired": 23
+    },
+    {
+     "n": 5,
+     "watched": 23,
+     "aired": 23
+    },
+    {
+     "n": 6,
+     "watched": 23,
+     "aired": 23
+    },
+    {
+     "n": 7,
+     "watched": 23,
+     "aired": 23
+    },
+    {
+     "n": 8,
+     "watched": 23,
+     "aired": 23
+    },
+    {
+     "n": 9,
+     "watched": 23,
+     "aired": 23
+    },
+    {
+     "n": 10,
+     "watched": 17,
+     "aired": 17
+    }
+   ],
+   "progress": 228,
+   "total": 228,
+   "minutes": 5700,
+   "score": null,
+   "genres": [
+    "comedy"
+   ],
+   "language": "en",
+   "network": "NBC",
+   "released": "1994-09-23"
   }
  ]
 }

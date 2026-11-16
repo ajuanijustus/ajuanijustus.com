@@ -126,6 +126,10 @@ def list_shows(s, user, slug):
     r = s.get(f"https://api.trakt.tv/users/{user}/lists/{slug}/items/shows", timeout=30)
     if r.status_code == 404:
         return set()
+    if r.status_code in (401, 403):
+        # the list exists but isn't public, so the site can't see it. carry on without it
+        print(f"::warning::trakt list \"{slug}\" is private, set it to public or delete it")
+        return set()
     r.raise_for_status()
     return {x["show"]["ids"]["trakt"] for x in r.json() if x.get("show")}
 

@@ -7,11 +7,16 @@
    "year": 2026,
    "released": "2026-09-23",
    "rating": null,
-   "rewatch": false,
    "liked": false,
+   "genres": [
+    "romance",
+    "comedy"
+   ],
+   "language": "en",
+   "country": "us",
+   "runtime": 112,
    "poster": "https://media.trakt.tv/movies/830859/medium/poster.webp",
-   "posterKey": "movie-830859",
-   "url": "https://trakt.tv/movies/the-love-hypothesis-2026"
+   "posterKey": "movie-830859"
   },
   {
    "id": "trakt-1237164",
@@ -19,11 +24,17 @@
    "year": 2026,
    "released": "2026-08-21",
    "rating": null,
-   "rewatch": false,
    "liked": false,
+   "genres": [
+    "romance",
+    "comedy",
+    "drama"
+   ],
+   "language": "ml",
+   "country": "in",
+   "runtime": 155,
    "poster": "https://media.trakt.tv/movies/1237164/medium/poster.webp",
-   "posterKey": "movie-1237164",
-   "url": "https://trakt.tv/movies/bethlehem-kudumba-unit-2026"
+   "posterKey": "movie-1237164"
   },
   {
    "id": "trakt-905132",
@@ -31,11 +42,18 @@
    "year": 2026,
    "released": "2026-07-31",
    "rating": null,
-   "rewatch": false,
    "liked": false,
+   "genres": [
+    "science-fiction",
+    "action",
+    "adventure",
+    "superhero"
+   ],
+   "language": "en",
+   "country": "us",
+   "runtime": 145,
    "poster": "https://media.trakt.tv/movies/905132/medium/poster.webp",
-   "posterKey": "movie-905132",
-   "url": "https://trakt.tv/movies/spider-man-brand-new-day-2026"
+   "posterKey": "movie-905132"
   },
   {
    "id": "trakt-1117351",
@@ -43,11 +61,305 @@
    "year": 2026,
    "released": "2026-07-17",
    "rating": null,
-   "rewatch": false,
    "liked": false,
+   "genres": [
+    "adventure",
+    "fantasy",
+    "action"
+   ],
+   "language": "en",
+   "country": "gb",
+   "runtime": 173,
    "poster": "https://media.trakt.tv/movies/1117351/medium/poster.webp",
-   "posterKey": "movie-1117351",
-   "url": "https://trakt.tv/movies/the-odyssey-2026"
+   "posterKey": "movie-1117351"
+  },
+  {
+   "id": "trakt-670164",
+   "title": "The Lord of the Rings: The War of the Rohirrim",
+   "year": 2024,
+   "released": "2024-12-13",
+   "rating": null,
+   "liked": false,
+   "genres": [
+    "animation",
+    "fantasy",
+    "action",
+    "adventure"
+   ],
+   "language": "en",
+   "country": "us",
+   "runtime": 134,
+   "poster": "https://media.trakt.tv/movies/670164/medium/poster.webp",
+   "posterKey": "movie-670164"
+  },
+  {
+   "id": "trakt-106668",
+   "title": "How to Train Your Dragon: The Hidden World",
+   "year": 2019,
+   "released": "2019-02-22",
+   "rating": null,
+   "liked": false,
+   "genres": [
+    "adventure",
+    "animation",
+    "family"
+   ],
+   "language": "en",
+   "country": "us",
+   "runtime": 104,
+   "poster": "https://media.trakt.tv/movies/106668/medium/poster.webp",
+   "posterKey": "movie-106668"
+  },
+  {
+   "id": "trakt-84900",
+   "title": "The Hobbit: The Battle of the Five Armies",
+   "year": 2014,
+   "released": "2014-12-11",
+   "rating": null,
+   "liked": false,
+   "genres": [
+    "adventure",
+    "fantasy",
+    "action"
+   ],
+   "language": "en",
+   "country": "nz",
+   "runtime": 144,
+   "poster": "https://media.trakt.tv/movies/84900/medium/poster.webp",
+   "posterKey": "movie-84900"
+  },
+  {
+   "id": "trakt-125205",
+   "title": "Love, Rosie",
+   "year": 2014,
+   "released": "2014-10-16",
+   "rating": null,
+   "liked": false,
+   "genres": [
+    "comedy",
+    "romance",
+    "drama"
+   ],
+   "language": "en",
+   "country": "gb",
+   "runtime": 102,
+   "poster": "https://media.trakt.tv/movies/125205/medium/poster.webp",
+   "posterKey": "movie-125205"
+  },
+  {
+   "id": "trakt-61873",
+   "title": "How to Train Your Dragon 2",
+   "year": 2014,
+   "released": "2014-06-13",
+   "rating": null,
+   "liked": false,
+   "genres": [
+    "action",
+    "adventure",
+    "animation",
+    "fantasy",
+    "family"
+   ],
+   "language": "en",
+   "country": "us",
+   "runtime": 102,
+   "poster": "https://media.trakt.tv/movies/61873/medium/poster.webp",
+   "posterKey": "movie-61873"
+  },
+  {
+   "id": "trakt-40808",
+   "title": "The Hobbit: The Desolation of Smaug",
+   "year": 2013,
+   "released": "2013-12-13",
+   "rating": null,
+   "liked": false,
+   "genres": [
+    "fantasy",
+    "adventure",
+    "action"
+   ],
+   "language": "en",
+   "country": "us",
+   "runtime": 161,
+   "poster": "https://media.trakt.tv/movies/40808/medium/poster.webp",
+   "posterKey": "movie-40808"
+  },
+  {
+   "id": "trakt-78768",
+   "title": "Stuck in Love",
+   "year": 2013,
+   "released": "2013-07-05",
+   "rating": null,
+   "liked": false,
+   "genres": [
+    "comedy",
+    "drama",
+    "romance"
+   ],
+   "language": "en",
+   "country": "us",
+   "runtime": 97,
+   "poster": "https://media.trakt.tv/movies/78768/medium/poster.webp",
+   "posterKey": "movie-78768"
+  },
+  {
+   "id": "trakt-34097",
+   "title": "The Hobbit: An Unexpected Journey",
+   "year": 2012,
+   "released": "2012-12-14",
+   "rating": null,
+   "liked": false,
+   "genres": [
+    "action",
+    "adventure",
+    "fantasy"
+   ],
+   "language": "en",
+   "country": "us",
+   "runtime": 169,
+   "poster": "https://media.trakt.tv/movies/34097/medium/poster.webp",
+   "posterKey": "movie-34097"
+  },
+  {
+   "id": "trakt-63693",
+   "title": "The Perks of Being a Wallflower",
+   "year": 2012,
+   "released": "2012-09-21",
+   "rating": null,
+   "liked": false,
+   "genres": [
+    "drama"
+   ],
+   "language": "en",
+   "country": "us",
+   "runtime": 103,
+   "poster": "https://media.trakt.tv/movies/63693/medium/poster.webp",
+   "posterKey": "movie-63693"
+  },
+  {
+   "id": "trakt-29131",
+   "title": "Love & Other Drugs",
+   "year": 2010,
+   "released": "2010-11-24",
+   "rating": null,
+   "liked": false,
+   "genres": [
+    "comedy",
+    "drama",
+    "romance"
+   ],
+   "language": "en",
+   "country": "us",
+   "runtime": 112,
+   "poster": "https://media.trakt.tv/movies/29131/medium/poster.webp",
+   "posterKey": "movie-29131"
+  },
+  {
+   "id": "trakt-24602",
+   "title": "Eat Pray Love",
+   "year": 2010,
+   "released": "2010-08-12",
+   "rating": null,
+   "liked": false,
+   "genres": [
+    "drama",
+    "romance"
+   ],
+   "language": "en",
+   "country": "us",
+   "runtime": 133,
+   "poster": "https://media.trakt.tv/movies/24602/medium/poster.webp",
+   "posterKey": "movie-24602"
+  },
+  {
+   "id": "trakt-5405",
+   "title": "How to Train Your Dragon",
+   "year": 2010,
+   "released": "2010-03-26",
+   "rating": null,
+   "liked": false,
+   "genres": [
+    "adventure",
+    "animation",
+    "fantasy",
+    "family"
+   ],
+   "language": "en",
+   "country": "us",
+   "runtime": 98,
+   "poster": "https://media.trakt.tv/movies/5405/medium/poster.webp",
+   "posterKey": "movie-5405"
+  },
+  {
+   "id": "trakt-3449",
+   "title": "P.S. I Love You",
+   "year": 2007,
+   "released": "2007-12-21",
+   "rating": null,
+   "liked": false,
+   "genres": [
+    "drama",
+    "romance"
+   ],
+   "language": "en",
+   "country": "us",
+   "runtime": 126,
+   "poster": "https://media.trakt.tv/movies/3449/medium/poster.webp",
+   "posterKey": "movie-3449"
+  },
+  {
+   "id": "trakt-90",
+   "title": "The Lord of the Rings: The Return of the King",
+   "year": 2003,
+   "released": "2003-12-17",
+   "rating": null,
+   "liked": false,
+   "genres": [
+    "action",
+    "adventure",
+    "fantasy"
+   ],
+   "language": "en",
+   "country": "us",
+   "runtime": 201,
+   "poster": "https://media.trakt.tv/movies/90/medium/poster.webp",
+   "posterKey": "movie-90"
+  },
+  {
+   "id": "trakt-89",
+   "title": "The Lord of the Rings: The Two Towers",
+   "year": 2002,
+   "released": "2002-12-18",
+   "rating": null,
+   "liked": false,
+   "genres": [
+    "action",
+    "adventure",
+    "fantasy"
+   ],
+   "language": "en",
+   "country": "us",
+   "runtime": 179,
+   "poster": "https://media.trakt.tv/movies/89/medium/poster.webp",
+   "posterKey": "movie-89"
+  },
+  {
+   "id": "trakt-88",
+   "title": "The Lord of the Rings: The Fellowship of the Ring",
+   "year": 2001,
+   "released": "2001-12-19",
+   "rating": null,
+   "liked": false,
+   "genres": [
+    "action",
+    "adventure",
+    "fantasy"
+   ],
+   "language": "en",
+   "country": "us",
+   "runtime": 179,
+   "poster": "https://media.trakt.tv/movies/88/medium/poster.webp",
+   "posterKey": "movie-88"
   }
  ]
 }

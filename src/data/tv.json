@@ -6,12 +6,30 @@
    "year": 2026,
    "poster": "https://static.tvmaze.com/uploads/images/medium_portrait/639/1597644.jpg",
    "posterKey": "show-285217",
-   "url": "https://trakt.tv/shows/best-medicine",
-   "status": "watching",
+   "status": "dropped",
+   "showStatus": "returning series",
+   "seasons": [
+    {
+     "n": 1,
+     "watched": 0,
+     "aired": 13
+    },
+    {
+     "n": 2,
+     "watched": 0,
+     "aired": 7
+    }
+   ],
    "progress": 0,
    "total": 20,
    "minutes": 0,
    "score": null,
+   "genres": [
+    "comedy",
+    "drama"
+   ],
+   "language": "en",
+   "network": "FOX",
    "released": "2026-01-05"
   },
   {
@@ -19,12 +37,29 @@
    "year": 2025,
    "poster": "https://static.tvmaze.com/uploads/images/medium_portrait/641/1603022.jpg",
    "posterKey": "show-250203",
-   "url": "https://trakt.tv/shows/adults-2025",
    "status": "watching",
+   "showStatus": "returning series",
+   "seasons": [
+    {
+     "n": 1,
+     "watched": 0,
+     "aired": 9
+    },
+    {
+     "n": 2,
+     "watched": 0,
+     "aired": 8
+    }
+   ],
    "progress": 0,
    "total": 17,
    "minutes": 0,
    "score": null,
+   "genres": [
+    "comedy"
+   ],
+   "language": "en",
+   "network": "FXX",
    "released": "2025-05-29"
   },
   {
@@ -32,12 +67,34 @@
    "year": 2025,
    "poster": "https://static.tvmaze.com/uploads/images/medium_portrait/639/1597647.jpg",
    "posterKey": "show-241215",
-   "url": "https://trakt.tv/shows/doc-2025",
-   "status": "watching",
+   "status": "dropped",
+   "showStatus": "returning series",
+   "seasons": [
+    {
+     "n": 1,
+     "watched": 0,
+     "aired": 10
+    },
+    {
+     "n": 2,
+     "watched": 0,
+     "aired": 22
+    },
+    {
+     "n": 3,
+     "watched": 0,
+     "aired": 7
+    }
+   ],
    "progress": 0,
    "total": 39,
    "minutes": 0,
    "score": null,
+   "genres": [
+    "drama"
+   ],
+   "language": "en",
+   "network": "FOX",
    "released": "2025-01-08"
   },
   {
@@ -45,12 +102,35 @@
    "year": 2023,
    "poster": "https://static.tvmaze.com/uploads/images/medium_portrait/631/1577677.jpg",
    "posterKey": "show-180770",
-   "url": "https://trakt.tv/shows/silo",
    "status": "watching",
+   "showStatus": "returning series",
+   "seasons": [
+    {
+     "n": 1,
+     "watched": 0,
+     "aired": 10
+    },
+    {
+     "n": 2,
+     "watched": 0,
+     "aired": 10
+    },
+    {
+     "n": 3,
+     "watched": 0,
+     "aired": 10
+    }
+   ],
    "progress": 0,
    "total": 30,
    "minutes": 0,
    "score": null,
+   "genres": [
+    "drama",
+    "science-fiction"
+   ],
+   "language": "en",
+   "network": "Apple TV",
    "released": "2023-05-05"
   },
   {
@@ -58,13 +138,97 @@
    "year": 2022,
    "poster": "https://static.tvmaze.com/uploads/images/medium_portrait/636/1591350.jpg",
    "posterKey": "show-155536",
-   "url": "https://trakt.tv/shows/reacher",
    "status": "watching",
+   "showStatus": "returning series",
+   "seasons": [
+    {
+     "n": 1,
+     "watched": 0,
+     "aired": 8
+    },
+    {
+     "n": 2,
+     "watched": 0,
+     "aired": 8
+    },
+    {
+     "n": 3,
+     "watched": 0,
+     "aired": 8
+    },
+    {
+     "n": 4,
+     "watched": 0,
+     "aired": 8
+    }
+   ],
    "progress": 0,
    "total": 32,
    "minutes": 0,
    "score": null,
+   "genres": [
+    "action",
+    "adventure",
+    "crime"
+   ],
+   "language": "en",
+   "network": "Prime Video",
    "released": "2022-02-03"
+  },
+  {
+   "title": "Parks and Recreation",
+   "year": 2009,
+   "poster": "https://static.tvmaze.com/uploads/images/medium_portrait/481/1204341.jpg",
+   "posterKey": "show-8546",
+   "status": "completed",
+   "showStatus": "ended",
+   "seasons": [
+    {
+     "n": 1,
+     "watched": 6,
+     "aired": 6
+    },
+    {
+     "n": 2,
+     "watched": 24,
+     "aired": 24
+    },
+    {
+     "n": 3,
+     "watched": 16,
+     "aired": 16
+    },
+    {
+     "n": 4,
+     "watched": 22,
+     "aired": 22
+    },
+    {
+     "n": 5,
+     "watched": 22,
+     "aired": 22
+    },
+    {
+     "n": 6,
+     "watched": 20,
+     "aired": 20
+    },
+    {
+     "n": 7,
+     "watched": 12,
+     "aired": 12
+    }
+   ],
+   "progress": 122,
+   "total": 122,
+   "minutes": 2684,
+   "score": null,
+   "genres": [
+    "comedy"
+   ],
+   "language": "en",
+   "network": "NBC",
+   "released": "2009-04-10"
   }
  ]
 }

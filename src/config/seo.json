@@ -8,8 +8,12 @@
       "description": "Aju Ani Justus is a doctoral researcher at the University of Birmingham working on heterogeneous-agent reinforcement learning, agent communication and human-agent teaming.",
       "index": true
     },
-    "/home": { "same": "/" },
-    "/splash": { "same": "/" },
+    "/home": {
+      "same": "/"
+    },
+    "/splash": {
+      "same": "/"
+    },
     "/contact": {
       "title": "Contact | Aju Ani Justus",
       "description": "Get in touch with Aju Ani Justus at the School of Computer Science, University of Birmingham: email, office location, CV and academic profiles.",
@@ -20,7 +24,9 @@
       "description": "You found the secret side of ajuanijustus.com.",
       "index": false
     },
-    "/secret/home": { "same": "/secret" },
+    "/secret/home": {
+      "same": "/secret"
+    },
     "/secret/contact": {
       "title": "Socials | Aju Ani Justus",
       "description": "Every corner of the internet where you can find Aju Ani Justus.",
@@ -53,7 +59,7 @@
     },
     "/secret/games": {
       "title": "Games | Aju Ani Justus",
-      "description": "Aju Ani Justus's favourite video games.",
+      "description": "Aju Ani Justus's favourite video games, streams and videos.",
       "index": false
     },
     "/secret/plants": {
@@ -67,16 +73,16 @@
       "index": false
     },
     "/secret/videos": {
-      "title": "Videos | Aju Ani Justus",
-      "description": "Streams, clips and videos by Aju Ani Justus.",
-      "index": false
+      "same": "/secret/games"
     },
     "/legacy": {
       "title": "Legacy | Aju Ani Justus",
       "description": "The previous version of ajuanijustus.com.",
       "index": false
     },
-    "/legacy/home": { "same": "/legacy" },
+    "/legacy/home": {
+      "same": "/legacy"
+    },
     "/legacy/contact": {
       "title": "Legacy Contact | Aju Ani Justus",
       "description": "The previous version of ajuanijustus.com.",

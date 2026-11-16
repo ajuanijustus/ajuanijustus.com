@@ -27,7 +27,7 @@ all the data is in src/data/. pages are in src/pages/secret/ (books ones in src/
 
 updates itself every night (.github/workflows/update.yml), or run it by hand from the actions tab:
 - anime + manga: anilist. ANILIST_USER variable
-- films + tv: trakt. TRAKT_USER variable, TRAKT_CLIENT_ID secret. posters come from trakt; if some films have none, add a free tmdb key as the TMDB_API_KEY secret
+- films + tv: trakt. TRAKT_USER variable, TRAKT_CLIENT_ID secret. posters come from trakt; if some films have none, add a free tmdb key as the TMDB_API_KEY secret. to mark a show as done, add it to a public trakt list called "done"
 the action commits "update data" to master, so git pull before pushing.
 
 by hand, rarely:
@@ -35,7 +35,7 @@ by hand, rarely:
 - games: src/data/games.json ({ "title", "steam": app id from the store url, "platform", "year", "hours", "note" }). non steam: image in public/secret/games/ and "cover": "file.jpg"
 - plants: src/data/plants.json ({ "name", "species", "since": "2025-04-01", "water": "weekly", "photo": "file.jpg", "note" }), photos in public/secret/plants/
 - recipes: one .md file per recipe in src/data/recipes/ (format at the top of scripts/data/recipes.js), photos in public/secret/kitchen/
-- videos/photos: src/data/media.json. youtube: { "id", "title" }. twitch: { "clip": clip slug, "title", "thumb": "file.jpg" in public/secret/videos/ }. photos: { "file" in public/secret/photos/, "link": instagram post url, "alt" }
+- videos (shown on the games page): src/data/media.json. youtube: { "id", "title" }. twitch: { "clip": clip slug, "title", "thumb": "file.jpg" in public/secret/games/ }
 
 books (goodreads dropped rss in oct 2025, so this one stays manual): my books > import and export > export library -> save as goodreads_library_export.csv in the repo root (gitignored, has private notes) -> python3 scripts/data/goodreads.py --csv goodreads_library_export.csv -> commit, push, deploy
 

@@ -36,8 +36,9 @@ def clean_isbn(s):
 
 
 def to_int(s):
+    # newer exports write ratings as "5.0"
     try:
-        return int(s)
+        return int(float(s))
     except (TypeError, ValueError):
         return None
 

@@ -8,6 +8,9 @@ client id: trakt.tv > settings > your api apps > new application
 
 posters come from trakt itself. if trakt doesn't have one, shows fall back to
 tvmaze (no key needed) and films to tmdb if TMDB_API_KEY is set.
+
+to mark a show as done (dropped, or just finished with it), add it to a public
+trakt list called "done". it moves to the "done with" section on the site.
 """
 import json
 import os
@@ -101,39 +104,71 @@ def movies(s, user, posters):
             "year": m.get("year"),
             "released": m.get("released"),
             "rating": rating / 2 if rating else None,
-            "rewatch": (w.get("plays") or 1) > 1,
             "liked": bool(rating and rating >= 9),
+            "genres": m.get("genres") or [],
+            "language": m.get("language"),
+            "country": m.get("country"),
+            "runtime": m.get("runtime"),
             "poster": poster,
             "posterKey": key,
-            "url": f"https://trakt.tv/movies/{m['ids'].get('slug')}",
         })
     items.sort(key=lambda x: (x["released"] or str(x["year"] or ""), x["title"]), reverse=True)
     return items
 
 
+def done_list(s, user):
+    # a public trakt list called "done" holds shows i've given up on or don't care about anymore
+    r = s.get(f"https://api.trakt.tv/users/{user}/lists/done/items/shows", timeout=30)
+    if r.status_code == 404:
+        return set()
+    r.raise_for_status()
+    return {x["show"]["ids"]["trakt"] for x in r.json() if x.get("show")}
+
+
 def shows(s, user, posters):
     ratings = {r["show"]["ids"]["trakt"]: r["rating"] for r in s.get(f"https://api.trakt.tv/users/{user}/ratings/shows", timeout=30).json()}
+    done = done_list(s, user)
     watched = s.get(f"https://api.trakt.tv/users/{user}/watched/shows", params={"extended": "full,images"}, timeout=30)
     watched.raise_for_status()
     items = []
     for w in watched.json():
         show = w["show"]
         ids = show.get("ids", {})
-        seen = sum(len(season.get("episodes", [])) for season in w.get("seasons", []) if season.get("number", 1) > 0)
-        aired = show.get("aired_episodes") or 0
-        status = "completed" if aired and seen >= aired else "watching"
+        seen_by_season = {season["number"]: len(season.get("episodes", [])) for season in w.get("seasons", [])}
+
+        r = s.get(f"https://api.trakt.tv/shows/{ids['trakt']}/seasons", params={"extended": "full"}, timeout=30)
+        aired_by_season = {x["number"]: x.get("aired_episodes") or 0 for x in (r.json() if r.ok else [])}
+        time.sleep(0.2)
+
+        seasons = [
+            {"n": n, "watched": min(seen_by_season.get(n, 0), aired), "aired": aired}
+            for n, aired in sorted(aired_by_season.items())
+            if n > 0 and aired > 0
+        ]
+        seen = sum(x["watched"] for x in seasons) or sum(v for k, v in seen_by_season.items() if k > 0)
+        aired = sum(x["aired"] for x in seasons) or show.get("aired_episodes") or 0
+        if ids.get("trakt") in done:
+            status = "done"
+        elif aired and seen >= aired:
+            status = "caught up"
+        else:
+            status = "watching"
         key, poster = posters.show(show)
         items.append({
             "title": show["title"],
             "year": show.get("year"),
             "poster": poster,
             "posterKey": key,
-            "url": f"https://trakt.tv/shows/{ids.get('slug')}",
             "status": status,
+            "showStatus": show.get("status"),
+            "seasons": seasons,
             "progress": seen,
             "total": aired or None,
             "minutes": seen * (show.get("runtime") or 0),
             "score": ratings.get(ids.get("trakt")),
+            "genres": show.get("genres") or [],
+            "language": show.get("language"),
+            "network": show.get("network"),
             "released": (show.get("first_aired") or "")[:10] or None,
         })
     items.sort(key=lambda x: (x["released"] or str(x["year"] or ""), x["title"]), reverse=True)

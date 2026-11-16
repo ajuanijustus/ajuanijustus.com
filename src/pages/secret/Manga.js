@@ -5,7 +5,6 @@ import manga from "../../data/manga.json";
 const card = (x) => ({
   title: x.title,
   image: x.poster,
-  url: x.url,
   rating: x.score ? x.score / 2 : null,
   meta: x.status === "reading" && x.progress ? `ch ${x.progress}${x.total ? ` / ${x.total}` : ""}` : x.year,
 });

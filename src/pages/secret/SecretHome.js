@@ -10,7 +10,6 @@ import travel from "../../data/travel.json";
 import games from "../../data/games.json";
 import plants from "../../data/plants.json";
 import recipes from "../../data/recipes.json";
-import media from "../../data/media.json";
 
 const read = books.filter((b) => b.shelf === "read" || b.shelf === "before-goodreads");
 const reading = books.find((b) => b.shelf === "currently-reading");
@@ -52,16 +51,9 @@ const sections = [
     title: "Travel",
     teaser: `${travel.visited.length} ${travel.visited.length === 1 ? "country" : "countries"} so far.`,
   },
-  { to: "/secret/games", icon: "🎮", title: "Games", teaser: "favourites, and why.", soon: !games.games.length },
+  { to: "/secret/games", icon: "🎮", title: "Games", teaser: `${games.games.length} favourites, plus my streams.` },
   { to: "/secret/plants", icon: "🪴", title: "Plants", teaser: plants.plants.length ? `${plants.plants.length} plants, all still alive.` : "the green roommates.", soon: !plants.plants.length },
   { to: "/secret/kitchen", icon: "🍳", title: "Kitchen", teaser: recipes.length ? `${recipes.length} go-to recipes.` : "my go-to recipes.", soon: !recipes.length },
-  {
-    to: "/secret/videos",
-    icon: "📺",
-    title: "Videos",
-    teaser: "streams, clips and videos.",
-    soon: !media.youtube.length && !media.twitch.length,
-  },
 ];
 
 export default function SecretHome(props) {

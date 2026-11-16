@@ -27,7 +27,6 @@ const Travel = lazy(() => import("./pages/secret/Travel"));
 const Games = lazy(() => import("./pages/secret/Games"));
 const Plants = lazy(() => import("./pages/secret/Plants"));
 const Kitchen = lazy(() => import("./pages/secret/Kitchen"));
-const Videos = lazy(() => import("./pages/secret/Videos"));
 
 function App() {
   const [currentTheme, setCurrentTheme] = useState(chosenTheme);
@@ -63,7 +62,7 @@ function App() {
             <Route path="/secret/games" element={<Games {...pageProps} />} />
             <Route path="/secret/plants" element={<Plants {...pageProps} />} />
             <Route path="/secret/kitchen" element={<Kitchen {...pageProps} />} />
-            <Route path="/secret/videos" element={<Videos {...pageProps} />} />
+            <Route path="/secret/videos" element={<Navigate to="/secret/games" replace />} />
 
             <Route path="/legacy" element={<LegacyHome {...pageProps} />} />
             <Route path="/legacy/home" element={<LegacyHome {...pageProps} />} />

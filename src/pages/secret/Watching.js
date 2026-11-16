@@ -113,7 +113,8 @@ function ShowCard({ show }) {
         <span className="tv-meta">
           {[show.year, show.network, show.showStatus === "ended" || show.showStatus === "canceled" ? show.showStatus : null].filter(Boolean).join(" · ")}
         </span>
-        {show.status === "watching" && left > 0 && (
+        {show.status === "watching" && show.progress === 0 && <span className="tv-left">not started yet</span>}
+        {show.status === "watching" && show.progress > 0 && left > 0 && (
           <span className="tv-left">
             {left} episode{left === 1 ? "" : "s"} to go
           </span>
@@ -141,8 +142,9 @@ function Shows() {
   const items = tv.items;
   if (!items.length) return <Empty>nothing here yet.</Empty>;
   const watching = items.filter((x) => x.status === "watching");
-  const caughtUp = items.filter((x) => x.status === "caught up" || x.status === "completed");
-  const done = items.filter((x) => x.status === "done");
+  const caughtUp = items.filter((x) => x.status === "caught up");
+  const completed = items.filter((x) => x.status === "completed");
+  const dropped = items.filter((x) => x.status === "dropped" || x.status === "done");
   const episodes = items.reduce((s, x) => s + (x.progress || 0), 0);
   const minutes = items.reduce((s, x) => s + (x.minutes || 0), 0);
   const group = (title, list, desc) =>
@@ -164,9 +166,10 @@ function Shows() {
           {minutes > 0 && <Tile value={`${Math.round(minutes / 60)}h`} label="of tv" foot={`about ${(minutes / 1440).toFixed(1)} days`} />}
         </Tiles>
       </Section>
-      {group("Still watching", watching, "shows with episodes i haven't seen yet, including new seasons.")}
-      {group("Caught up", caughtUp, "seen everything that's out. these move back up when a new season drops.")}
-      {group("Done with", done)}
+      {group("Still watching", watching, "shows with episodes i haven't seen yet, new seasons, and ones i'm about to start.")}
+      {group("Caught up", caughtUp, "seen everything that's out so far. these move back up when a new season drops.")}
+      {group("Completed", completed, "seen it all, and the show has ended.")}
+      {group("Dropped", dropped)}
       <Breakdown items={items} unit="shows" />
     </>
   );

@@ -28,11 +28,36 @@ all the data is in src/data/. pages are in src/pages/secret/ (books ones in src/
 
 ### logging, every once in a while
 
-- films + tv: trakt. search and hit "watched": https://trakt.tv/search
-  - mark a show as done: add it to my "done" list (create it once, public): https://trakt.tv/users/ajewdor/lists
-- anime: https://anilist.co/search/anime
-- manga: https://anilist.co/search/manga
-- books: goodreads as usual, then export (see below)
+films + tv on trakt, anime + manga on anilist, books on goodreads. the site sorts everything by release date, not by when i logged it, so backlogging old stuff is fine.
+
+#### anilist (anime + manga)
+
+- add: https://anilist.co/search/anime or https://anilist.co/search/manga
+- set the status on each entry:
+  - watching / reading: what i'm on now, or about to start following
+  - completed: finished
+  - paused: manga only, shown under its own heading
+  - dropped, planning: kept off the site
+- update progress: the "+" next to the episode/chapter count on my list, or the entry's edit box
+- list: https://anilist.co/user/ajewdor/animelist
+
+#### trakt (films + tv)
+
+trakt has no status buttons, so the site works the status out from what's logged:
+
+| site section | how it gets there on trakt |
+|---|---|
+| still watching | episodes left to watch, or on my watchlist and not started |
+| caught up | every aired episode watched, show still running |
+| completed | every aired episode watched, show ended or cancelled |
+| dropped | on my public list called "dropped" |
+
+- films: search, hit "watched": https://trakt.tv/search. rating is optional
+- shows i'm on: tick episodes as i go, or "mark as watched" on a whole season to catch up in one go
+- shows i'm about to start: add to the watchlist (bookmark icon on the show page)
+- dropping a show: show page -> lists -> "dropped". taking it off the list puts it back
+- lists: https://trakt.tv/users/ajewdor/lists. the only one needed is "dropped", set to public, named exactly that. my old "done" list still counts as dropped
+- trakt's own "drop show" button doesn't work for the site, it's private and the update only reads the public profile
 
 then either wait for sunday, or run it now: https://github.com/ajuanijustus/ajuanijustus.com/actions/workflows/update.yml -> run workflow.
 it commits "update data" to master, so git pull before pushing.
@@ -71,3 +96,4 @@ rm -rf node_modules package-lock.json
 npm install
 
 npm audit warnings are from create-react-app's build tools. the site is static files, so they don't affect the live site.
+the "overrides" in package.json pin patched versions of some of those tools. what's left (webpack-dev-server, svgo, jest) can only go by moving off react-scripts.

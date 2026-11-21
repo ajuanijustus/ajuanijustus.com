@@ -1,6 +1,6 @@
 name: update data
 
-# every sunday (or by hand from the actions tab): pull trakt (films + tv) and anilist (anime + manga), and redeploy if anything changed.
+# every sunday (or by hand from the actions tab): pull trakt (films + tv), anilist (anime + manga) and live diary covers from spotify, and redeploy if anything changed.
 # books are updated by hand from a goodreads export (see README).
 # usernames are repo variables, keys are repo secrets (settings > secrets and variables > actions).
 
@@ -38,6 +38,7 @@ jobs:
         run: |
           python scripts/data/anilist.py || true
           python scripts/data/trakt.py || true
+          python scripts/data/spotify.py || true
 
       - name: commit
         id: commit

@@ -77,6 +77,11 @@
       "description": "Aju Ani Justus's favourite video games, streams and videos.",
       "index": false
     },
+    "/secret/live": {
+      "title": "Live diary | Aju Ani Justus",
+      "description": "Concerts and shows Aju Ani Justus has been to.",
+      "index": false
+    },
     "/secret/plants": {
       "title": "Plants | Aju Ani Justus",
       "description": "Aju Ani Justus's plants.",

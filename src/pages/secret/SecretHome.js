@@ -10,6 +10,7 @@ import travel from "../../data/travel.json";
 import games from "../../data/games.json";
 import plants from "../../data/plants.json";
 import recipes from "../../data/recipes.json";
+import live from "../../data/live.json";
 
 const read = books.filter((b) => b.shelf === "read" || b.shelf === "before-goodreads");
 const reading = books.find((b) => b.shelf === "currently-reading");
@@ -52,6 +53,13 @@ const sections = [
     teaser: `${travel.visited.length} ${travel.visited.length === 1 ? "country" : "countries"} so far.`,
   },
   { to: "/secret/games/", icon: "🎮", title: "Games", teaser: `${games.games.length} favourites, plus my streams.` },
+  {
+    to: "/secret/live/",
+    icon: "🎤",
+    title: "Live diary",
+    teaser: live.playlists.length ? `${live.playlists.length} ${live.playlists.length === 1 ? "show" : "shows"} in the diary.` : "concerts and shows i've been to.",
+    soon: !live.playlists.length,
+  },
   { to: "/secret/plants/", icon: "🪴", title: "Plants", teaser: plants.plants.length ? `${plants.plants.length} plants, all still alive.` : "the green roommates.", soon: !plants.plants.length },
   { to: "/secret/kitchen/", icon: "🍳", title: "Kitchen", teaser: recipes.length ? `${recipes.length} go-to recipes.` : "my go-to recipes.", soon: !recipes.length },
 ];

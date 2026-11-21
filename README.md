@@ -64,6 +64,15 @@ trakt has no status buttons, so the site works the status out from what's logged
 then either wait for sunday, or run it now: https://github.com/ajuanijustus/ajuanijustus.com/actions/workflows/update.yml -> run workflow.
 it commits "update data" to master, so git pull before pushing.
 
+#### live diary (spotify)
+
+my LIVE DIARY folder isn't visible to spotify's api, so each playlist gets added once by hand:
+1. spotify -> the playlist -> share -> copy link. the playlist has to be public
+2. add it to src/data/live.json: { "url": "https://open.spotify.com/playlist/...", "date": "2025-06", "note": "optional line" }
+   name the playlist "[LIVE Diary] Artist – City, Mon YYYY". the site drops the "[LIVE Diary]" and the date from the title, and uses "date" instead
+   my public playlists: https://open.spotify.com/user/5m6qysxxgn7vz6uhrzolm6dto/playlists
+3. the sunday update fills in the title and cover, or run python3 scripts/data/spotify.py now
+
 ### books (manual, goodreads dropped rss in oct 2025)
 
 1. export: https://www.goodreads.com/review/import -> "export library", wait, download
@@ -85,6 +94,14 @@ it commits "update data" to master, so git pull before pushing.
 - videos (shown on the games page): src/data/media.json. youtube: { "id", "title" }. twitch: { "clip": clip slug, "title", "thumb": "file.jpg" in public/secret/games/ }
 - plants: src/data/plants.json ({ "name", "species", "since": "2025-04-01", "water": "weekly", "photo": "file.jpg", "note" }), photos in public/secret/plants/
 - recipes: one .md file per recipe in src/data/recipes/ (format at the top of scripts/data/recipes.js), photos in public/secret/kitchen/
+
+### booking link (contact page)
+
+shows "book a chat · coming soon" until it's switched on.
+1. google calendar -> create -> appointment schedule. 20 min, add buffer time and a max bookings per day
+2. open the booking page, copy its link (calendar.app.google/...)
+3. src/config/portfolio.js -> contactPageData.contactSection.booking: paste it as url, set live: true
+4. commit, push, npm run deploy
 
 ### new photo
 

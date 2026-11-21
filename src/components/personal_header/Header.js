@@ -13,6 +13,7 @@ const LINKS = [
   { to: "/secret/manga/", label: "Manga" },
   { to: "/secret/travel/", label: "Travel" },
   { to: "/secret/games/", label: "Games" },
+  { to: "/secret/live/", label: "Live" },
   { to: "/secret/contact/", label: "Contact" },
 ];
 

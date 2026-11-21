@@ -28,6 +28,7 @@ const Watching = lazy(() => import("./pages/secret/Watching"));
 const Manga = lazy(() => import("./pages/secret/Manga"));
 const Travel = lazy(() => import("./pages/secret/Travel"));
 const Games = lazy(() => import("./pages/secret/Games"));
+const Live = lazy(() => import("./pages/secret/Live"));
 const Plants = lazy(() => import("./pages/secret/Plants"));
 const Kitchen = lazy(() => import("./pages/secret/Kitchen"));
 
@@ -66,6 +67,7 @@ function App() {
             <Route path="/secret/manga" element={<Manga {...pageProps} />} />
             <Route path="/secret/travel" element={<Travel {...pageProps} />} />
             <Route path="/secret/games" element={<Games {...pageProps} />} />
+            <Route path="/secret/live" element={<Live {...pageProps} />} />
             <Route path="/secret/plants" element={<Plants {...pageProps} />} />
             <Route path="/secret/kitchen" element={<Kitchen {...pageProps} />} />
             <Route path="/secret/videos" element={<Navigate to="/secret/games/" replace />} />

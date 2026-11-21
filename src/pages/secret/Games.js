@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import SecretPage, { Section } from "../../components/secret/SecretPage";
+import Facade from "../../components/secret/Facade";
 import games from "../../data/games.json";
 import media from "../../data/media.json";
 import "./secret-pages.css";
@@ -12,29 +13,6 @@ const coverOf = (g) =>
     : g.steam
     ? `https://cdn.cloudflare.steamstatic.com/steam/apps/${g.steam}/header.jpg`
     : null;
-
-// shows a thumbnail first and only loads the player when someone presses play
-function Facade({ title, thumb, src, source }) {
-  const [playing, setPlaying] = useState(false);
-  return (
-    <div className="vd-card">
-      <div className="vd-frame">
-        {playing ? (
-          <iframe src={src} title={title} allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowFullScreen />
-        ) : (
-          <>
-            {thumb && <img src={thumb} alt="" loading="lazy" />}
-            <button className="vd-play" onClick={() => setPlaying(true)} aria-label={`play ${title}`}>
-              <span>▶</span>
-            </button>
-          </>
-        )}
-      </div>
-      <span className="vd-title">{title}</span>
-      <span className="vd-source">{source}</span>
-    </div>
-  );
-}
 
 export default function Games(props) {
   const { youtube, twitch } = media;

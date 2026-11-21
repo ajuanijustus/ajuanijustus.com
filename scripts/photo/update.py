@@ -11,6 +11,7 @@ writes:
   src/assets/images/linkedin_dp_overlay_round_repos.png   the photo on home and contact pages
   public/favicon-*, apple-icon-*, android-icon-*, ms-icon-*   browser tab, home screen icons, footer easter egg
   public/og-card.jpg                                  the whatsapp/linkedin/x preview card
+  brand/assets/                                       banners, profile picture, post templates
 """
 import os
 import subprocess
@@ -69,6 +70,7 @@ def main():
     save(im, 192, P("public", "apple-icon-precomposed.png"))
     subprocess.run([sys.executable, P("scripts", "photo", "card.py"), ROOT, P("public", "og-card.jpg")], check=True)
     print("   public/og-card.jpg")
+    subprocess.run([sys.executable, P("scripts", "brand", "make.py")], check=True)
 
 
 if __name__ == "__main__":

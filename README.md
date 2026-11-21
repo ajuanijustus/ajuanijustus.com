@@ -107,19 +107,23 @@ shows "book a chat · coming soon" until it's switched on.
 
 1. get a square photo, 1000px or more. best is a png cut-out with a transparent background, like the current one with my head popping out of the circle (remove.bg or photoshop). a normal photo works too, it gets cropped to a circle.
 2. python3 scripts/photo/update.py path/to/photo.png
-   rebuilds every copy: home and contact page photo, public/profile.png, the browser tab and home screen icons (the footer easter egg uses one), and the link preview card public/og-card.jpg
+   rebuilds every copy: home and contact page photo, public/profile.png, the browser tab and home screen icons (the footer easter egg uses one), the link preview card public/og-card.jpg, and the banners and profile picture in brand/assets/
 3. npm start, check the home page, contact page and the tab icon
 4. commit, push, npm run deploy
-5. elsewhere, same photo everywhere so google ties them together:
+5. elsewhere, same photo everywhere so google ties them together (brand/assets/profile-picture.png, and the banners from brand/README.md):
    - google scholar, orcid, linkedin, github, researchgate, semantic scholar
    - university pure profile and school staff/phd page
    - x, bluesky, instagram, youtube, twitch, substack, goodreads, trakt, anilist
    - google account photo (shows in the knowledge panel once it's claimed)
    - cv, if it has a photo
 
+### brand
+
+colours, fonts, bios, writing style, banners and post images for linkedin, github and the rest: brand/README.md
+
 ### link previews (whatsapp, linkedin, x...)
 
-public/og-card.jpg, 1200x630. scripts/photo/card.py draws it from public/profile.png and the site fonts. after changing the name, title or research line in that script:
+public/og-card.jpg, 1200x630. scripts/photo/card.py draws it with the layout in scripts/brand/brand.py. after changing the name, title or research line there:
 
 python3 scripts/photo/card.py . public/og-card.jpg
 

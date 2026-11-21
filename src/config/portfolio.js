@@ -298,7 +298,9 @@ const skills = {
 const contactPageData = {
   contactSection: {
     title: "Contact Me",
-    profile_image_path: "linkedin_dp_overlay_round_repos.png"
+    profile_image_path: "linkedin_dp_overlay_round_repos.png",
+    // google calendar appointment schedule link. leave live false to show "coming soon"
+    booking: { url: "", live: false }
   },
   blogSection: {
     title: "Blogs",

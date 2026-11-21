@@ -44,6 +44,7 @@ const CompactIconWrapper = styled.span`
 `;
 
 const ContactData = contactPageData.contactSection;
+const booking = ContactData.booking;
 
 export default function Contact(props) {
   const theme = props.theme;
@@ -129,6 +130,13 @@ export default function Contact(props) {
 
                 <div className="contact-resume-action">
                   <Button text="See My Resume" newTab={true} href={myResume} theme={theme} />
+                  {booking && booking.live && booking.url ? (
+                    <Button text="Book a 20-min chat" newTab={true} href={booking.url} theme={theme} />
+                  ) : (
+                    <span className="contact-booking-soon" aria-disabled="true" style={{ color: theme.secondaryText, borderColor: theme.secondaryText }}>
+                      Book a chat · coming soon
+                    </span>
+                  )}
                 </div>
               </div>
             </div>

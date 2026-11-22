@@ -32,15 +32,12 @@ def x_banner():
 def youtube_banner():
     # youtube crops to a 1546x423 middle strip on phones, so everything goes in there
     top = (1440 - 423) // 2
-    return brand.strip(2560, 1440, left=577, right=1983, top=top, bottom=top + 423, glow=(1820, 470, 2420, 970))
+    return brand.strip(2560, 1440, left=577, right=1983, top=top, bottom=top + 423)
 
 
 def github_header():
-    # top of the github profile readme: the strip plus a small photo on the right
-    img = brand.strip(1280, 320, left=70, right=960, glow=(900, -40, 1320, 360))
-    p = brand.cutout(280)
-    img.paste(p, (1280 - p.width - 60, 320 - p.height), p)
-    return img
+    # top of the github profile readme. github already shows my picture next to it
+    return brand.strip(1280, 320, left=70, right=1210)
 
 
 def slug(title):

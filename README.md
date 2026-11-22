@@ -108,7 +108,7 @@ shows "book a chat · coming soon" until it's switched on.
 1. get a photo, 1000px or more, and remove the background (remove.bg, adobe firefly). a normal photo works too, it gets cropped to a circle.
 2. python3 scripts/photo/update.py path/to/photo.png --mute-greens
    puts me on the dark circle with my head breaking out of the top, cleans the leftover tint from the old background off the hair and edges, and (with --mute-greens) greys out green clothing so it sits with the red. --as-is if the png already has its own circle
-   rebuilds every copy: home and contact page photo, public/profile.png, the browser tab and home screen icons (the footer easter egg uses one), the link preview card public/og-card.jpg, and the banners and profile picture in brand/assets/
+   rebuilds every copy: home and contact page photo, public/profile.png, the browser tab and home screen icons (the footer easter egg uses one), and brand/assets/profile-picture.png. the banners and link preview card are text only, they get regenerated too but don't change
 3. npm start, check the home page, contact page and the tab icon
 4. commit, push, npm run deploy
 5. elsewhere, same photo everywhere so google ties them together (brand/assets/profile-picture.png, and the banners from brand/README.md):

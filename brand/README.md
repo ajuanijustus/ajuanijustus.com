@@ -32,10 +32,11 @@ when something changes (new role, graduation) change it on the site first, then 
 | background | `#121212` | almost everything sits on this. not pure black |
 | text | `#E0E0E0` | headings, names, body text. not pure white |
 | muted | `#969696` | second lines, places, research areas, captions |
-| red | `#B30000` | the accent. one short rule above a heading, links, the url. never big blocks of it |
-| glow | `#460808` | a soft blurred patch behind the photo or in a corner, so it's not flat. optional |
+| red | `#B30000` | the accent, used small: one short rule above a heading, a kicker word, links on the site |
+| dark red | `#7D0C0C` | the thin ring round the profile picture |
+| glow | `#2C0A0A` | a faint blurred patch behind the text, so the background isn't flat. barely there |
 
-red is a highlight, not a background. if more than about 5% of an image is red, it's too much.
+red is a highlight, not a background. the url and other secondary text are grey, not red. if you notice the red before the name, there's too much of it.
 
 light version (the site has a light theme): swap background and text, keep red and muted.
 
@@ -48,18 +49,19 @@ light version (the site has a light theme): swap background and text, keep red a
 ## photo
 
 - one photo, used everywhere at the same time. when it changes, it changes on every profile in the same week
+- the photo is for profile pictures and the site. banners, cards and posts are text only: the profile picture already sits next to them, and two faces side by side looks cluttered
 - the cut-out style: me on a dark round background, head allowed to break out of the circle
 - always on the dark background, never on white or busy colours
 - to swap it everywhere on the site and regenerate every asset here: `python3 scripts/photo/update.py path/to/photo.png` (see the main README, "new photo")
 
 ## layouts
 
-all built on the share card (`assets/share-card.png`): a short red rule, the name big, role and place under it, the research areas in muted grey, the url in red at the bottom, photo on the right with the glow behind it.
+all built on the share card (`assets/share-card.png`): a short red rule, the name big, role and place under it, the research areas in muted grey, the url in grey at the bottom, a faint glow behind the text. the signature can sit quietly in a corner when there's room.
 
 - left aligned, lots of empty space, one idea per image
 - banners: text sits on the side the profile picture doesn't cover
 - posts: red rule, optional small red kicker ("new paper", "conference notes"), the title big, my name and the url along the bottom
-- no stock images, emoji, icons-as-decoration, gradients beyond the one glow, drop shadows or rounded boxes around text
+- no photos outside the profile picture, no stock images, emoji, icons-as-decoration, gradients beyond the one glow, drop shadows or rounded boxes around text
 
 ## writing
 
@@ -84,13 +86,13 @@ all in `assets/`, made by `scripts/brand/make.py`.
 
 | file | size | where |
 |---|---|---|
-| `profile-picture.png` | 800×800 | every profile picture: linkedin, github, x, bluesky, scholar, orcid, slack, teams |
+| `profile-picture.png` | 800×800 | every profile picture: linkedin, github, x, bluesky, scholar, orcid, slack, teams. the only asset with the photo |
 | `linkedin-banner.png` | 1584×396 | linkedin background photo |
 | `x-bluesky-banner.png` | 3000×1000 | x header and bluesky banner (same 3:1 shape) |
 | `youtube-banner.png` | 2560×1440 | youtube banner. the text sits in the 1546×423 middle strip that phones show |
 | `github-header.png` | 1280×320 | top of the github profile readme (`ajuanijustus/ajuanijustus` repo) |
 | `github-social-preview.png` | 1280×640 | repo settings -> social preview, for repos that don't have their own |
-| `share-card.png` | 1200×630 | same as the site's link preview, for slides or anywhere a wide card fits |
+| `share-card.png` | 1200×630 | same as the site's link preview (whatsapp, linkedin, x), for slides or anywhere a wide card fits |
 | `post-template.png` | 1080×1350 | what a tall post looks like (linkedin, instagram) |
 | `post-template-wide.png` | 1200×627 | what a wide post looks like (linkedin link posts, x) |
 

@@ -299,7 +299,7 @@ const contactPageData = {
   contactSection: {
     title: "Contact Me",
     profile_image_path: "linkedin_dp_overlay_round_repos.png",
-    // google calendar appointment schedule link. leave live false to show "coming soon"
+    // cal.com booking link (setup in the README). leave live false to show "coming soon"
     booking: { url: "", live: false }
   },
   blogSection: {
@@ -323,6 +323,16 @@ const contactPageData = {
 
 // --- Academic Research News ---
 const news = [
+  {
+    date: "Nov 2026",
+    text: "Leading a Reinforcement Learning workshop with the University of Birmingham AI Society on 24 November: how agents learn from experience, final-year project ideas and real-world applications.",
+    link: "https://www.instagram.com/p/Df926N9jEk9/"
+  },
+  {
+    date: "Nov 2026",
+    text: "PhD information session with the Computer Science Society (CSS) at the University of Birmingham, on what doing a PhD in computer science is actually like.",
+    link: ""
+  },
   {
     date: "Jul 2026",
     text: "Invited to give a talk to high school students at the University of Birmingham CS Summer School on 'How do Computers Learn to Play Games', a first look at reinforcement learning.",
@@ -581,6 +591,8 @@ const teaching = [
 ];
 
 const talks = [
+  { date: "Nov 2026", title: "Reinforcement Learning workshop", kind: "Workshop", where: "University of Birmingham AI Society" },
+  { date: "Nov 2026", title: "PhD information session", kind: "Info session", where: "Computer Science Society (CSS), University of Birmingham" },
   { date: "Jul 2026", title: "How do Computers Learn to Play Games", kind: "Invited talk", where: "University of Birmingham CS Summer School, for high school students" },
   { date: "May 2026", title: "voice2mode: Phonation Mode Classification in Singing", kind: "Oral presentation", where: "ICASSP 2026, Barcelona" },
   { date: "May 2026", title: "Grounded Communication Policies in Heterogeneous Agent Reinforcement Learning", kind: "Spotlight talk and poster", where: "AAMAS 2026 Doctoral Consortium, Paphos" },

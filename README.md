@@ -97,11 +97,38 @@ my LIVE DIARY folder isn't visible to spotify's api, so each playlist gets added
 
 ### booking link (contact page)
 
-shows "book a chat · coming soon" until it's switched on.
-1. google calendar -> create -> appointment schedule. 20 min, add buffer time and a max bookings per day
-2. open the booking page, copy its link (calendar.app.google/...)
-3. src/config/portfolio.js -> contactPageData.contactSection.booking: paste it as url, set live: true
-4. commit, push, npm run deploy
+the contact page shows "request a chat · coming soon" until it's switched on. it's a plain link out, no embed.
+
+google calendar's own appointment schedules can check several calendars and stick to set hours, but every booking is confirmed straight away, there's no approve/decline. cal.com does all of it (free) and sits on top of google calendar, so that's what this uses.
+
+how it should behave:
+- only offers slots inside my chat hours (say tue and thu afternoons)
+- and only where every one of my calendars is free (personal, uni, pint of science...)
+- a booking arrives as a request, i accept or decline, and only then does it land in my calendar with a meet link
+
+1. sign up at https://cal.com with my google account. username ajuanijustus, so the page is cal.com/ajuanijustus
+2. calendars: settings -> calendars -> connect google calendar
+   - "check for conflicts": tick every calendar that should block time. busy events block, events marked "free" don't
+   - "add events to": the calendar accepted chats go into
+   - uni calendar (outlook): connect it here too as office 365. if the uni blocks that, subscribe to its ics link inside google calendar instead and tick it here (subscribed calendars can lag by hours)
+3. chat hours: availability -> new schedule, call it "chat hours", timezone europe/london
+   - e.g. tue 14:00-16:00, thu 14:00-16:00
+   - date overrides for conferences, holidays and deadline weeks (mark the day unavailable)
+4. the meeting: links (event types) -> new -> "20 min chat", 20 minutes
+   - location: google meet (install the google meet app in cal.com first), or in person at the school
+   - availability tab: pick "chat hours"
+   - limits tab: 10 min buffer before and after, minimum notice 48 hours, max 2 per day and 4 per week, only bookable up to 30 days ahead
+   - booking questions: add a required "what would you like to talk about?" so i can decide
+5. approval: on that event, policies -> privacy & security -> requires confirmation -> always
+   - keep "unconfirmed bookings still block calendar slots" on, so two people can't request the same slot
+   - requests show up in bookings -> unconfirmed (and in the cal.com phone app). accept, or decline with a short reason, and they get an email either way
+   - optional: "when booked with less than X notice" only asks for approval on short-notice requests
+   - cal.com's pricing page doesn't say whether this is free-plan or paid. if it's locked, the fallback is the same setup without approval, leaning on the daily/weekly limits
+6. test it from another email: request a slot, check it shows as unconfirmed, accept it, check the event and meet link land in google calendar, then cancel it
+7. switch it on: src/config/portfolio.js -> contactPageData.contactSection.booking
+   - url: the event's link, e.g. https://cal.com/ajuanijustus/20min
+   - live: true
+   - commit, push, npm run deploy
 
 ### new photo
 

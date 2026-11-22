@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.e86d1a6a.css",
-    "main.js": "/static/js/main.013b589b.js",
+    "main.js": "/static/js/main.77fad074.js",
     "static/css/580.6b23cea0.chunk.css": "/static/css/580.6b23cea0.chunk.css",
     "static/js/580.acc87eac.chunk.js": "/static/js/580.acc87eac.chunk.js",
     "static/css/412.b34b3ef8.chunk.css": "/static/css/412.b34b3ef8.chunk.css",
@@ -25,7 +25,7 @@
     "static/js/636.8c25795c.chunk.js": "/static/js/636.8c25795c.chunk.js",
     "static/js/893.d3b2d525.chunk.js": "/static/js/893.d3b2d525.chunk.js",
     "static/media/Montserrat-Regular.ttf": "/static/media/Montserrat-Regular.3cd786652b8a2e9d41f2.ttf",
-    "static/media/linkedin_dp_overlay_round_repos.png": "/static/media/linkedin_dp_overlay_round_repos.a141f1b1a4d635736191.png",
+    "static/media/linkedin_dp_overlay_round_repos.png": "/static/media/linkedin_dp_overlay_round_repos.1a72cfb21259a127520a.png",
     "static/media/GoogleSans-Italic.ttf": "/static/media/GoogleSans-Italic.40bb50bd202405745006.ttf",
     "static/media/GoogleSans-MediumItalic.ttf": "/static/media/GoogleSans-MediumItalic.56d4f777a7997e5a10b3.ttf",
     "static/media/GoogleSans-BoldItalic.ttf": "/static/media/GoogleSans-BoldItalic.d282e9c31d0f894a7f06.ttf",
@@ -38,7 +38,7 @@
     "index.html": "/index.html",
     "static/media/student.svg": "/static/media/student.d37b06a544e16cd5796b057fc9e07f51.svg",
     "main.e86d1a6a.css.map": "/static/css/main.e86d1a6a.css.map",
-    "main.013b589b.js.map": "/static/js/main.013b589b.js.map",
+    "main.77fad074.js.map": "/static/js/main.77fad074.js.map",
     "580.6b23cea0.chunk.css.map": "/static/css/580.6b23cea0.chunk.css.map",
     "580.acc87eac.chunk.js.map": "/static/js/580.acc87eac.chunk.js.map",
     "412.b34b3ef8.chunk.css.map": "/static/css/412.b34b3ef8.chunk.css.map",
@@ -63,6 +63,6 @@
   },
   "entrypoints": [
     "static/css/main.e86d1a6a.css",
-    "static/js/main.013b589b.js"
+    "static/js/main.77fad074.js"
   ]
 }

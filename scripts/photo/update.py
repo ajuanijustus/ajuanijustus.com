@@ -170,7 +170,8 @@ def prepare(path, as_is=False, mute_greens=False):
 
 
 def save(im, size, path):
-    im.resize((size, size), Image.LANCZOS).save(path, optimize=True)
+    # shrinking can blend a trace of tint back into the edge, so clean once more at the final size
+    despill(im.resize((size, size), Image.LANCZOS)).save(path, optimize=True)
     print("  ", os.path.relpath(path, ROOT))
 
 

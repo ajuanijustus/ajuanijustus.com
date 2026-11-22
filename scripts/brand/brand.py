@@ -5,11 +5,12 @@ only the profile picture uses my photo, everything else is text.
 """
 import os
 
-from PIL import Image, ImageDraw, ImageFilter, ImageFont
+from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageFont
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 FONTS = os.path.join(ROOT, "src", "assets", "fonts")
 PHOTO = os.path.join(ROOT, "public", "profile.png")
+CUTOUT = os.path.join(ROOT, "brand", "source", "cutout.png")  # me with no background, written by scripts/photo/update.py
 
 BG = (18, 18, 18)  # #121212
 TEXT = (224, 224, 224)  # #E0E0E0
@@ -175,6 +176,36 @@ def avatar(size=800, ring=True):
         d.ellipse((cx - r - pad, cy - r - pad, cx + r + pad, cy + r + pad), outline=RING, width=max(2, round(size * 0.005)))
     img.paste(p, (x, y), p)
     return img
+
+
+def portrait(size=800):
+    """
+    profile picture with no circle: me on a soft dark gradient with the same faint red glow
+    as the banners, shoulders running off the bottom edge. falls back to avatar() if there's no cut-out.
+    """
+    if not os.path.exists(CUTOUT):
+        return avatar(size, ring=False)
+    # lighter grey at the top fading to the site background, like the banners
+    img = Image.new("RGB", (size, size), BG)
+    top, bottom = (34, 34, 34), BG
+    grad = ImageDraw.Draw(img)
+    for y in range(size):
+        t = y / (size - 1)
+        grad.line((0, y, size, y), fill=tuple(round(a + (b - a) * t) for a, b in zip(top, bottom)))
+    # the banners' faint red glow, low down behind the shoulders
+    glow = canvas(size, size, (size * 0.05, size * 0.4, size * 0.95, size * 1.2), blur=size // 7)
+    img = ImageChops.lighter(img, glow)
+    p = Image.open(CUTOUT).convert("RGBA")
+    w = round(size * 1.02)
+    h = round(p.height * w / p.width)
+    p = p.resize((w, h), Image.LANCZOS)
+    y = size - h + round(size * 0.02)
+    y = max(y, round(size * 0.1))
+    layer = Image.new("RGBA", (size, size), (0, 0, 0, 0))
+    layer.alpha_composite(p, ((size - w) // 2, y))
+    out = img.convert("RGBA")
+    out.alpha_composite(layer)
+    return out.convert("RGB")
 
 
 def signature(img, xy, size, fill=TEXT):

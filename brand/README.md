@@ -50,7 +50,7 @@ light version (the site has a light theme): swap background and text, keep red a
 
 - one photo, used everywhere at the same time. when it changes, it changes on every profile in the same week
 - the photo is for profile pictures and the site. banners, cards and posts are text only: the profile picture already sits next to them, and two faces side by side looks cluttered
-- the cut-out style: me on a dark round background, head allowed to break out of the circle
+- two styles from the same cut-out: on a dark round background with the head breaking out of the circle (the site, `profile-picture.png`), or straight on the dark gradient (`profile-picture-plain.png`)
 - always on the dark background, never on white or busy colours
 - to swap it everywhere on the site and regenerate every asset here: `python3 scripts/photo/update.py path/to/photo.png` (see the main README, "new photo")
 
@@ -87,7 +87,7 @@ all in `assets/`, made by `scripts/brand/make.py`.
 | file | size | where |
 |---|---|---|
 | `profile-picture.png` | 800×800 | every profile picture: linkedin, github, x, bluesky, scholar, orcid, slack, teams. the only assets with the photo |
-| `profile-picture-no-ring.png` | 800×800 | the same without the red ring, for places that want something plainer (university pages, conference badges, speaker bios) |
+| `profile-picture-plain.png` | 800×800 | no circle or ring, just me on the dark gradient with the banners' faint red glow. for places that want a plain headshot (university pages, conference badges, speaker bios), or anywhere the circle looks fussy |
 | `linkedin-banner.png` | 1584×396 | linkedin background photo |
 | `x-bluesky-banner.png` | 3000×1000 | x header and bluesky banner (same 3:1 shape) |
 | `youtube-banner.png` | 2560×1440 | youtube banner. the text sits in the 1546×423 middle strip that phones show |

@@ -16,6 +16,7 @@ writes:
   src/assets/images/linkedin_dp_overlay_round_repos.png   the photo on home and contact pages
   public/favicon-*, apple-icon-*, android-icon-*, ms-icon-*   browser tab, home screen icons, footer easter egg
   public/og-card.jpg                                  the whatsapp/linkedin/x preview card (text only, regenerated anyway)
+  brand/source/cutout.png                             the cleaned cut-out on its own (cut-outs only)
   brand/assets/profile-picture.png                    and the rest of brand/assets (text only)
 """
 import os
@@ -122,7 +123,11 @@ def prepare(path, as_is=False, mute_greens=False):
             # blends them back into the edge. blank them first
             blank = Image.new("RGBA", im.size, (0, 0, 0, 0))
             im = Image.composite(im, blank, im.getchannel("A").point(lambda v: 255 if v else 0))
-            return despill(on_circle(choke(despill(im, mute_greens))))
+            person = choke(despill(im, mute_greens))
+            # the brand kit uses the cleaned cut-out on its own for the plain profile picture
+            os.makedirs(P("brand", "source"), exist_ok=True)
+            person.crop(person.getbbox()).save(P("brand", "source", "cutout.png"), optimize=True)
+            return despill(on_circle(person))
         # already has its circle: trim the empty space and centre it on a square
         im = im.convert("RGBA")
         im = im.crop(im.getbbox())

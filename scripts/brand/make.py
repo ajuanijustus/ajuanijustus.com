@@ -47,7 +47,7 @@ def slug(title):
 def everything():
     print("brand/assets:")
     brand.save(brand.avatar(800), P("profile-picture.png"))
-    brand.save(brand.avatar(800, ring=False), P("profile-picture-no-ring.png"))
+    brand.save(brand.portrait(800), P("profile-picture-plain.png"))
     brand.save(linkedin_banner(), P("linkedin-banner.png"))
     brand.save(x_banner(), P("x-bluesky-banner.png"))
     brand.save(youtube_banner(), P("youtube-banner.png"))

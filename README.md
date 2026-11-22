@@ -105,8 +105,9 @@ shows "book a chat · coming soon" until it's switched on.
 
 ### new photo
 
-1. get a square photo, 1000px or more. best is a png cut-out with a transparent background, like the current one with my head popping out of the circle (remove.bg or photoshop). a normal photo works too, it gets cropped to a circle.
-2. python3 scripts/photo/update.py path/to/photo.png
+1. get a photo, 1000px or more, and remove the background (remove.bg, adobe firefly). a normal photo works too, it gets cropped to a circle.
+2. python3 scripts/photo/update.py path/to/photo.png --mute-greens
+   puts me on the dark circle with my head breaking out of the top, cleans the leftover tint from the old background off the hair and edges, and (with --mute-greens) greys out green clothing so it sits with the red. --as-is if the png already has its own circle
    rebuilds every copy: home and contact page photo, public/profile.png, the browser tab and home screen icons (the footer easter egg uses one), the link preview card public/og-card.jpg, and the banners and profile picture in brand/assets/
 3. npm start, check the home page, contact page and the tab icon
 4. commit, push, npm run deploy

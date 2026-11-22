@@ -66,6 +66,30 @@ def despill(im, mute_greens=False):
     return out
 
 
+def decontaminate(im, radius=8):
+    """
+    the soft edge of a cut-out (beard, hair) is half see-through, and those pixels still carry the
+    old background's colour, so the edge looks like a blurry beige/green band. give every
+    see-through pixel the colour of the solid pixels just inside it instead.
+    """
+    import numpy as np
+
+    a = np.asarray(im, dtype=np.float32)
+    rgb, alpha = a[..., :3], a[..., 3]
+    solid = (alpha >= 250).astype(np.float32)
+    weight = Image.fromarray((solid * 255).astype(np.uint8))
+    spread = np.asarray(weight.filter(ImageFilter.GaussianBlur(radius)), dtype=np.float32) / 255
+    colour = np.zeros_like(rgb)
+    for c in range(3):
+        layer = Image.fromarray(np.clip(rgb[..., c] * solid, 0, 255).astype(np.uint8))
+        colour[..., c] = np.asarray(layer.filter(ImageFilter.GaussianBlur(radius)), dtype=np.float32)
+    inside = colour / np.maximum(spread, 1e-3)[..., None]
+    edge = (alpha < 250) & (spread > 0.01)
+    rgb[edge] = inside[edge]
+    out = np.dstack([np.clip(rgb, 0, 255), alpha]).astype(np.uint8)
+    return Image.fromarray(out, "RGBA")
+
+
 def choke(im, px=1):
     # pull the cut-out edge in a little, so the leftover halo from the old background goes
     a = im.getchannel("A").filter(ImageFilter.MinFilter(px * 2 + 1)).filter(ImageFilter.GaussianBlur(0.6))
@@ -123,7 +147,7 @@ def prepare(path, as_is=False, mute_greens=False):
             # blends them back into the edge. blank them first
             blank = Image.new("RGBA", im.size, (0, 0, 0, 0))
             im = Image.composite(im, blank, im.getchannel("A").point(lambda v: 255 if v else 0))
-            person = choke(despill(im, mute_greens))
+            person = choke(despill(decontaminate(im), mute_greens))
             # the brand kit uses the cleaned cut-out on its own for the plain profile picture
             os.makedirs(P("brand", "source"), exist_ok=True)
             person.crop(person.getbbox()).save(P("brand", "source", "cutout.png"), optimize=True)

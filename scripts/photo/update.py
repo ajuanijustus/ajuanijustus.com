@@ -117,7 +117,12 @@ def prepare(path, as_is=False, mute_greens=False):
     im = Image.open(path)
     if im.mode in ("RGBA", "LA") and im.getchannel("A").getextrema()[0] < 255:
         if not as_is:
-            return on_circle(choke(despill(im.convert("RGBA"), mute_greens)))
+            im = im.convert("RGBA")
+            # transparent pixels still hold the old background's colours underneath, and resizing
+            # blends them back into the edge. blank them first
+            blank = Image.new("RGBA", im.size, (0, 0, 0, 0))
+            im = Image.composite(im, blank, im.getchannel("A").point(lambda v: 255 if v else 0))
+            return despill(on_circle(choke(despill(im, mute_greens))))
         # already has its circle: trim the empty space and centre it on a square
         im = im.convert("RGBA")
         im = im.crop(im.getbbox())

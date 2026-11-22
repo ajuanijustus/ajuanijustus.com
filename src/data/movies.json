@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16",
+ "updated": "2026-11-22",
  "items": [
   {
    "id": "trakt-830859",
@@ -32,7 +32,7 @@
    ],
    "language": "ml",
    "country": "in",
-   "runtime": 155,
+   "runtime": 156,
    "poster": "https://media.trakt.tv/movies/1237164/medium/poster.webp",
    "posterKey": "movie-1237164"
   },
@@ -74,6 +74,42 @@
    "posterKey": "movie-1117351"
   },
   {
+   "id": "trakt-1011230",
+   "title": "Mollywood Times",
+   "year": 2026,
+   "released": "2026-06-05",
+   "rating": null,
+   "liked": false,
+   "genres": [
+    "comedy",
+    "drama"
+   ],
+   "language": "ml",
+   "country": "in",
+   "runtime": 167,
+   "poster": "https://media.trakt.tv/movies/1011230/medium/poster.webp",
+   "posterKey": "movie-1011230"
+  },
+  {
+   "id": "trakt-1074813",
+   "title": "Hridayapoorvam",
+   "year": 2025,
+   "released": "2025-08-28",
+   "rating": null,
+   "liked": false,
+   "genres": [
+    "romance",
+    "comedy",
+    "drama",
+    "family"
+   ],
+   "language": "ml",
+   "country": "in",
+   "runtime": 151,
+   "poster": "https://media.trakt.tv/movies/1074813/medium/poster.webp",
+   "posterKey": "movie-1074813"
+  },
+  {
    "id": "trakt-670164",
    "title": "The Lord of the Rings: The War of the Rohirrim",
    "year": 2024,
@@ -91,6 +127,23 @@
    "runtime": 134,
    "poster": "https://media.trakt.tv/movies/670164/medium/poster.webp",
    "posterKey": "movie-670164"
+  },
+  {
+   "id": "trakt-304190",
+   "title": "Moothon",
+   "year": 2019,
+   "released": "2019-10-18",
+   "rating": null,
+   "liked": false,
+   "genres": [
+    "crime",
+    "drama"
+   ],
+   "language": "ml",
+   "country": "in",
+   "runtime": 110,
+   "poster": "https://media.trakt.tv/movies/304190/medium/poster.webp",
+   "posterKey": "movie-304190"
   },
   {
    "id": "trakt-106668",

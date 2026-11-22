@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16",
+ "updated": "2026-11-22",
  "items": [
   {
    "title": "Neagley",
@@ -100,11 +100,11 @@
     {
      "n": 2,
      "watched": 4,
-     "aired": 7
+     "aired": 8
     }
    ],
    "progress": 17,
-   "total": 20,
+   "total": 21,
    "minutes": 714,
    "score": null,
    "genres": [
@@ -131,11 +131,11 @@
     {
      "n": 2,
      "watched": 0,
-     "aired": 3
+     "aired": 4
     }
    ],
    "progress": 10,
-   "total": 13,
+   "total": 14,
    "minutes": 330,
    "score": null,
    "genres": [
@@ -257,11 +257,11 @@
     {
      "n": 3,
      "watched": 3,
-     "aired": 7
+     "aired": 8
     }
    ],
    "progress": 35,
-   "total": 39,
+   "total": 40,
    "minutes": 1540,
    "score": null,
    "genres": [
@@ -341,11 +341,44 @@
    "released": "2024-09-18"
   },
   {
-   "title": "Percy Jackson and the Olympians",
-   "year": 2023,
-   "poster": "https://media.trakt.tv/shows/194518/medium/poster.webp",
-   "posterKey": "show-194518",
-   "status": "caught up",
+   "title": "A Good Girl's Guide to Murder",
+   "year": 2024,
+   "poster": "https://static.tvmaze.com/uploads/images/medium_portrait/626/1566763.jpg",
+   "posterKey": "show-201640",
+   "status": "watching",
+   "showStatus": "returning series",
+   "seasons": [
+    {
+     "n": 1,
+     "watched": 6,
+     "aired": 6
+    },
+    {
+     "n": 2,
+     "watched": 0,
+     "aired": 6
+    }
+   ],
+   "progress": 6,
+   "total": 12,
+   "minutes": 270,
+   "score": null,
+   "genres": [
+    "mystery",
+    "crime",
+    "thriller",
+    "drama"
+   ],
+   "language": "en",
+   "network": "BBC Three",
+   "released": "2024-07-10"
+  },
+  {
+   "title": "Criminal Record",
+   "year": 2024,
+   "poster": "https://static.tvmaze.com/uploads/images/medium_portrait/622/1556570.jpg",
+   "posterKey": "show-196417",
+   "status": "dropped",
    "showStatus": "returning series",
    "seasons": [
     {
@@ -361,6 +394,43 @@
    ],
    "progress": 16,
    "total": 16,
+   "minutes": 720,
+   "score": null,
+   "genres": [
+    "thriller",
+    "crime",
+    "drama"
+   ],
+   "language": "en",
+   "network": "Apple TV",
+   "released": "2024-01-10"
+  },
+  {
+   "title": "Percy Jackson and the Olympians",
+   "year": 2023,
+   "poster": "https://media.trakt.tv/shows/194518/medium/poster.webp",
+   "posterKey": "show-194518",
+   "status": "watching",
+   "showStatus": "returning series",
+   "seasons": [
+    {
+     "n": 1,
+     "watched": 8,
+     "aired": 8
+    },
+    {
+     "n": 2,
+     "watched": 8,
+     "aired": 8
+    },
+    {
+     "n": 3,
+     "watched": 0,
+     "aired": 2
+    }
+   ],
+   "progress": 16,
+   "total": 18,
    "minutes": 640,
    "score": null,
    "genres": [
@@ -476,6 +546,52 @@
    "released": "2022-11-23"
   },
   {
+   "title": "The Bear",
+   "year": 2022,
+   "poster": "https://static.tvmaze.com/uploads/images/medium_portrait/629/1574642.jpg",
+   "posterKey": "show-189717",
+   "status": "dropped",
+   "showStatus": "ended",
+   "seasons": [
+    {
+     "n": 1,
+     "watched": 8,
+     "aired": 8
+    },
+    {
+     "n": 2,
+     "watched": 10,
+     "aired": 10
+    },
+    {
+     "n": 3,
+     "watched": 0,
+     "aired": 10
+    },
+    {
+     "n": 4,
+     "watched": 0,
+     "aired": 10
+    },
+    {
+     "n": 5,
+     "watched": 0,
+     "aired": 8
+    }
+   ],
+   "progress": 18,
+   "total": 46,
+   "minutes": 630,
+   "score": null,
+   "genres": [
+    "drama",
+    "comedy"
+   ],
+   "language": "en",
+   "network": "Hulu",
+   "released": "2022-06-24"
+  },
+  {
    "title": "Reacher",
    "year": 2022,
    "poster": "https://static.tvmaze.com/uploads/images/medium_portrait/636/1591350.jpg",
@@ -566,6 +682,58 @@
    "language": "en",
    "network": "ABC",
    "released": "2021-12-08"
+  },
+  {
+   "title": "Ghosts",
+   "year": 2021,
+   "poster": "https://static.tvmaze.com/uploads/images/medium_portrait/590/1475093.jpg",
+   "posterKey": "show-176964",
+   "status": "dropped",
+   "showStatus": "returning series",
+   "seasons": [
+    {
+     "n": 1,
+     "watched": 18,
+     "aired": 18
+    },
+    {
+     "n": 2,
+     "watched": 22,
+     "aired": 22
+    },
+    {
+     "n": 3,
+     "watched": 10,
+     "aired": 10
+    },
+    {
+     "n": 4,
+     "watched": 22,
+     "aired": 22
+    },
+    {
+     "n": 5,
+     "watched": 0,
+     "aired": 22
+    },
+    {
+     "n": 6,
+     "watched": 0,
+     "aired": 2
+    }
+   ],
+   "progress": 72,
+   "total": 96,
+   "minutes": 1584,
+   "score": null,
+   "genres": [
+    "comedy",
+    "fantasy",
+    "science-fiction"
+   ],
+   "language": "en",
+   "network": "CBS",
+   "released": "2021-10-08"
   },
   {
    "title": "Ted Lasso",
@@ -694,6 +862,68 @@
    "language": "en",
    "network": "Prime Video",
    "released": "2019-07-25"
+  },
+  {
+   "title": "The Rookie",
+   "year": 2018,
+   "poster": "https://static.tvmaze.com/uploads/images/medium_portrait/606/1515728.jpg",
+   "posterKey": "show-134421",
+   "status": "dropped",
+   "showStatus": "returning series",
+   "seasons": [
+    {
+     "n": 1,
+     "watched": 20,
+     "aired": 20
+    },
+    {
+     "n": 2,
+     "watched": 20,
+     "aired": 20
+    },
+    {
+     "n": 3,
+     "watched": 14,
+     "aired": 14
+    },
+    {
+     "n": 4,
+     "watched": 22,
+     "aired": 22
+    },
+    {
+     "n": 5,
+     "watched": 22,
+     "aired": 22
+    },
+    {
+     "n": 6,
+     "watched": 10,
+     "aired": 10
+    },
+    {
+     "n": 7,
+     "watched": 0,
+     "aired": 18
+    },
+    {
+     "n": 8,
+     "watched": 0,
+     "aired": 18
+    }
+   ],
+   "progress": 108,
+   "total": 144,
+   "minutes": 4320,
+   "score": null,
+   "genres": [
+    "crime",
+    "drama",
+    "comedy"
+   ],
+   "language": "en",
+   "network": "ABC",
+   "released": "2018-10-17"
   },
   {
    "title": "The Good Place",

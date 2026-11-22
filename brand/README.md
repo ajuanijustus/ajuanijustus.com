@@ -86,7 +86,8 @@ all in `assets/`, made by `scripts/brand/make.py`.
 
 | file | size | where |
 |---|---|---|
-| `profile-picture.png` | 800×800 | every profile picture: linkedin, github, x, bluesky, scholar, orcid, slack, teams. the only asset with the photo |
+| `profile-picture.png` | 800×800 | every profile picture: linkedin, github, x, bluesky, scholar, orcid, slack, teams. the only assets with the photo |
+| `profile-picture-no-ring.png` | 800×800 | the same without the red ring, for places that want something plainer (university pages, conference badges, speaker bios) |
 | `linkedin-banner.png` | 1584×396 | linkedin background photo |
 | `x-bluesky-banner.png` | 3000×1000 | x header and bluesky banner (same 3:1 shape) |
 | `youtube-banner.png` | 2560×1440 | youtube banner. the text sits in the 1546×423 middle strip that phones show |

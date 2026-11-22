@@ -161,17 +161,18 @@ def post(w, h, title, kicker=None):
     return img
 
 
-def avatar(size=800):
-    # profile picture: the photo on the dark background with a thin dark-red ring round the circle
+def avatar(size=800, ring=True):
+    # profile picture: the photo on the dark background, with a thin dark-red ring round the circle unless ring=False
     img = canvas(size, size)
     p = cutout(round(size * 0.86))
     x, y = (size - p.width) // 2, size - p.height - round(size * 0.04)
     # the circle in the cut-out is as wide as the image and sits at its bottom
     r = p.width / 2
     cx, cy = x + r, y + p.height - r
-    d = ImageDraw.Draw(img)
-    pad = round(size * 0.016)
-    d.ellipse((cx - r - pad, cy - r - pad, cx + r + pad, cy + r + pad), outline=RING, width=max(2, round(size * 0.005)))
+    if ring:
+        d = ImageDraw.Draw(img)
+        pad = round(size * 0.016)
+        d.ellipse((cx - r - pad, cy - r - pad, cx + r + pad, cy + r + pad), outline=RING, width=max(2, round(size * 0.005)))
     img.paste(p, (x, y), p)
     return img
 

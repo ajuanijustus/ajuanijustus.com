@@ -71,7 +71,10 @@ export default function Research(props) {
         <ul className="ac-list">
           {openSource.map((o) => (
             <li key={o.name}>
-              <strong>{o.name}</strong>: {o.detail}
+              <a className="ac-link" href={o.link} target="_blank" rel="noopener noreferrer">
+                <strong>{o.name}</strong>
+              </a>
+              : {o.detail}
             </li>
           ))}
           <li>

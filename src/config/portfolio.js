@@ -516,7 +516,7 @@ const publications = [
     fullVenue: "IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP 2026) [Oral presentation]",
     links: {
       pdf: "https://doi.org/10.1109/ICASSP55912.2026.11460695",
-      code: "",
+      code: "https://github.com/ajuanijustus/voice2mode",
       bibtex: `@inproceedings{justus2026voice2mode,
         author={Justus, Aju Ani and Agrawal, Ruchit and Kadiri, Sudarsana Reddy and Narayanan, Shrikanth},
         booktitle={ICASSP 2026 - 2026 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}, 
@@ -527,7 +527,7 @@ const publications = [
         pages={22072-22076},
         doi={10.1109/ICASSP55912.2026.11460695}
       }`,
-      website: "https://github.com/ajuanijustus/voice2mode"
+      website: ""
     }
   },
   {
@@ -559,7 +559,7 @@ const publications = [
     fullVenue: "Proceedings of the 2023 IEEE International Conference on Big Data (BigData) [Online presentation]",
     links: {
       pdf: "https://arxiv.org/pdf/2501.15304",
-      code: "",
+      code: "https://github.com/ajuanijustus/music-gen-hitl-rl",
       bibtex: `@misc{justus2025musicgenerationusinghumanintheloop,
         title={Music Generation using Human-In-The-Loop Reinforcement Learning}, 
         author={Aju Ani Justus},
@@ -569,7 +569,7 @@ const publications = [
         primaryClass={cs.SD},
         url={https://arxiv.org/abs/2501.15304}
       }`,
-      website: "https://github.com/ajuanijustus/music-gen-hitl-rl"
+      website: ""
     }
   }
 ];
@@ -639,11 +639,15 @@ const outreach = [
 const summerSchools = [{ year: "2026", name: "European Agent Systems Summer School (EASSS 2026), held with EUMAS 2026" }];
 
 const openSource = [
-  { name: "voice2mode", detail: "open-source framework for singing phonation-mode classification using self-supervised speech-model embeddings" },
-  { name: "music-gen-hitl-rl", detail: "music generation with human-in-the-loop reinforcement learning (my MSc dissertation)" }
+  { name: "GridHunt", link: "https://github.com/ajuanijustus/gridhunt", detail: "heterogeneous, mixed-motive predator-prey environments for multi-agent RL and human-agent teaming, with a PettingZoo API. on PyPI as gridhunt" },
+  { name: "PettingZoo", link: "https://github.com/Farama-Foundation/PettingZoo/pull/1543", detail: "adding GridHunt to the third-party environments (open pull request)" },
+  { name: "eq2rl", link: "https://github.com/ajuanijustus/eq2rl", detail: "single-file RL implementations in PyTorch and JAX that follow the paper equations, written for studying" },
+  { name: "voice2mode", link: "https://github.com/ajuanijustus/voice2mode", detail: "singing phonation-mode classification with self-supervised speech-model embeddings (ICASSP 2026)" },
+  { name: "music-gen-hitl-rl", link: "https://github.com/ajuanijustus/music-gen-hitl-rl", detail: "music generation with human-in-the-loop reinforcement learning (my MSc dissertation, IEEE BigData 2023)" },
+  { name: "intro-rl-workshop", link: "https://github.com/ajuanijustus/intro-rl-workshop", detail: "materials from the reinforcement learning workshop with the UoB AI Society" }
 ];
 
-// include sociotechnical systems, eq2rl, AA + MAS reading group
+// include sociotechnical systems, AA + MAS reading group
 
 export {
   settings,

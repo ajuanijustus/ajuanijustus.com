@@ -325,7 +325,7 @@ const contactPageData = {
 const news = [
   {
     date: "Nov 2026",
-    text: "Leading a Reinforcement Learning workshop with the University of Birmingham AI Society on 24 November: how agents learn from experience, final-year project ideas and real-world applications.",
+    text: "Led a Reinforcement Learning workshop with the University of Birmingham AI Society on 24 November: how agents learn from experience, final-year project ideas and real-world applications.",
     link: "https://www.instagram.com/p/Df926N9jEk9/"
   },
   {
